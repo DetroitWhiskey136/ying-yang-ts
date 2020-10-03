@@ -1,4 +1,6 @@
-import { OPTIONS, stringResolvable, booleanResolvable, numberResolvable } from 'src/util';
+import {
+  booleanResolvable, numberResolvable,
+} from 'src/util';
 
 export interface User {
   botAdmin: booleanResolvable;
@@ -10,6 +12,6 @@ const UserSchema: User = {
   botAdmin: false,
   botSupport: false,
   level: 0,
-}
+};
 
 export default UserSchema;

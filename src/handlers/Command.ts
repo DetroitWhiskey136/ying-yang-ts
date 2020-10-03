@@ -1,5 +1,6 @@
-import Logger from '@util/Logger';
-import CommandContext from '../command/CommandContext';
+import Logger from 'src/util/Logger';
+import CommandContext from 'src/command/CommandContext';
+
 const logger = new Logger();
 
 interface commandOptions {
@@ -14,14 +15,22 @@ interface commandOptions {
 
 export default class Command {
   name: string;
+
   description: string;
+
   category: string;
+
   usage: string;
+
   enabled: boolean;
+
   guildOnly: boolean;
+
   aliases: string[];
+
   type: string;
-  constructor (options: commandOptions) {
+
+  constructor(options: commandOptions) {
     this.name = options.name;
     this.description = options.description;
     this.category = options.category;
@@ -36,11 +45,11 @@ export default class Command {
    * Gets called if the command doesn't have a run method.
    * @memberof Command
    */
-  run (ctx: CommandContext) {
+  run(ctx: CommandContext) {
     throw new Error(`${this.constructor.name} doesn't have a run() method.`);
   }
 
-  async _run (ctx: CommandContext) {
+  async _run(ctx: CommandContext) {
     try {
       await this.run(ctx);
     } catch (error) {

@@ -10,7 +10,7 @@ interface LoggerTypes {
   DEBUG: string[];
   WARN: string[];
   ERROR: string[];
-};
+}
 
 /**
  * Sets a Color name to the terminal value
@@ -29,15 +29,15 @@ enum Colors {
 }
 
 const TerminalFormatter = {
-  bold (text: string): string {
+  bold(text: string): string {
     return `\x1b[1m${text}\x1b[0m`;
   },
-  underlined (text: string): string {
+  underlined(text: string): string {
     return `\x1b[4m${text}\x1b[0m`;
   },
-  color (color: Colors, text: string): string {
+  color(color: Colors, text: string): string {
     return `${color + text}\x1b[0m`;
-  }
+  },
 };
 
 /**
@@ -54,7 +54,7 @@ export default class Logger {
    * @returns {string} String or Number
    * @memberof Logger
    */
-  private static formatTime (input: number): string {
+  private static formatTime(input: number): string {
     return input < 10 ? `0${input}` : `${input}`;
   }
 
@@ -66,7 +66,7 @@ export default class Logger {
    * @returns {string[]} String Array
    * @memberof Logger
    */
-  private static timestamp (): string[] {
+  private static timestamp(): string[] {
     const date = new Date();
     const m = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
     const formatedTime = `${this.formatTime(date.getHours())}:${this.formatTime(date.getMinutes())}:${this.formatTime(date.getSeconds())}`;
@@ -76,7 +76,7 @@ export default class Logger {
     return [
       TerminalFormatter.color(Colors.FgDarkGray, `${formatedDate} ${formatedTime}`),
       `${fileDate}`,
-      `${formatedDate} ${formatedTime}`
+      `${formatedDate} ${formatedTime}`,
     ];
   }
 
@@ -88,7 +88,7 @@ export default class Logger {
    * @param {...any[]} content
    * @memberof Logger
    */
-  private static appendLogs (timestamp: string[], ...content: any[]): void {
+  private static appendLogs(timestamp: string[], ...content: any[]): void {
     const filePath = './data/logs/';
     const file = `${filePath}${timestamp[1]}.log`;
     if (!fs.existsSync(filePath)) fs.mkdirSync(filePath, { recursive: true });
@@ -103,48 +103,48 @@ export default class Logger {
    * @returns {string[]} String Array
    * @memberof Logger
    */
-  private static type (type: keyof LoggerTypes): string[] {
+  private static type(type: keyof LoggerTypes): string[] {
     const types: LoggerTypes = {
       LOG: [
         TerminalFormatter.bold(
           TerminalFormatter.color(
-            Colors.FgGreen, 'LOG'
-          )
+            Colors.FgGreen, 'LOG',
+          ),
         ),
-        'LOG'
+        'LOG',
       ],
       INFO: [
         TerminalFormatter.bold(
           TerminalFormatter.color(
-            Colors.FgCyan, 'INFO'
-          )
+            Colors.FgCyan, 'INFO',
+          ),
         ),
-        'INFO'
+        'INFO',
       ],
       DEBUG: [
         TerminalFormatter.bold(
           TerminalFormatter.color(
-            Colors.FgLightMagenta, 'DEBUG'
-          )
+            Colors.FgLightMagenta, 'DEBUG',
+          ),
         ),
-        'DEBUG'
+        'DEBUG',
       ],
       WARN: [
         TerminalFormatter.bold(
           TerminalFormatter.color(
-            Colors.FgYellow, 'WARN'
-          )
+            Colors.FgYellow, 'WARN',
+          ),
         ),
-        'WARN'
+        'WARN',
       ],
       ERROR: [
         TerminalFormatter.bold(
           TerminalFormatter.color(
-            Colors.FgRed, 'ERROR'
-          )
+            Colors.FgRed, 'ERROR',
+          ),
         ),
-        'ERROR'
-      ]
+        'ERROR',
+      ],
     };
 
     return types[type];
@@ -156,7 +156,7 @@ export default class Logger {
    * @param {...any[]} content
    * @memberof Logger
    */
-  public log (...content: any[]): void {
+  public log(...content: any[]): void {
     const tm = Logger.timestamp();
     console.log(Logger.type('LOG')[0], tm[0], ...content);
     Logger.appendLogs(tm, `${Logger.type('LOG')[1]} ${tm[2]} ${content.join(' ')}`);
@@ -168,7 +168,7 @@ export default class Logger {
    * @param {...any[]} content
    * @memberof Logger
    */
-  public info (...content: any[]): void {
+  public info(...content: any[]): void {
     const tm = Logger.timestamp();
     console.log(Logger.type('INFO')[0], tm[0], ...content);
     Logger.appendLogs(tm, `${Logger.type('INFO')[1]} ${tm[2]} ${content.join(' ')}`);
@@ -180,7 +180,7 @@ export default class Logger {
    * @param {any[]} content
    * @memberof Logger
    */
-  public debug (...content: any[]): void {
+  public debug(...content: any[]): void {
     const tm = Logger.timestamp();
     console.log(Logger.type('DEBUG')[0], tm[0], ...content);
     Logger.appendLogs(tm, `${Logger.type('DEBUG')[1]} ${tm[2]} ${content.join(' ')}`);
@@ -192,7 +192,7 @@ export default class Logger {
    * @param {any[]} content
    * @memberof Logger
    */
-  public warn (...content: any[]): void {
+  public warn(...content: any[]): void {
     const tm = Logger.timestamp();
     console.log(Logger.type('WARN')[0], tm[0], ...content);
     Logger.appendLogs(tm, `${Logger.type('WARN')[1]} ${tm[2]} ${content.join(' ')}`);
@@ -204,7 +204,7 @@ export default class Logger {
    * @param {any[]} content
    * @memberof Logger
    */
-  public error (...content: any[]): void {
+  public error(...content: any[]): void {
     const tm = Logger.timestamp();
     console.log(Logger.type('ERROR')[0], tm[0], ...content);
     Logger.appendLogs(tm, `${Logger.type('ERROR')[1]} ${tm[2]} ${content.join(' ')}`);

@@ -12,11 +12,12 @@ const logger = new Logger();
  */
 class FileUtil {
   message: string | null;
+
   /**
    * Creates an instance of FileUtil.
    * @memberof FileUtil
    */
-  constructor () {
+  constructor() {
     this.message = null;
   }
 
@@ -28,7 +29,7 @@ class FileUtil {
    * @param {BotClient} bot The BotClient object
    * @memberof FileUtil
    */
-  LoadFiles (url: string, bot: BotClient) {
+  LoadFiles(url: string, bot: BotClient) {
     klaw(url).on('data', async (item: klaw.Item) => {
       const parsedItem = path.parse(item.path);
       if (!parsedItem.ext || !['.js', '.ts'].includes(parsedItem.ext)) return;
@@ -50,7 +51,7 @@ class FileUtil {
    * @param {BotClient} bot The BotClient.
    * @memberof FileUtil
    */
-  private async LoadFile (filePath: string, fileName: string, bot: BotClient) {
+  private async LoadFile(filePath: string, fileName: string, bot: BotClient) {
     try {
       this.message = null;
 
@@ -70,7 +71,7 @@ class FileUtil {
         bot.events.set(props.name, props);
         bot.client.on(
           props.name,
-          (...args) => props.run(bot, bot.client, ...args)
+          (...args) => props.run(bot, bot.client, ...args),
         );
       } else if (props.type === 'command') {
         bot.commands.set(props.name, props);

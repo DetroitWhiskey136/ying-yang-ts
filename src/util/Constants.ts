@@ -5,16 +5,16 @@ export const clientOptions: ClientOptions = {
   fetchAllMembers: true,
   partials: [
     'MESSAGE',
-    'CHANNEL'
+    'CHANNEL',
   ],
   messageCacheMaxSize: 100,
   messageCacheLifetime: 240,
   messageSweepInterval: 300,
   ws: {
     large_threshold: 100,
-    intents: Intents.ALL
+    intents: Intents.ALL,
   },
-  retryLimit: 3
+  retryLimit: 3,
 };
 
 export const REGEX = {
@@ -23,15 +23,15 @@ export const REGEX = {
   USER_ID: /^[0-9]{16,19}$/,
   MEMBER_MENTION: /^(?:<@!?)?([0-9]{16,19})(?:>)?$/,
   REGEX: /[|\\{}()[\]^$+*?.]/g,
-  DOMAINS: /^https?:\/\/(www\.)?(pastebin|(gist\.)?github|gitlab)\.com\/\b([-a-zA-Z0-9()@:%_+.~#?&/=]*)?$/i
+  DOMAINS: /^https?:\/\/(www\.)?(pastebin|(gist\.)?github|gitlab)\.com\/\b([-a-zA-Z0-9()@:%_+.~#?&/=]*)?$/i,
 };
 
 export const MESSAGES = {
-  PREFIX: 'My prefix in this guild is: {prefix}'
+  PREFIX: 'My prefix in this guild is: {prefix}',
 };
 
 export const OPTIONS = {
-  PREFIX: '/'
+  PREFIX: '/',
 };
 
 export type stringResolvable = string | undefined | null;

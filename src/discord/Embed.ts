@@ -3,9 +3,9 @@
 
 import crypto from 'crypto';
 import {
-  Guild, GuildMember, MessageAttachment, MessageEmbed, User, MessageEmbedOptions, ImageURLOptions
+  Guild, GuildMember, MessageAttachment, MessageEmbed, User, MessageEmbedOptions, ImageURLOptions,
 } from 'discord.js';
-import ImageUtil from '@util/Image';
+import ImageUtil from 'src/util/Image';
 
 const EmbedColors = { error: 'RED', normal: '#00FFFF', warn: '0xfdfd96' } as const;
 
@@ -37,10 +37,10 @@ export default class Embed extends MessageEmbed {
    * @param options The options for the embed
    * @param data The data of the embed
    */
-  constructor (
+  constructor(
     embedResolvable?: EmbedResolvable | null,
     options: Partial<EmbedOptions> = {},
-    data: MessageEmbed | MessageEmbedOptions = {}
+    data: MessageEmbed | MessageEmbedOptions = {},
   ) {
     super(data);
 
@@ -49,7 +49,7 @@ export default class Embed extends MessageEmbed {
       autoFooter: true,
       autoTimestamp: true,
       type: 'normal',
-      ...options
+      ...options,
     };
     if (embedResolvable) {
       if (embedResolvable instanceof User) {
@@ -64,7 +64,7 @@ export default class Embed extends MessageEmbed {
     this.setColor(color);
   }
 
-  setTemplate (user: User): void {
+  setTemplate(user: User): void {
     if (this.options.autoAuthor) this.setAuthor(user);
     if (this.options.autoFooter) this.setFooter(user.tag);
     if (this.options.autoTimestamp) this.setTimestamp();
@@ -75,17 +75,17 @@ export default class Embed extends MessageEmbed {
    * @param resolvable The resolvable to be resolved
    * @returns The resolved name
    */
-  static resolveName (resolvable: EmbedInput): string {
+  static resolveName(resolvable: EmbedInput): string {
     if (resolvable instanceof User) return resolvable.tag;
     if (resolvable instanceof GuildMember) return resolvable.user.tag;
     if (resolvable instanceof Guild) return resolvable.name;
     return resolvable;
   }
 
-  static hasSupport (resolvable: any): boolean {
-    return resolvable instanceof GuildMember ||
-      resolvable instanceof GuildMember ||
-      resolvable instanceof Guild;
+  static hasSupport(resolvable: any): boolean {
+    return resolvable instanceof GuildMember
+      || resolvable instanceof GuildMember
+      || resolvable instanceof Guild;
   }
 
   /**
@@ -93,7 +93,7 @@ export default class Embed extends MessageEmbed {
    * @param resolvable The resolvable to be resolved
    * @returns The resolved image url
    */
-  resolveImage (resolvable: EmbedInput): string {
+  resolveImage(resolvable: EmbedInput): string {
     const o: ImageURLOptions & { dynamic?: boolean } = { dynamic: true, format: 'png', size: 4096 };
     if (resolvable instanceof User) return resolvable.displayAvatarURL(o);
     if (resolvable instanceof GuildMember) return resolvable.user.displayAvatarURL(o);
@@ -111,7 +111,7 @@ export default class Embed extends MessageEmbed {
   /**
    * Sets the color of this embed to red
    */
-  setError (): this {
+  setError(): this {
     return this.setColor(EmbedColors.error);
   }
 
@@ -121,10 +121,10 @@ export default class Embed extends MessageEmbed {
    * @param iconURL The icon URL of the author
    * @param url The URL of the author
    */
-  setAuthor (
+  setAuthor(
     name: EmbedInput,
     iconURL?: EmbedInput | null,
-    url?: EmbedInput | null
+    url?: EmbedInput | null,
   ): this {
     const parseName = Embed.resolveName(name);
     const parseIcon = iconURL
@@ -133,7 +133,7 @@ export default class Embed extends MessageEmbed {
     return super.setAuthor(
       parseName,
       parseIcon,
-      parseUrl
+      parseUrl,
     );
   }
 
@@ -142,7 +142,7 @@ export default class Embed extends MessageEmbed {
    * @param text The text of the footer
    * @param iconURL The icon URL of the footer
    */
-  setFooter (text: EmbedInput, iconURL: EmbedInput | null = null): this {
+  setFooter(text: EmbedInput, iconURL: EmbedInput | null = null): this {
     const parseText = Embed.resolveName(text);
     const parseIconURL = iconURL
       ? this.resolveImage(iconURL)
@@ -150,7 +150,7 @@ export default class Embed extends MessageEmbed {
 
     return super.setFooter(
       parseText,
-      parseIconURL
+      parseIconURL,
     );
   }
 
@@ -158,7 +158,7 @@ export default class Embed extends MessageEmbed {
    * Sets the description of this embed.
    * @param description The description
    */
-  setDescription (description: string): this {
+  setDescription(description: string): this {
     return super.setDescription(description);
   }
 
@@ -167,7 +167,7 @@ export default class Embed extends MessageEmbed {
    * @param title The title
    * @param options The options of the title
    */
-  setTitle (title: string): this {
+  setTitle(title: string): this {
     return super.setTitle(title);
   }
 
@@ -177,16 +177,16 @@ export default class Embed extends MessageEmbed {
    * @param value The value of this field
    * @param inline If this field will be displayed inline
    */
-  addField (
+  addField(
     name: string | number,
     value: string | number,
-    inline = false
+    inline = false,
   ): this {
     return this
       .addFields({
         inline,
         name,
-        value
+        value,
       });
   }
 
@@ -194,17 +194,18 @@ export default class Embed extends MessageEmbed {
    * Adds fields to the embed (max 25).
    * @param fields The fields to add
    */
-  addFields (...fields: FieldOptions[]): this {
+  addFields(...fields: FieldOptions[]): this {
+    // eslint-disable-next-line no-restricted-syntax
     for (const data of fields) {
       const {
-        name, value, inline
+        name, value, inline,
       } = data;
       this.fields.push(
         Embed.normalizeField(
           name,
           value,
-          inline
-        )
+          inline,
+        ),
       );
     }
     return this;
@@ -214,7 +215,7 @@ export default class Embed extends MessageEmbed {
    * Sets the thumbnail of this embed.
    * @param url The URL of the thumbnail
    */
-  setThumbnail (url: EmbedInput): this {
+  setThumbnail(url: EmbedInput): this {
     return super.setThumbnail(this.resolveImage(url));
   }
 
@@ -222,7 +223,7 @@ export default class Embed extends MessageEmbed {
    * Sets the image of this embed.
    * @param url The URL of the image
    */
-  setImage (url: EmbedInput): this {
+  setImage(url: EmbedInput): this {
     return super.setImage(this.resolveImage(url));
   }
 }

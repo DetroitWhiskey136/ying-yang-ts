@@ -1,6 +1,9 @@
-import BotClient from '@client/BotClient';
-import { Message, MessageMentions, GuildMember, Guild, User, TextChannel, DMChannel, VoiceChannel, NewsChannel, Structures } from 'discord.js';
-import DiscordClient from '@client/DiscordClient';
+import BotClient from 'src/client/BotClient';
+import {
+  Message, MessageMentions, GuildMember, Guild, User,
+  TextChannel, DMChannel, VoiceChannel, NewsChannel, Structures,
+} from 'discord.js';
+import DiscordClient from 'src/client/DiscordClient';
 import { Database } from 'src/database';
 
 interface commandContext {
@@ -13,19 +16,32 @@ interface commandContext {
 
 export default class CommandContext {
   bot: BotClient;
+
   message: Message;
+
   mentions: MessageMentions;
+
   member: GuildMember | null;
+
   guild: Guild | null;
+
   author: User;
+
   channel: TextChannel | DMChannel | NewsChannel;
+
   client: DiscordClient;
+
   voiceChannel: VoiceChannel | null;
+
   prefix: string | null;
+
   query: string;
+
   args: string[];
+
   database: Database;
-  constructor (options: commandContext) {
+
+  constructor(options: commandContext) {
     this.bot = options.bot;
     this.message = options.message;
     this.mentions = options.message.mentions;
@@ -41,13 +57,12 @@ export default class CommandContext {
     this.database = options.bot.database;
   }
 
-  _getVoiceChannel (member: GuildMember | null, guild: Guild | null, client: DiscordClient) {
+  _getVoiceChannel(member: GuildMember | null, guild: Guild | null, client: DiscordClient) {
     if (member) {
       return member.voice.channel;
-    } else if (guild && client.voice) {
+    } if (guild && client.voice) {
       return client.voice.connections.get(guild.id)?.channel || null;
-    } else {
-      return null;
     }
+    return null;
   }
 }

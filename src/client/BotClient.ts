@@ -1,20 +1,25 @@
 import { Collection, ClientOptions } from 'discord.js';
-import DiscordClient from './DiscordClient';
 import { Logger, FileUtil } from 'src/util';
 import { Command, Event } from 'src/handlers';
 import { Database } from 'src/database';
+import { DiscordClient } from 'src/client';
 
 const fileUtil = new FileUtil();
 
 class BotClient {
   client: DiscordClient;
+
   logger: Logger;
+
   events: Collection<string, Event>;
+
   commands: Collection<string, Command>;
+
   aliases: Collection<string, string>;
+
   database: Database;
 
-  constructor (options: ClientOptions) {
+  constructor(options: ClientOptions) {
     this.client = new DiscordClient(options, this);
     this.logger = new Logger();
     this.events = new Collection();
@@ -24,7 +29,6 @@ class BotClient {
 
     fileUtil.LoadFiles('src/events', this);
     fileUtil.LoadFiles('src/commands', this);
-
   }
 }
 

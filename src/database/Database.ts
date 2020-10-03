@@ -1,27 +1,18 @@
-import BotClient from '@client/BotClient';
-import EnmapProvider from './EnmapProvider';
+import BotClient from 'src/client/BotClient';
+import EnmapProvider from 'src/database/EnmapProvider';
 import {
   Settings, settings,
   Guild, guilds,
   User, users,
-} from './models';
-
+} from 'src/database/models';
 
 class Database {
-
   public settings: EnmapProvider<Settings> = new EnmapProvider('settings');
+
   public guilds: EnmapProvider<Settings> = new EnmapProvider('guilds');
+
   public users: EnmapProvider<Settings> = new EnmapProvider('users');
-
-
-  constructor() {
-  }
-
 }
-
-
-
-
 
 /**
  * The Database used by the client
@@ -30,7 +21,6 @@ class Database {
   client: BotClient;
   fn: {};
   help: {};
-
 
   *
    * This creates the database functions

@@ -7,15 +7,15 @@ export default class Util {
    * @param {*} val The value to be checked if empty.
    * @returns {boolean} Whether it is empty or not.
    */
-  static isEmpty (val: any) {
+  static isEmpty(val: any) {
     if ([false, null, undefined].includes(val)) return true;
 
     if (typeof val === 'number') return val === 0;
     if (typeof val === 'boolean') return false;
     if (
-      typeof val === 'string' ||
-      typeof val === 'function' ||
-      Array.isArray(val)
+      typeof val === 'string'
+      || typeof val === 'function'
+      || Array.isArray(val)
     ) { return val.length === 0; }
 
     if (val instanceof Error) return val.message === '';
@@ -24,12 +24,13 @@ export default class Util {
       const type = val.toString();
 
       if (
-        type === '[object File]' ||
-        type === '[object Map]' ||
-        type === '[object Set]'
+        type === '[object File]'
+        || type === '[object Map]'
+        || type === '[object Set]'
       ) { return val.size === 0; }
 
       if (type === '[object Object]') {
+        // eslint-disable-next-line no-restricted-syntax
         for (const key in val) {
           if (Object.prototype.hasOwnProperty.call(val, key)) return false;
         }
@@ -46,11 +47,11 @@ export default class Util {
    * @param {*} val The value to be checked.
    * @returns {boolean} If the value was a promise.
    */
-  static isPromise (val: any) {
+  static isPromise(val: any) {
     return (
-      val &&
-      Object.prototype.toString.call(val) === '[object Promise]' &&
-      typeof val.then === 'function'
+      val
+      && Object.prototype.toString.call(val) === '[object Promise]'
+      && typeof val.then === 'function'
     );
   }
 
@@ -59,7 +60,7 @@ export default class Util {
    * @param {String} str The value to be checked.
    * @returns {boolean} If the value was a boolean.
    */
-  static isBoolean (str: string) {
+  static isBoolean(str: string) {
     let result;
     str === 'true'
       ? (result = true)

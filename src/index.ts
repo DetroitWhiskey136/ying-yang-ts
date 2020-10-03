@@ -1,8 +1,8 @@
 import 'dotenv/config';
-import './structures';
 import 'tsconfig-paths/register';
+import './structures';
 
-import BotClient from '@client/BotClient';
+import BotClient from 'src/client/BotClient';
 import { clientOptions } from '@util/Constants';
 
 const bot = new BotClient(clientOptions);

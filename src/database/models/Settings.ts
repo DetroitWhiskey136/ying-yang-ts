@@ -19,6 +19,6 @@ const SettingsSchema: Settings = {
   support: [],
   guilds: 0,
   restart: false,
-}
+};
 
 export default SettingsSchema;

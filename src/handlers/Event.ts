@@ -16,8 +16,11 @@ interface eventOptions {
  */
 export default class Event {
   name: string;
+
   enabled: boolean;
+
   type: string;
+
   /**
    * Creates an instance of Event.
    * @param {eventOptions} options Options for the event
@@ -27,7 +30,7 @@ export default class Event {
    *
    * @memberof Event
    */
-  constructor (options: eventOptions) {
+  constructor(options: eventOptions) {
     this.name = options.name;
     this.enabled = options.enabled;
     this.type = 'event';

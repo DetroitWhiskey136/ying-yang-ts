@@ -1,7 +1,7 @@
 import { createCanvas } from 'canvas';
 
 export default class ImageUtil {
-  static renderGuildIcon (acronym: string): Buffer {
+  static renderGuildIcon(acronym: string): Buffer {
     const width = 512;
     const height = 512;
     const canvas = createCanvas(width, height);

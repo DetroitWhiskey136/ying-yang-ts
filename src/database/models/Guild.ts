@@ -14,6 +14,6 @@ const GuildSchema: Guild = {
   joinMessage: null,
   leaveMessage: null,
   welcomeChannel: null,
-}
+};
 
 export default GuildSchema;

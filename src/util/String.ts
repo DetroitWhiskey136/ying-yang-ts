@@ -1,4 +1,4 @@
-import { REGEX } from './Constants';
+import { REGEX } from 'src/util/Constants';
 
 export default class StringUtil {
   /**
@@ -8,28 +8,28 @@ export default class StringUtil {
    * @param {Number} minLength
    * @param {Number} maxLength
    */
-  static code (str: string, lang: string, minLength: number = 0, maxLength: number = 1024) {
-    str = String(str);
+  static code(str: string, lang: string, minLength: number = 0, maxLength: number = 1024) {
     return `\`\`\`${lang}\n${str.slice(minLength, maxLength - 3) + (str.length > maxLength - 3 ? '...' : '')}\n\`\`\``;
   }
 
-  static escapeRegExp (str: string): string {
+  static escapeRegExp(str: string): string {
     return str
       .replace(REGEX.REGEX, '\\$&')
       .replace(/ -/g, '\\u002d');
   }
 
-  static toProperCase (str: string): string {
+  static toProperCase(str: string): string {
     return (String(str ? str.toLowerCase() : this)).replace(/(^|[\s\xA0])[^\s\xA0]/g, (s: string) => s.toUpperCase());
   }
 
-  static hasPlaceholder (str: string, placeholder: string, value: string): string {
+  static hasPlaceholder(str: string, placeholder: string, value: string): string {
     let result;
+    // eslint-disable-next-line no-unused-expressions
     str.includes(placeholder) ? result = str.replace(placeholder, value) : result = str;
     return result;
   }
 
-  static makeID (length: number): string {
+  static makeID(length: number): string {
     let result = '';
     const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
     const charactersLength = characters.length;
