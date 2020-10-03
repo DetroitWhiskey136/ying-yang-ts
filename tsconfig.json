@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "noUnusedLocals": false,
+    "target": "es2019",
+    "module": "commonjs",
+    "noImplicitAny": true,
+    "outDir": "dist",
+    "baseUrl": ".",
+    "paths": {
+      "@client/*": ["src/client/*"],
+      "@util/*": ["src/util/*"],
+      "@event/*": ["src/event/*"],
+      "@command/*": ["src/command/*"],
+      "@discord/*": ["src/discord/*"],
+      "@structures/*": ["src/structures/*"]
+    },
+    "resolveJsonModule": true,
+    "rootDir": "./src",
+    "skipLibCheck": true,
+    "strict": true,
+    "strictNullChecks": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "removeComments": true,
+
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}

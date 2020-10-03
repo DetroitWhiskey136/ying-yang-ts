@@ -1,0 +1,49 @@
+{
+  "name": "yin-yang-ts",
+  "version": "1.0.0",
+  "description": "This is a wip concept for typescript stuff in regards to yin-yang-class",
+  "main": "index.js",
+  "scripts": {
+    "start": "yarn build && node .",
+    "dev": "tsnd --ignore-watch node_modules --respawn --transpile-only --watch src,.env --no-notify src/index.ts",
+    "lint": "eslint --ext ts src",
+    "lint:fix": "eslint --fix --ext ts src",
+    "prebuild": "rimraf dist",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DetroitWhiskey136/ying-yang-ts.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DetroitWhiskey136/ying-yang-ts/issues"
+  },
+  "homepage": "https://github.com/DetroitWhiskey136/ying-yang-ts#readme",
+  "dependencies": {
+    "canvas": "^2.6.1",
+    "discord.js": "^12.1.1",
+    "dotenv": "^8.2.0",
+    "enmap": "^5.8.0",
+    "klaw": "^3.0.0",
+    "moment": "^2.29.0",
+    "tsconfig-paths": "^3.9.0",
+    "tspath": "^1.3.7",
+    "typescript": "^3.8.3"
+  },
+  "devDependencies": {
+    "@types/klaw": "^3.0.1",
+    "@types/node": "^14.11.2",
+    "@typescript-eslint/eslint-plugin": "^4.3.0",
+    "@typescript-eslint/parser": "^4.3.0",
+    "eslint": "^7.10.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.22.1",
+    "nodemon": "^2.0.3",
+    "prettier": "^2.1.2",
+    "rimraf": "^3.0.2",
+    "ts-node-dev": "^1.0.0-pre.63"
+  }
+}
