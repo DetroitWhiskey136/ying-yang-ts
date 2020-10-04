@@ -58,7 +58,6 @@ class EvalCommand extends Command {
       const evaluated = eval(toEval);
       res = await cleanResult(evaluated, hrStart);
     } catch (err) {
-      bot.logger.error(err.stack);
       if (['await is only valid in async function', 'await is not defined'].includes(err.message)) {
         try {
           const hrStart = process.hrtime();
@@ -66,9 +65,13 @@ class EvalCommand extends Command {
             res = await cleanResult(eval(`(async () => ${toEval})()`), hrStart);
           } else res = await cleanResult(eval(`(async () => {\n${toEval}\n})()`), hrStart);
         } catch (er) {
-          res = `Error: ${value(this.clean(er))}`;
+          bot.logger.error(er.stack);
+          res = `Error: ${value(this.clean(er.message))}`;
         }
-      } else res = `Error: ${value(this.clean(err))}`;
+      } else {
+        bot.logger.error(err.stack);
+        res = `Error: ${value(this.clean(err.message))}`;
+      }
     } finally {
       embed.setDescription(String(res));
       await channel.send(embed);

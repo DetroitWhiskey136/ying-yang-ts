@@ -44,11 +44,11 @@ export default Structures.extend('Guild', (Guild) => {
         welcomeChannel: null,
       };
 
-      await this.client.bot.database.guilds.model.ensure(this.id, options);
+      await this.client.bot.database.guilds.ensure(this.id, options);
     }
 
     async setPrefix(value: string) {
-      await this.client.bot.database.guilds.model.update(this.id, { prefix: value });
+      await this.client.bot.database.guilds.update(this.id, { prefix: value });
       const data = await
       this.client.bot.database.guilds.model.get(this.id)?.prefix;
       this.prefix = data;
@@ -64,7 +64,7 @@ export default Structures.extend('Guild', (Guild) => {
     }
 
     async setJoinMessage(value: string) {
-      await this.client.bot.database.guilds.model.update(this.id, { joinMessage: value });
+      await this.client.bot.database.guilds.update(this.id, { joinMessage: value });
       const data = await
       this.client.bot.database.guilds.model.get(this.id)?.joinMessage;
       this.joinMessage = data;
@@ -72,7 +72,7 @@ export default Structures.extend('Guild', (Guild) => {
     }
 
     async setLeaveMessage(value: string) {
-      await this.client.bot.database.guilds.model.update(this.id, { leaveMessage: value });
+      await this.client.bot.database.guilds.update(this.id, { leaveMessage: value });
       const data = await
       this.client.bot.database.guilds.model.get(this.id)?.leaveMessage;
       this.leaveMessage = data;
@@ -80,7 +80,7 @@ export default Structures.extend('Guild', (Guild) => {
     }
 
     async setWelcomeChannel(value: TextChannel) {
-      await this.client.bot.database.guilds.model.update(this.id, { welcomeChannel: value.id });
+      await this.client.bot.database.guilds.update(this.id, { welcomeChannel: value.id });
       const data = await
       this.client.bot.database.guilds.model.get(this.id)?.welcomeChannel;
       this.welcomeChannel = data;

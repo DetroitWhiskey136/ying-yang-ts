@@ -29,7 +29,7 @@ class EnmapProvider<D> {
    */
   public async get(key: string) {
     const data = this.model.get(key);
-    return data || new Error('Data not found');
+    return data || new Error(`Data not found: ${key}`);
   }
 
   /**
@@ -41,7 +41,9 @@ class EnmapProvider<D> {
    */
   public async set(key: string, value: any) {
     const data = this.model.get(key);
-    return data ? new Error('Data already exists') : this.model.set(key, value);
+    return data
+      ? new Error(`Data already exists: ${key}`)
+      : this.model.set(key, value);
   }
 
   /**
@@ -53,7 +55,9 @@ class EnmapProvider<D> {
    */
   public async update(key: string, value: any) {
     const data = this.model.get(key);
-    return data ? this.model.set(key, value) : new Error('Data not found');
+    return data
+      ? this.model.update(key, value)
+      : new Error(`Data not found: ${key}`);
   }
 
   /**
@@ -76,7 +80,9 @@ class EnmapProvider<D> {
    */
   public async delete(key: string) {
     const data = this.model.get(key);
-    return data ? this.model.delete(key) : new Error('Data not found');
+    return data
+      ? this.model.delete(key)
+      : new Error(`Data not found: ${key}`);
   }
 }
 

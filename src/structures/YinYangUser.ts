@@ -27,22 +27,19 @@ export default Structures.extend('User', (User) => {
     }
 
     async init() {
-      await this.client.bot.database.users.model.ensure(
-        this.id,
-        {
-          botAdmin: false,
-          botSupport: false,
-          level: 0,
-        },
-      );
+      const options = {
+        botAdmin: false,
+        botSupport: false,
+        level: 0,
+      };
+
+      await this.client.bot.database.users.ensure(this.id, options);
     }
 
     async setBotAdmin(value: boolean) {
-      await this.client.bot.database.users.model.update(
+      await this.client.bot.database.users.update(
         this.id,
-        {
-          botAdmin: value,
-        },
+        { botAdmin: value },
       );
       const data = await
       this.client.bot.database.users.model.get(this.id)?.botAdmin;
@@ -51,11 +48,9 @@ export default Structures.extend('User', (User) => {
     }
 
     async setBotSupport(value: boolean) {
-      await this.client.bot.database.users.model.update(
+      await this.client.bot.database.users.update(
         this.id,
-        {
-          botSupport: value,
-        },
+        { botSupport: value },
       );
       const data = await
       this.client.bot.database.users.model.get(this.id)?.botSupport;
@@ -64,11 +59,9 @@ export default Structures.extend('User', (User) => {
     }
 
     async setLevel(value: number) {
-      await this.client.bot.database.users.model.update(
+      await this.client.bot.database.users.update(
         this.id,
-        {
-          level: value,
-        },
+        { level: value },
       );
       const data = await
       this.client.bot.database.users.model.get(this.id)?.level;

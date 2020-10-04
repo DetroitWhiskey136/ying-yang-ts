@@ -9,7 +9,8 @@ export default class StringUtil {
    * @param {Number} maxLength
    */
   static code(str: string, lang: string, minLength: number = 0, maxLength: number = 1024) {
-    return `\`\`\`${lang}\n${str.slice(minLength, maxLength - 3) + (str.length > maxLength - 3 ? '...' : '')}\n\`\`\``;
+    const data = String(str);
+    return `\`\`\`${lang}\n${data.slice(minLength, maxLength - 3) + (data.length > maxLength - 3 ? '...' : '')}\n\`\`\``;
   }
 
   static escapeRegExp(str: string): string {
