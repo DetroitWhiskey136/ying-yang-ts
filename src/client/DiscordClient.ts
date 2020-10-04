@@ -1,5 +1,5 @@
 import { Client, ClientOptions } from 'discord.js';
-import { BotClient } from 'src/client';
+import BotClient from './BotClient';
 
 declare module 'discord.js' {
   interface Client {

@@ -1,11 +1,12 @@
 /* eslint-disable no-eval, no-unused-vars */
-import Embed from 'src/discord/Embed';
-import { Command } from 'src/handlers';
-import CommandContext from 'src/command/CommandContext';
+import { inspect } from 'util';
+
 import {
   Constants, Logger, StringUtil, Util,
-} from 'src/util';
-import { inspect } from 'util';
+} from '../../util';
+import Embed from '../../discord/Embed';
+import { Command } from '../../handlers';
+import CommandContext from '../../command/CommandContext';
 
 const { isEmpty, isPromise } = Util;
 const { code } = StringUtil;

@@ -1,4 +1,4 @@
-import { OPTIONS, stringResolvable, booleanResolvable } from 'src/util';
+import { stringResolvable } from '../../util';
 
 export interface Guild {
   prefix: stringResolvable;

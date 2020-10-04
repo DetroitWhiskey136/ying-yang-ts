@@ -1,10 +1,10 @@
-import BotClient from 'src/client/BotClient';
-import EnmapProvider from 'src/database/EnmapProvider';
+import BotClient from '../client/BotClient';
+import EnmapProvider from '../database/EnmapProvider';
 import {
   Settings, settings,
   Guild, guilds,
   User, users,
-} from 'src/database/models';
+} from './models';
 
 class Database {
   public settings: EnmapProvider<Settings> = new EnmapProvider('settings');

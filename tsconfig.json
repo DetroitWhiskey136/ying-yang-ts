@@ -12,11 +12,14 @@
       "@util/*": ["src/util/*"],
       "@event/*": ["src/event/*"],
       "@command/*": ["src/command/*"],
+      "@events/*": ["data/events/*"],
+      "@commands/*": ["data/commands/*"],
       "@discord/*": ["src/discord/*"],
-      "@structures/*": ["src/structures/*"]
+      "@structures/*": ["src/structures/*"],
+      "@handlers/*": ["src/handlers/*"]
     },
     "resolveJsonModule": true,
-    "rootDir": "./src",
+    "rootDir": "src",
     "skipLibCheck": true,
     "strict": true,
     "strictNullChecks": true,

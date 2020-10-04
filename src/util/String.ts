@@ -1,4 +1,4 @@
-import { REGEX } from 'src/util/Constants';
+import { REGEX } from './Constants';
 
 export default class StringUtil {
   /**

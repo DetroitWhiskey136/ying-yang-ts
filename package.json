@@ -2,9 +2,9 @@
   "name": "yin-yang-ts",
   "version": "1.0.0",
   "description": "This is a wip concept for typescript stuff in regards to yin-yang-class",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
-    "start": "yarn build && node .",
+    "start": "yarn build && set NODE_ENV=production && node .",
     "dev": "tsnd --ignore-watch node_modules --respawn --transpile-only --watch src,.env --no-notify src/index.ts",
     "lint": "eslint --ext ts src",
     "lint:fix": "eslint --fix --ext ts src",

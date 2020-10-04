@@ -1,8 +1,8 @@
 import path from 'path';
 import klaw from 'klaw';
 
-import Logger from '@util/Logger';
-import BotClient from '@client/BotClient';
+import Logger from './Logger';
+import BotClient from '../client/BotClient';
 
 const logger = new Logger();
 

@@ -1,6 +1,6 @@
 import { Structures, TextChannel } from 'discord.js';
-import { DiscordClient } from 'src/client';
-import { stringResolvable } from 'src/util/Constants';
+import { DiscordClient } from '../client';
+import { stringResolvable } from '../util/Constants';
 
 declare module 'discord.js' {
   interface Guild {

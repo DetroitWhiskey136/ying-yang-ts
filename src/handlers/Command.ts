@@ -1,5 +1,5 @@
-import Logger from 'src/util/Logger';
-import CommandContext from 'src/command/CommandContext';
+import Logger from '../util/Logger';
+import CommandContext from '../command/CommandContext';
 
 const logger = new Logger();
 

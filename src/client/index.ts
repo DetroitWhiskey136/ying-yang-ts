@@ -1,6 +1,6 @@
-import DiscordClient from 'src/client/DiscordClient';
+import DiscordClient from './DiscordClient';
 
-import BotClient from 'src/client/BotClient';
+import BotClient from './BotClient';
 
-export { default as DiscordClient } from 'src/client/DiscordClient';
-export { default as BotClient } from 'src/client/BotClient';
+export { default as DiscordClient } from './DiscordClient';
+export { default as BotClient } from './BotClient';

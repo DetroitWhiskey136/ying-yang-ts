@@ -5,7 +5,7 @@ import crypto from 'crypto';
 import {
   Guild, GuildMember, MessageAttachment, MessageEmbed, User, MessageEmbedOptions, ImageURLOptions,
 } from 'discord.js';
-import ImageUtil from 'src/util/Image';
+import ImageUtil from '../util/Image';
 
 const EmbedColors = { error: 'RED', normal: '#00FFFF', warn: '0xfdfd96' } as const;
 

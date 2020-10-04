@@ -1,6 +1,6 @@
 import { Structures } from 'discord.js';
-import { DiscordClient } from 'src/client';
-import { numberResolvable, booleanResolvable } from 'src/util/Constants';
+import { DiscordClient } from '../client';
+import { numberResolvable, booleanResolvable } from '../util/Constants';
 
 declare module 'discord.js' {
   interface User {

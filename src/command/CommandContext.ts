@@ -1,10 +1,11 @@
-import BotClient from 'src/client/BotClient';
 import {
   Message, MessageMentions, GuildMember, Guild, User,
   TextChannel, DMChannel, VoiceChannel, NewsChannel, Structures,
 } from 'discord.js';
-import DiscordClient from 'src/client/DiscordClient';
-import { Database } from 'src/database';
+
+import BotClient from '../client/BotClient';
+import DiscordClient from '../client/DiscordClient';
+import { Database } from '../database';
 
 interface commandContext {
   bot: BotClient;
