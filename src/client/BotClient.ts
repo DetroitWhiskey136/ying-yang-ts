@@ -7,18 +7,21 @@ import DiscordClient from './DiscordClient';
 const fileUtil = new FileUtil();
 
 class BotClient {
-  client: DiscordClient;
+  // #region Type Declarations
+  public client: DiscordClient;
 
-  logger: Logger;
+  public logger: Logger;
 
-  events: Collection<string, Event>;
+  public events: Collection<string, Event>;
 
-  commands: Collection<string, Command>;
+  public commands: Collection<string, Command>;
 
-  aliases: Collection<string, string>;
+  public aliases: Collection<string, string>;
 
-  database: Database;
+  public database: Database;
+  // #endregion
 
+  // #region Constructor
   constructor(options: ClientOptions) {
     this.client = new DiscordClient(options, this);
     this.logger = new Logger();
@@ -28,13 +31,10 @@ class BotClient {
     this.database = new Database();
 
     console.log();
-    if (
-      !(
-        process.env.NODE_ENV
-          ? process.env.NODE_ENV.indexOf('production') > -1
-          : false
-      )
-    ) {
+    if (!(process.env.NODE_ENV
+      ? process.env.NODE_ENV.indexOf('production') > -1
+      : false
+    )) {
       fileUtil.LoadFiles('src/events', this);
       fileUtil.LoadFiles('src/commands', this);
     } else {
@@ -42,6 +42,10 @@ class BotClient {
       fileUtil.LoadFiles('dist/commands', this);
     }
   }
+  // #endregion
+
+  // #region Methods
+  // #endregion
 }
 
 export default BotClient;
