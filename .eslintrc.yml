@@ -20,5 +20,33 @@ rules: {
   no-plusplus: 0,
   no-nested-ternary: 0,
   no-unused-expressions: 0,
-  import/extensions: 0
+  import/extensions: 0,
+  import/order: [
+    'error',
+    {
+      alphabetize: {
+        order: 'asc',
+      },
+      groups: [
+        'builtin',
+        'external',
+        'index',
+        'internal',
+        'parent',
+        'sibling',
+      ],
+    }
+  ],
+  sort-keys: [
+    'error',
+    'asc',
+    {
+      caseSensitive: true,
+      minKeys: 2,
+      natural: false,
+    },
+  ],
+  sort-vars: [
+    'error',
+  ],
 }

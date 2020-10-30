@@ -1,7 +1,7 @@
 import { Collection, ClientOptions } from 'discord.js';
-import { Logger, FileUtil } from '../util';
-import { Command, Event } from '../handlers';
 import { Database } from '../database';
+import { Command, Event } from '../handlers';
+import { Logger, FileUtil } from '../util';
 import DiscordClient from './DiscordClient';
 
 const fileUtil = new FileUtil();
