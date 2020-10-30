@@ -27,7 +27,7 @@ class EnmapProvider<D> {
    * @param {string} key
    * @memberof EnmapProvider
    */
-  public async get(key: string) {
+  public get(key: string) {
     const data = this.model.get(key);
     return data || new Error(`Data not found: ${key}`);
   }
@@ -39,7 +39,7 @@ class EnmapProvider<D> {
    * @param {*} value
    * @memberof EnmapProvider
    */
-  public async set(key: string, value: any) {
+  public set(key: string, value: any) {
     const data = this.model.get(key);
     return data
       ? new Error(`Data already exists: ${key}`)
@@ -53,7 +53,7 @@ class EnmapProvider<D> {
    * @param {*} value
    * @memberof EnmapProvider
    */
-  public async update(key: string, value: any) {
+  public update(key: string, value: any) {
     const data = this.model.get(key);
     return data
       ? this.model.update(key, value)
@@ -67,7 +67,7 @@ class EnmapProvider<D> {
    * @param {*} value
    * @memberof EnmapProvider
    */
-  public async ensure(key: string, value: any) {
+  public ensure(key: string, value: any) {
     const data = this.model.get(key);
     return data || this.model.set(key, value);
   }
@@ -78,7 +78,7 @@ class EnmapProvider<D> {
    * @param {string} key
    * @memberof EnmapProvider
    */
-  public async delete(key: string) {
+  public delete(key: string) {
     const data = this.model.get(key);
     return data
       ? this.model.delete(key)

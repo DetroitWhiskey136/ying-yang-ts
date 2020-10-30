@@ -21,9 +21,9 @@ export default Structures.extend('User', (User) => {
     constructor(client: DiscordClient, data: object) {
       super(client, data);
       this.init();
-      this.botAdmin = client.bot.database.users.model.get(this.id)?.botAdmin;
-      this.botSupport = client.bot.database.users.model.get(this.id)?.botSupport;
-      this.level = client.bot.database.users.model.get(this.id)?.level;
+      this.botAdmin = client.bot.database.users.get(this.id)?.botAdmin;
+      this.botSupport = client.bot.database.users.get(this.id)?.botSupport;
+      this.level = client.bot.database.users.get(this.id)?.level;
     }
 
     async init() {
@@ -42,9 +42,9 @@ export default Structures.extend('User', (User) => {
         { botAdmin: value },
       );
       const data = await
-      this.client.bot.database.users.model.get(this.id)?.botAdmin;
+      this.client.bot.database.users.get(this.id)?.botAdmin;
       this.botAdmin = data;
-      return data;
+      return this;
     }
 
     async setBotSupport(value: boolean) {
@@ -53,7 +53,7 @@ export default Structures.extend('User', (User) => {
         { botSupport: value },
       );
       const data = await
-      this.client.bot.database.users.model.get(this.id)?.botSupport;
+      this.client.bot.database.users.get(this.id)?.botSupport;
       this.botSupport = data;
       return data;
     }
@@ -64,7 +64,7 @@ export default Structures.extend('User', (User) => {
         { level: value },
       );
       const data = await
-      this.client.bot.database.users.model.get(this.id)?.level;
+      this.client.bot.database.users.get(this.id)?.level;
       this.level = data;
       return data;
     }

@@ -4,8 +4,8 @@
   "description": "This is a wip concept for typescript stuff in regards to yin-yang-class",
   "main": "dist/index.js",
   "scripts": {
-    "start": "yarn build && set NODE_ENV=production && node .",
-    "dev": "tsnd --ignore-watch node_modules --respawn --transpile-only --watch src,.env --no-notify src/index.ts",
+    "start": "yarn build && cross-env NODE_ENV=production node .",
+    "dev": "cross-env NODE_ENV=development tsnd --ignore-watch node_modules --respawn --transpile-only --watch src,.env --no-notify src/index.ts",
     "lint": "eslint --ext ts src",
     "lint:fix": "eslint --fix --ext ts src",
     "prebuild": "rimraf dist",
@@ -18,11 +18,14 @@
   "keywords": [],
   "author": "",
   "license": "MIT",
+  "private": true,
   "bugs": {
     "url": "https://github.com/DetroitWhiskey136/ying-yang-ts/issues"
   },
   "homepage": "https://github.com/DetroitWhiskey136/ying-yang-ts#readme",
   "dependencies": {
+    "@sentry/node": "^5.27.1",
+    "@sentry/tracing": "^5.27.1",
     "canvas": "^2.6.1",
     "discord.js": "^12.1.1",
     "dotenv": "^8.2.0",
@@ -35,7 +38,7 @@
   },
   "devDependencies": {
     "@types/klaw": "^3.0.1",
-    "@types/node": "^14.11.2",
+    "@types/node": "^14.14.6",
     "@typescript-eslint/eslint-plugin": "^4.3.0",
     "@typescript-eslint/parser": "^4.3.0",
     "eslint": "^7.10.0",
