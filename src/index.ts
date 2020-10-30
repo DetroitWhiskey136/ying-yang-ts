@@ -1,6 +1,4 @@
 import * as Sentry from '@sentry/node';
-import * as Tracing from '@sentry/tracing';
-import http from 'http';
 import 'dotenv/config';
 import 'tsconfig-paths/register';
 import './structures';
