@@ -41,13 +41,29 @@ bot.client
     bot.logger.error(error.message);
     Sentry.captureException(error);
   });
+
+if (process.env.NODE_ENV !== 'production') {
+  bot.client.on('debug', (debug) => {
+    bot.logger.debug(debug);
+    // Sentry.captureMessage(debug);
+  });
+}
 // #endregion
 
 // #region Bot Login
-bot.client.login(process.env.TOKEN).then(() => {
-  if (process.env.DEBUG) bot.logger.debug('Using token to login');
-}).catch((error) => {
-  bot.logger.error(`${error.name}:\n  ${error.message}\n${error.stack.replace(`${error.name}: ${error.message}`, '')}
-    `);
-});
+bot.client
+  .login(process.env.TOKEN)
+  .then(() => {
+    bot.logger.debug('Using token to login');
+  })
+  .catch((error) => {
+    bot.logger.error(
+      `${error.name}:\n  ${error.message}\n${error.stack.replace(
+        `${error.name}: ${error.message}`, '',
+      )}`,
+    );
+  })
+  .finally(() => {
+    bot.logger.info('Bot is Ready');
+  });
 // #endregion
