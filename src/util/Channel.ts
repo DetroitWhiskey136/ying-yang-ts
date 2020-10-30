@@ -5,7 +5,8 @@ import {
 type channelResolvable =
   GuildChannel | TextChannel | VoiceChannel | CategoryChannel |
   Channel | NewsChannel | DMChannel | null;
-export default class ChannelUtils {
+
+class ChannelUtils {
   static resolveTextChannel(channel: channelResolvable) {
     if (!((channel): channel is TextChannel => channel?.type === 'text')(channel)) return;
 
@@ -13,3 +14,5 @@ export default class ChannelUtils {
     return channel;
   }
 }
+
+export default ChannelUtils;

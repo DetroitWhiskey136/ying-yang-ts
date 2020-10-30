@@ -2,6 +2,7 @@ import { Structures } from 'discord.js';
 import { DiscordClient } from '../client';
 import { numberResolvable, booleanResolvable } from '../util/Constants';
 
+// #region Scope Declaration
 declare module 'discord.js' {
   interface User {
     botAdmin: booleanResolvable;
@@ -9,15 +10,18 @@ declare module 'discord.js' {
     level: numberResolvable;
   }
 }
-
+// #endregion
 export default Structures.extend('User', (User) => {
   class YinYangUser extends User {
+    // #region Type Declarations
     botAdmin: booleanResolvable;
 
     botSupport: booleanResolvable;
 
     level: numberResolvable;
+    // #endregion
 
+    // #region Constructor
     constructor(client: DiscordClient, data: object) {
       super(client, data);
       this.init();
@@ -25,7 +29,9 @@ export default Structures.extend('User', (User) => {
       this.botSupport = client.bot.database.users.get(this.id)?.botSupport;
       this.level = client.bot.database.users.get(this.id)?.level;
     }
+    // #endregion
 
+    // #region Methods
     async init() {
       const options = {
         botAdmin: false,
@@ -68,6 +74,7 @@ export default Structures.extend('User', (User) => {
       this.level = data;
       return data;
     }
+    // #endregion
   }
   return YinYangUser;
 });

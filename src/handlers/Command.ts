@@ -3,6 +3,7 @@ import CommandContext from '../command/CommandContext';
 
 const logger = new Logger();
 
+// #region Scope Declaration
 interface commandOptions {
   name: string;
   description: string;
@@ -12,8 +13,10 @@ interface commandOptions {
   guildOnly: boolean;
   aliases: string[];
 }
+// #endregion
 
 export default class Command {
+  // #region Type Declarations
   name: string;
 
   description: string;
@@ -26,10 +29,12 @@ export default class Command {
 
   guildOnly: boolean;
 
-  aliases: string[];
+  aliases: Array<string>;
 
   type: string;
+  // #endregion
 
+  // #region Constructor
   constructor(options: commandOptions) {
     this.name = options.name;
     this.description = options.description;
@@ -40,7 +45,9 @@ export default class Command {
     this.aliases = options.aliases || [];
     this.type = 'command';
   }
+  // #endregion
 
+  // #region Methods
   /**
    * Gets called if the command doesn't have a run method.
    * @memberof Command
@@ -56,4 +63,5 @@ export default class Command {
       logger.error(error.message, '\n', error.stack);
     }
   }
+  // #endregion
 }

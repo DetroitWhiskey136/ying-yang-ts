@@ -2,6 +2,7 @@ import { Structures, TextChannel } from 'discord.js';
 import { DiscordClient } from '../client';
 import { stringResolvable } from '../util/Constants';
 
+// #region Scope Declaration
 declare module 'discord.js' {
   interface Guild {
     prefix: stringResolvable;
@@ -11,9 +12,11 @@ declare module 'discord.js' {
     welcomeChannel: stringResolvable;
   }
 }
+// #endregion
 
 export default Structures.extend('Guild', (Guild) => {
   class YinYangGuild extends Guild {
+    // #region Type Declarations
     prefix: stringResolvable;
 
     log: stringResolvable;
@@ -23,7 +26,9 @@ export default Structures.extend('Guild', (Guild) => {
     leaveMessage: stringResolvable;
 
     welcomeChannel: stringResolvable;
+    // #endregion
 
+    // #region Constructor
     constructor(client: DiscordClient, data: any) {
       super(client, data);
       this.init();
@@ -34,7 +39,9 @@ export default Structures.extend('Guild', (Guild) => {
       this.leaveMessage = client.bot.database.guilds.get(this.id)?.leaveMessage;
       this.welcomeChannel = client.bot.database.guilds.get(this.id)?.welcomeChannel;
     }
+    // #endregion
 
+    // #region Methods
     async init() {
       const options = {
         prefix: '/',
@@ -86,6 +93,7 @@ export default Structures.extend('Guild', (Guild) => {
       this.welcomeChannel = data;
       return data;
     }
+    // #endregion
   }
 
   return YinYangGuild;

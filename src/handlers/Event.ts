@@ -1,3 +1,4 @@
+// #region Scope Declaration
 /**
  * Set the types of the various options in the eventOptions
  * @param name string
@@ -9,18 +10,22 @@ interface eventOptions {
   name: string,
   enabled: boolean,
 }
+// #endregion
 
 /**
  * The Event Class.
  * @class Event
  */
 export default class Event {
+  // #region Type Declarations
   name: string;
 
   enabled: boolean;
 
   type: string;
+  // #endregion
 
+  // #region Constructor
   /**
    * Creates an instance of Event.
    * @param {eventOptions} options Options for the event
@@ -35,4 +40,9 @@ export default class Event {
     this.enabled = options.enabled;
     this.type = 'event';
   }
+  // #endregion
+
+  // #region Methods
+
+  // #endregion
 }

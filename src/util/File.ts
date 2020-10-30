@@ -11,8 +11,11 @@ const logger = new Logger();
  * @class FileUtil
  */
 class FileUtil {
+  // #region Type Declarations
   message: string | null;
+  // #endregion
 
+  // #region Constructor
   /**
    * Creates an instance of FileUtil.
    * @memberof FileUtil
@@ -20,7 +23,9 @@ class FileUtil {
   constructor() {
     this.message = null;
   }
+  // #endregion
 
+  // #region Methods
   /**
    * Load all files in a folder and
    * gets them ready for the loadFile method
@@ -86,5 +91,6 @@ class FileUtil {
       this.message = `Unable to load command ${fileName}: ${error.message}`;
     }
   }
+  // #endregion
 }
 export default FileUtil;

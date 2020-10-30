@@ -1,5 +1,6 @@
 import fs from 'fs';
 
+// #region Scope Declaration
 /**
  * The type definitions for Logger Types
  * @interface LoggerTypes
@@ -39,6 +40,7 @@ const TerminalFormatter = {
     return `${color + text}\x1b[0m`;
   },
 };
+// #endregion
 
 /**
  * The Logger Class, every project should have this.
@@ -46,6 +48,7 @@ const TerminalFormatter = {
  * @class Logger
  */
 export default class Logger {
+  // #region Methods
   /**
    * Adds 0 to the beginning of the number if less than 10
    * @private
@@ -209,4 +212,5 @@ export default class Logger {
     console.log(Logger.type('ERROR')[0], tm[0], ...content);
     Logger.appendLogs(tm, `${Logger.type('ERROR')[1]} ${tm[2]} ${content.join(' ')}`);
   }
+  // #endregion
 }

@@ -4,12 +4,15 @@ import { Warning } from '../structures';
 import { StringUtil } from '../util';
 
 class GuildMemberWarningManager {
+  // #region Type Declarations
   member: GuildMember;
 
   guild: Guild;
 
   cache: Collection<string, Warning>;
+  // #endregion
 
+  // #region Constructor
   constructor(member: GuildMember) {
     this.member = member;
     this.guild = member.guild;
@@ -17,7 +20,9 @@ class GuildMemberWarningManager {
 
     this.init();
   }
+  // #endregion
 
+  // #region Methods
   private init() {
     const { warnings } = this.member.client.bot.database.members.get(
       this.member.id,
@@ -115,6 +120,7 @@ class GuildMemberWarningManager {
     this.init();
     return this.member.warnings.cache.get(id);
   }
+  // #endregion
 }
 
 export default GuildMemberWarningManager;

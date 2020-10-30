@@ -1,6 +1,7 @@
 import { REGEX } from './Constants';
 
 export default class StringUtil {
+  // #region Methods
   /**
    * If string is longer than max length will cut string down
    * @param {String} str
@@ -41,4 +42,5 @@ export default class StringUtil {
 
     return result;
   }
+  // #endregion
 }

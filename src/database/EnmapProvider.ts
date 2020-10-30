@@ -1,25 +1,27 @@
+// eslint-disable-next-line max-classes-per-file
 import Enmap from 'enmap';
-import path from 'path';
-import fs from 'fs';
 
-const dataDir = `${process.cwd()}${path.sep}${path.join('data', 'enmap_data')}`;
-
-if (!fs.existsSync(dataDir)) {
-  fs.mkdirSync(dataDir);
-}
+// #region Scope Declaration
+// #endregion
 
 class EnmapProvider<D> {
+  // #region Type Declarations
   public model: any;
 
-  public help: any;
+  public help: object;
 
   __proto__: any;
+  // #endregion
 
-  constructor(model: any) {
-    this.model = new Enmap(model, { dataDir });
+  // #region Constructor
+  constructor(model: Enmap) {
+    this.model = model;
     // eslint-disable-next-line no-proto
     this.help = this.__proto__;
   }
+  // #endregion
+
+  // #region Methods
 
   /**
    * Gets a document from the db, returns an error if not found
@@ -68,8 +70,7 @@ class EnmapProvider<D> {
    * @memberof EnmapProvider
    */
   public ensure(key: string, value: any) {
-    const data = this.model.get(key);
-    return data || this.model.set(key, value);
+    return this.model.ensure(key, value);
   }
 
   /**
@@ -84,6 +85,7 @@ class EnmapProvider<D> {
       ? this.model.delete(key)
       : new Error(`Data not found: ${key}`);
   }
+  // #endregion
 }
 
 export default EnmapProvider;

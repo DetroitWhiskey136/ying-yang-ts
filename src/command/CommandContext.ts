@@ -1,12 +1,13 @@
 import {
   Message, MessageMentions, GuildMember, Guild, User,
-  TextChannel, DMChannel, VoiceChannel, NewsChannel, Structures,
+  TextChannel, DMChannel, VoiceChannel, NewsChannel,
 } from 'discord.js';
 
 import BotClient from '../client/BotClient';
 import DiscordClient from '../client/DiscordClient';
 import { Database } from '../database';
 
+// #region Scope Declaration
 interface commandContext {
   bot: BotClient;
   message: Message;
@@ -14,34 +15,38 @@ interface commandContext {
   query: string;
   args: string[];
 }
+// #endregion
 
 export default class CommandContext {
-  bot: BotClient;
+  // #region Type Declarations
+  public bot: BotClient;
 
-  message: Message;
+  public message: Message;
 
-  mentions: MessageMentions;
+  public mentions: MessageMentions;
 
-  member: GuildMember | null;
+  public member: GuildMember | null;
 
-  guild: Guild | null;
+  public guild: Guild | null;
 
-  author: User;
+  public author: User;
 
-  channel: TextChannel | DMChannel | NewsChannel;
+  public channel: TextChannel | DMChannel | NewsChannel;
 
-  client: DiscordClient;
+  public client: DiscordClient;
 
-  voiceChannel: VoiceChannel | null;
+  public voiceChannel: VoiceChannel | null;
 
-  prefix: string | null;
+  public prefix: string | null;
 
-  query: string;
+  public query: string;
 
-  args: string[];
+  public args: Array<string>;
 
-  database: Database;
+  public database: Database;
+  // #endregion
 
+  // #region Constructor
   constructor(options: commandContext) {
     this.bot = options.bot;
     this.message = options.message;
@@ -51,14 +56,16 @@ export default class CommandContext {
     this.author = options.message.author;
     this.channel = options.message.channel;
     this.client = options.bot.client;
-    this.voiceChannel = this._getVoiceChannel(this.member, this.guild, this.client);
+    this.voiceChannel = this.getVoiceChannel(this.member, this.guild, this.client);
     this.prefix = options.prefix || null;
     this.query = options.query;
     this.args = options.args;
     this.database = options.bot.database;
   }
+  // #endregion
 
-  _getVoiceChannel(member: GuildMember | null, guild: Guild | null, client: DiscordClient) {
+  // #region Methods
+  private getVoiceChannel(member: GuildMember | null, guild: Guild | null, client: DiscordClient) {
     if (member) {
       return member.voice.channel;
     } if (guild && client.voice) {
@@ -66,4 +73,5 @@ export default class CommandContext {
     }
     return null;
   }
+  // #endregion
 }

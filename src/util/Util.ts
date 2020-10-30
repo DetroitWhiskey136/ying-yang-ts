@@ -2,6 +2,7 @@
  * @class Utils
  */
 export default class Util {
+  // #region Methods
   /**
    * Checks if something is empty as in if their size/length is 0.
    * @param {*} val The value to be checked if empty.
@@ -69,4 +70,5 @@ export default class Util {
         : (result = str);
     return result;
   }
+  // #endregion
 }

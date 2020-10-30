@@ -1,7 +1,7 @@
 import { Client, ClientOptions } from 'discord.js';
 import BotClient from './BotClient';
 
-// #region Module Declaration
+// #region Scope Declaration
 declare module 'discord.js' {
   interface Client {
     bot: BotClient;

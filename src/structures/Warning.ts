@@ -3,6 +3,7 @@ import { MemberWarning } from 'src/database';
 import { DiscordClient } from '../client';
 
 class Warning {
+  // #region Type Declarations
   client: DiscordClient;
 
   guild: Guild
@@ -16,7 +17,9 @@ class Warning {
   points: number;
 
   moderator: GuildMember | undefined | string;
+  // #endregion
 
+  // #region Constructor
   constructor(client: DiscordClient, data: MemberWarning, member: GuildMember) {
     this.client = client;
     this.guild = member.guild;
@@ -27,7 +30,9 @@ class Warning {
     this.moderator = undefined;
     this.getMod(data.moderator);
   }
+  // #endregion
 
+  // #region Methods
   private getMod(moderator: string) {
     this.guild.members.fetch(moderator).then((mod) => {
       this.moderator = mod;
@@ -35,6 +40,7 @@ class Warning {
       this.moderator = moderator;
     });
   }
+  // #endregion
 }
 
 export default Warning;

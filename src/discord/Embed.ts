@@ -9,6 +9,7 @@ import ImageUtil from '../util/Image';
 
 const EmbedColors = { error: 'RED', normal: '#00FFFF', warn: '0xfdfd96' } as const;
 
+// #region Scope Declaration
 type EmbedResolvable = User | GuildMember
 type EmbedInput = Guild | GuildMember | User | string;
 
@@ -25,13 +26,17 @@ interface FieldOptions {
   options?: object;
   value: string | number;
 }
+// #endregion
 
 /**
  * Represents a rich embed in a message.
  */
 export default class Embed extends MessageEmbed {
+  // #region Type Declarations
   options: EmbedOptions;
+  // #endregion
 
+  // #region Constructor
   /**
    * @param embedResolvable The embed resolvable
    * @param options The options for the embed
@@ -63,7 +68,9 @@ export default class Embed extends MessageEmbed {
 
     this.setColor(color);
   }
+  // #endregion
 
+  // #region Methods
   setTemplate(user: User): void {
     if (this.options.autoAuthor) this.setAuthor(user);
     if (this.options.autoFooter) this.setFooter(user.tag);
@@ -226,4 +233,5 @@ export default class Embed extends MessageEmbed {
   setImage(url: EmbedInput): this {
     return super.setImage(this.resolveImage(url));
   }
+  // #endregion
 }

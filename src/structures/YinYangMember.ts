@@ -2,23 +2,30 @@ import { Structures, Guild } from 'discord.js';
 import { GuildMemberWarningManager } from 'src/managers';
 import { DiscordClient } from '../client';
 
+// #region Scope Declaration
 declare module 'discord.js' {
   interface GuildMember {
     warnings: GuildMemberWarningManager;
   }
 }
+// #endregion
 
 export default Structures.extend('GuildMember', (GuildMember) => {
   class YinYangMember extends GuildMember {
+    // #region Type Declarations
     warnings: GuildMemberWarningManager;
+    // #endregion
 
+    // #region Constructor
     constructor(client: DiscordClient, data: object, guild: Guild) {
       super(client, data, guild);
       this.init();
 
       this.warnings = new GuildMemberWarningManager(this);
     }
+    // #endregion
 
+    // #region Methods
     private async init() {
       const { id } = this.guild;
       const options = {
@@ -39,9 +46,7 @@ export default Structures.extend('GuildMember', (GuildMember) => {
         await this.client.bot.database.members.update(this.id, options);
       }
     }
-
-    // member.warnings.add (requires a class)
-    // member.addWarnings (member methods)
+    // #endregion
   }
   return YinYangMember;
 });
