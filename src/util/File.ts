@@ -31,6 +31,7 @@ class FileUtil {
    * @static
    * @param {string} url The folder of files you want to load
    * @param {BotClient} bot The BotClient object
+   * @returns {void}
    * @memberof FileUtil
    */
   public LoadFiles(url: string, bot: BotClient) {
@@ -53,6 +54,7 @@ class FileUtil {
    * @param {string} filePath The files path.
    * @param {string} fileName The files name.
    * @param {BotClient} bot The BotClient.
+   * @returns {Promise<void>} A void Promise
    * @memberof FileUtil
    */
   private async LoadFile(filePath: string, fileName: string, bot: BotClient) {

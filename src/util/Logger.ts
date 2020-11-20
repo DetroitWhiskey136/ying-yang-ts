@@ -87,8 +87,9 @@ export default class Logger {
    * Writes to the end of the log file
    * @private
    * @static
-   * @param {string[]} timestamp
-   * @param {...any[]} content
+   * @param {string[]} timestamp A timestamp.
+   * @param {...any[]} content The content.
+   * @returns {void}
    * @memberof Logger
    */
   private static appendLogs(timestamp: string[], ...content: any[]): void {
@@ -102,11 +103,11 @@ export default class Logger {
    * Creates a type for colors and stuff
    * @private
    * @static
-   * @param {keyof object} type Type of message
-   * @returns {string[]} String Array
+   * @param {keyofLoggerTypes} loggerType The Logger Type.
+   * @returns {Array<string>} String Array
    * @memberof Logger
    */
-  private static type(type: keyof LoggerTypes): string[] {
+  private static type(loggerType: keyof LoggerTypes): string[] {
     const types: LoggerTypes = {
       DEBUG: [
         TerminalFormatter.bold(
@@ -150,13 +151,14 @@ export default class Logger {
       ],
     };
 
-    return types[type];
+    return types[loggerType];
   }
 
   /**
    * Sends a Log message
    * @static
-   * @param {...any[]} content
+   * @param {...any[]} content The content.
+   * @returns {void}
    * @memberof Logger
    */
   public log(...content: any[]): void {
@@ -168,7 +170,8 @@ export default class Logger {
   /**
    * Sends a Info message
    * @static
-   * @param {...any[]} content
+   * @param {...any[]} content The content.
+   * @returns {void}
    * @memberof Logger
    */
   public info(...content: any[]): void {
@@ -180,7 +183,8 @@ export default class Logger {
   /**
    * Sends a Debug message
    * @static
-   * @param {any[]} content
+   * @param {any[]} content The content.
+   * @returns {void}
    * @memberof Logger
    */
   public debug(...content: any[]): void {
@@ -192,7 +196,8 @@ export default class Logger {
   /**
    * Sends a Warn message
    * @static
-   * @param {any[]} content
+   * @param {any[]} content The content.
+   * @returns {void}
    * @memberof Logger
    */
   public warn(...content: any[]): void {
@@ -204,7 +209,8 @@ export default class Logger {
   /**
    * Sends a Error message
    * @static
-   * @param {any[]} content
+   * @param {any[]} content The content.
+   * @returns {void}
    * @memberof Logger
    */
   public error(...content: any[]): void {
