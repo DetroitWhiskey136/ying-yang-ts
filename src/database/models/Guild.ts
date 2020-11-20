@@ -9,10 +9,10 @@ export interface Guild {
 }
 
 const GuildSchema: Guild = {
-  prefix: '/',
-  log: null,
   joinMessage: null,
   leaveMessage: null,
+  log: null,
+  prefix: '/',
   welcomeChannel: null,
 };
 

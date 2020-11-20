@@ -1,12 +1,12 @@
 /* eslint-disable no-eval, no-unused-vars */
 import { inspect } from 'util';
 
+import CommandContext from '../../command/CommandContext';
+import Embed from '../../discord/Embed';
+import { Command } from '../../handlers';
 import {
   Constants, Logger, StringUtil, Util,
 } from '../../util';
-import Embed from '../../discord/Embed';
-import { Command } from '../../handlers';
-import CommandContext from '../../command/CommandContext';
 
 const { isEmpty, isPromise } = Util;
 const { code } = StringUtil;
@@ -66,11 +66,11 @@ class EvalCommand extends Command {
             res = await cleanResult(eval(`(async () => ${toEval})()`), hrStart);
           } else res = await cleanResult(eval(`(async () => {\n${toEval}\n})()`), hrStart);
         } catch (er) {
-          bot.logger.error(er.stack);
+          client.emit('error', er);
           res = `Error: ${value(this.clean(er.message))}`;
         }
       } else {
-        bot.logger.error(err.stack);
+        client.emit('error', err);
         res = `Error: ${value(this.clean(err.message))}`;
       }
     } finally {

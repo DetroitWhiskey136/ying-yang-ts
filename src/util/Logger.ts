@@ -33,11 +33,11 @@ const TerminalFormatter = {
   bold(text: string): string {
     return `\x1b[1m${text}\x1b[0m`;
   },
-  underlined(text: string): string {
-    return `\x1b[4m${text}\x1b[0m`;
-  },
   color(color: Colors, text: string): string {
     return `${color + text}\x1b[0m`;
+  },
+  underlined(text: string): string {
+    return `\x1b[4m${text}\x1b[0m`;
   },
 };
 // #endregion
@@ -108,13 +108,21 @@ export default class Logger {
    */
   private static type(type: keyof LoggerTypes): string[] {
     const types: LoggerTypes = {
-      LOG: [
+      DEBUG: [
         TerminalFormatter.bold(
           TerminalFormatter.color(
-            Colors.FgGreen, 'LOG',
+            Colors.FgLightMagenta, 'DEBUG',
           ),
         ),
-        'LOG',
+        'DEBUG',
+      ],
+      ERROR: [
+        TerminalFormatter.bold(
+          TerminalFormatter.color(
+            Colors.FgRed, 'ERROR',
+          ),
+        ),
+        'ERROR',
       ],
       INFO: [
         TerminalFormatter.bold(
@@ -124,13 +132,13 @@ export default class Logger {
         ),
         'INFO',
       ],
-      DEBUG: [
+      LOG: [
         TerminalFormatter.bold(
           TerminalFormatter.color(
-            Colors.FgLightMagenta, 'DEBUG',
+            Colors.FgGreen, 'LOG',
           ),
         ),
-        'DEBUG',
+        'LOG',
       ],
       WARN: [
         TerminalFormatter.bold(
@@ -139,14 +147,6 @@ export default class Logger {
           ),
         ),
         'WARN',
-      ],
-      ERROR: [
-        TerminalFormatter.bold(
-          TerminalFormatter.color(
-            Colors.FgRed, 'ERROR',
-          ),
-        ),
-        'ERROR',
       ],
     };
 

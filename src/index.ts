@@ -14,20 +14,19 @@ const bot = new BotClient(clientOptions);
 
 // #region Sentry
 Sentry.init({
-  release: `${process.env.npm_package_name}@${process.env.npm_package_version}`,
-  environment: 'development',
-  dsn: process.env.SentryDSN,
-  tracesSampleRate: 1.0,
   attachStacktrace: true,
-
+  dsn: process.env.SentryDSN,
+  environment: 'development',
   integrations: [
     new Sentry.Integrations.Http({ tracing: true }),
   ],
+  release: `${process.env.npm_package_name}@${process.env.npm_package_version}`,
+  tracesSampleRate: 1.0,
 });
 
 const transaction = Sentry.startTransaction({
-  op: 'transaction',
   name: 'My Transaction',
+  op: 'transaction',
 });
 
 Sentry.configureScope((scope) => {

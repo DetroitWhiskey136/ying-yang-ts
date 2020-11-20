@@ -38,9 +38,9 @@ export default class Embed extends MessageEmbed {
 
   // #region Constructor
   /**
-   * @param embedResolvable The embed resolvable
-   * @param options The options for the embed
-   * @param data The data of the embed
+   * @param {EmbedResolvable | null} embedResolvable The embed resolvable.
+   * @param {Partial<EmbedOptions>} options The options for the embed.
+   * @param {MessageEmbed | MessageEmbedOptions} data The data of the embed.
    */
   constructor(
     embedResolvable?: EmbedResolvable | null,
@@ -79,8 +79,8 @@ export default class Embed extends MessageEmbed {
 
   /**
    * Resolves a name
-   * @param resolvable The resolvable to be resolved
-   * @returns The resolved name
+   * @param {EmbedInput} resolvable The resolvable to be resolved
+   * @returns {string} The resolved name
    */
   static resolveName(resolvable: EmbedInput): string {
     if (resolvable instanceof User) return resolvable.tag;
@@ -89,6 +89,13 @@ export default class Embed extends MessageEmbed {
     return resolvable;
   }
 
+  /**
+   * No idea what this does probably shouldn't touch it.
+   * @static
+   * @param {*} resolvable The resolvable
+   * @returns {boolean} A Boolean
+   * @memberof Embed
+   */
   static hasSupport(resolvable: any): boolean {
     return resolvable instanceof GuildMember
       || resolvable instanceof GuildMember
@@ -97,8 +104,8 @@ export default class Embed extends MessageEmbed {
 
   /**
    * Resolves an icon
-   * @param resolvable The resolvable to be resolved
-   * @returns The resolved image url
+   * @param {EmbedInput} resolvable The resolvable to be resolved
+   * @returns {string} The resolved image url
    */
   resolveImage(resolvable: EmbedInput): string {
     const o: ImageURLOptions & { dynamic?: boolean } = { dynamic: true, format: 'png', size: 4096 };
@@ -117,6 +124,7 @@ export default class Embed extends MessageEmbed {
 
   /**
    * Sets the color of this embed to red
+   * @returns {this} This?
    */
   setError(): this {
     return this.setColor(EmbedColors.error);
@@ -124,9 +132,10 @@ export default class Embed extends MessageEmbed {
 
   /**
    * Sets the author of this embed.
-   * @param name The name of the author
-   * @param iconURL The icon URL of the author
-   * @param url The URL of the author
+   * @param {EmbedInput} name The name of the author
+   * @param {EmbedInput | null} iconURL The icon URL of the author
+   * @param {EmbedInput | null} url The URL of the author
+   * @returns {this} This?
    */
   setAuthor(
     name: EmbedInput,
@@ -146,8 +155,9 @@ export default class Embed extends MessageEmbed {
 
   /**
    * Sets the footer of this embed.
-   * @param text The text of the footer
-   * @param iconURL The icon URL of the footer
+   * @param {EmbedInput} text The text of the footer
+   * @param {EmbedInput} iconURL The icon URL of the footer
+   * @returns {this} This?
    */
   setFooter(text: EmbedInput, iconURL: EmbedInput | null = null): this {
     const parseText = Embed.resolveName(text);
@@ -163,7 +173,8 @@ export default class Embed extends MessageEmbed {
 
   /**
    * Sets the description of this embed.
-   * @param description The description
+   * @param {string} description The description
+   * @returns {this} This?
    */
   setDescription(description: string): this {
     return super.setDescription(description);
@@ -171,8 +182,8 @@ export default class Embed extends MessageEmbed {
 
   /**
    * Sets the title of this embed.
-   * @param title The title
-   * @param options The options of the title
+   * @param {string} title The title
+   * @returns {this} This?
    */
   setTitle(title: string): this {
     return super.setTitle(title);
@@ -180,9 +191,10 @@ export default class Embed extends MessageEmbed {
 
   /**
    * Adds a field to the embed (max 25).
-   * @param name The name of this field
-   * @param value The value of this field
-   * @param inline If this field will be displayed inline
+   * @param {string | number} name The name of this field
+   * @param {string | number} value The value of this field
+   * @param {boolean} inline If this field will be displayed inline
+   * @returns {this} This?
    */
   addField(
     name: string | number,
@@ -199,7 +211,8 @@ export default class Embed extends MessageEmbed {
 
   /**
    * Adds fields to the embed (max 25).
-   * @param fields The fields to add
+   * @param {FieldOptions[]} fields The fields to add
+   * @returns {this} This?
    */
   addFields(...fields: FieldOptions[]): this {
     // eslint-disable-next-line no-restricted-syntax
@@ -220,7 +233,8 @@ export default class Embed extends MessageEmbed {
 
   /**
    * Sets the thumbnail of this embed.
-   * @param url The URL of the thumbnail
+   * @param {EmbedInput} url The URL of the thumbnail
+   * @returns {this} This?
    */
   setThumbnail(url: EmbedInput): this {
     return super.setThumbnail(this.resolveImage(url));
@@ -228,7 +242,8 @@ export default class Embed extends MessageEmbed {
 
   /**
    * Sets the image of this embed.
-   * @param url The URL of the image
+   * @param {EmbedInput} url The URL of the image
+   * @returns {this} This?
    */
   setImage(url: EmbedInput): this {
     return super.setImage(this.resolveImage(url));

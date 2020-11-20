@@ -13,21 +13,13 @@ declare module 'discord.js' {
 // #endregion
 export default Structures.extend('User', (User) => {
   class YinYangUser extends User {
-    // #region Type Declarations
-    botAdmin: booleanResolvable;
-
-    botSupport: booleanResolvable;
-
-    level: numberResolvable;
-    // #endregion
-
     // #region Constructor
     constructor(client: DiscordClient, data: object) {
       super(client, data);
       this.init();
-      this.botAdmin = client.bot.database.users.get(this.id)?.botAdmin;
-      this.botSupport = client.bot.database.users.get(this.id)?.botSupport;
-      this.level = client.bot.database.users.get(this.id)?.level;
+      this.botAdmin = client.bot.database.users.get(this.id).botAdmin;
+      this.botSupport = client.bot.database.users.get(this.id).botSupport;
+      this.level = client.bot.database.users.get(this.id).level;
     }
     // #endregion
 

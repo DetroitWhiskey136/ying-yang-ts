@@ -1,5 +1,5 @@
-import Logger from '../util/Logger';
 import CommandContext from '../command/CommandContext';
+import Logger from '../util/Logger';
 
 const logger = new Logger();
 
@@ -50,9 +50,11 @@ export default class Command {
   // #region Methods
   /**
    * Gets called if the command doesn't have a run method.
+   * @param {CommandContext} ctx The commands context.
+   * @returns {Error} An Error for some reason.
    * @memberof Command
    */
-  run(ctx: CommandContext) {
+  run(ctx: CommandContext): Error {
     throw new Error(`${this.constructor.name} doesn't have a run() method.`);
   }
 

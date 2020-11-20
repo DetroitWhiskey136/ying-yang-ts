@@ -16,38 +16,26 @@ declare module 'discord.js' {
 
 export default Structures.extend('Guild', (Guild) => {
   class YinYangGuild extends Guild {
-    // #region Type Declarations
-    prefix: stringResolvable;
-
-    log: stringResolvable;
-
-    joinMessage: stringResolvable;
-
-    leaveMessage: stringResolvable;
-
-    welcomeChannel: stringResolvable;
-    // #endregion
-
     // #region Constructor
     constructor(client: DiscordClient, data: any) {
       super(client, data);
       this.init();
 
-      this.prefix = client.bot.database.guilds.get(this.id)?.prefix;
-      this.log = client.bot.database.guilds.get(this.id)?.log;
-      this.joinMessage = client.bot.database.guilds.get(this.id)?.joinMessage;
-      this.leaveMessage = client.bot.database.guilds.get(this.id)?.leaveMessage;
-      this.welcomeChannel = client.bot.database.guilds.get(this.id)?.welcomeChannel;
+      this.prefix = client.bot.database.guilds.get(this.id).prefix;
+      this.log = client.bot.database.guilds.get(this.id).log;
+      this.joinMessage = client.bot.database.guilds.get(this.id).joinMessage;
+      this.leaveMessage = client.bot.database.guilds.get(this.id).leaveMessage;
+      this.welcomeChannel = client.bot.database.guilds.get(this.id).welcomeChannel;
     }
     // #endregion
 
     // #region Methods
     async init() {
       const options = {
-        prefix: '/',
-        log: null,
         joinMessage: null,
         leaveMessage: null,
+        log: null,
+        prefix: '/',
         welcomeChannel: null,
       };
 

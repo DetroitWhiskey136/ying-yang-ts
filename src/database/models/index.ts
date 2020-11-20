@@ -8,4 +8,4 @@ export { default as members } from './Member';
 export { Settings, Admins, Support } from './Settings';
 export { Guild } from './Guild';
 export { User } from './User';
-export { Member, MemberWarning, MemberWarningGuild } from './Member';
+export { Member, MemberWarning, MemberGuild } from './Member';

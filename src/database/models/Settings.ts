@@ -16,9 +16,9 @@ export interface Settings {
 
 const SettingsSchema: Settings = {
   admins: [],
-  support: [],
   guilds: 0,
   restart: false,
+  support: [],
 };
 
 export default SettingsSchema;

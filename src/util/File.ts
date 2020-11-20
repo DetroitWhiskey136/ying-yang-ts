@@ -1,8 +1,7 @@
 import path from 'path';
 import klaw from 'klaw';
-
-import Logger from './Logger';
 import BotClient from '../client/BotClient';
+import Logger from './Logger';
 
 const logger = new Logger();
 
@@ -34,7 +33,7 @@ class FileUtil {
    * @param {BotClient} bot The BotClient object
    * @memberof FileUtil
    */
-  LoadFiles(url: string, bot: BotClient) {
+  public LoadFiles(url: string, bot: BotClient) {
     klaw(url).on('data', async (item: klaw.Item) => {
       const parsedItem = path.parse(item.path);
       if (!parsedItem.ext || !['.js', '.ts'].includes(parsedItem.ext)) return;

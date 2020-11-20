@@ -15,37 +15,29 @@ interface commandContext {
   query: string;
   args: string[];
 }
+
+declare interface CommandContext {
+  bot: BotClient;
+  message: Message;
+  mentions: MessageMentions;
+  member: GuildMember | null;
+  guild: Guild | null;
+  author: User;
+  channel: TextChannel | DMChannel | NewsChannel;
+  client: DiscordClient;
+  voiceChannel: VoiceChannel | null;
+  prefix: string | null;
+  query: string;
+  args: Array<string>;
+  database: Database;
+}
 // #endregion
 
-export default class CommandContext {
-  // #region Type Declarations
-  public bot: BotClient;
-
-  public message: Message;
-
-  public mentions: MessageMentions;
-
-  public member: GuildMember | null;
-
-  public guild: Guild | null;
-
-  public author: User;
-
-  public channel: TextChannel | DMChannel | NewsChannel;
-
-  public client: DiscordClient;
-
-  public voiceChannel: VoiceChannel | null;
-
-  public prefix: string | null;
-
-  public query: string;
-
-  public args: Array<string>;
-
-  public database: Database;
-  // #endregion
-
+/**
+ * The CommandContext Class
+ * @class CommandContext
+ */
+class CommandContext {
   // #region Constructor
   constructor(options: commandContext) {
     this.bot = options.bot;
@@ -65,7 +57,17 @@ export default class CommandContext {
   // #endregion
 
   // #region Methods
-  private getVoiceChannel(member: GuildMember | null, guild: Guild | null, client: DiscordClient) {
+  /**
+   * Gets a voicechannel if it exists/in-use.
+   * @private
+   * @param {(GuildMember | null)} member The member.
+   * @param {(Guild | null)} guild The members guild.
+   * @param {DiscordClient} client The client from discord.
+   * @returns {VoiceChannel | null} return the voicechannel or null.
+   * @memberof CommandContext
+   */
+  private getVoiceChannel(member: GuildMember | null, guild: Guild | null, client: DiscordClient):
+  VoiceChannel | null {
     if (member) {
       return member.voice.channel;
     } if (guild && client.voice) {
@@ -75,3 +77,5 @@ export default class CommandContext {
   }
   // #endregion
 }
+
+export default CommandContext;

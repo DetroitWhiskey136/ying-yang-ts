@@ -10,11 +10,6 @@ declare module 'discord.js' {
 // #endregion
 
 class DiscordClient extends Client {
-  // #region Type Declarations
-  bot: BotClient;
-  // #endregion
-
-  // #region Constructor
   constructor(options: ClientOptions, bot: BotClient) {
     super(options);
     this.bot = bot;

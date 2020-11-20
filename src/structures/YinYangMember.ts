@@ -12,16 +12,11 @@ declare module 'discord.js' {
 
 export default Structures.extend('GuildMember', (GuildMember) => {
   class YinYangMember extends GuildMember {
-    // #region Type Declarations
-    warnings: GuildMemberWarningManager;
-    // #endregion
-
     // #region Constructor
     constructor(client: DiscordClient, data: object, guild: Guild) {
       super(client, data, guild);
-      this.init();
-
       this.warnings = new GuildMemberWarningManager(this);
+      this.init();
     }
     // #endregion
 
@@ -31,9 +26,9 @@ export default Structures.extend('GuildMember', (GuildMember) => {
       const options = {
         guilds: {
           [id]: {
-            warnings: [],
             dj: false,
             level: 0,
+            warnings: [],
           },
         },
       };

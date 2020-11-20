@@ -6,21 +6,20 @@ import DiscordClient from './DiscordClient';
 
 const fileUtil = new FileUtil();
 
+declare interface BotClient {
+  client: DiscordClient;
+  logger: Logger;
+  events: Collection<string, Event>;
+  commands: Collection<string, Command>;
+  aliases: Collection<string, string>;
+  database: Database;
+}
+
+/**
+ * The BotClient Class.
+ * @class BotClient
+ */
 class BotClient {
-  // #region Type Declarations
-  public client: DiscordClient;
-
-  public logger: Logger;
-
-  public events: Collection<string, Event>;
-
-  public commands: Collection<string, Command>;
-
-  public aliases: Collection<string, string>;
-
-  public database: Database;
-  // #endregion
-
   // #region Constructor
   constructor(options: ClientOptions) {
     this.client = new DiscordClient(options, this);

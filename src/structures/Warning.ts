@@ -2,23 +2,17 @@ import { GuildMember, Guild } from 'discord.js';
 import { MemberWarning } from 'src/database';
 import { DiscordClient } from '../client';
 
-class Warning {
-  // #region Type Declarations
+declare interface Warning {
   client: DiscordClient;
-
   guild: Guild
-
   member: GuildMember;
-
   id: string;
-
   reason: string;
-
   points: number;
+  moderator: GuildMember | string;
+}
 
-  moderator: GuildMember | undefined | string;
-  // #endregion
-
+class Warning {
   // #region Constructor
   constructor(client: DiscordClient, data: MemberWarning, member: GuildMember) {
     this.client = client;
@@ -27,18 +21,18 @@ class Warning {
     this.id = data.id;
     this.reason = data.reason;
     this.points = data.points;
-    this.moderator = undefined;
-    this.getMod(data.moderator);
+    this.moderator = this.getMod(data.moderator);
   }
   // #endregion
 
   // #region Methods
-  private getMod(moderator: string) {
+  private getMod(moderator: string): GuildMember | string {
     this.guild.members.fetch(moderator).then((mod) => {
       this.moderator = mod;
     }).catch(() => {
       this.moderator = moderator;
     });
+    return this.moderator;
   }
   // #endregion
 }

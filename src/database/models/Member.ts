@@ -1,22 +1,23 @@
 export interface MemberWarning {
-  id: string;
-  reason: string;
-  points: number;
-  moderator: string;
+    [ x: string ]: any;
+    id: string;
+    reason: string;
+    points: number;
+    moderator: string;
 }
 
-export interface MemberWarningGuild {
-  warnings: MemberWarning | null;
+export interface MemberGuild {
+  warnings: MemberWarning;
   dj: boolean;
   level: number;
 }
 
 export interface Member {
-  guilds: MemberWarningGuild | null;
+  guilds: { [id: string]: MemberGuild };
 }
 
 const MemberSchema: Member = {
-  guilds: null,
+  guilds: {},
 };
 
 export default MemberSchema;

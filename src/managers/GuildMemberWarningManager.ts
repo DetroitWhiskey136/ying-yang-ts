@@ -3,15 +3,13 @@ import { MemberWarning } from '../database/models';
 import { Warning } from '../structures';
 import { StringUtil } from '../util';
 
-class GuildMemberWarningManager {
-  // #region Type Declarations
+declare interface GuildMemberWarningManager {
   member: GuildMember;
-
   guild: Guild;
-
   cache: Collection<string, Warning>;
-  // #endregion
+}
 
+class GuildMemberWarningManager {
   // #region Constructor
   constructor(member: GuildMember) {
     this.member = member;
@@ -24,17 +22,19 @@ class GuildMemberWarningManager {
 
   // #region Methods
   private init() {
-    const { warnings } = this.member.client.bot.database.members.get(
+    const member = this.member.client.bot.database.members.get(
       this.member.id,
-    ).guilds[this.guild.id];
+    );
 
-    if (!warnings) return;
+    if (member && member.guilds) {
+      const { warnings } = member.guilds[this.guild.id];
 
-    this.cache = new Collection();
+      if (!warnings) return;
 
-    warnings.forEach((warning: MemberWarning) => {
-      this.cache.set(warning.id, new Warning(this.member.client, warning, this.member));
-    });
+      warnings.forEach((warning: MemberWarning) => {
+        this.cache.set(warning.id, new Warning(this.member.client, warning, this.member));
+      });
+    }
   }
 
   public add(reason: string, points: number, moderator: GuildMember) {
@@ -49,9 +49,9 @@ class GuildMemberWarningManager {
     warnings.push(
       {
         id,
-        reason,
-        points,
         moderator: moderator.id,
+        points,
+        reason,
       },
     );
     db.members.update(this.member.id, {
@@ -104,9 +104,9 @@ class GuildMemberWarningManager {
     warnings.push(
       {
         id,
-        reason: data?.reason || warning.reason,
-        points: data?.points || warning.points,
         moderator: data?.moderator,
+        points: data?.points || warning.points,
+        reason: data?.reason || warning.reason,
       },
     );
     db.members.update(this.member.id, {
