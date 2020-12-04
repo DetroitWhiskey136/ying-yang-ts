@@ -74,7 +74,7 @@ export default class Logger {
     const m = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
     const formatedTime = `${this.formatTime(date.getHours())}:${this.formatTime(date.getMinutes())}:${this.formatTime(date.getSeconds())}`;
     const formatedDate = `${m[date.getMonth()]}-${this.formatTime(date.getDate())}-${date.getFullYear()}`;
-    const fileDate = `${date.getMonth()}-${this.formatTime(date.getDate())}-${date.getFullYear()}`;
+    const fileDate = `${date.getMonth() + 1}-${this.formatTime(date.getDate())}-${date.getFullYear()}`;
 
     return [
       TerminalFormatter.color(Colors.FgDarkGray, `${formatedDate} ${formatedTime}`),
