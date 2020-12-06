@@ -5,4 +5,5 @@ export { default as Logger } from './Logger';
 export { default as StringUtil } from './String';
 export { default as Util } from './Util';
 export { default as ChannelUtil } from './Channel';
+export { default as MemberUtil } from './MemberUtil';
 export * from './Constants';

@@ -1,5 +1,6 @@
 /* eslint-disable no-eval, no-unused-vars */
 import { inspect } from 'util';
+import { BotClient } from '../../client/index';
 
 import CommandContext from '../../command/CommandContext';
 import Embed from '../../discord/Embed';
@@ -18,16 +19,16 @@ const hrToSeconds = (hrtime: [number, number]) => (hrtime[0] + (hrtime[1] / 1e9)
 const exec = (c: any) => require('child_process').execSync(c).toString();
 
 class EvalCommand extends Command {
-  constructor() {
-    super({
-      name: 'eval',
-      description: 'Evaluates arbitrary javascript code',
-      category: 'Developer',
-      usage: 'eval <code>',
+  constructor(bot: BotClient) {
+    super(bot, {
       aliases: ['compile', 'ev', 'js'],
-      guildOnly: false,
+      category: 'Developer',
+      description: 'Evaluates arbitrary javascript code',
       enabled: true,
-    });
+      guildOnly: false,
+      name: 'eval',
+      usage: 'eval <code>',
+    }, []);
   }
 
   async run(ctx: CommandContext) {
@@ -85,4 +86,4 @@ class EvalCommand extends Command {
   }
 }
 
-module.exports = EvalCommand;
+export = EvalCommand;

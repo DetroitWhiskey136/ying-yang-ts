@@ -29,7 +29,10 @@ class GuildMemberWarningManager {
     if (member && member.guilds) {
       const { warnings } = member.guilds[this.guild.id];
 
-      if (!warnings) return;
+      if (!warnings) {
+        this.cache = new Collection();
+        return;
+      }
 
       warnings.forEach((warning: MemberWarning) => {
         this.cache.set(warning.id, new Warning(this.member.client, warning, this.member));
@@ -82,6 +85,8 @@ class GuildMemberWarningManager {
       this.member.id,
       `guilds[${this.guild.id}].warnings[${warning}]`,
     );
+
+    this.cache.delete(id);
 
     this.init();
 

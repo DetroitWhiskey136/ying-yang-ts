@@ -1,11 +1,11 @@
 import {
   Message, TextChannel, DMChannel, NewsChannel, ColorResolvable,
 } from 'discord.js';
-import { Event } from '../../handlers';
-import Embed from '../../discord/Embed';
 import { BotClient, DiscordClient } from '../../client';
-import { StringUtil, Constants } from '../../util';
 import CommandContext from '../../command/CommandContext';
+import Embed from '../../discord/Embed';
+import { Event } from '../../handlers';
+import { StringUtil, Constants } from '../../util';
 
 const { MESSAGES, OPTIONS } = Constants;
 
@@ -14,8 +14,8 @@ type Channel = TextChannel | DMChannel | NewsChannel;
 export default class MessageEvent extends Event {
   constructor() {
     super({
-      name: 'message',
       enabled: true,
+      name: 'message',
     });
   }
 
@@ -45,8 +45,9 @@ export default class MessageEvent extends Event {
    * @param {Channel} channel the message channel
    * @param {String} color the embed color wanted
    * @param {String} message the message you want to send to the user i.e. "Don't be a dumbass"
+   * @returns {void}
    */
-  createEmbed(channel: Channel, color: ColorResolvable, message: string) {
+  createEmbed(channel: Channel, color: ColorResolvable, message: string): void {
     if (!color || !message) throw new Error('A argument was not provided please check your work!');
     const embed = new Embed()
       .setColor(color)
@@ -91,7 +92,7 @@ export default class MessageEvent extends Event {
     if (!command || !usedPrefix) return;
 
     const params = {
-      bot, args, message, prefix: guild?.prefix || '/', query: args.join(' '),
+      args, bot, message, prefix: guild?.prefix || '/', query: args.join(' '),
     };
 
     command._run(new CommandContext(params));

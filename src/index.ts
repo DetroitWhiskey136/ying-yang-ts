@@ -43,7 +43,14 @@ bot.client
 
 if (process.env.NODE_ENV !== 'production') {
   bot.client.on('debug', (debug) => {
-    bot.logger.debug(debug);
+    const words = ['heartbeat', 'heartbeat.', 'token:', 'swept'];
+    const msg = debug.toLowerCase().split(' ');
+    const filtered = msg.filter((word) => words.includes(word));
+
+    if (filtered.length <= 0) {
+      bot.logger.debug(debug);
+    }
+
     // Sentry.captureMessage(debug);
   });
 }

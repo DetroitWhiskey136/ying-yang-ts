@@ -28,8 +28,10 @@ declare interface CommandContext {
   voiceChannel: VoiceChannel | null;
   prefix: string | null;
   query: string;
-  args: Array<string>;
+  args: string[];
   database: Database;
+  flags: object;
+  parseState?: object;
 }
 // #endregion
 
@@ -53,6 +55,8 @@ class CommandContext {
     this.query = options.query;
     this.args = options.args;
     this.database = options.bot.database;
+    this.flags = {};
+    this.parseState = {};
   }
   // #endregion
 

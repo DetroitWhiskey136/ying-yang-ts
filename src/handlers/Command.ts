@@ -1,7 +1,6 @@
+import { BotClient, DiscordClient } from '../client/index';
 import CommandContext from '../command/CommandContext';
-import Logger from '../util/Logger';
-
-const logger = new Logger();
+import CommandParameters from '../command/parameters/CommandParameters';
 
 // #region Scope Declaration
 interface commandOptions {
@@ -9,61 +8,71 @@ interface commandOptions {
   description: string;
   category: string;
   usage: string;
-  enabled: boolean;
-  guildOnly: boolean;
-  aliases: string[];
+  enabled?: boolean;
+  guildOnly?: boolean;
+  aliases?: string[];
+  type?: string;
 }
 // #endregion
 
-export default class Command {
-  // #region Type Declarations
+declare interface Command {
+  bot: BotClient;
+  options: commandOptions;
+  parameters: Array<object>
   name: string;
-
   description: string;
-
   category: string;
-
   usage: string;
-
   enabled: boolean;
-
   guildOnly: boolean;
-
-  aliases: Array<string>;
-
+  aliases: string[];
   type: string;
-  // #endregion
+}
 
-  // #region Constructor
-  constructor(options: commandOptions) {
-    this.name = options.name;
-    this.description = options.description;
-    this.category = options.category;
-    this.usage = options.usage;
-    this.enabled = options.enabled;
-    this.guildOnly = options.guildOnly || false;
+class Command {
+  constructor(bot: BotClient, options: commandOptions, parameters: Array<object>) {
+    this.bot = bot;
+    this.parameters = parameters;
+    this.setup(options);
+  }
+
+  // #region Methods
+  private setup(options: commandOptions) {
+    this.name = options.name || 'none';
+    this.description = options.description || 'none';
+    this.category = options.category || 'none';
+    this.usage = options.usage || '';
+    this.enabled = options.enabled || false;
+    this.guildOnly = options.guildOnly || true;
     this.aliases = options.aliases || [];
     this.type = 'command';
   }
-  // #endregion
 
-  // #region Methods
   /**
    * Gets called if the command doesn't have a run method.
    * @param {CommandContext} ctx The commands context.
-   * @returns {Error} An Error for some reason.
+   * @returns {void}
    * @memberof Command
    */
-  run(ctx: CommandContext): Error {
+  run(ctx: CommandContext): Promise<void> | void {
     throw new Error(`${this.constructor.name} doesn't have a run() method.`);
   }
 
-  async _run(ctx: CommandContext) {
+  public async _run(ctx: CommandContext) {
+    const { client } = ctx;
+    // eslint-disable-next-line prefer-destructuring
+    let args = ctx.args;
     try {
+      if (this.parameters) {
+        args = await CommandParameters.handle(ctx, this.parameters, args);
+      }
+
       await this.run(ctx);
     } catch (error) {
-      logger.error(error.message, '\n', error.stack);
+      client.emit('error', error);
     }
   }
   // #endregion
 }
+
+export default Command;
