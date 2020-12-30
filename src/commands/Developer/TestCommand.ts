@@ -15,13 +15,13 @@ class TestCommand extends Command {
     }, [
       {
         required: true,
-        type: 'user',
+        type: 'string',
       },
     ]);
   }
 
   run(ctx: CommandContext) {
-    ctx.channel.send('hello from test');
+    ctx.channel.send(`hello from test the result was: ${ctx.args.join(' ')}`);
   }
 }
 

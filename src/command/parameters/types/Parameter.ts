@@ -49,7 +49,6 @@ class Parameter {
    */
   static _parse(arg: string, ctx: CommandContext, opt: object = {}): void {
     const options = this.parseOptions(opt);
-    console.log(this.parse.call(options, arg, ctx));
     return this.parse.call(options, arg, ctx);
   }
 

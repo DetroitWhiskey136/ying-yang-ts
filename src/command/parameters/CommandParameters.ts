@@ -146,17 +146,12 @@ class CommandParameters {
     // eslint-disable-next-line no-restricted-syntax, guard-for-in
     for (const parameter of param.types) {
       // eslint-disable-next-line no-await-in-loop
-      console.log(await parameter._parse(arg, context, param));
-      // eslint-disable-next-line no-await-in-loop
       const result = await parameter._parse(arg, context, param);
-      console.log(result);
       if (!isNull(result)) {
         parsedArg = result;
         break;
       }
     }
-
-    console.log(parsedArg, param.required);
 
     if (isNull(parsedArg) && param.required) {
       throw new CommandError(missingErr, { delete: true });
