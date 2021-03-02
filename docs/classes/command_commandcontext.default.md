@@ -48,7 +48,7 @@ Name | Type |
 
 **Returns:** [*default*](command_commandcontext.default.md)
 
-Defined in: [src/command/CommandContext.ts:42](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/command/CommandContext.ts#L42)
+Defined in: [src/command/CommandContext.ts:42](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/9e5d8a8/src/command/CommandContext.ts#L42)
 
 ## Properties
 
@@ -56,7 +56,7 @@ Defined in: [src/command/CommandContext.ts:42](https://github.com/DetroitWhiskey
 
 • **args**: *string*[]
 
-Defined in: [src/command/CommandContext.ts:31](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/command/CommandContext.ts#L31)
+Defined in: [src/command/CommandContext.ts:31](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/9e5d8a8/src/command/CommandContext.ts#L31)
 
 ___
 
@@ -64,7 +64,7 @@ ___
 
 • **author**: *User*
 
-Defined in: [src/command/CommandContext.ts:25](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/command/CommandContext.ts#L25)
+Defined in: [src/command/CommandContext.ts:25](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/9e5d8a8/src/command/CommandContext.ts#L25)
 
 ___
 
@@ -72,7 +72,7 @@ ___
 
 • **bot**: [*BotClient*](client_botclient.botclient.md)
 
-Defined in: [src/command/CommandContext.ts:20](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/command/CommandContext.ts#L20)
+Defined in: [src/command/CommandContext.ts:20](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/9e5d8a8/src/command/CommandContext.ts#L20)
 
 ___
 
@@ -80,7 +80,7 @@ ___
 
 • **channel**: *TextChannel* \| *DMChannel* \| *NewsChannel*
 
-Defined in: [src/command/CommandContext.ts:26](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/command/CommandContext.ts#L26)
+Defined in: [src/command/CommandContext.ts:26](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/9e5d8a8/src/command/CommandContext.ts#L26)
 
 ___
 
@@ -88,7 +88,7 @@ ___
 
 • **client**: [*DiscordClient*](client_discordclient.discordclient.md)
 
-Defined in: [src/command/CommandContext.ts:27](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/command/CommandContext.ts#L27)
+Defined in: [src/command/CommandContext.ts:27](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/9e5d8a8/src/command/CommandContext.ts#L27)
 
 ___
 
@@ -96,7 +96,7 @@ ___
 
 • **database**: [*default*](database_database.default.md)
 
-Defined in: [src/command/CommandContext.ts:32](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/command/CommandContext.ts#L32)
+Defined in: [src/command/CommandContext.ts:32](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/9e5d8a8/src/command/CommandContext.ts#L32)
 
 ___
 
@@ -104,7 +104,7 @@ ___
 
 • **flags**: *object*
 
-Defined in: [src/command/CommandContext.ts:33](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/command/CommandContext.ts#L33)
+Defined in: [src/command/CommandContext.ts:33](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/9e5d8a8/src/command/CommandContext.ts#L33)
 
 ___
 
@@ -112,7 +112,7 @@ ___
 
 • **guild**: *null* \| *Guild*
 
-Defined in: [src/command/CommandContext.ts:24](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/command/CommandContext.ts#L24)
+Defined in: [src/command/CommandContext.ts:24](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/9e5d8a8/src/command/CommandContext.ts#L24)
 
 ___
 
@@ -120,7 +120,7 @@ ___
 
 • **member**: *null* \| *GuildMember*
 
-Defined in: [src/command/CommandContext.ts:23](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/command/CommandContext.ts#L23)
+Defined in: [src/command/CommandContext.ts:23](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/9e5d8a8/src/command/CommandContext.ts#L23)
 
 ___
 
@@ -128,7 +128,7 @@ ___
 
 • **mentions**: *MessageMentions*
 
-Defined in: [src/command/CommandContext.ts:22](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/command/CommandContext.ts#L22)
+Defined in: [src/command/CommandContext.ts:22](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/9e5d8a8/src/command/CommandContext.ts#L22)
 
 ___
 
@@ -136,7 +136,7 @@ ___
 
 • **message**: *Message*
 
-Defined in: [src/command/CommandContext.ts:21](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/command/CommandContext.ts#L21)
+Defined in: [src/command/CommandContext.ts:21](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/9e5d8a8/src/command/CommandContext.ts#L21)
 
 ___
 
@@ -144,7 +144,7 @@ ___
 
 • `Optional` **parseState**: *undefined* \| *object*
 
-Defined in: [src/command/CommandContext.ts:34](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/command/CommandContext.ts#L34)
+Defined in: [src/command/CommandContext.ts:34](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/9e5d8a8/src/command/CommandContext.ts#L34)
 
 ___
 
@@ -152,7 +152,7 @@ ___
 
 • **prefix**: *null* \| *string*
 
-Defined in: [src/command/CommandContext.ts:29](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/command/CommandContext.ts#L29)
+Defined in: [src/command/CommandContext.ts:29](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/9e5d8a8/src/command/CommandContext.ts#L29)
 
 ___
 
@@ -160,7 +160,7 @@ ___
 
 • **query**: *string*
 
-Defined in: [src/command/CommandContext.ts:30](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/command/CommandContext.ts#L30)
+Defined in: [src/command/CommandContext.ts:30](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/9e5d8a8/src/command/CommandContext.ts#L30)
 
 ___
 
@@ -168,7 +168,7 @@ ___
 
 • **voiceChannel**: *null* \| *VoiceChannel*
 
-Defined in: [src/command/CommandContext.ts:28](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/command/CommandContext.ts#L28)
+Defined in: [src/command/CommandContext.ts:28](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/9e5d8a8/src/command/CommandContext.ts#L28)
 
 ## Methods
 
@@ -192,4 +192,4 @@ Name | Type | Description |
 
 return the voicechannel or null.
 
-Defined in: [src/command/CommandContext.ts:73](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/command/CommandContext.ts#L73)
+Defined in: [src/command/CommandContext.ts:73](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/9e5d8a8/src/command/CommandContext.ts#L73)

@@ -36,4 +36,4 @@ Name | Type |
 
 **Returns:** *Buffer*
 
-Defined in: [src/util/Image.ts:4](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/util/Image.ts#L4)
+Defined in: [src/util/Image.ts:4](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/9e5d8a8/src/util/Image.ts#L4)

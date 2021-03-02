@@ -16,4 +16,4 @@
 
 • **id**: *string*
 
-Defined in: [src/database/models/Settings.ts:6](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/database/models/Settings.ts#L6)
+Defined in: [src/database/models/Settings.ts:6](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/9e5d8a8/src/database/models/Settings.ts#L6)

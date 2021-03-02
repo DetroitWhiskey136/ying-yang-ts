@@ -14,4 +14,4 @@
 
 • `Const` **ParameterTypes**: *any*
 
-Defined in: [src/command/parameters/types/index.ts:5](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/command/parameters/types/index.ts#L5)
+Defined in: [src/command/parameters/types/index.ts:5](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/9e5d8a8/src/command/parameters/types/index.ts#L5)

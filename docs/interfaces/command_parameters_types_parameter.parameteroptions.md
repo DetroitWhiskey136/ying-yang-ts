@@ -24,7 +24,7 @@
 
 • `Optional` **aliases**: *undefined* \| *string*[]
 
-Defined in: [src/command/parameters/types/Parameter.ts:5](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/command/parameters/types/Parameter.ts#L5)
+Defined in: [src/command/parameters/types/Parameter.ts:5](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/9e5d8a8/src/command/parameters/types/Parameter.ts#L5)
 
 ___
 
@@ -32,7 +32,7 @@ ___
 
 • `Optional` **full**: *undefined* \| *boolean*
 
-Defined in: [src/command/parameters/types/Parameter.ts:6](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/command/parameters/types/Parameter.ts#L6)
+Defined in: [src/command/parameters/types/Parameter.ts:6](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/9e5d8a8/src/command/parameters/types/Parameter.ts#L6)
 
 ___
 
@@ -40,7 +40,7 @@ ___
 
 • `Optional` **fullJoin**: *undefined* \| *string*
 
-Defined in: [src/command/parameters/types/Parameter.ts:7](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/command/parameters/types/Parameter.ts#L7)
+Defined in: [src/command/parameters/types/Parameter.ts:7](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/9e5d8a8/src/command/parameters/types/Parameter.ts#L7)
 
 ___
 
@@ -48,7 +48,7 @@ ___
 
 • `Optional` **missingError**: *undefined* \| *string*
 
-Defined in: [src/command/parameters/types/Parameter.ts:8](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/command/parameters/types/Parameter.ts#L8)
+Defined in: [src/command/parameters/types/Parameter.ts:8](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/9e5d8a8/src/command/parameters/types/Parameter.ts#L8)
 
 ___
 
@@ -56,7 +56,7 @@ ___
 
 • `Optional` **name**: *undefined* \| *string*
 
-Defined in: [src/command/parameters/types/Parameter.ts:9](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/command/parameters/types/Parameter.ts#L9)
+Defined in: [src/command/parameters/types/Parameter.ts:9](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/9e5d8a8/src/command/parameters/types/Parameter.ts#L9)
 
 ___
 
@@ -64,7 +64,7 @@ ___
 
 • `Optional` **required**: *undefined* \| *boolean*
 
-Defined in: [src/command/parameters/types/Parameter.ts:10](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/command/parameters/types/Parameter.ts#L10)
+Defined in: [src/command/parameters/types/Parameter.ts:10](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/9e5d8a8/src/command/parameters/types/Parameter.ts#L10)
 
 ___
 
@@ -72,7 +72,7 @@ ___
 
 • `Optional` **showUsage**: *undefined* \| *boolean*
 
-Defined in: [src/command/parameters/types/Parameter.ts:11](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/command/parameters/types/Parameter.ts#L11)
+Defined in: [src/command/parameters/types/Parameter.ts:11](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/9e5d8a8/src/command/parameters/types/Parameter.ts#L11)
 
 ___
 
@@ -80,7 +80,7 @@ ___
 
 • `Optional` **types**: *any*
 
-Defined in: [src/command/parameters/types/Parameter.ts:4](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/command/parameters/types/Parameter.ts#L4)
+Defined in: [src/command/parameters/types/Parameter.ts:4](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/9e5d8a8/src/command/parameters/types/Parameter.ts#L4)
 
 ___
 
@@ -88,4 +88,4 @@ ___
 
 • `Optional` **whitelist**: *undefined* \| *string*[]
 
-Defined in: [src/command/parameters/types/Parameter.ts:12](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/command/parameters/types/Parameter.ts#L12)
+Defined in: [src/command/parameters/types/Parameter.ts:12](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/9e5d8a8/src/command/parameters/types/Parameter.ts#L12)

@@ -36,4 +36,4 @@ Name | Type |
 
 **Returns:** *undefined* \| *TextChannel*
 
-Defined in: [src/util/Channel.ts:10](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/util/Channel.ts#L10)
+Defined in: [src/util/Channel.ts:10](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/9e5d8a8/src/util/Channel.ts#L10)

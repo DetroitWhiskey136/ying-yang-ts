@@ -20,4 +20,4 @@
 
 • `Const` **default**: [*Member*](../interfaces/database_models_member.member.md)
 
-Defined in: [src/database/models/Member.ts:19](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/database/models/Member.ts#L19)
+Defined in: [src/database/models/Member.ts:19](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/9e5d8a8/src/database/models/Member.ts#L19)

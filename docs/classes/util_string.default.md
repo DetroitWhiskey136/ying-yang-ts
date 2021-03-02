@@ -47,7 +47,7 @@ Name | Type | Default value | Description |
 
 The formated string of code?
 
-Defined in: [src/util/String.ts:13](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/util/String.ts#L13)
+Defined in: [src/util/String.ts:13](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/9e5d8a8/src/util/String.ts#L13)
 
 ___
 
@@ -63,7 +63,7 @@ Name | Type |
 
 **Returns:** *string*
 
-Defined in: [src/util/String.ts:18](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/util/String.ts#L18)
+Defined in: [src/util/String.ts:18](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/9e5d8a8/src/util/String.ts#L18)
 
 ___
 
@@ -81,7 +81,7 @@ Name | Type |
 
 **Returns:** *string*
 
-Defined in: [src/util/String.ts:28](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/util/String.ts#L28)
+Defined in: [src/util/String.ts:28](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/9e5d8a8/src/util/String.ts#L28)
 
 ___
 
@@ -97,7 +97,7 @@ Name | Type |
 
 **Returns:** *string*
 
-Defined in: [src/util/String.ts:35](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/util/String.ts#L35)
+Defined in: [src/util/String.ts:35](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/9e5d8a8/src/util/String.ts#L35)
 
 ___
 
@@ -113,4 +113,4 @@ Name | Type |
 
 **Returns:** *string*
 
-Defined in: [src/util/String.ts:24](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/util/String.ts#L24)
+Defined in: [src/util/String.ts:24](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/9e5d8a8/src/util/String.ts#L24)

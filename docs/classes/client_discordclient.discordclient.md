@@ -86,7 +86,7 @@ Name | Type |
 
 **Returns:** [*DiscordClient*](client_discordclient.discordclient.md)
 
-Defined in: [src/client/DiscordClient.ts:17](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/client/DiscordClient.ts#L17)
+Defined in: [src/client/DiscordClient.ts:17](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/9e5d8a8/src/client/DiscordClient.ts#L17)
 
 ## Properties
 
@@ -94,7 +94,7 @@ Defined in: [src/client/DiscordClient.ts:17](https://github.com/DetroitWhiskey13
 
 • **bot**: [*BotClient*](client_botclient.botclient.md)
 
-Defined in: [src/client/DiscordClient.ts:11](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/client/DiscordClient.ts#L11)
+Defined in: [src/client/DiscordClient.ts:11](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/9e5d8a8/src/client/DiscordClient.ts#L11)
 
 ___
 
@@ -450,7 +450,7 @@ Name | Type |
 
 **Returns:** *void*
 
-Defined in: [src/client/DiscordClient.ts:15](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/client/DiscordClient.ts#L15)
+Defined in: [src/client/DiscordClient.ts:15](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/9e5d8a8/src/client/DiscordClient.ts#L15)
 
 ___
 

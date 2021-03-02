@@ -37,7 +37,7 @@ Name | Type |
 
 **Returns:** [*default*](managers_guildmemberwarningmanager.default.md)
 
-Defined in: [src/managers/GuildMemberWarningManager.ts:12](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/managers/GuildMemberWarningManager.ts#L12)
+Defined in: [src/managers/GuildMemberWarningManager.ts:12](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/9e5d8a8/src/managers/GuildMemberWarningManager.ts#L12)
 
 ## Properties
 
@@ -45,7 +45,7 @@ Defined in: [src/managers/GuildMemberWarningManager.ts:12](https://github.com/De
 
 • **cache**: *Collection*<string, [*default*](structures_warning.default.md)\>
 
-Defined in: [src/managers/GuildMemberWarningManager.ts:9](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/managers/GuildMemberWarningManager.ts#L9)
+Defined in: [src/managers/GuildMemberWarningManager.ts:9](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/9e5d8a8/src/managers/GuildMemberWarningManager.ts#L9)
 
 ___
 
@@ -53,7 +53,7 @@ ___
 
 • **guild**: *Guild*
 
-Defined in: [src/managers/GuildMemberWarningManager.ts:8](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/managers/GuildMemberWarningManager.ts#L8)
+Defined in: [src/managers/GuildMemberWarningManager.ts:8](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/9e5d8a8/src/managers/GuildMemberWarningManager.ts#L8)
 
 ___
 
@@ -61,7 +61,7 @@ ___
 
 • **member**: *GuildMember*
 
-Defined in: [src/managers/GuildMemberWarningManager.ts:7](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/managers/GuildMemberWarningManager.ts#L7)
+Defined in: [src/managers/GuildMemberWarningManager.ts:7](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/9e5d8a8/src/managers/GuildMemberWarningManager.ts#L7)
 
 ## Methods
 
@@ -79,7 +79,7 @@ Name | Type |
 
 **Returns:** *undefined* \| [*default*](structures_warning.default.md)
 
-Defined in: [src/managers/GuildMemberWarningManager.ts:43](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/managers/GuildMemberWarningManager.ts#L43)
+Defined in: [src/managers/GuildMemberWarningManager.ts:43](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/9e5d8a8/src/managers/GuildMemberWarningManager.ts#L43)
 
 ___
 
@@ -89,7 +89,7 @@ ___
 
 **Returns:** *void*
 
-Defined in: [src/managers/GuildMemberWarningManager.ts:24](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/managers/GuildMemberWarningManager.ts#L24)
+Defined in: [src/managers/GuildMemberWarningManager.ts:24](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/9e5d8a8/src/managers/GuildMemberWarningManager.ts#L24)
 
 ___
 
@@ -105,7 +105,7 @@ Name | Type |
 
 **Returns:** *string* \| *Collection*<string, [*default*](structures_warning.default.md)\>
 
-Defined in: [src/managers/GuildMemberWarningManager.ts:72](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/managers/GuildMemberWarningManager.ts#L72)
+Defined in: [src/managers/GuildMemberWarningManager.ts:72](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/9e5d8a8/src/managers/GuildMemberWarningManager.ts#L72)
 
 ___
 
@@ -122,4 +122,4 @@ Name | Type |
 
 **Returns:** *undefined* \| *string* \| [*default*](structures_warning.default.md)
 
-Defined in: [src/managers/GuildMemberWarningManager.ts:96](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/managers/GuildMemberWarningManager.ts#L96)
+Defined in: [src/managers/GuildMemberWarningManager.ts:96](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/9e5d8a8/src/managers/GuildMemberWarningManager.ts#L96)

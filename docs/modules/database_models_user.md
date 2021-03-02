@@ -18,4 +18,4 @@
 
 • `Const` **default**: [*User*](../interfaces/database_models_user.user.md)
 
-Defined in: [src/database/models/User.ts:11](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/database/models/User.ts#L11)
+Defined in: [src/database/models/User.ts:11](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/9e5d8a8/src/database/models/User.ts#L11)

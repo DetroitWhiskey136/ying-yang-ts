@@ -18,7 +18,7 @@
 
 • **dj**: *boolean*
 
-Defined in: [src/database/models/Member.ts:11](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/database/models/Member.ts#L11)
+Defined in: [src/database/models/Member.ts:11](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/9e5d8a8/src/database/models/Member.ts#L11)
 
 ___
 
@@ -26,7 +26,7 @@ ___
 
 • **level**: *number*
 
-Defined in: [src/database/models/Member.ts:12](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/database/models/Member.ts#L12)
+Defined in: [src/database/models/Member.ts:12](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/9e5d8a8/src/database/models/Member.ts#L12)
 
 ___
 
@@ -34,4 +34,4 @@ ___
 
 • **warnings**: [*MemberWarning*](database_models_member.memberwarning.md)
 
-Defined in: [src/database/models/Member.ts:10](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/database/models/Member.ts#L10)
+Defined in: [src/database/models/Member.ts:10](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/9e5d8a8/src/database/models/Member.ts#L10)

@@ -24,7 +24,7 @@
 
 Ƭ **booleanResolvable**: *boolean* \| *undefined* \| *null*
 
-Defined in: [src/util/Constants.ts:40](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/util/Constants.ts#L40)
+Defined in: [src/util/Constants.ts:40](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/9e5d8a8/src/util/Constants.ts#L40)
 
 ___
 
@@ -32,7 +32,7 @@ ___
 
 Ƭ **channelResolvable**: TextChannel \| *undefined* \| *null*
 
-Defined in: [src/util/Constants.ts:38](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/util/Constants.ts#L38)
+Defined in: [src/util/Constants.ts:38](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/9e5d8a8/src/util/Constants.ts#L38)
 
 ___
 
@@ -40,7 +40,7 @@ ___
 
 Ƭ **numberResolvable**: *number* \| *undefined* \| *null*
 
-Defined in: [src/util/Constants.ts:39](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/util/Constants.ts#L39)
+Defined in: [src/util/Constants.ts:39](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/9e5d8a8/src/util/Constants.ts#L39)
 
 ___
 
@@ -48,7 +48,7 @@ ___
 
 Ƭ **stringResolvable**: *string* \| *undefined* \| *null*
 
-Defined in: [src/util/Constants.ts:37](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/util/Constants.ts#L37)
+Defined in: [src/util/Constants.ts:37](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/9e5d8a8/src/util/Constants.ts#L37)
 
 ## Variables
 
@@ -62,7 +62,7 @@ Name | Type |
 :------ | :------ |
 `PREFIX` | *string* |
 
-Defined in: [src/util/Constants.ts:29](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/util/Constants.ts#L29)
+Defined in: [src/util/Constants.ts:29](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/9e5d8a8/src/util/Constants.ts#L29)
 
 ___
 
@@ -76,7 +76,7 @@ Name | Type |
 :------ | :------ |
 `PREFIX` | *string* |
 
-Defined in: [src/util/Constants.ts:33](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/util/Constants.ts#L33)
+Defined in: [src/util/Constants.ts:33](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/9e5d8a8/src/util/Constants.ts#L33)
 
 ___
 
@@ -95,7 +95,7 @@ Name | Type |
 `ROLE_MENTION` | *RegExp* |
 `USER_ID` | *RegExp* |
 
-Defined in: [src/util/Constants.ts:20](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/util/Constants.ts#L20)
+Defined in: [src/util/Constants.ts:20](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/9e5d8a8/src/util/Constants.ts#L20)
 
 ___
 
@@ -103,4 +103,4 @@ ___
 
 • `Const` **clientOptions**: ClientOptions
 
-Defined in: [src/util/Constants.ts:3](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/util/Constants.ts#L3)
+Defined in: [src/util/Constants.ts:3](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/9e5d8a8/src/util/Constants.ts#L3)

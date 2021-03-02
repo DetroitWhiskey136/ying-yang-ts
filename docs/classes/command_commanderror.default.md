@@ -48,7 +48,7 @@ Name | Type |
 
 **Returns:** [*default*](command_commanderror.default.md)
 
-Defined in: [src/command/CommandError.ts:20](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/command/CommandError.ts#L20)
+Defined in: [src/command/CommandError.ts:20](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/9e5d8a8/src/command/CommandError.ts#L20)
 
 ## Properties
 
@@ -56,7 +56,7 @@ Defined in: [src/command/CommandError.ts:20](https://github.com/DetroitWhiskey13
 
 • **delete**: *boolean*
 
-Defined in: [src/command/CommandError.ts:17](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/command/CommandError.ts#L17)
+Defined in: [src/command/CommandError.ts:17](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/9e5d8a8/src/command/CommandError.ts#L17)
 
 ___
 
@@ -64,7 +64,7 @@ ___
 
 • **fields**: CommandErrorField[]
 
-Defined in: [src/command/CommandError.ts:16](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/command/CommandError.ts#L16)
+Defined in: [src/command/CommandError.ts:16](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/9e5d8a8/src/command/CommandError.ts#L16)
 
 ___
 
@@ -88,7 +88,7 @@ ___
 
 • **onUsage**: *boolean*
 
-Defined in: [src/command/CommandError.ts:15](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/command/CommandError.ts#L15)
+Defined in: [src/command/CommandError.ts:15](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/9e5d8a8/src/command/CommandError.ts#L15)
 
 ___
 
@@ -96,7 +96,7 @@ ___
 
 • **options**: CommandErrorOptions
 
-Defined in: [src/command/CommandError.ts:14](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/command/CommandError.ts#L14)
+Defined in: [src/command/CommandError.ts:14](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/9e5d8a8/src/command/CommandError.ts#L14)
 
 ___
 
@@ -146,7 +146,7 @@ Name | Type | Default value | Description |
 
 The error embed.
 
-Defined in: [src/command/CommandError.ts:36](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/command/CommandError.ts#L36)
+Defined in: [src/command/CommandError.ts:36](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/9e5d8a8/src/command/CommandError.ts#L36)
 
 ___
 

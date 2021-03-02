@@ -37,7 +37,7 @@ Name | Type |
 
 **Returns:** [*BotClient*](client_botclient.botclient.md)
 
-Defined in: [src/client/BotClient.ts:28](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/client/BotClient.ts#L28)
+Defined in: [src/client/BotClient.ts:28](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/9e5d8a8/src/client/BotClient.ts#L28)
 
 ## Properties
 
@@ -45,7 +45,7 @@ Defined in: [src/client/BotClient.ts:28](https://github.com/DetroitWhiskey136/yi
 
 • **aliases**: *Collection*<string, string\>
 
-Defined in: [src/client/BotClient.ts:19](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/client/BotClient.ts#L19)
+Defined in: [src/client/BotClient.ts:19](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/9e5d8a8/src/client/BotClient.ts#L19)
 
 ___
 
@@ -53,7 +53,7 @@ ___
 
 • **client**: [*DiscordClient*](client_discordclient.discordclient.md)
 
-Defined in: [src/client/BotClient.ts:15](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/client/BotClient.ts#L15)
+Defined in: [src/client/BotClient.ts:15](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/9e5d8a8/src/client/BotClient.ts#L15)
 
 ___
 
@@ -61,7 +61,7 @@ ___
 
 • **commands**: *Collection*<string, [*default*](handlers_command.default.md)\>
 
-Defined in: [src/client/BotClient.ts:18](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/client/BotClient.ts#L18)
+Defined in: [src/client/BotClient.ts:18](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/9e5d8a8/src/client/BotClient.ts#L18)
 
 ___
 
@@ -69,7 +69,7 @@ ___
 
 • **database**: [*default*](database_database.default.md)
 
-Defined in: [src/client/BotClient.ts:20](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/client/BotClient.ts#L20)
+Defined in: [src/client/BotClient.ts:20](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/9e5d8a8/src/client/BotClient.ts#L20)
 
 ___
 
@@ -77,7 +77,7 @@ ___
 
 • **events**: *Collection*<string, [*default*](handlers_event.default.md)\>
 
-Defined in: [src/client/BotClient.ts:17](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/client/BotClient.ts#L17)
+Defined in: [src/client/BotClient.ts:17](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/9e5d8a8/src/client/BotClient.ts#L17)
 
 ___
 
@@ -85,4 +85,4 @@ ___
 
 • **logger**: [*default*](util_logger.default.md)
 
-Defined in: [src/client/BotClient.ts:16](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/client/BotClient.ts#L16)
+Defined in: [src/client/BotClient.ts:16](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/9e5d8a8/src/client/BotClient.ts#L16)

@@ -18,7 +18,7 @@
 
 • **botAdmin**: [*booleanResolvable*](../modules/util_constants.md#booleanresolvable)
 
-Defined in: [src/database/models/User.ts:6](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/database/models/User.ts#L6)
+Defined in: [src/database/models/User.ts:6](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/9e5d8a8/src/database/models/User.ts#L6)
 
 ___
 
@@ -26,7 +26,7 @@ ___
 
 • **botSupport**: [*booleanResolvable*](../modules/util_constants.md#booleanresolvable)
 
-Defined in: [src/database/models/User.ts:7](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/database/models/User.ts#L7)
+Defined in: [src/database/models/User.ts:7](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/9e5d8a8/src/database/models/User.ts#L7)
 
 ___
 
@@ -34,4 +34,4 @@ ___
 
 • **level**: [*numberResolvable*](../modules/util_constants.md#numberresolvable)
 
-Defined in: [src/database/models/User.ts:8](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/database/models/User.ts#L8)
+Defined in: [src/database/models/User.ts:8](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/9e5d8a8/src/database/models/User.ts#L8)

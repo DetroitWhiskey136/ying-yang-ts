@@ -42,7 +42,7 @@ Name | Type | Description |
 
 **Returns:** [*default*](handlers_event.default.md)
 
-Defined in: [src/handlers/Event.ts:25](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/handlers/Event.ts#L25)
+Defined in: [src/handlers/Event.ts:25](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/9e5d8a8/src/handlers/Event.ts#L25)
 
 ## Properties
 
@@ -50,7 +50,7 @@ Defined in: [src/handlers/Event.ts:25](https://github.com/DetroitWhiskey136/ying
 
 • **enabled**: *boolean*
 
-Defined in: [src/handlers/Event.ts:23](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/handlers/Event.ts#L23)
+Defined in: [src/handlers/Event.ts:23](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/9e5d8a8/src/handlers/Event.ts#L23)
 
 ___
 
@@ -58,7 +58,7 @@ ___
 
 • **name**: *string*
 
-Defined in: [src/handlers/Event.ts:21](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/handlers/Event.ts#L21)
+Defined in: [src/handlers/Event.ts:21](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/9e5d8a8/src/handlers/Event.ts#L21)
 
 ___
 
@@ -66,4 +66,4 @@ ___
 
 • **type**: *string*
 
-Defined in: [src/handlers/Event.ts:25](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/handlers/Event.ts#L25)
+Defined in: [src/handlers/Event.ts:25](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/9e5d8a8/src/handlers/Event.ts#L25)

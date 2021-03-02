@@ -21,7 +21,7 @@
 
 • **clean**: *boolean*
 
-Defined in: [src/command/parameters/types/StringParameter.ts:8](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/command/parameters/types/StringParameter.ts#L8)
+Defined in: [src/command/parameters/types/StringParameter.ts:8](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/9e5d8a8/src/command/parameters/types/StringParameter.ts#L8)
 
 ___
 
@@ -29,7 +29,7 @@ ___
 
 • **forceLowerCase**: *boolean*
 
-Defined in: [src/command/parameters/types/StringParameter.ts:10](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/command/parameters/types/StringParameter.ts#L10)
+Defined in: [src/command/parameters/types/StringParameter.ts:10](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/9e5d8a8/src/command/parameters/types/StringParameter.ts#L10)
 
 ___
 
@@ -37,7 +37,7 @@ ___
 
 • **forceUpperCase**: *boolean*
 
-Defined in: [src/command/parameters/types/StringParameter.ts:11](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/command/parameters/types/StringParameter.ts#L11)
+Defined in: [src/command/parameters/types/StringParameter.ts:11](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/9e5d8a8/src/command/parameters/types/StringParameter.ts#L11)
 
 ___
 
@@ -45,7 +45,7 @@ ___
 
 • **maxLength**: *number*
 
-Defined in: [src/command/parameters/types/StringParameter.ts:12](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/command/parameters/types/StringParameter.ts#L12)
+Defined in: [src/command/parameters/types/StringParameter.ts:12](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/9e5d8a8/src/command/parameters/types/StringParameter.ts#L12)
 
 ___
 
@@ -53,7 +53,7 @@ ___
 
 • **regex**: *any*
 
-Defined in: [src/command/parameters/types/StringParameter.ts:9](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/command/parameters/types/StringParameter.ts#L9)
+Defined in: [src/command/parameters/types/StringParameter.ts:9](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/9e5d8a8/src/command/parameters/types/StringParameter.ts#L9)
 
 ___
 
@@ -61,4 +61,4 @@ ___
 
 • **truncate**: *boolean*
 
-Defined in: [src/command/parameters/types/StringParameter.ts:13](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/command/parameters/types/StringParameter.ts#L13)
+Defined in: [src/command/parameters/types/StringParameter.ts:13](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/9e5d8a8/src/command/parameters/types/StringParameter.ts#L13)

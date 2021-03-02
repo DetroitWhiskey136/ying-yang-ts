@@ -18,4 +18,4 @@
 
 • `Const` **default**: [*Guild*](../interfaces/database_models_guild.guild.md)
 
-Defined in: [src/database/models/Guild.ts:11](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/database/models/Guild.ts#L11)
+Defined in: [src/database/models/Guild.ts:11](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/9e5d8a8/src/database/models/Guild.ts#L11)

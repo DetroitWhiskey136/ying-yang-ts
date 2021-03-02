@@ -62,7 +62,7 @@ Name | Type |
 
 **Returns:** [*default*](handlers_command.default.md)
 
-Defined in: [src/handlers/Command.ts:32](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/handlers/Command.ts#L32)
+Defined in: [src/handlers/Command.ts:32](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/9e5d8a8/src/handlers/Command.ts#L32)
 
 ## Properties
 
@@ -70,7 +70,7 @@ Defined in: [src/handlers/Command.ts:32](https://github.com/DetroitWhiskey136/yi
 
 • **aliases**: *string*[]
 
-Defined in: [src/handlers/Command.ts:28](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/handlers/Command.ts#L28)
+Defined in: [src/handlers/Command.ts:28](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/9e5d8a8/src/handlers/Command.ts#L28)
 
 ___
 
@@ -78,7 +78,7 @@ ___
 
 • **bot**: [*BotClient*](client_botclient.botclient.md)
 
-Defined in: [src/handlers/Command.ts:19](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/handlers/Command.ts#L19)
+Defined in: [src/handlers/Command.ts:19](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/9e5d8a8/src/handlers/Command.ts#L19)
 
 ___
 
@@ -86,7 +86,7 @@ ___
 
 • **category**: *string*
 
-Defined in: [src/handlers/Command.ts:24](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/handlers/Command.ts#L24)
+Defined in: [src/handlers/Command.ts:24](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/9e5d8a8/src/handlers/Command.ts#L24)
 
 ___
 
@@ -94,7 +94,7 @@ ___
 
 • **description**: *string*
 
-Defined in: [src/handlers/Command.ts:23](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/handlers/Command.ts#L23)
+Defined in: [src/handlers/Command.ts:23](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/9e5d8a8/src/handlers/Command.ts#L23)
 
 ___
 
@@ -102,7 +102,7 @@ ___
 
 • **enabled**: *boolean*
 
-Defined in: [src/handlers/Command.ts:26](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/handlers/Command.ts#L26)
+Defined in: [src/handlers/Command.ts:26](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/9e5d8a8/src/handlers/Command.ts#L26)
 
 ___
 
@@ -110,7 +110,7 @@ ___
 
 • **guildOnly**: *boolean*
 
-Defined in: [src/handlers/Command.ts:27](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/handlers/Command.ts#L27)
+Defined in: [src/handlers/Command.ts:27](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/9e5d8a8/src/handlers/Command.ts#L27)
 
 ___
 
@@ -118,7 +118,7 @@ ___
 
 • **name**: *string*
 
-Defined in: [src/handlers/Command.ts:22](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/handlers/Command.ts#L22)
+Defined in: [src/handlers/Command.ts:22](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/9e5d8a8/src/handlers/Command.ts#L22)
 
 ___
 
@@ -126,7 +126,7 @@ ___
 
 • **options**: commandOptions
 
-Defined in: [src/handlers/Command.ts:20](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/handlers/Command.ts#L20)
+Defined in: [src/handlers/Command.ts:20](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/9e5d8a8/src/handlers/Command.ts#L20)
 
 ___
 
@@ -134,7 +134,7 @@ ___
 
 • **parameters**: *object*[]
 
-Defined in: [src/handlers/Command.ts:21](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/handlers/Command.ts#L21)
+Defined in: [src/handlers/Command.ts:21](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/9e5d8a8/src/handlers/Command.ts#L21)
 
 ___
 
@@ -142,7 +142,7 @@ ___
 
 • **type**: *string*
 
-Defined in: [src/handlers/Command.ts:29](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/handlers/Command.ts#L29)
+Defined in: [src/handlers/Command.ts:29](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/9e5d8a8/src/handlers/Command.ts#L29)
 
 ___
 
@@ -150,7 +150,7 @@ ___
 
 • **usage**: *string*
 
-Defined in: [src/handlers/Command.ts:25](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/handlers/Command.ts#L25)
+Defined in: [src/handlers/Command.ts:25](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/9e5d8a8/src/handlers/Command.ts#L25)
 
 ## Methods
 
@@ -166,7 +166,7 @@ Name | Type |
 
 **Returns:** *Promise*<void\>
 
-Defined in: [src/handlers/Command.ts:61](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/handlers/Command.ts#L61)
+Defined in: [src/handlers/Command.ts:61](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/9e5d8a8/src/handlers/Command.ts#L61)
 
 ___
 
@@ -186,7 +186,7 @@ Name | Type | Description |
 
 **Returns:** *void* \| *Promise*<void\>
 
-Defined in: [src/handlers/Command.ts:57](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/handlers/Command.ts#L57)
+Defined in: [src/handlers/Command.ts:57](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/9e5d8a8/src/handlers/Command.ts#L57)
 
 ___
 
@@ -202,4 +202,4 @@ Name | Type |
 
 **Returns:** *void*
 
-Defined in: [src/handlers/Command.ts:40](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/handlers/Command.ts#L40)
+Defined in: [src/handlers/Command.ts:40](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/9e5d8a8/src/handlers/Command.ts#L40)

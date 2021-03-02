@@ -33,7 +33,7 @@ Creates an instance of FileUtil.
 
 **Returns:** [*default*](util_file.default.md)
 
-Defined in: [src/util/File.ts:14](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/util/File.ts#L14)
+Defined in: [src/util/File.ts:14](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/9e5d8a8/src/util/File.ts#L14)
 
 ## Properties
 
@@ -41,7 +41,7 @@ Defined in: [src/util/File.ts:14](https://github.com/DetroitWhiskey136/ying-yang
 
 • **message**: *null* \| *string*
 
-Defined in: [src/util/File.ts:14](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/util/File.ts#L14)
+Defined in: [src/util/File.ts:14](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/9e5d8a8/src/util/File.ts#L14)
 
 ## Methods
 
@@ -67,7 +67,7 @@ Name | Type | Description |
 
 A void Promise
 
-Defined in: [src/util/File.ts:60](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/util/File.ts#L60)
+Defined in: [src/util/File.ts:60](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/9e5d8a8/src/util/File.ts#L60)
 
 ___
 
@@ -91,4 +91,4 @@ Name | Type | Description |
 
 **Returns:** *void*
 
-Defined in: [src/util/File.ts:37](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/util/File.ts#L37)
+Defined in: [src/util/File.ts:37](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/9e5d8a8/src/util/File.ts#L37)

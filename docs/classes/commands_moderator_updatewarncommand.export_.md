@@ -51,7 +51,7 @@ Name | Type |
 
 Inherited from: [default](handlers_command.default.md)
 
-Defined in: [src/commands/Moderator/UpdateWarnCommand.ts:4](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/commands/Moderator/UpdateWarnCommand.ts#L4)
+Defined in: [src/commands/Moderator/UpdateWarnCommand.ts:4](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/9e5d8a8/src/commands/Moderator/UpdateWarnCommand.ts#L4)
 
 ## Properties
 
@@ -61,7 +61,7 @@ Defined in: [src/commands/Moderator/UpdateWarnCommand.ts:4](https://github.com/D
 
 Inherited from: [default](handlers_command.default.md).[aliases](handlers_command.default.md#aliases)
 
-Defined in: [src/handlers/Command.ts:28](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/handlers/Command.ts#L28)
+Defined in: [src/handlers/Command.ts:28](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/9e5d8a8/src/handlers/Command.ts#L28)
 
 ___
 
@@ -71,7 +71,7 @@ ___
 
 Inherited from: [default](handlers_command.default.md).[bot](handlers_command.default.md#bot)
 
-Defined in: [src/handlers/Command.ts:19](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/handlers/Command.ts#L19)
+Defined in: [src/handlers/Command.ts:19](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/9e5d8a8/src/handlers/Command.ts#L19)
 
 ___
 
@@ -81,7 +81,7 @@ ___
 
 Inherited from: [default](handlers_command.default.md).[category](handlers_command.default.md#category)
 
-Defined in: [src/handlers/Command.ts:24](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/handlers/Command.ts#L24)
+Defined in: [src/handlers/Command.ts:24](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/9e5d8a8/src/handlers/Command.ts#L24)
 
 ___
 
@@ -91,7 +91,7 @@ ___
 
 Inherited from: [default](handlers_command.default.md).[description](handlers_command.default.md#description)
 
-Defined in: [src/handlers/Command.ts:23](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/handlers/Command.ts#L23)
+Defined in: [src/handlers/Command.ts:23](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/9e5d8a8/src/handlers/Command.ts#L23)
 
 ___
 
@@ -101,7 +101,7 @@ ___
 
 Inherited from: [default](handlers_command.default.md).[enabled](handlers_command.default.md#enabled)
 
-Defined in: [src/handlers/Command.ts:26](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/handlers/Command.ts#L26)
+Defined in: [src/handlers/Command.ts:26](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/9e5d8a8/src/handlers/Command.ts#L26)
 
 ___
 
@@ -111,7 +111,7 @@ ___
 
 Inherited from: [default](handlers_command.default.md).[guildOnly](handlers_command.default.md#guildonly)
 
-Defined in: [src/handlers/Command.ts:27](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/handlers/Command.ts#L27)
+Defined in: [src/handlers/Command.ts:27](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/9e5d8a8/src/handlers/Command.ts#L27)
 
 ___
 
@@ -121,7 +121,7 @@ ___
 
 Inherited from: [default](handlers_command.default.md).[name](handlers_command.default.md#name)
 
-Defined in: [src/handlers/Command.ts:22](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/handlers/Command.ts#L22)
+Defined in: [src/handlers/Command.ts:22](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/9e5d8a8/src/handlers/Command.ts#L22)
 
 ___
 
@@ -131,7 +131,7 @@ ___
 
 Inherited from: [default](handlers_command.default.md).[options](handlers_command.default.md#options)
 
-Defined in: [src/handlers/Command.ts:20](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/handlers/Command.ts#L20)
+Defined in: [src/handlers/Command.ts:20](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/9e5d8a8/src/handlers/Command.ts#L20)
 
 ___
 
@@ -141,7 +141,7 @@ ___
 
 Inherited from: [default](handlers_command.default.md).[parameters](handlers_command.default.md#parameters)
 
-Defined in: [src/handlers/Command.ts:21](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/handlers/Command.ts#L21)
+Defined in: [src/handlers/Command.ts:21](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/9e5d8a8/src/handlers/Command.ts#L21)
 
 ___
 
@@ -151,7 +151,7 @@ ___
 
 Inherited from: [default](handlers_command.default.md).[type](handlers_command.default.md#type)
 
-Defined in: [src/handlers/Command.ts:29](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/handlers/Command.ts#L29)
+Defined in: [src/handlers/Command.ts:29](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/9e5d8a8/src/handlers/Command.ts#L29)
 
 ___
 
@@ -161,7 +161,7 @@ ___
 
 Inherited from: [default](handlers_command.default.md).[usage](handlers_command.default.md#usage)
 
-Defined in: [src/handlers/Command.ts:25](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/handlers/Command.ts#L25)
+Defined in: [src/handlers/Command.ts:25](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/9e5d8a8/src/handlers/Command.ts#L25)
 
 ## Methods
 
@@ -179,7 +179,7 @@ Name | Type |
 
 Inherited from: [default](handlers_command.default.md)
 
-Defined in: [src/handlers/Command.ts:61](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/handlers/Command.ts#L61)
+Defined in: [src/handlers/Command.ts:61](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/9e5d8a8/src/handlers/Command.ts#L61)
 
 ___
 
@@ -191,4 +191,4 @@ ___
 
 Overrides: [default](handlers_command.default.md)
 
-Defined in: [src/commands/Moderator/UpdateWarnCommand.ts:17](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/commands/Moderator/UpdateWarnCommand.ts#L17)
+Defined in: [src/commands/Moderator/UpdateWarnCommand.ts:17](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/9e5d8a8/src/commands/Moderator/UpdateWarnCommand.ts#L17)

@@ -42,7 +42,7 @@ Name | Type | Description |
 
 If the value was a boolean.
 
-Defined in: [src/util/Util.ts:64](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/util/Util.ts#L64)
+Defined in: [src/util/Util.ts:64](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/9e5d8a8/src/util/Util.ts#L64)
 
 ___
 
@@ -62,7 +62,7 @@ Name | Type | Description |
 
 Whether it is empty or not.
 
-Defined in: [src/util/Util.ts:11](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/util/Util.ts#L11)
+Defined in: [src/util/Util.ts:11](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/9e5d8a8/src/util/Util.ts#L11)
 
 ___
 
@@ -82,4 +82,4 @@ Name | Type | Description |
 
 If the value was a promise.
 
-Defined in: [src/util/Util.ts:51](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/util/Util.ts#L51)
+Defined in: [src/util/Util.ts:51](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/9e5d8a8/src/util/Util.ts#L51)
