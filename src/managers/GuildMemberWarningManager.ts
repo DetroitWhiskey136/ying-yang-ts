@@ -27,20 +27,20 @@ class GuildMemberWarningManager {
     );
 
     if (member && member.guilds) {
-      const { warnings } = member.guilds[this.guild.id];
+      const guildData = member.guilds[this.guild.id];
+
+      const warnings = guildData ? guildData.warnings : this.cache = new Collection();
 
       if (!warnings) {
-        this.cache = new Collection();
         return;
       }
-
-      warnings.forEach((warning: MemberWarning) => {
-        this.cache.set(warning.id, new Warning(this.member.client, warning, this.member));
-      });
+      warnings.forEach((warning: MemberWarning) => this.cache.set(
+        warning.id, new Warning(this.member.client, warning, this.member),
+      ));
     }
   }
 
-  public add(reason: string, points: number, moderator: GuildMember) {
+  public add(reason: string, points: number, moderator: GuildMember | null) {
     const db = this.member.client.bot.database;
     const { warnings } = db.members.get(this.member.id).guilds[this.guild.id];
 
@@ -52,7 +52,7 @@ class GuildMemberWarningManager {
     warnings.push(
       {
         id,
-        moderator: moderator.id,
+        moderator: moderator?.id,
         points,
         reason,
       },

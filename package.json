@@ -9,7 +9,8 @@
     "lint": "eslint --ext ts src",
     "lint:fix": "eslint --fix --ext ts src",
     "prebuild": "rimraf dist",
-    "build": "tsc"
+    "build": "tsc",
+    "docs": "typedoc --plugin typedoc-plugin-markdown --out ./docs/ ./src"
   },
   "repository": {
     "type": "git",
@@ -41,12 +42,16 @@
     "@types/node": "^14.14.6",
     "@typescript-eslint/eslint-plugin": "^4.3.0",
     "@typescript-eslint/parser": "^4.3.0",
+    "docusaurus-plugin-typedoc": "^0.10.0",
     "eslint": "^7.10.0",
     "eslint-config-airbnb-base": "^14.2.0",
     "eslint-plugin-import": "^2.22.1",
+    "jsdoc-to-markdown": "^7.0.0",
     "nodemon": "^2.0.3",
     "prettier": "^2.1.2",
     "rimraf": "^3.0.2",
-    "ts-node-dev": "^1.0.0-pre.63"
+    "ts-node-dev": "^1.0.0-pre.63",
+    "typedoc": "^0.20.28",
+    "typedoc-plugin-markdown": "^3.6.0"
   }
 }

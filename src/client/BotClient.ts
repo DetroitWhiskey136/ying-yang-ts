@@ -42,9 +42,6 @@ class BotClient {
     }
   }
   // #endregion
-
-  // #region Methods
-  // #endregion
 }
 
 export default BotClient;

@@ -10,16 +10,14 @@ declare module 'discord.js' {
 // #endregion
 
 class DiscordClient extends Client {
-  getGuild ( arg0: string ) {
-    throw new Error( 'Method not implemented.' );
+  getGuild(arg0: string) {
+    throw new Error('Method not implemented.');
   }
+
   constructor(options: ClientOptions, bot: BotClient) {
     super(options);
     this.bot = bot;
   }
-  // #endregion
-
-  // #region Methods
   // #endregion
 }
 
