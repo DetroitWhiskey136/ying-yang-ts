@@ -23,7 +23,7 @@
 
 • **id**: *string*
 
-Defined in: [src/database/models/Member.ts:3](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/112e06c/src/database/models/Member.ts#L3)
+Defined in: [src/database/models/Member.ts:3](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/database/models/Member.ts#L3)
 
 ___
 
@@ -31,7 +31,7 @@ ___
 
 • **moderator**: *string*
 
-Defined in: [src/database/models/Member.ts:6](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/112e06c/src/database/models/Member.ts#L6)
+Defined in: [src/database/models/Member.ts:6](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/database/models/Member.ts#L6)
 
 ___
 
@@ -39,7 +39,7 @@ ___
 
 • **points**: *number*
 
-Defined in: [src/database/models/Member.ts:5](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/112e06c/src/database/models/Member.ts#L5)
+Defined in: [src/database/models/Member.ts:5](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/database/models/Member.ts#L5)
 
 ___
 
@@ -47,4 +47,4 @@ ___
 
 • **reason**: *string*
 
-Defined in: [src/database/models/Member.ts:4](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/112e06c/src/database/models/Member.ts#L4)
+Defined in: [src/database/models/Member.ts:4](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/database/models/Member.ts#L4)

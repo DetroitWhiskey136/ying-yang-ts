@@ -3,8 +3,8 @@ import {
   TextChannel, DMChannel, VoiceChannel, NewsChannel,
 } from 'discord.js';
 
-import BotClient from '../client/BotClient';
-import DiscordClient from '../client/DiscordClient';
+import { BotClient } from '../client/BotClient';
+import { DiscordClient } from '../client/DiscordClient';
 import { Database } from '../database';
 
 // #region Scope Declaration

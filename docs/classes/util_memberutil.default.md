@@ -39,7 +39,7 @@ Name | Type |
 
 **Returns:** *void*
 
-Defined in: [src/util/MemberUtil.ts:12](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/112e06c/src/util/MemberUtil.ts#L12)
+Defined in: [src/util/MemberUtil.ts:12](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/util/MemberUtil.ts#L12)
 
 ___
 
@@ -56,7 +56,7 @@ Name | Type |
 
 **Returns:** *null* \| *GuildMember*
 
-Defined in: [src/util/MemberUtil.ts:5](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/112e06c/src/util/MemberUtil.ts#L5)
+Defined in: [src/util/MemberUtil.ts:5](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/util/MemberUtil.ts#L5)
 
 ___
 
@@ -73,4 +73,4 @@ Name | Type |
 
 **Returns:** *void*
 
-Defined in: [src/util/MemberUtil.ts:9](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/112e06c/src/util/MemberUtil.ts#L9)
+Defined in: [src/util/MemberUtil.ts:9](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/util/MemberUtil.ts#L9)

@@ -65,7 +65,7 @@ Inherited from: [default](command_parameters_types_parameter.default.md)
 
 Inherited from: [default](command_parameters_types_parameter.default.md).[aliases](command_parameters_types_parameter.default.md#aliases)
 
-Defined in: [src/command/parameters/types/Parameter.ts:17](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/112e06c/src/command/parameters/types/Parameter.ts#L17)
+Defined in: [src/command/parameters/types/Parameter.ts:17](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/command/parameters/types/Parameter.ts#L17)
 
 ___
 
@@ -73,7 +73,7 @@ ___
 
 • **clean**: *boolean*
 
-Defined in: [src/command/parameters/types/StringParameter.ts:17](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/112e06c/src/command/parameters/types/StringParameter.ts#L17)
+Defined in: [src/command/parameters/types/StringParameter.ts:17](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/command/parameters/types/StringParameter.ts#L17)
 
 ___
 
@@ -81,7 +81,7 @@ ___
 
 • **errorRegex**: *any*
 
-Defined in: [src/command/parameters/types/StringParameter.ts:18](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/112e06c/src/command/parameters/types/StringParameter.ts#L18)
+Defined in: [src/command/parameters/types/StringParameter.ts:18](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/command/parameters/types/StringParameter.ts#L18)
 
 ___
 
@@ -89,7 +89,7 @@ ___
 
 • **forceLowerCase**: *boolean*
 
-Defined in: [src/command/parameters/types/StringParameter.ts:19](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/112e06c/src/command/parameters/types/StringParameter.ts#L19)
+Defined in: [src/command/parameters/types/StringParameter.ts:19](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/command/parameters/types/StringParameter.ts#L19)
 
 ___
 
@@ -97,7 +97,7 @@ ___
 
 • **forceUpperCase**: *boolean*
 
-Defined in: [src/command/parameters/types/StringParameter.ts:20](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/112e06c/src/command/parameters/types/StringParameter.ts#L20)
+Defined in: [src/command/parameters/types/StringParameter.ts:20](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/command/parameters/types/StringParameter.ts#L20)
 
 ___
 
@@ -107,7 +107,7 @@ ___
 
 Inherited from: [default](command_parameters_types_parameter.default.md).[full](command_parameters_types_parameter.default.md#full)
 
-Defined in: [src/command/parameters/types/Parameter.ts:18](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/112e06c/src/command/parameters/types/Parameter.ts#L18)
+Defined in: [src/command/parameters/types/Parameter.ts:18](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/command/parameters/types/Parameter.ts#L18)
 
 ___
 
@@ -117,7 +117,7 @@ ___
 
 Inherited from: [default](command_parameters_types_parameter.default.md).[fullJoin](command_parameters_types_parameter.default.md#fulljoin)
 
-Defined in: [src/command/parameters/types/Parameter.ts:19](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/112e06c/src/command/parameters/types/Parameter.ts#L19)
+Defined in: [src/command/parameters/types/Parameter.ts:19](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/command/parameters/types/Parameter.ts#L19)
 
 ___
 
@@ -125,7 +125,7 @@ ___
 
 • **maxLength**: *number*
 
-Defined in: [src/command/parameters/types/StringParameter.ts:21](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/112e06c/src/command/parameters/types/StringParameter.ts#L21)
+Defined in: [src/command/parameters/types/StringParameter.ts:21](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/command/parameters/types/StringParameter.ts#L21)
 
 ___
 
@@ -135,7 +135,7 @@ ___
 
 Inherited from: [default](command_parameters_types_parameter.default.md).[missingError](command_parameters_types_parameter.default.md#missingerror)
 
-Defined in: [src/command/parameters/types/Parameter.ts:20](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/112e06c/src/command/parameters/types/Parameter.ts#L20)
+Defined in: [src/command/parameters/types/Parameter.ts:20](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/command/parameters/types/Parameter.ts#L20)
 
 ___
 
@@ -145,7 +145,7 @@ ___
 
 Inherited from: [default](command_parameters_types_parameter.default.md).[name](command_parameters_types_parameter.default.md#name)
 
-Defined in: [src/command/parameters/types/Parameter.ts:21](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/112e06c/src/command/parameters/types/Parameter.ts#L21)
+Defined in: [src/command/parameters/types/Parameter.ts:21](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/command/parameters/types/Parameter.ts#L21)
 
 ___
 
@@ -155,7 +155,7 @@ ___
 
 Inherited from: [default](command_parameters_types_parameter.default.md).[required](command_parameters_types_parameter.default.md#required)
 
-Defined in: [src/command/parameters/types/Parameter.ts:22](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/112e06c/src/command/parameters/types/Parameter.ts#L22)
+Defined in: [src/command/parameters/types/Parameter.ts:22](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/command/parameters/types/Parameter.ts#L22)
 
 ___
 
@@ -165,7 +165,7 @@ ___
 
 Inherited from: [default](command_parameters_types_parameter.default.md).[showUsage](command_parameters_types_parameter.default.md#showusage)
 
-Defined in: [src/command/parameters/types/Parameter.ts:23](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/112e06c/src/command/parameters/types/Parameter.ts#L23)
+Defined in: [src/command/parameters/types/Parameter.ts:23](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/command/parameters/types/Parameter.ts#L23)
 
 ___
 
@@ -173,7 +173,7 @@ ___
 
 • **truncate**: *boolean*
 
-Defined in: [src/command/parameters/types/StringParameter.ts:22](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/112e06c/src/command/parameters/types/StringParameter.ts#L22)
+Defined in: [src/command/parameters/types/StringParameter.ts:22](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/command/parameters/types/StringParameter.ts#L22)
 
 ___
 
@@ -183,7 +183,7 @@ ___
 
 Inherited from: [default](command_parameters_types_parameter.default.md).[types](command_parameters_types_parameter.default.md#types)
 
-Defined in: [src/command/parameters/types/Parameter.ts:16](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/112e06c/src/command/parameters/types/Parameter.ts#L16)
+Defined in: [src/command/parameters/types/Parameter.ts:16](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/command/parameters/types/Parameter.ts#L16)
 
 ___
 
@@ -193,7 +193,7 @@ ___
 
 Inherited from: [default](command_parameters_types_parameter.default.md).[whitelist](command_parameters_types_parameter.default.md#whitelist)
 
-Defined in: [src/command/parameters/types/Parameter.ts:24](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/112e06c/src/command/parameters/types/Parameter.ts#L24)
+Defined in: [src/command/parameters/types/Parameter.ts:24](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/command/parameters/types/Parameter.ts#L24)
 
 ___
 
@@ -201,7 +201,7 @@ ___
 
 ▪ `Static` **clean**: *boolean*
 
-Defined in: [src/command/parameters/types/StringParameter.ts:26](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/112e06c/src/command/parameters/types/StringParameter.ts#L26)
+Defined in: [src/command/parameters/types/StringParameter.ts:26](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/command/parameters/types/StringParameter.ts#L26)
 
 ___
 
@@ -209,7 +209,7 @@ ___
 
 ▪ `Static` **errorRegex**: *any*
 
-Defined in: [src/command/parameters/types/StringParameter.ts:28](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/112e06c/src/command/parameters/types/StringParameter.ts#L28)
+Defined in: [src/command/parameters/types/StringParameter.ts:28](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/command/parameters/types/StringParameter.ts#L28)
 
 ___
 
@@ -217,7 +217,7 @@ ___
 
 ▪ `Static` **errors**: *any*
 
-Defined in: [src/command/parameters/types/StringParameter.ts:38](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/112e06c/src/command/parameters/types/StringParameter.ts#L38)
+Defined in: [src/command/parameters/types/StringParameter.ts:38](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/command/parameters/types/StringParameter.ts#L38)
 
 ___
 
@@ -225,7 +225,7 @@ ___
 
 ▪ `Static` **forceLowerCase**: *boolean*
 
-Defined in: [src/command/parameters/types/StringParameter.ts:30](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/112e06c/src/command/parameters/types/StringParameter.ts#L30)
+Defined in: [src/command/parameters/types/StringParameter.ts:30](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/command/parameters/types/StringParameter.ts#L30)
 
 ___
 
@@ -233,7 +233,7 @@ ___
 
 ▪ `Static` **forceUpperCase**: *boolean*
 
-Defined in: [src/command/parameters/types/StringParameter.ts:32](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/112e06c/src/command/parameters/types/StringParameter.ts#L32)
+Defined in: [src/command/parameters/types/StringParameter.ts:32](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/command/parameters/types/StringParameter.ts#L32)
 
 ___
 
@@ -241,7 +241,7 @@ ___
 
 ▪ `Static` **maxLength**: *number*
 
-Defined in: [src/command/parameters/types/StringParameter.ts:34](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/112e06c/src/command/parameters/types/StringParameter.ts#L34)
+Defined in: [src/command/parameters/types/StringParameter.ts:34](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/command/parameters/types/StringParameter.ts#L34)
 
 ___
 
@@ -249,7 +249,7 @@ ___
 
 ▪ `Static` **truncate**: *boolean*
 
-Defined in: [src/command/parameters/types/StringParameter.ts:36](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/112e06c/src/command/parameters/types/StringParameter.ts#L36)
+Defined in: [src/command/parameters/types/StringParameter.ts:36](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/command/parameters/types/StringParameter.ts#L36)
 
 ## Methods
 
@@ -269,7 +269,7 @@ Name | Type | Description |
 
 Inherited from: [default](command_parameters_types_parameter.default.md)
 
-Defined in: [src/command/parameters/types/Parameter.ts:50](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/112e06c/src/command/parameters/types/Parameter.ts#L50)
+Defined in: [src/command/parameters/types/Parameter.ts:50](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/command/parameters/types/Parameter.ts#L50)
 
 ___
 
@@ -290,7 +290,7 @@ string
 
 Overrides: [default](command_parameters_types_parameter.default.md)
 
-Defined in: [src/command/parameters/types/StringParameter.ts:57](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/112e06c/src/command/parameters/types/StringParameter.ts#L57)
+Defined in: [src/command/parameters/types/StringParameter.ts:57](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/command/parameters/types/StringParameter.ts#L57)
 
 ___
 
@@ -325,4 +325,4 @@ Name | Type |
 
 Overrides: [default](command_parameters_types_parameter.default.md)
 
-Defined in: [src/command/parameters/types/StringParameter.ts:40](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/112e06c/src/command/parameters/types/StringParameter.ts#L40)
+Defined in: [src/command/parameters/types/StringParameter.ts:40](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/command/parameters/types/StringParameter.ts#L40)

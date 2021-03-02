@@ -33,7 +33,7 @@ Creates an instance of FileUtil.
 
 **Returns:** [*default*](util_file.default.md)
 
-Defined in: [src/util/File.ts:14](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/112e06c/src/util/File.ts#L14)
+Defined in: [src/util/File.ts:14](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/util/File.ts#L14)
 
 ## Properties
 
@@ -41,13 +41,13 @@ Defined in: [src/util/File.ts:14](https://github.com/DetroitWhiskey136/ying-yang
 
 • **message**: *null* \| *string*
 
-Defined in: [src/util/File.ts:14](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/112e06c/src/util/File.ts#L14)
+Defined in: [src/util/File.ts:14](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/util/File.ts#L14)
 
 ## Methods
 
 ### LoadFile
 
-▸ `Private`**LoadFile**(`filePath`: *string*, `fileName`: *string*, `bot`: [*default*](client_botclient.default.md)): *Promise*<void\>
+▸ `Private`**LoadFile**(`filePath`: *string*, `fileName`: *string*, `bot`: [*BotClient*](client_botclient.botclient.md)): *Promise*<void\>
 
 Loads a specific file into the appropriate Collection if not disabled.
 
@@ -61,19 +61,19 @@ Name | Type | Description |
 :------ | :------ | :------ |
 `filePath` | *string* | The files path.   |
 `fileName` | *string* | The files name.   |
-`bot` | [*default*](client_botclient.default.md) | The BotClient.   |
+`bot` | [*BotClient*](client_botclient.botclient.md) | The BotClient.   |
 
 **Returns:** *Promise*<void\>
 
 A void Promise
 
-Defined in: [src/util/File.ts:60](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/112e06c/src/util/File.ts#L60)
+Defined in: [src/util/File.ts:60](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/util/File.ts#L60)
 
 ___
 
 ### LoadFiles
 
-▸ **LoadFiles**(`url`: *string*, `bot`: [*default*](client_botclient.default.md)): *void*
+▸ **LoadFiles**(`url`: *string*, `bot`: [*BotClient*](client_botclient.botclient.md)): *void*
 
 Load all files in a folder and
 gets them ready for the loadFile method
@@ -87,8 +87,8 @@ gets them ready for the loadFile method
 Name | Type | Description |
 :------ | :------ | :------ |
 `url` | *string* | The folder of files you want to load   |
-`bot` | [*default*](client_botclient.default.md) | The BotClient object   |
+`bot` | [*BotClient*](client_botclient.botclient.md) | The BotClient object   |
 
 **Returns:** *void*
 
-Defined in: [src/util/File.ts:37](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/112e06c/src/util/File.ts#L37)
+Defined in: [src/util/File.ts:37](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/util/File.ts#L37)

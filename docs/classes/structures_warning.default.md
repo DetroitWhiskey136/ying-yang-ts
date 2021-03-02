@@ -28,27 +28,27 @@
 
 ### constructor
 
-\+ **new default**(`client`: [*default*](client_discordclient.default.md) \| *Client*, `data`: [*MemberWarning*](../interfaces/database_models_member.memberwarning.md), `member`: *GuildMember*): [*default*](structures_warning.default.md)
+\+ **new default**(`client`: [*DiscordClient*](client_discordclient.discordclient.md) \| *Client*, `data`: [*MemberWarning*](../interfaces/database_models_member.memberwarning.md), `member`: *GuildMember*): [*default*](structures_warning.default.md)
 
 #### Parameters:
 
 Name | Type |
 :------ | :------ |
-`client` | [*default*](client_discordclient.default.md) \| *Client* |
+`client` | [*DiscordClient*](client_discordclient.discordclient.md) \| *Client* |
 `data` | [*MemberWarning*](../interfaces/database_models_member.memberwarning.md) |
 `member` | *GuildMember* |
 
 **Returns:** [*default*](structures_warning.default.md)
 
-Defined in: [src/structures/Warning.ts:15](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/112e06c/src/structures/Warning.ts#L15)
+Defined in: [src/structures/Warning.ts:15](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/structures/Warning.ts#L15)
 
 ## Properties
 
 ### client
 
-• **client**: [*default*](client_discordclient.default.md) \| *Client*
+• **client**: [*DiscordClient*](client_discordclient.discordclient.md) \| *Client*
 
-Defined in: [src/structures/Warning.ts:6](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/112e06c/src/structures/Warning.ts#L6)
+Defined in: [src/structures/Warning.ts:6](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/structures/Warning.ts#L6)
 
 ___
 
@@ -56,7 +56,7 @@ ___
 
 • **guild**: *Guild*
 
-Defined in: [src/structures/Warning.ts:7](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/112e06c/src/structures/Warning.ts#L7)
+Defined in: [src/structures/Warning.ts:7](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/structures/Warning.ts#L7)
 
 ___
 
@@ -64,7 +64,7 @@ ___
 
 • **id**: *string*
 
-Defined in: [src/structures/Warning.ts:9](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/112e06c/src/structures/Warning.ts#L9)
+Defined in: [src/structures/Warning.ts:9](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/structures/Warning.ts#L9)
 
 ___
 
@@ -72,7 +72,7 @@ ___
 
 • **member**: *GuildMember*
 
-Defined in: [src/structures/Warning.ts:8](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/112e06c/src/structures/Warning.ts#L8)
+Defined in: [src/structures/Warning.ts:8](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/structures/Warning.ts#L8)
 
 ___
 
@@ -80,7 +80,7 @@ ___
 
 • **moderator**: *string* \| *GuildMember*
 
-Defined in: [src/structures/Warning.ts:12](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/112e06c/src/structures/Warning.ts#L12)
+Defined in: [src/structures/Warning.ts:12](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/structures/Warning.ts#L12)
 
 ___
 
@@ -88,7 +88,7 @@ ___
 
 • **points**: *number*
 
-Defined in: [src/structures/Warning.ts:11](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/112e06c/src/structures/Warning.ts#L11)
+Defined in: [src/structures/Warning.ts:11](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/structures/Warning.ts#L11)
 
 ___
 
@@ -96,7 +96,7 @@ ___
 
 • **reason**: *string*
 
-Defined in: [src/structures/Warning.ts:10](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/112e06c/src/structures/Warning.ts#L10)
+Defined in: [src/structures/Warning.ts:10](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/structures/Warning.ts#L10)
 
 ## Methods
 
@@ -112,4 +112,4 @@ Name | Type |
 
 **Returns:** *string* \| *GuildMember*
 
-Defined in: [src/structures/Warning.ts:29](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/112e06c/src/structures/Warning.ts#L29)
+Defined in: [src/structures/Warning.ts:29](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/structures/Warning.ts#L29)

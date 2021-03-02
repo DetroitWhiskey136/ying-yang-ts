@@ -39,7 +39,7 @@
 
 Inherited from: [default](handlers_event.default.md)
 
-Defined in: [src/events/Message/MessageEvent.ts:14](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/112e06c/src/events/Message/MessageEvent.ts#L14)
+Defined in: [src/events/Message/MessageEvent.ts:14](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/events/Message/MessageEvent.ts#L14)
 
 ## Properties
 
@@ -49,7 +49,7 @@ Defined in: [src/events/Message/MessageEvent.ts:14](https://github.com/DetroitWh
 
 Inherited from: [default](handlers_event.default.md).[enabled](handlers_event.default.md#enabled)
 
-Defined in: [src/handlers/Event.ts:23](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/112e06c/src/handlers/Event.ts#L23)
+Defined in: [src/handlers/Event.ts:23](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/handlers/Event.ts#L23)
 
 ___
 
@@ -59,7 +59,7 @@ ___
 
 Inherited from: [default](handlers_event.default.md).[name](handlers_event.default.md#name)
 
-Defined in: [src/handlers/Event.ts:21](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/112e06c/src/handlers/Event.ts#L21)
+Defined in: [src/handlers/Event.ts:21](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/handlers/Event.ts#L21)
 
 ___
 
@@ -69,7 +69,7 @@ ___
 
 Inherited from: [default](handlers_event.default.md).[type](handlers_event.default.md#type)
 
-Defined in: [src/handlers/Event.ts:25](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/112e06c/src/handlers/Event.ts#L25)
+Defined in: [src/handlers/Event.ts:25](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/handlers/Event.ts#L25)
 
 ## Methods
 
@@ -89,7 +89,7 @@ Name | Type | Description |
 
 **Returns:** *void*
 
-Defined in: [src/events/Message/MessageEvent.ts:50](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/112e06c/src/events/Message/MessageEvent.ts#L50)
+Defined in: [src/events/Message/MessageEvent.ts:50](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/events/Message/MessageEvent.ts#L50)
 
 ___
 
@@ -106,7 +106,7 @@ Name | Type |
 
 **Returns:** *null* \| *string*
 
-Defined in: [src/events/Message/MessageEvent.ts:29](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/112e06c/src/events/Message/MessageEvent.ts#L29)
+Defined in: [src/events/Message/MessageEvent.ts:29](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/events/Message/MessageEvent.ts#L29)
 
 ___
 
@@ -122,22 +122,22 @@ Name | Type |
 
 **Returns:** *boolean*
 
-Defined in: [src/events/Message/MessageEvent.ts:22](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/112e06c/src/events/Message/MessageEvent.ts#L22)
+Defined in: [src/events/Message/MessageEvent.ts:22](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/events/Message/MessageEvent.ts#L22)
 
 ___
 
 ### run
 
-▸ **run**(`bot`: [*default*](client_botclient.default.md), `client`: [*default*](client_discordclient.default.md), `message`: *Message*): *void*
+▸ **run**(`bot`: [*BotClient*](client_botclient.botclient.md), `client`: [*DiscordClient*](client_discordclient.discordclient.md), `message`: *Message*): *void*
 
 #### Parameters:
 
 Name | Type |
 :------ | :------ |
-`bot` | [*default*](client_botclient.default.md) |
-`client` | [*default*](client_discordclient.default.md) |
+`bot` | [*BotClient*](client_botclient.botclient.md) |
+`client` | [*DiscordClient*](client_discordclient.discordclient.md) |
 `message` | *Message* |
 
 **Returns:** *void*
 
-Defined in: [src/events/Message/MessageEvent.ts:60](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/112e06c/src/events/Message/MessageEvent.ts#L60)
+Defined in: [src/events/Message/MessageEvent.ts:60](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/events/Message/MessageEvent.ts#L60)

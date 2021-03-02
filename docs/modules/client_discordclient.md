@@ -6,4 +6,4 @@
 
 ### Classes
 
-- [default](../classes/client_discordclient.default.md)
+- [DiscordClient](../classes/client_discordclient.discordclient.md)

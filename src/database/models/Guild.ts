@@ -1,4 +1,4 @@
-import { stringResolvable } from '../../util';
+import { stringResolvable } from '@util/Constants';
 
 export interface Guild {
   prefix: stringResolvable;

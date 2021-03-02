@@ -54,7 +54,7 @@ Name | Type | Description |
 
 **Returns:** *void*
 
-Defined in: [src/util/Logger.ts:190](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/112e06c/src/util/Logger.ts#L190)
+Defined in: [src/util/Logger.ts:190](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/util/Logger.ts#L190)
 
 ___
 
@@ -76,7 +76,7 @@ Name | Type | Description |
 
 **Returns:** *void*
 
-Defined in: [src/util/Logger.ts:216](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/112e06c/src/util/Logger.ts#L216)
+Defined in: [src/util/Logger.ts:216](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/util/Logger.ts#L216)
 
 ___
 
@@ -98,7 +98,7 @@ Name | Type | Description |
 
 **Returns:** *void*
 
-Defined in: [src/util/Logger.ts:177](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/112e06c/src/util/Logger.ts#L177)
+Defined in: [src/util/Logger.ts:177](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/util/Logger.ts#L177)
 
 ___
 
@@ -120,7 +120,7 @@ Name | Type | Description |
 
 **Returns:** *void*
 
-Defined in: [src/util/Logger.ts:164](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/112e06c/src/util/Logger.ts#L164)
+Defined in: [src/util/Logger.ts:164](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/util/Logger.ts#L164)
 
 ___
 
@@ -142,7 +142,7 @@ Name | Type | Description |
 
 **Returns:** *void*
 
-Defined in: [src/util/Logger.ts:203](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/112e06c/src/util/Logger.ts#L203)
+Defined in: [src/util/Logger.ts:203](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/util/Logger.ts#L203)
 
 ___
 
@@ -165,7 +165,7 @@ Name | Type | Description |
 
 **Returns:** *void*
 
-Defined in: [src/util/Logger.ts:95](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/112e06c/src/util/Logger.ts#L95)
+Defined in: [src/util/Logger.ts:95](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/util/Logger.ts#L95)
 
 ___
 
@@ -189,7 +189,7 @@ Name | Type | Description |
 
 String or Number
 
-Defined in: [src/util/Logger.ts:60](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/112e06c/src/util/Logger.ts#L60)
+Defined in: [src/util/Logger.ts:60](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/util/Logger.ts#L60)
 
 ___
 
@@ -207,7 +207,7 @@ Create a new timestamp array.
 
 String Array
 
-Defined in: [src/util/Logger.ts:72](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/112e06c/src/util/Logger.ts#L72)
+Defined in: [src/util/Logger.ts:72](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/util/Logger.ts#L72)
 
 ___
 
@@ -231,4 +231,4 @@ Name | Type | Description |
 
 String Array
 
-Defined in: [src/util/Logger.ts:110](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/112e06c/src/util/Logger.ts#L110)
+Defined in: [src/util/Logger.ts:110](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/util/Logger.ts#L110)

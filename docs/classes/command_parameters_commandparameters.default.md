@@ -26,7 +26,7 @@
 
 **Returns:** [*default*](command_parameters_commandparameters.default.md)
 
-Defined in: [src/command/parameters/CommandParameters.ts:30](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/112e06c/src/command/parameters/CommandParameters.ts#L30)
+Defined in: [src/command/parameters/CommandParameters.ts:30](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/command/parameters/CommandParameters.ts#L30)
 
 ## Methods
 
@@ -48,7 +48,7 @@ Name | Type | Description |
 
 The handled arguments.
 
-Defined in: [src/command/parameters/CommandParameters.ts:51](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/112e06c/src/command/parameters/CommandParameters.ts#L51)
+Defined in: [src/command/parameters/CommandParameters.ts:51](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/command/parameters/CommandParameters.ts#L51)
 
 ___
 
@@ -70,7 +70,7 @@ Name | Type | Description |
 
 The parsed arguments
 
-Defined in: [src/command/parameters/CommandParameters.ts:98](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/112e06c/src/command/parameters/CommandParameters.ts#L98)
+Defined in: [src/command/parameters/CommandParameters.ts:98](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/command/parameters/CommandParameters.ts#L98)
 
 ___
 
@@ -90,7 +90,7 @@ Name | Type | Description |
 
 **Returns:** *Promise*<void\>
 
-Defined in: [src/command/parameters/CommandParameters.ts:64](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/112e06c/src/command/parameters/CommandParameters.ts#L64)
+Defined in: [src/command/parameters/CommandParameters.ts:64](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/command/parameters/CommandParameters.ts#L64)
 
 ___
 
@@ -111,7 +111,7 @@ Name | Type |
 `flags` | *any* |
 `parameters` | *any* |
 
-Defined in: [src/command/parameters/CommandParameters.ts:35](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/112e06c/src/command/parameters/CommandParameters.ts#L35)
+Defined in: [src/command/parameters/CommandParameters.ts:35](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/command/parameters/CommandParameters.ts#L35)
 
 ___
 
@@ -134,4 +134,4 @@ Name | Type | Description |
 
 parsedArgs
 
-Defined in: [src/command/parameters/CommandParameters.ts:141](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/112e06c/src/command/parameters/CommandParameters.ts#L141)
+Defined in: [src/command/parameters/CommandParameters.ts:141](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/command/parameters/CommandParameters.ts#L141)

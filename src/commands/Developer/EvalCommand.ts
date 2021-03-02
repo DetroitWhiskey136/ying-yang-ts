@@ -1,13 +1,13 @@
 /* eslint-disable no-eval, no-unused-vars */
 import { inspect } from 'util';
+import {
+  Constants, Logger, StringUtil, Util,
+} from '@util/index';
 import { BotClient } from '../../client/index';
 
 import CommandContext from '../../command/CommandContext';
 import Embed from '../../discord/Embed';
 import { Command } from '../../handlers';
-import {
-  Constants, Logger, StringUtil, Util,
-} from '../../util';
 
 const { isEmpty, isPromise } = Util;
 const { code } = StringUtil;

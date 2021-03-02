@@ -20,4 +20,4 @@
 
 • `Const` **default**: [*Settings*](../interfaces/database_models_settings.settings.md)
 
-Defined in: [src/database/models/Settings.ts:17](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/112e06c/src/database/models/Settings.ts#L17)
+Defined in: [src/database/models/Settings.ts:17](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/database/models/Settings.ts#L17)

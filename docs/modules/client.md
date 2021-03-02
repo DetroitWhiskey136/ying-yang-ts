@@ -13,10 +13,10 @@
 
 ### BotClient
 
-Renames and exports: [default](../classes/client_botclient.default.md)
+Re-exports: [BotClient](../classes/client_botclient.botclient.md)
 
 ___
 
 ### DiscordClient
 
-Renames and exports: [default](../classes/client_discordclient.default.md)
+Re-exports: [DiscordClient](../classes/client_discordclient.discordclient.md)

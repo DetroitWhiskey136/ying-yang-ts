@@ -18,4 +18,4 @@
 
 #### Type declaration:
 
-Defined in: [src/database/models/Member.ts:16](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/112e06c/src/database/models/Member.ts#L16)
+Defined in: [src/database/models/Member.ts:16](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/database/models/Member.ts#L16)

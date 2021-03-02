@@ -19,7 +19,7 @@
 
 • **admins**: [*Admins*](database_models_settings.admins.md)[]
 
-Defined in: [src/database/models/Settings.ts:10](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/112e06c/src/database/models/Settings.ts#L10)
+Defined in: [src/database/models/Settings.ts:10](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/database/models/Settings.ts#L10)
 
 ___
 
@@ -27,7 +27,7 @@ ___
 
 • **guilds**: *number*
 
-Defined in: [src/database/models/Settings.ts:12](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/112e06c/src/database/models/Settings.ts#L12)
+Defined in: [src/database/models/Settings.ts:12](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/database/models/Settings.ts#L12)
 
 ___
 
@@ -35,7 +35,7 @@ ___
 
 • **restart**: *boolean*
 
-Defined in: [src/database/models/Settings.ts:13](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/112e06c/src/database/models/Settings.ts#L13)
+Defined in: [src/database/models/Settings.ts:13](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/database/models/Settings.ts#L13)
 
 ___
 
@@ -43,4 +43,4 @@ ___
 
 • **support**: [*Support*](database_models_settings.support.md)[]
 
-Defined in: [src/database/models/Settings.ts:11](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/112e06c/src/database/models/Settings.ts#L11)
+Defined in: [src/database/models/Settings.ts:11](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/database/models/Settings.ts#L11)

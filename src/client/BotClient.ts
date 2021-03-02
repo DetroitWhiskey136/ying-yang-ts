@@ -1,12 +1,17 @@
+import { DiscordClient } from '@client/index';
 import { Collection, ClientOptions } from 'discord.js';
 import { Database } from '../database';
 import { Command, Event } from '../handlers';
 import { Logger, FileUtil } from '../util';
-import DiscordClient from './DiscordClient';
 
 const fileUtil = new FileUtil();
 
-declare interface BotClient {
+/**
+ * The BotClient Interface
+ * @export
+ * @interface BotClient
+ */
+export declare interface BotClient {
   client: DiscordClient;
   logger: Logger;
   events: Collection<string, Event>;
@@ -17,10 +22,10 @@ declare interface BotClient {
 
 /**
  * The BotClient Class.
+ * @exports
  * @class BotClient
  */
-class BotClient {
-  // #region Constructor
+export class BotClient {
   constructor(options: ClientOptions) {
     this.client = new DiscordClient(options, this);
     this.logger = new Logger();
@@ -41,7 +46,4 @@ class BotClient {
       fileUtil.LoadFiles('dist/commands', this);
     }
   }
-  // #endregion
 }
-
-export default BotClient;

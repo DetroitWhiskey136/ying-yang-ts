@@ -1,15 +1,17 @@
+import { BotClient } from '@client/index';
 import { Client, ClientOptions } from 'discord.js';
-import BotClient from './BotClient';
 
-// #region Scope Declaration
 declare module 'discord.js' {
   interface Client {
     bot: BotClient;
   }
 }
-// #endregion
 
-class DiscordClient extends Client {
+export declare interface DiscordClient {
+  bot: BotClient;
+}
+
+export class DiscordClient extends Client {
   getGuild(arg0: string) {
     throw new Error('Method not implemented.');
   }
@@ -18,7 +20,4 @@ class DiscordClient extends Client {
     super(options);
     this.bot = bot;
   }
-  // #endregion
 }
-
-export default DiscordClient;

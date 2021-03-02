@@ -6,7 +6,7 @@ type channelResolvable =
   GuildChannel | TextChannel | VoiceChannel | CategoryChannel |
   Channel | NewsChannel | DMChannel | null;
 
-class ChannelUtils {
+class ChannelUtil {
   static resolveTextChannel(channel: channelResolvable) {
     if (!((channel): channel is TextChannel => channel?.type === 'text')(channel)) return;
 
@@ -15,4 +15,4 @@ class ChannelUtils {
   }
 }
 
-export default ChannelUtils;
+export default ChannelUtil;

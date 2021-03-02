@@ -59,7 +59,7 @@ Inherited from: [default](command_parameters_types_parameter.default.md)
 
 Inherited from: [default](command_parameters_types_parameter.default.md).[aliases](command_parameters_types_parameter.default.md#aliases)
 
-Defined in: [src/command/parameters/types/Parameter.ts:17](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/112e06c/src/command/parameters/types/Parameter.ts#L17)
+Defined in: [src/command/parameters/types/Parameter.ts:17](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/command/parameters/types/Parameter.ts#L17)
 
 ___
 
@@ -69,7 +69,7 @@ ___
 
 Inherited from: [default](command_parameters_types_parameter.default.md).[full](command_parameters_types_parameter.default.md#full)
 
-Defined in: [src/command/parameters/types/Parameter.ts:18](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/112e06c/src/command/parameters/types/Parameter.ts#L18)
+Defined in: [src/command/parameters/types/Parameter.ts:18](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/command/parameters/types/Parameter.ts#L18)
 
 ___
 
@@ -79,7 +79,7 @@ ___
 
 Inherited from: [default](command_parameters_types_parameter.default.md).[fullJoin](command_parameters_types_parameter.default.md#fulljoin)
 
-Defined in: [src/command/parameters/types/Parameter.ts:19](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/112e06c/src/command/parameters/types/Parameter.ts#L19)
+Defined in: [src/command/parameters/types/Parameter.ts:19](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/command/parameters/types/Parameter.ts#L19)
 
 ___
 
@@ -89,7 +89,7 @@ ___
 
 Inherited from: [default](command_parameters_types_parameter.default.md).[missingError](command_parameters_types_parameter.default.md#missingerror)
 
-Defined in: [src/command/parameters/types/Parameter.ts:20](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/112e06c/src/command/parameters/types/Parameter.ts#L20)
+Defined in: [src/command/parameters/types/Parameter.ts:20](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/command/parameters/types/Parameter.ts#L20)
 
 ___
 
@@ -99,7 +99,7 @@ ___
 
 Inherited from: [default](command_parameters_types_parameter.default.md).[name](command_parameters_types_parameter.default.md#name)
 
-Defined in: [src/command/parameters/types/Parameter.ts:21](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/112e06c/src/command/parameters/types/Parameter.ts#L21)
+Defined in: [src/command/parameters/types/Parameter.ts:21](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/command/parameters/types/Parameter.ts#L21)
 
 ___
 
@@ -109,7 +109,7 @@ ___
 
 Inherited from: [default](command_parameters_types_parameter.default.md).[required](command_parameters_types_parameter.default.md#required)
 
-Defined in: [src/command/parameters/types/Parameter.ts:22](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/112e06c/src/command/parameters/types/Parameter.ts#L22)
+Defined in: [src/command/parameters/types/Parameter.ts:22](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/command/parameters/types/Parameter.ts#L22)
 
 ___
 
@@ -119,7 +119,7 @@ ___
 
 Inherited from: [default](command_parameters_types_parameter.default.md).[showUsage](command_parameters_types_parameter.default.md#showusage)
 
-Defined in: [src/command/parameters/types/Parameter.ts:23](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/112e06c/src/command/parameters/types/Parameter.ts#L23)
+Defined in: [src/command/parameters/types/Parameter.ts:23](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/command/parameters/types/Parameter.ts#L23)
 
 ___
 
@@ -129,7 +129,7 @@ ___
 
 Inherited from: [default](command_parameters_types_parameter.default.md).[types](command_parameters_types_parameter.default.md#types)
 
-Defined in: [src/command/parameters/types/Parameter.ts:16](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/112e06c/src/command/parameters/types/Parameter.ts#L16)
+Defined in: [src/command/parameters/types/Parameter.ts:16](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/command/parameters/types/Parameter.ts#L16)
 
 ___
 
@@ -139,7 +139,7 @@ ___
 
 Inherited from: [default](command_parameters_types_parameter.default.md).[whitelist](command_parameters_types_parameter.default.md#whitelist)
 
-Defined in: [src/command/parameters/types/Parameter.ts:24](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/112e06c/src/command/parameters/types/Parameter.ts#L24)
+Defined in: [src/command/parameters/types/Parameter.ts:24](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/command/parameters/types/Parameter.ts#L24)
 
 ___
 
@@ -147,7 +147,7 @@ ___
 
 ▪ `Static` **acceptBot**: *boolean*
 
-Defined in: [src/command/parameters/types/UserParameter.ts:38](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/112e06c/src/command/parameters/types/UserParameter.ts#L38)
+Defined in: [src/command/parameters/types/UserParameter.ts:38](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/command/parameters/types/UserParameter.ts#L38)
 
 ___
 
@@ -155,7 +155,7 @@ ___
 
 ▪ `Static` **acceptSelf**: *boolean*
 
-Defined in: [src/command/parameters/types/UserParameter.ts:36](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/112e06c/src/command/parameters/types/UserParameter.ts#L36)
+Defined in: [src/command/parameters/types/UserParameter.ts:36](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/command/parameters/types/UserParameter.ts#L36)
 
 ___
 
@@ -163,7 +163,7 @@ ___
 
 ▪ `Static` **acceptUser**: *boolean*
 
-Defined in: [src/command/parameters/types/UserParameter.ts:40](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/112e06c/src/command/parameters/types/UserParameter.ts#L40)
+Defined in: [src/command/parameters/types/UserParameter.ts:40](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/command/parameters/types/UserParameter.ts#L40)
 
 ___
 
@@ -171,7 +171,7 @@ ___
 
 ▪ `Static` **errors**: OptionErrors
 
-Defined in: [src/command/parameters/types/UserParameter.ts:34](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/112e06c/src/command/parameters/types/UserParameter.ts#L34)
+Defined in: [src/command/parameters/types/UserParameter.ts:34](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/command/parameters/types/UserParameter.ts#L34)
 
 ___
 
@@ -179,7 +179,7 @@ ___
 
 ▪ `Static` **fetchGlobal**: *boolean*
 
-Defined in: [src/command/parameters/types/UserParameter.ts:30](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/112e06c/src/command/parameters/types/UserParameter.ts#L30)
+Defined in: [src/command/parameters/types/UserParameter.ts:30](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/command/parameters/types/UserParameter.ts#L30)
 
 ___
 
@@ -187,7 +187,7 @@ ___
 
 ▪ `Static` **moreParams**: *any*
 
-Defined in: [src/command/parameters/types/UserParameter.ts:32](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/112e06c/src/command/parameters/types/UserParameter.ts#L32)
+Defined in: [src/command/parameters/types/UserParameter.ts:32](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/command/parameters/types/UserParameter.ts#L32)
 
 ___
 
@@ -195,7 +195,7 @@ ___
 
 ▪ `Static` **verifyHierarchy**: *boolean*
 
-Defined in: [src/command/parameters/types/UserParameter.ts:42](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/112e06c/src/command/parameters/types/UserParameter.ts#L42)
+Defined in: [src/command/parameters/types/UserParameter.ts:42](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/command/parameters/types/UserParameter.ts#L42)
 
 ## Methods
 
@@ -215,13 +215,13 @@ Name | Type | Description |
 
 Inherited from: [default](command_parameters_types_parameter.default.md)
 
-Defined in: [src/command/parameters/types/Parameter.ts:50](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/112e06c/src/command/parameters/types/Parameter.ts#L50)
+Defined in: [src/command/parameters/types/Parameter.ts:50](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/command/parameters/types/Parameter.ts#L50)
 
 ___
 
 ### parse
 
-▸ `Static`**parse**(`arg`: *string*, `ctx`: [*default*](command_commandcontext.default.md)): *Promise*<undefined \| *null* \| User\>
+▸ `Static`**parse**(`arg`: *string*, `ctx`: [*default*](command_commandcontext.default.md)): *Promise*<ParsedUser\>
 
 #### Parameters:
 
@@ -230,13 +230,13 @@ Name | Type | Description |
 `arg` | *string* | The argument.   |
 `ctx` | [*default*](command_commandcontext.default.md) | The context of this argument.   |
 
-**Returns:** *Promise*<undefined \| *null* \| User\>
+**Returns:** *Promise*<ParsedUser\>
 
 a user?
 
 Overrides: [default](command_parameters_types_parameter.default.md)
 
-Defined in: [src/command/parameters/types/UserParameter.ts:67](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/112e06c/src/command/parameters/types/UserParameter.ts#L67)
+Defined in: [src/command/parameters/types/UserParameter.ts:67](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/command/parameters/types/UserParameter.ts#L67)
 
 ___
 
@@ -275,4 +275,4 @@ Name | Type |
 
 Overrides: [default](command_parameters_types_parameter.default.md)
 
-Defined in: [src/command/parameters/types/UserParameter.ts:44](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/112e06c/src/command/parameters/types/UserParameter.ts#L44)
+Defined in: [src/command/parameters/types/UserParameter.ts:44](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/command/parameters/types/UserParameter.ts#L44)

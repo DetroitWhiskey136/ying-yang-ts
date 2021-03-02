@@ -20,7 +20,7 @@
 
 • **joinMessage**: [*stringResolvable*](../modules/util_constants.md#stringresolvable)
 
-Defined in: [src/database/models/Guild.ts:6](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/112e06c/src/database/models/Guild.ts#L6)
+Defined in: [src/database/models/Guild.ts:6](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/database/models/Guild.ts#L6)
 
 ___
 
@@ -28,7 +28,7 @@ ___
 
 • **leaveMessage**: [*stringResolvable*](../modules/util_constants.md#stringresolvable)
 
-Defined in: [src/database/models/Guild.ts:7](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/112e06c/src/database/models/Guild.ts#L7)
+Defined in: [src/database/models/Guild.ts:7](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/database/models/Guild.ts#L7)
 
 ___
 
@@ -36,7 +36,7 @@ ___
 
 • **log**: [*stringResolvable*](../modules/util_constants.md#stringresolvable)
 
-Defined in: [src/database/models/Guild.ts:5](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/112e06c/src/database/models/Guild.ts#L5)
+Defined in: [src/database/models/Guild.ts:5](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/database/models/Guild.ts#L5)
 
 ___
 
@@ -44,7 +44,7 @@ ___
 
 • **prefix**: [*stringResolvable*](../modules/util_constants.md#stringresolvable)
 
-Defined in: [src/database/models/Guild.ts:4](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/112e06c/src/database/models/Guild.ts#L4)
+Defined in: [src/database/models/Guild.ts:4](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/database/models/Guild.ts#L4)
 
 ___
 
@@ -52,4 +52,4 @@ ___
 
 • **welcomeChannel**: [*stringResolvable*](../modules/util_constants.md#stringresolvable)
 
-Defined in: [src/database/models/Guild.ts:8](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/112e06c/src/database/models/Guild.ts#L8)
+Defined in: [src/database/models/Guild.ts:8](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/database/models/Guild.ts#L8)

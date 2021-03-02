@@ -6,4 +6,4 @@
 
 ### Classes
 
-- [default](../classes/client_botclient.default.md)
+- [BotClient](../classes/client_botclient.botclient.md)

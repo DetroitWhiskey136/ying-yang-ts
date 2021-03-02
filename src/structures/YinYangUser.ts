@@ -1,6 +1,6 @@
+import { numberResolvable, booleanResolvable } from '@util/Constants';
 import { Structures } from 'discord.js';
 import { DiscordClient } from '../client';
-import { numberResolvable, booleanResolvable } from '../util/Constants';
 
 // #region Scope Declaration
 declare module 'discord.js' {

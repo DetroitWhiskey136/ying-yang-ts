@@ -1,10 +1,10 @@
 /* eslint-disable no-else-return */
-import { User, GuildMember } from 'discord.js';
+import { User } from 'discord.js';
 import CommandContext from '../../CommandContext';
 import CommandError from '../../CommandError';
 import Parameter from './Parameter';
 
-type ParsedUser = User | GuildMember | undefined | null
+type ParsedUser = User | undefined | null
 
 declare interface OptionErrors {
   acceptBotError: string
@@ -75,8 +75,9 @@ class UserParameter extends Parameter {
       || m.user.username.toLowerCase().includes(lower)
       || m.displayName.toLowerCase().includes(lower));
 
-    const globalMember = client && client.users.cache.find((m) => m.tag.toLowerCase() === lower
-      || m.username.toLowerCase().includes(lower));
+    const globalMember = client
+      && client.users.cache.find((u: User) => u.tag.toLowerCase() === lower
+      || u.username.toLowerCase().includes(lower));
 
     let user: ParsedUser = client.users.resolve(id)
       || (!!guildMember && guildMember.user)

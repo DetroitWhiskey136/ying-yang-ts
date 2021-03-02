@@ -17,7 +17,7 @@
 
 • **falseValues**: *string*[]
 
-Defined in: src/command/parameters/types/BooleanParameter.ts:5
+Defined in: [src/command/parameters/types/BooleanParameter.ts:5](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/command/parameters/types/BooleanParameter.ts#L5)
 
 ___
 
@@ -25,4 +25,4 @@ ___
 
 • **trueValues**: *string*[]
 
-Defined in: src/command/parameters/types/BooleanParameter.ts:6
+Defined in: [src/command/parameters/types/BooleanParameter.ts:6](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/command/parameters/types/BooleanParameter.ts#L6)

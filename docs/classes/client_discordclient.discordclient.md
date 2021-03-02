@@ -1,100 +1,100 @@
-[yin-yang-ts](../README.md) / [Exports](../modules.md) / [client/DiscordClient](../modules/client_discordclient.md) / default
+[yin-yang-ts](../README.md) / [Exports](../modules.md) / [client/DiscordClient](../modules/client_discordclient.md) / DiscordClient
 
-# Class: default
+# Class: DiscordClient
 
-[client/DiscordClient](../modules/client_discordclient.md).default
+[client/DiscordClient](../modules/client_discordclient.md).DiscordClient
 
 ## Hierarchy
 
 * *Client*
 
-  ↳ **default**
+  ↳ **DiscordClient**
 
 ## Table of contents
 
 ### Constructors
 
-- [constructor](client_discordclient.default.md#constructor)
+- [constructor](client_discordclient.discordclient.md#constructor)
 
 ### Properties
 
-- [bot](client_discordclient.default.md#bot)
-- [channels](client_discordclient.default.md#channels)
-- [emojis](client_discordclient.default.md#emojis)
-- [guilds](client_discordclient.default.md#guilds)
-- [options](client_discordclient.default.md#options)
-- [readyAt](client_discordclient.default.md#readyat)
-- [readyTimestamp](client_discordclient.default.md#readytimestamp)
-- [shard](client_discordclient.default.md#shard)
-- [token](client_discordclient.default.md#token)
-- [uptime](client_discordclient.default.md#uptime)
-- [user](client_discordclient.default.md#user)
-- [users](client_discordclient.default.md#users)
-- [voice](client_discordclient.default.md#voice)
-- [ws](client_discordclient.default.md#ws)
-- [defaultMaxListeners](client_discordclient.default.md#defaultmaxlisteners)
-- [errorMonitor](client_discordclient.default.md#errormonitor)
+- [bot](client_discordclient.discordclient.md#bot)
+- [channels](client_discordclient.discordclient.md#channels)
+- [emojis](client_discordclient.discordclient.md#emojis)
+- [guilds](client_discordclient.discordclient.md#guilds)
+- [options](client_discordclient.discordclient.md#options)
+- [readyAt](client_discordclient.discordclient.md#readyat)
+- [readyTimestamp](client_discordclient.discordclient.md#readytimestamp)
+- [shard](client_discordclient.discordclient.md#shard)
+- [token](client_discordclient.discordclient.md#token)
+- [uptime](client_discordclient.discordclient.md#uptime)
+- [user](client_discordclient.discordclient.md#user)
+- [users](client_discordclient.discordclient.md#users)
+- [voice](client_discordclient.discordclient.md#voice)
+- [ws](client_discordclient.discordclient.md#ws)
+- [defaultMaxListeners](client_discordclient.discordclient.md#defaultmaxlisteners)
+- [errorMonitor](client_discordclient.discordclient.md#errormonitor)
 
 ### Methods
 
-- [addListener](client_discordclient.default.md#addlistener)
-- [clearImmediate](client_discordclient.default.md#clearimmediate)
-- [clearInterval](client_discordclient.default.md#clearinterval)
-- [clearTimeout](client_discordclient.default.md#cleartimeout)
-- [destroy](client_discordclient.default.md#destroy)
-- [emit](client_discordclient.default.md#emit)
-- [eventNames](client_discordclient.default.md#eventnames)
-- [fetchApplication](client_discordclient.default.md#fetchapplication)
-- [fetchGuildPreview](client_discordclient.default.md#fetchguildpreview)
-- [fetchInvite](client_discordclient.default.md#fetchinvite)
-- [fetchVoiceRegions](client_discordclient.default.md#fetchvoiceregions)
-- [fetchWebhook](client_discordclient.default.md#fetchwebhook)
-- [generateInvite](client_discordclient.default.md#generateinvite)
-- [getGuild](client_discordclient.default.md#getguild)
-- [getMaxListeners](client_discordclient.default.md#getmaxlisteners)
-- [listenerCount](client_discordclient.default.md#listenercount)
-- [listeners](client_discordclient.default.md#listeners)
-- [login](client_discordclient.default.md#login)
-- [off](client_discordclient.default.md#off)
-- [on](client_discordclient.default.md#on)
-- [once](client_discordclient.default.md#once)
-- [prependListener](client_discordclient.default.md#prependlistener)
-- [prependOnceListener](client_discordclient.default.md#prependoncelistener)
-- [rawListeners](client_discordclient.default.md#rawlisteners)
-- [removeAllListeners](client_discordclient.default.md#removealllisteners)
-- [removeListener](client_discordclient.default.md#removelistener)
-- [setImmediate](client_discordclient.default.md#setimmediate)
-- [setInterval](client_discordclient.default.md#setinterval)
-- [setMaxListeners](client_discordclient.default.md#setmaxlisteners)
-- [setTimeout](client_discordclient.default.md#settimeout)
-- [sweepMessages](client_discordclient.default.md#sweepmessages)
-- [toJSON](client_discordclient.default.md#tojson)
-- [listenerCount](client_discordclient.default.md#listenercount)
+- [addListener](client_discordclient.discordclient.md#addlistener)
+- [clearImmediate](client_discordclient.discordclient.md#clearimmediate)
+- [clearInterval](client_discordclient.discordclient.md#clearinterval)
+- [clearTimeout](client_discordclient.discordclient.md#cleartimeout)
+- [destroy](client_discordclient.discordclient.md#destroy)
+- [emit](client_discordclient.discordclient.md#emit)
+- [eventNames](client_discordclient.discordclient.md#eventnames)
+- [fetchApplication](client_discordclient.discordclient.md#fetchapplication)
+- [fetchGuildPreview](client_discordclient.discordclient.md#fetchguildpreview)
+- [fetchInvite](client_discordclient.discordclient.md#fetchinvite)
+- [fetchVoiceRegions](client_discordclient.discordclient.md#fetchvoiceregions)
+- [fetchWebhook](client_discordclient.discordclient.md#fetchwebhook)
+- [generateInvite](client_discordclient.discordclient.md#generateinvite)
+- [getGuild](client_discordclient.discordclient.md#getguild)
+- [getMaxListeners](client_discordclient.discordclient.md#getmaxlisteners)
+- [listenerCount](client_discordclient.discordclient.md#listenercount)
+- [listeners](client_discordclient.discordclient.md#listeners)
+- [login](client_discordclient.discordclient.md#login)
+- [off](client_discordclient.discordclient.md#off)
+- [on](client_discordclient.discordclient.md#on)
+- [once](client_discordclient.discordclient.md#once)
+- [prependListener](client_discordclient.discordclient.md#prependlistener)
+- [prependOnceListener](client_discordclient.discordclient.md#prependoncelistener)
+- [rawListeners](client_discordclient.discordclient.md#rawlisteners)
+- [removeAllListeners](client_discordclient.discordclient.md#removealllisteners)
+- [removeListener](client_discordclient.discordclient.md#removelistener)
+- [setImmediate](client_discordclient.discordclient.md#setimmediate)
+- [setInterval](client_discordclient.discordclient.md#setinterval)
+- [setMaxListeners](client_discordclient.discordclient.md#setmaxlisteners)
+- [setTimeout](client_discordclient.discordclient.md#settimeout)
+- [sweepMessages](client_discordclient.discordclient.md#sweepmessages)
+- [toJSON](client_discordclient.discordclient.md#tojson)
+- [listenerCount](client_discordclient.discordclient.md#listenercount)
 
 ## Constructors
 
 ### constructor
 
-\+ **new default**(`options`: ClientOptions, `bot`: [*default*](client_botclient.default.md)): [*default*](client_discordclient.default.md)
+\+ **new DiscordClient**(`options`: ClientOptions, `bot`: [*BotClient*](client_botclient.botclient.md)): [*DiscordClient*](client_discordclient.discordclient.md)
 
 #### Parameters:
 
 Name | Type |
 :------ | :------ |
 `options` | ClientOptions |
-`bot` | [*default*](client_botclient.default.md) |
+`bot` | [*BotClient*](client_botclient.botclient.md) |
 
-**Returns:** [*default*](client_discordclient.default.md)
+**Returns:** [*DiscordClient*](client_discordclient.discordclient.md)
 
-Defined in: [src/client/DiscordClient.ts:15](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/112e06c/src/client/DiscordClient.ts#L15)
+Defined in: [src/client/DiscordClient.ts:17](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/client/DiscordClient.ts#L17)
 
 ## Properties
 
 ### bot
 
-• **bot**: [*default*](client_botclient.default.md)
+• **bot**: [*BotClient*](client_botclient.botclient.md)
 
-Defined in: [src/client/DiscordClient.ts:7](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/112e06c/src/client/DiscordClient.ts#L7)
+Defined in: [src/client/DiscordClient.ts:11](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/client/DiscordClient.ts#L11)
 
 ___
 
@@ -212,7 +212,7 @@ ___
 
 ### errorMonitor
 
-▪ `Readonly` `Static` **errorMonitor**: *typeof* [*errorMonitor*](client_discordclient.default.md#errormonitor)
+▪ `Readonly` `Static` **errorMonitor**: *typeof* [*errorMonitor*](client_discordclient.discordclient.md#errormonitor)
 
 This symbol shall be used to install a listener for only monitoring `'error'`
 events. Listeners installed using this symbol are called before the regular
@@ -228,7 +228,7 @@ Defined in: node_modules/@types/node/events.d.ts:55
 
 ### addListener
 
-▸ **addListener**(`event`: *string* \| *symbol*, `listener`: (...`args`: *any*[]) => *void*): [*default*](client_discordclient.default.md)
+▸ **addListener**(`event`: *string* \| *symbol*, `listener`: (...`args`: *any*[]) => *void*): [*DiscordClient*](client_discordclient.discordclient.md)
 
 #### Parameters:
 
@@ -237,7 +237,7 @@ Name | Type |
 `event` | *string* \| *symbol* |
 `listener` | (...`args`: *any*[]) => *void* |
 
-**Returns:** [*default*](client_discordclient.default.md)
+**Returns:** [*DiscordClient*](client_discordclient.discordclient.md)
 
 Defined in: node_modules/@types/node/events.d.ts:62
 
@@ -450,7 +450,7 @@ Name | Type |
 
 **Returns:** *void*
 
-Defined in: [src/client/DiscordClient.ts:13](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/112e06c/src/client/DiscordClient.ts#L13)
+Defined in: [src/client/DiscordClient.ts:15](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/client/DiscordClient.ts#L15)
 
 ___
 
@@ -514,7 +514,7 @@ ___
 
 ### off
 
-▸ **off**<K\>(`event`: K, `listener`: (...`args`: ClientEvents[K]) => *void*): [*default*](client_discordclient.default.md)
+▸ **off**<K\>(`event`: K, `listener`: (...`args`: ClientEvents[K]) => *void*): [*DiscordClient*](client_discordclient.discordclient.md)
 
 #### Type parameters:
 
@@ -529,11 +529,11 @@ Name | Type |
 `event` | K |
 `listener` | (...`args`: ClientEvents[K]) => *void* |
 
-**Returns:** [*default*](client_discordclient.default.md)
+**Returns:** [*DiscordClient*](client_discordclient.discordclient.md)
 
 Defined in: node_modules/discord.js/typings/index.d.ts:239
 
-▸ **off**<S\>(`event`: *Exclude*<S, *channelCreate* \| *channelDelete* \| *channelPinsUpdate* \| *channelUpdate* \| *debug* \| *warn* \| *disconnect* \| *emojiCreate* \| *emojiDelete* \| *emojiUpdate* \| *error* \| *guildBanAdd* \| *guildBanRemove* \| *guildCreate* \| *guildDelete* \| *guildUnavailable* \| *guildIntegrationsUpdate* \| *guildMemberAdd* \| *guildMemberAvailable* \| *guildMemberRemove* \| *guildMembersChunk* \| *guildMemberSpeaking* \| *guildMemberUpdate* \| *guildUpdate* \| *inviteCreate* \| *inviteDelete* \| *message* \| *messageDelete* \| *messageReactionRemoveAll* \| *messageReactionRemoveEmoji* \| *messageDeleteBulk* \| *messageReactionAdd* \| *messageReactionRemove* \| *messageUpdate* \| *presenceUpdate* \| *rateLimit* \| *ready* \| *invalidated* \| *roleCreate* \| *roleDelete* \| *roleUpdate* \| *typingStart* \| *userUpdate* \| *voiceStateUpdate* \| *webhookUpdate* \| *shardDisconnect* \| *shardError* \| *shardReady* \| *shardReconnecting* \| *shardResume*\>, `listener`: (...`args`: *any*[]) => *void*): [*default*](client_discordclient.default.md)
+▸ **off**<S\>(`event`: *Exclude*<S, *channelCreate* \| *channelDelete* \| *channelPinsUpdate* \| *channelUpdate* \| *debug* \| *warn* \| *disconnect* \| *emojiCreate* \| *emojiDelete* \| *emojiUpdate* \| *error* \| *guildBanAdd* \| *guildBanRemove* \| *guildCreate* \| *guildDelete* \| *guildUnavailable* \| *guildIntegrationsUpdate* \| *guildMemberAdd* \| *guildMemberAvailable* \| *guildMemberRemove* \| *guildMembersChunk* \| *guildMemberSpeaking* \| *guildMemberUpdate* \| *guildUpdate* \| *inviteCreate* \| *inviteDelete* \| *message* \| *messageDelete* \| *messageReactionRemoveAll* \| *messageReactionRemoveEmoji* \| *messageDeleteBulk* \| *messageReactionAdd* \| *messageReactionRemove* \| *messageUpdate* \| *presenceUpdate* \| *rateLimit* \| *ready* \| *invalidated* \| *roleCreate* \| *roleDelete* \| *roleUpdate* \| *typingStart* \| *userUpdate* \| *voiceStateUpdate* \| *webhookUpdate* \| *shardDisconnect* \| *shardError* \| *shardReady* \| *shardReconnecting* \| *shardResume*\>, `listener`: (...`args`: *any*[]) => *void*): [*DiscordClient*](client_discordclient.discordclient.md)
 
 #### Type parameters:
 
@@ -548,7 +548,7 @@ Name | Type |
 `event` | *Exclude*<S, *channelCreate* \| *channelDelete* \| *channelPinsUpdate* \| *channelUpdate* \| *debug* \| *warn* \| *disconnect* \| *emojiCreate* \| *emojiDelete* \| *emojiUpdate* \| *error* \| *guildBanAdd* \| *guildBanRemove* \| *guildCreate* \| *guildDelete* \| *guildUnavailable* \| *guildIntegrationsUpdate* \| *guildMemberAdd* \| *guildMemberAvailable* \| *guildMemberRemove* \| *guildMembersChunk* \| *guildMemberSpeaking* \| *guildMemberUpdate* \| *guildUpdate* \| *inviteCreate* \| *inviteDelete* \| *message* \| *messageDelete* \| *messageReactionRemoveAll* \| *messageReactionRemoveEmoji* \| *messageDeleteBulk* \| *messageReactionAdd* \| *messageReactionRemove* \| *messageUpdate* \| *presenceUpdate* \| *rateLimit* \| *ready* \| *invalidated* \| *roleCreate* \| *roleDelete* \| *roleUpdate* \| *typingStart* \| *userUpdate* \| *voiceStateUpdate* \| *webhookUpdate* \| *shardDisconnect* \| *shardError* \| *shardReady* \| *shardReconnecting* \| *shardResume*\> |
 `listener` | (...`args`: *any*[]) => *void* |
 
-**Returns:** [*default*](client_discordclient.default.md)
+**Returns:** [*DiscordClient*](client_discordclient.discordclient.md)
 
 Defined in: node_modules/discord.js/typings/index.d.ts:240
 
@@ -556,7 +556,7 @@ ___
 
 ### on
 
-▸ **on**<K\>(`event`: K, `listener`: (...`args`: ClientEvents[K]) => *void*): [*default*](client_discordclient.default.md)
+▸ **on**<K\>(`event`: K, `listener`: (...`args`: ClientEvents[K]) => *void*): [*DiscordClient*](client_discordclient.discordclient.md)
 
 #### Type parameters:
 
@@ -571,11 +571,11 @@ Name | Type |
 `event` | K |
 `listener` | (...`args`: ClientEvents[K]) => *void* |
 
-**Returns:** [*default*](client_discordclient.default.md)
+**Returns:** [*DiscordClient*](client_discordclient.discordclient.md)
 
 Defined in: node_modules/discord.js/typings/index.d.ts:224
 
-▸ **on**<S\>(`event`: *Exclude*<S, *channelCreate* \| *channelDelete* \| *channelPinsUpdate* \| *channelUpdate* \| *debug* \| *warn* \| *disconnect* \| *emojiCreate* \| *emojiDelete* \| *emojiUpdate* \| *error* \| *guildBanAdd* \| *guildBanRemove* \| *guildCreate* \| *guildDelete* \| *guildUnavailable* \| *guildIntegrationsUpdate* \| *guildMemberAdd* \| *guildMemberAvailable* \| *guildMemberRemove* \| *guildMembersChunk* \| *guildMemberSpeaking* \| *guildMemberUpdate* \| *guildUpdate* \| *inviteCreate* \| *inviteDelete* \| *message* \| *messageDelete* \| *messageReactionRemoveAll* \| *messageReactionRemoveEmoji* \| *messageDeleteBulk* \| *messageReactionAdd* \| *messageReactionRemove* \| *messageUpdate* \| *presenceUpdate* \| *rateLimit* \| *ready* \| *invalidated* \| *roleCreate* \| *roleDelete* \| *roleUpdate* \| *typingStart* \| *userUpdate* \| *voiceStateUpdate* \| *webhookUpdate* \| *shardDisconnect* \| *shardError* \| *shardReady* \| *shardReconnecting* \| *shardResume*\>, `listener`: (...`args`: *any*[]) => *void*): [*default*](client_discordclient.default.md)
+▸ **on**<S\>(`event`: *Exclude*<S, *channelCreate* \| *channelDelete* \| *channelPinsUpdate* \| *channelUpdate* \| *debug* \| *warn* \| *disconnect* \| *emojiCreate* \| *emojiDelete* \| *emojiUpdate* \| *error* \| *guildBanAdd* \| *guildBanRemove* \| *guildCreate* \| *guildDelete* \| *guildUnavailable* \| *guildIntegrationsUpdate* \| *guildMemberAdd* \| *guildMemberAvailable* \| *guildMemberRemove* \| *guildMembersChunk* \| *guildMemberSpeaking* \| *guildMemberUpdate* \| *guildUpdate* \| *inviteCreate* \| *inviteDelete* \| *message* \| *messageDelete* \| *messageReactionRemoveAll* \| *messageReactionRemoveEmoji* \| *messageDeleteBulk* \| *messageReactionAdd* \| *messageReactionRemove* \| *messageUpdate* \| *presenceUpdate* \| *rateLimit* \| *ready* \| *invalidated* \| *roleCreate* \| *roleDelete* \| *roleUpdate* \| *typingStart* \| *userUpdate* \| *voiceStateUpdate* \| *webhookUpdate* \| *shardDisconnect* \| *shardError* \| *shardReady* \| *shardReconnecting* \| *shardResume*\>, `listener`: (...`args`: *any*[]) => *void*): [*DiscordClient*](client_discordclient.discordclient.md)
 
 #### Type parameters:
 
@@ -590,7 +590,7 @@ Name | Type |
 `event` | *Exclude*<S, *channelCreate* \| *channelDelete* \| *channelPinsUpdate* \| *channelUpdate* \| *debug* \| *warn* \| *disconnect* \| *emojiCreate* \| *emojiDelete* \| *emojiUpdate* \| *error* \| *guildBanAdd* \| *guildBanRemove* \| *guildCreate* \| *guildDelete* \| *guildUnavailable* \| *guildIntegrationsUpdate* \| *guildMemberAdd* \| *guildMemberAvailable* \| *guildMemberRemove* \| *guildMembersChunk* \| *guildMemberSpeaking* \| *guildMemberUpdate* \| *guildUpdate* \| *inviteCreate* \| *inviteDelete* \| *message* \| *messageDelete* \| *messageReactionRemoveAll* \| *messageReactionRemoveEmoji* \| *messageDeleteBulk* \| *messageReactionAdd* \| *messageReactionRemove* \| *messageUpdate* \| *presenceUpdate* \| *rateLimit* \| *ready* \| *invalidated* \| *roleCreate* \| *roleDelete* \| *roleUpdate* \| *typingStart* \| *userUpdate* \| *voiceStateUpdate* \| *webhookUpdate* \| *shardDisconnect* \| *shardError* \| *shardReady* \| *shardReconnecting* \| *shardResume*\> |
 `listener` | (...`args`: *any*[]) => *void* |
 
-**Returns:** [*default*](client_discordclient.default.md)
+**Returns:** [*DiscordClient*](client_discordclient.discordclient.md)
 
 Defined in: node_modules/discord.js/typings/index.d.ts:225
 
@@ -598,7 +598,7 @@ ___
 
 ### once
 
-▸ **once**<K\>(`event`: K, `listener`: (...`args`: ClientEvents[K]) => *void*): [*default*](client_discordclient.default.md)
+▸ **once**<K\>(`event`: K, `listener`: (...`args`: ClientEvents[K]) => *void*): [*DiscordClient*](client_discordclient.discordclient.md)
 
 #### Type parameters:
 
@@ -613,11 +613,11 @@ Name | Type |
 `event` | K |
 `listener` | (...`args`: ClientEvents[K]) => *void* |
 
-**Returns:** [*default*](client_discordclient.default.md)
+**Returns:** [*DiscordClient*](client_discordclient.discordclient.md)
 
 Defined in: node_modules/discord.js/typings/index.d.ts:230
 
-▸ **once**<S\>(`event`: *Exclude*<S, *channelCreate* \| *channelDelete* \| *channelPinsUpdate* \| *channelUpdate* \| *debug* \| *warn* \| *disconnect* \| *emojiCreate* \| *emojiDelete* \| *emojiUpdate* \| *error* \| *guildBanAdd* \| *guildBanRemove* \| *guildCreate* \| *guildDelete* \| *guildUnavailable* \| *guildIntegrationsUpdate* \| *guildMemberAdd* \| *guildMemberAvailable* \| *guildMemberRemove* \| *guildMembersChunk* \| *guildMemberSpeaking* \| *guildMemberUpdate* \| *guildUpdate* \| *inviteCreate* \| *inviteDelete* \| *message* \| *messageDelete* \| *messageReactionRemoveAll* \| *messageReactionRemoveEmoji* \| *messageDeleteBulk* \| *messageReactionAdd* \| *messageReactionRemove* \| *messageUpdate* \| *presenceUpdate* \| *rateLimit* \| *ready* \| *invalidated* \| *roleCreate* \| *roleDelete* \| *roleUpdate* \| *typingStart* \| *userUpdate* \| *voiceStateUpdate* \| *webhookUpdate* \| *shardDisconnect* \| *shardError* \| *shardReady* \| *shardReconnecting* \| *shardResume*\>, `listener`: (...`args`: *any*[]) => *void*): [*default*](client_discordclient.default.md)
+▸ **once**<S\>(`event`: *Exclude*<S, *channelCreate* \| *channelDelete* \| *channelPinsUpdate* \| *channelUpdate* \| *debug* \| *warn* \| *disconnect* \| *emojiCreate* \| *emojiDelete* \| *emojiUpdate* \| *error* \| *guildBanAdd* \| *guildBanRemove* \| *guildCreate* \| *guildDelete* \| *guildUnavailable* \| *guildIntegrationsUpdate* \| *guildMemberAdd* \| *guildMemberAvailable* \| *guildMemberRemove* \| *guildMembersChunk* \| *guildMemberSpeaking* \| *guildMemberUpdate* \| *guildUpdate* \| *inviteCreate* \| *inviteDelete* \| *message* \| *messageDelete* \| *messageReactionRemoveAll* \| *messageReactionRemoveEmoji* \| *messageDeleteBulk* \| *messageReactionAdd* \| *messageReactionRemove* \| *messageUpdate* \| *presenceUpdate* \| *rateLimit* \| *ready* \| *invalidated* \| *roleCreate* \| *roleDelete* \| *roleUpdate* \| *typingStart* \| *userUpdate* \| *voiceStateUpdate* \| *webhookUpdate* \| *shardDisconnect* \| *shardError* \| *shardReady* \| *shardReconnecting* \| *shardResume*\>, `listener`: (...`args`: *any*[]) => *void*): [*DiscordClient*](client_discordclient.discordclient.md)
 
 #### Type parameters:
 
@@ -632,7 +632,7 @@ Name | Type |
 `event` | *Exclude*<S, *channelCreate* \| *channelDelete* \| *channelPinsUpdate* \| *channelUpdate* \| *debug* \| *warn* \| *disconnect* \| *emojiCreate* \| *emojiDelete* \| *emojiUpdate* \| *error* \| *guildBanAdd* \| *guildBanRemove* \| *guildCreate* \| *guildDelete* \| *guildUnavailable* \| *guildIntegrationsUpdate* \| *guildMemberAdd* \| *guildMemberAvailable* \| *guildMemberRemove* \| *guildMembersChunk* \| *guildMemberSpeaking* \| *guildMemberUpdate* \| *guildUpdate* \| *inviteCreate* \| *inviteDelete* \| *message* \| *messageDelete* \| *messageReactionRemoveAll* \| *messageReactionRemoveEmoji* \| *messageDeleteBulk* \| *messageReactionAdd* \| *messageReactionRemove* \| *messageUpdate* \| *presenceUpdate* \| *rateLimit* \| *ready* \| *invalidated* \| *roleCreate* \| *roleDelete* \| *roleUpdate* \| *typingStart* \| *userUpdate* \| *voiceStateUpdate* \| *webhookUpdate* \| *shardDisconnect* \| *shardError* \| *shardReady* \| *shardReconnecting* \| *shardResume*\> |
 `listener` | (...`args`: *any*[]) => *void* |
 
-**Returns:** [*default*](client_discordclient.default.md)
+**Returns:** [*DiscordClient*](client_discordclient.discordclient.md)
 
 Defined in: node_modules/discord.js/typings/index.d.ts:231
 
@@ -640,7 +640,7 @@ ___
 
 ### prependListener
 
-▸ **prependListener**(`event`: *string* \| *symbol*, `listener`: (...`args`: *any*[]) => *void*): [*default*](client_discordclient.default.md)
+▸ **prependListener**(`event`: *string* \| *symbol*, `listener`: (...`args`: *any*[]) => *void*): [*DiscordClient*](client_discordclient.discordclient.md)
 
 #### Parameters:
 
@@ -649,7 +649,7 @@ Name | Type |
 `event` | *string* \| *symbol* |
 `listener` | (...`args`: *any*[]) => *void* |
 
-**Returns:** [*default*](client_discordclient.default.md)
+**Returns:** [*DiscordClient*](client_discordclient.discordclient.md)
 
 Defined in: node_modules/@types/node/events.d.ts:75
 
@@ -657,7 +657,7 @@ ___
 
 ### prependOnceListener
 
-▸ **prependOnceListener**(`event`: *string* \| *symbol*, `listener`: (...`args`: *any*[]) => *void*): [*default*](client_discordclient.default.md)
+▸ **prependOnceListener**(`event`: *string* \| *symbol*, `listener`: (...`args`: *any*[]) => *void*): [*DiscordClient*](client_discordclient.discordclient.md)
 
 #### Parameters:
 
@@ -666,7 +666,7 @@ Name | Type |
 `event` | *string* \| *symbol* |
 `listener` | (...`args`: *any*[]) => *void* |
 
-**Returns:** [*default*](client_discordclient.default.md)
+**Returns:** [*DiscordClient*](client_discordclient.discordclient.md)
 
 Defined in: node_modules/@types/node/events.d.ts:76
 
@@ -690,7 +690,7 @@ ___
 
 ### removeAllListeners
 
-▸ **removeAllListeners**<K\>(`event?`: K): [*default*](client_discordclient.default.md)
+▸ **removeAllListeners**<K\>(`event?`: K): [*DiscordClient*](client_discordclient.discordclient.md)
 
 #### Type parameters:
 
@@ -704,11 +704,11 @@ Name | Type |
 :------ | :------ |
 `event?` | K |
 
-**Returns:** [*default*](client_discordclient.default.md)
+**Returns:** [*DiscordClient*](client_discordclient.discordclient.md)
 
 Defined in: node_modules/discord.js/typings/index.d.ts:245
 
-▸ **removeAllListeners**<S\>(`event?`: *Exclude*<S, *channelCreate* \| *channelDelete* \| *channelPinsUpdate* \| *channelUpdate* \| *debug* \| *warn* \| *disconnect* \| *emojiCreate* \| *emojiDelete* \| *emojiUpdate* \| *error* \| *guildBanAdd* \| *guildBanRemove* \| *guildCreate* \| *guildDelete* \| *guildUnavailable* \| *guildIntegrationsUpdate* \| *guildMemberAdd* \| *guildMemberAvailable* \| *guildMemberRemove* \| *guildMembersChunk* \| *guildMemberSpeaking* \| *guildMemberUpdate* \| *guildUpdate* \| *inviteCreate* \| *inviteDelete* \| *message* \| *messageDelete* \| *messageReactionRemoveAll* \| *messageReactionRemoveEmoji* \| *messageDeleteBulk* \| *messageReactionAdd* \| *messageReactionRemove* \| *messageUpdate* \| *presenceUpdate* \| *rateLimit* \| *ready* \| *invalidated* \| *roleCreate* \| *roleDelete* \| *roleUpdate* \| *typingStart* \| *userUpdate* \| *voiceStateUpdate* \| *webhookUpdate* \| *shardDisconnect* \| *shardError* \| *shardReady* \| *shardReconnecting* \| *shardResume*\>): [*default*](client_discordclient.default.md)
+▸ **removeAllListeners**<S\>(`event?`: *Exclude*<S, *channelCreate* \| *channelDelete* \| *channelPinsUpdate* \| *channelUpdate* \| *debug* \| *warn* \| *disconnect* \| *emojiCreate* \| *emojiDelete* \| *emojiUpdate* \| *error* \| *guildBanAdd* \| *guildBanRemove* \| *guildCreate* \| *guildDelete* \| *guildUnavailable* \| *guildIntegrationsUpdate* \| *guildMemberAdd* \| *guildMemberAvailable* \| *guildMemberRemove* \| *guildMembersChunk* \| *guildMemberSpeaking* \| *guildMemberUpdate* \| *guildUpdate* \| *inviteCreate* \| *inviteDelete* \| *message* \| *messageDelete* \| *messageReactionRemoveAll* \| *messageReactionRemoveEmoji* \| *messageDeleteBulk* \| *messageReactionAdd* \| *messageReactionRemove* \| *messageUpdate* \| *presenceUpdate* \| *rateLimit* \| *ready* \| *invalidated* \| *roleCreate* \| *roleDelete* \| *roleUpdate* \| *typingStart* \| *userUpdate* \| *voiceStateUpdate* \| *webhookUpdate* \| *shardDisconnect* \| *shardError* \| *shardReady* \| *shardReconnecting* \| *shardResume*\>): [*DiscordClient*](client_discordclient.discordclient.md)
 
 #### Type parameters:
 
@@ -722,7 +722,7 @@ Name | Type |
 :------ | :------ |
 `event?` | *Exclude*<S, *channelCreate* \| *channelDelete* \| *channelPinsUpdate* \| *channelUpdate* \| *debug* \| *warn* \| *disconnect* \| *emojiCreate* \| *emojiDelete* \| *emojiUpdate* \| *error* \| *guildBanAdd* \| *guildBanRemove* \| *guildCreate* \| *guildDelete* \| *guildUnavailable* \| *guildIntegrationsUpdate* \| *guildMemberAdd* \| *guildMemberAvailable* \| *guildMemberRemove* \| *guildMembersChunk* \| *guildMemberSpeaking* \| *guildMemberUpdate* \| *guildUpdate* \| *inviteCreate* \| *inviteDelete* \| *message* \| *messageDelete* \| *messageReactionRemoveAll* \| *messageReactionRemoveEmoji* \| *messageDeleteBulk* \| *messageReactionAdd* \| *messageReactionRemove* \| *messageUpdate* \| *presenceUpdate* \| *rateLimit* \| *ready* \| *invalidated* \| *roleCreate* \| *roleDelete* \| *roleUpdate* \| *typingStart* \| *userUpdate* \| *voiceStateUpdate* \| *webhookUpdate* \| *shardDisconnect* \| *shardError* \| *shardReady* \| *shardReconnecting* \| *shardResume*\> |
 
-**Returns:** [*default*](client_discordclient.default.md)
+**Returns:** [*DiscordClient*](client_discordclient.discordclient.md)
 
 Defined in: node_modules/discord.js/typings/index.d.ts:246
 
@@ -730,7 +730,7 @@ ___
 
 ### removeListener
 
-▸ **removeListener**(`event`: *string* \| *symbol*, `listener`: (...`args`: *any*[]) => *void*): [*default*](client_discordclient.default.md)
+▸ **removeListener**(`event`: *string* \| *symbol*, `listener`: (...`args`: *any*[]) => *void*): [*DiscordClient*](client_discordclient.discordclient.md)
 
 #### Parameters:
 
@@ -739,7 +739,7 @@ Name | Type |
 `event` | *string* \| *symbol* |
 `listener` | (...`args`: *any*[]) => *void* |
 
-**Returns:** [*default*](client_discordclient.default.md)
+**Returns:** [*DiscordClient*](client_discordclient.discordclient.md)
 
 Defined in: node_modules/@types/node/events.d.ts:65
 
@@ -782,7 +782,7 @@ ___
 
 ### setMaxListeners
 
-▸ **setMaxListeners**(`n`: *number*): [*default*](client_discordclient.default.md)
+▸ **setMaxListeners**(`n`: *number*): [*DiscordClient*](client_discordclient.discordclient.md)
 
 #### Parameters:
 
@@ -790,7 +790,7 @@ Name | Type |
 :------ | :------ |
 `n` | *number* |
 
-**Returns:** [*default*](client_discordclient.default.md)
+**Returns:** [*DiscordClient*](client_discordclient.discordclient.md)
 
 Defined in: node_modules/@types/node/events.d.ts:68
 

@@ -1,2 +1,7 @@
-export { default as DiscordClient } from './DiscordClient';
-export { default as BotClient } from './BotClient';
+import { BotClient } from './BotClient';
+import { DiscordClient } from './DiscordClient';
+
+export {
+  BotClient,
+  DiscordClient,
+};

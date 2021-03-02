@@ -67,19 +67,19 @@ Represents a rich embed in a message.
 
 ### constructor
 
-\+ **new default**(`embedResolvable?`: ParsedUser, `options?`: *Partial*<EmbedOptions\>, `data?`: *MessageEmbed* \| MessageEmbedOptions): [*default*](discord_embed.default.md)
+\+ **new default**(`embedResolvable?`: *null* \| *GuildMember* \| *User*, `options?`: *Partial*<EmbedOptions\>, `data?`: *MessageEmbed* \| MessageEmbedOptions): [*default*](discord_embed.default.md)
 
 #### Parameters:
 
 Name | Type | Description |
 :------ | :------ | :------ |
-`embedResolvable?` | ParsedUser | The embed resolvable.   |
+`embedResolvable?` | *null* \| *GuildMember* \| *User* | The embed resolvable.   |
 `options` | *Partial*<EmbedOptions\> | The options for the embed.   |
 `data` | *MessageEmbed* \| MessageEmbedOptions | The data of the embed.    |
 
 **Returns:** [*default*](discord_embed.default.md)
 
-Defined in: [src/discord/Embed.ts:36](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/112e06c/src/discord/Embed.ts#L36)
+Defined in: [src/discord/Embed.ts:36](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/discord/Embed.ts#L36)
 
 ## Properties
 
@@ -167,7 +167,7 @@ ___
 
 • **options**: EmbedOptions
 
-Defined in: [src/discord/Embed.ts:36](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/112e06c/src/discord/Embed.ts#L36)
+Defined in: [src/discord/Embed.ts:36](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/discord/Embed.ts#L36)
 
 ___
 
@@ -245,7 +245,7 @@ Name | Type | Default value | Description |
 
 This?
 
-Defined in: [src/discord/Embed.ts:199](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/112e06c/src/discord/Embed.ts#L199)
+Defined in: [src/discord/Embed.ts:199](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/discord/Embed.ts#L199)
 
 ___
 
@@ -265,7 +265,7 @@ Name | Type | Description |
 
 This?
 
-Defined in: [src/discord/Embed.ts:217](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/112e06c/src/discord/Embed.ts#L217)
+Defined in: [src/discord/Embed.ts:217](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/discord/Embed.ts#L217)
 
 ___
 
@@ -301,7 +301,7 @@ Name | Type | Description |
 
 The resolved image url
 
-Defined in: [src/discord/Embed.ts:110](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/112e06c/src/discord/Embed.ts#L110)
+Defined in: [src/discord/Embed.ts:110](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/discord/Embed.ts#L110)
 
 ___
 
@@ -323,7 +323,7 @@ Name | Type | Description |
 
 This?
 
-Defined in: [src/discord/Embed.ts:140](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/112e06c/src/discord/Embed.ts#L140)
+Defined in: [src/discord/Embed.ts:140](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/discord/Embed.ts#L140)
 
 ___
 
@@ -359,7 +359,7 @@ Name | Type | Description |
 
 This?
 
-Defined in: [src/discord/Embed.ts:179](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/112e06c/src/discord/Embed.ts#L179)
+Defined in: [src/discord/Embed.ts:179](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/discord/Embed.ts#L179)
 
 ___
 
@@ -373,7 +373,7 @@ Sets the color of this embed to red
 
 This?
 
-Defined in: [src/discord/Embed.ts:129](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/112e06c/src/discord/Embed.ts#L129)
+Defined in: [src/discord/Embed.ts:129](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/discord/Embed.ts#L129)
 
 ___
 
@@ -394,7 +394,7 @@ Name | Type | Default value | Description |
 
 This?
 
-Defined in: [src/discord/Embed.ts:162](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/112e06c/src/discord/Embed.ts#L162)
+Defined in: [src/discord/Embed.ts:162](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/discord/Embed.ts#L162)
 
 ___
 
@@ -414,7 +414,7 @@ Name | Type | Description |
 
 This?
 
-Defined in: [src/discord/Embed.ts:248](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/112e06c/src/discord/Embed.ts#L248)
+Defined in: [src/discord/Embed.ts:248](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/discord/Embed.ts#L248)
 
 ___
 
@@ -430,7 +430,7 @@ Name | Type |
 
 **Returns:** *void*
 
-Defined in: [src/discord/Embed.ts:74](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/112e06c/src/discord/Embed.ts#L74)
+Defined in: [src/discord/Embed.ts:74](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/discord/Embed.ts#L74)
 
 ___
 
@@ -450,7 +450,7 @@ Name | Type | Description |
 
 This?
 
-Defined in: [src/discord/Embed.ts:239](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/112e06c/src/discord/Embed.ts#L239)
+Defined in: [src/discord/Embed.ts:239](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/discord/Embed.ts#L239)
 
 ___
 
@@ -486,7 +486,7 @@ Name | Type | Description |
 
 This?
 
-Defined in: [src/discord/Embed.ts:188](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/112e06c/src/discord/Embed.ts#L188)
+Defined in: [src/discord/Embed.ts:188](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/discord/Embed.ts#L188)
 
 ___
 
@@ -554,7 +554,7 @@ Name | Type | Description |
 
 A Boolean
 
-Defined in: [src/discord/Embed.ts:99](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/112e06c/src/discord/Embed.ts#L99)
+Defined in: [src/discord/Embed.ts:99](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/discord/Embed.ts#L99)
 
 ___
 
@@ -608,4 +608,4 @@ Name | Type | Description |
 
 The resolved name
 
-Defined in: [src/discord/Embed.ts:85](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/112e06c/src/discord/Embed.ts#L85)
+Defined in: [src/discord/Embed.ts:85](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/discord/Embed.ts#L85)

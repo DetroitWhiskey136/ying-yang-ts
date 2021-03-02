@@ -52,7 +52,7 @@ Name | Type |
 
 **Returns:** [*default*](database_enmapprovider.default.md)<D\>
 
-Defined in: [src/database/EnmapProvider.ts:18](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/112e06c/src/database/EnmapProvider.ts#L18)
+Defined in: [src/database/EnmapProvider.ts:18](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/database/EnmapProvider.ts#L18)
 
 ## Properties
 
@@ -60,7 +60,7 @@ Defined in: [src/database/EnmapProvider.ts:18](https://github.com/DetroitWhiskey
 
 • **\_\_proto\_\_**: *any*
 
-Defined in: [src/database/EnmapProvider.ts:8](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/112e06c/src/database/EnmapProvider.ts#L8)
+Defined in: [src/database/EnmapProvider.ts:8](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/database/EnmapProvider.ts#L8)
 
 ___
 
@@ -68,7 +68,7 @@ ___
 
 • **help**: *object*
 
-Defined in: [src/database/EnmapProvider.ts:7](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/112e06c/src/database/EnmapProvider.ts#L7)
+Defined in: [src/database/EnmapProvider.ts:7](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/database/EnmapProvider.ts#L7)
 
 ___
 
@@ -76,7 +76,7 @@ ___
 
 • **model**: *any*
 
-Defined in: [src/database/EnmapProvider.ts:6](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/112e06c/src/database/EnmapProvider.ts#L6)
+Defined in: [src/database/EnmapProvider.ts:6](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/database/EnmapProvider.ts#L6)
 
 ## Methods
 
@@ -98,7 +98,7 @@ Name | Type | Description |
 
 The object should be null or undefined -_- or an error.
 
-Defined in: [src/database/EnmapProvider.ts:84](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/112e06c/src/database/EnmapProvider.ts#L84)
+Defined in: [src/database/EnmapProvider.ts:84](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/database/EnmapProvider.ts#L84)
 
 ___
 
@@ -121,7 +121,7 @@ Name | Type | Description |
 
 The object of the document.
 
-Defined in: [src/database/EnmapProvider.ts:74](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/112e06c/src/database/EnmapProvider.ts#L74)
+Defined in: [src/database/EnmapProvider.ts:74](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/database/EnmapProvider.ts#L74)
 
 ___
 
@@ -143,7 +143,7 @@ Name | Type | Description |
 
 The document or an error.
 
-Defined in: [src/database/EnmapProvider.ts:34](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/112e06c/src/database/EnmapProvider.ts#L34)
+Defined in: [src/database/EnmapProvider.ts:34](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/database/EnmapProvider.ts#L34)
 
 ___
 
@@ -166,7 +166,7 @@ Name | Type | Description |
 
 An error if document exists or creates the docment.
 
-Defined in: [src/database/EnmapProvider.ts:46](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/112e06c/src/database/EnmapProvider.ts#L46)
+Defined in: [src/database/EnmapProvider.ts:46](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/database/EnmapProvider.ts#L46)
 
 ___
 
@@ -189,4 +189,4 @@ Name | Type | Description |
 
 The document or an error.
 
-Defined in: [src/database/EnmapProvider.ts:60](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/112e06c/src/database/EnmapProvider.ts#L60)
+Defined in: [src/database/EnmapProvider.ts:60](https://github.com/DetroitWhiskey136/ying-yang-ts/blob/17c6b1a/src/database/EnmapProvider.ts#L60)

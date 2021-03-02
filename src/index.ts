@@ -1,18 +1,13 @@
-// #region Imports
 import * as Sentry from '@sentry/node';
 import 'dotenv/config';
 import 'tsconfig-paths/register';
 import './structures';
 
-import BotClient from './client/BotClient';
+import { BotClient } from './client';
 import { clientOptions } from './util/Constants';
-// #endregion
 
-// #region Declare new BotClient
 const bot = new BotClient(clientOptions);
-// #endregion
 
-// #region Sentry
 Sentry.init({
   attachStacktrace: true,
   dsn: process.env.SentryDSN,
@@ -32,9 +27,7 @@ const transaction = Sentry.startTransaction({
 Sentry.configureScope((scope) => {
   scope.setSpan(transaction);
 });
-// #endregion
 
-// #region Bot Minor Events
 bot.client
   .on('error', (error) => {
     bot.logger.error(error.message);
@@ -54,9 +47,7 @@ if (process.env.NODE_ENV !== 'production') {
     // Sentry.captureMessage(debug);
   });
 }
-// #endregion
 
-// #region Bot Login
 bot.client
   .login(process.env.TOKEN)
   .then(() => {
@@ -72,4 +63,3 @@ bot.client
   .finally(() => {
     bot.logger.info('Bot is Ready');
   });
-// #endregion
