@@ -16,7 +16,7 @@ module.exports = {
    * ref：https://v1.vuepress.vuejs.org/config/#head
    */
   head: [
-    ['meta', { name: 'theme-color', content: '#3eaf7c' }],
+    ['meta', { name: 'theme-color', content: '#02aeb1' }],
     ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
     ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }]
   ],
@@ -28,10 +28,10 @@ module.exports = {
    */
   themeConfig: {
     repo: '',
-    editLinks: false,
+    editLinks: true,
     docsDir: '',
     editLinkText: '',
-    lastUpdated: false,
+    lastUpdated: true,
     nav: [
       {
         text: 'Documentation',
@@ -40,28 +40,8 @@ module.exports = {
       {
         text: 'Github',
         link: 'https://github.com/DetroitWhiskey136/ying-yang-ts'
-      },
-      {
-        text: 'Guide',
-        link: '/guide/',
-      },
-      {
-        text: 'Config',
-        link: '/config/'
       }
     ],
-    sidebar: {
-      '/guide/': [
-        {
-          title: 'Guide',
-          collapsable: false,
-          children: [
-            '',
-            'using-vue',
-          ]
-        }
-      ],
-    }
   },
 
   /**
@@ -82,11 +62,16 @@ module.exports = {
         readme: 'none',
         categoryOrder: ["Classes", "*"],
         categorizeByGroup: true,
-        excludeExternals: true,
-
+        allReflectionsHaveOwnDocument: true,
+        hideGenerator: true,
         out: 'docs',
         sidebar: {
           fullNames: false,
+        },
+        toc: 'none',
+        markedOptions: {
+          smartLists: true,
+          smartypants: true
         }
       },
     ],

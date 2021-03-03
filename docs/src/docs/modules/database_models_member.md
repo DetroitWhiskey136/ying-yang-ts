@@ -14,10 +14,4 @@ title: "Module: database/models/Member"
 
 ### Variables
 
-- [MemberSchema](database_models_member.md#memberschema)
-
-## Variables
-
-### MemberSchema
-
-• `Const` **MemberSchema**: [*Member*](../interfaces/database_models_member.member.md)
+- [MemberSchema](../variables/database_models_member.memberschema.md)

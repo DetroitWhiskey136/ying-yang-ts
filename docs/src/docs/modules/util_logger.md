@@ -20,18 +20,4 @@ title: "Module: util/Logger"
 
 ### Variables
 
-- [TerminalFormatter](util_logger.md#terminalformatter)
-
-## Variables
-
-### TerminalFormatter
-
-• `Const` **TerminalFormatter**: *object*
-
-#### Type declaration:
-
-Name | Type |
-:------ | :------ |
-`bold` | (`text`: *string*) => *string* |
-`color` | (`color`: [*Colors*](../enums/util_logger.colors.md), `text`: *string*) => *string* |
-`underlined` | (`text`: *string*) => *string* |
+- [TerminalFormatter](../variables/util_logger.terminalformatter.md)

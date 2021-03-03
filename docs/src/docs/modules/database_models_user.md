@@ -12,10 +12,4 @@ title: "Module: database/models/User"
 
 ### Variables
 
-- [UserSchema](database_models_user.md#userschema)
-
-## Variables
-
-### UserSchema
-
-• `Const` **UserSchema**: [*User*](../interfaces/database_models_user.user.md)
+- [UserSchema](../variables/database_models_user.userschema.md)

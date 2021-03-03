@@ -22,12 +22,18 @@ title: "Class: CommandError"
 
 - [delete](command_commanderror.commanderror.md#delete)
 - [fields](command_commanderror.commanderror.md#fields)
+- [message](command_commanderror.commanderror.md#message)
+- [name](command_commanderror.commanderror.md#name)
 - [onUsage](command_commanderror.commanderror.md#onusage)
 - [options](command_commanderror.commanderror.md#options)
+- [stack](command_commanderror.commanderror.md#stack)
+- [prepareStackTrace](command_commanderror.commanderror.md#preparestacktrace)
+- [stackTraceLimit](command_commanderror.commanderror.md#stacktracelimit)
 
 ### Methods
 
 - [addField](command_commanderror.commanderror.md#addfield)
+- [captureStackTrace](command_commanderror.commanderror.md#capturestacktrace)
 
 ## Constructors
 
@@ -58,6 +64,18 @@ ___
 
 ___
 
+### message
+
+• **message**: *string*
+
+___
+
+### name
+
+• **name**: *string*
+
+___
+
 ### onUsage
 
 • **onUsage**: *boolean*
@@ -67,6 +85,28 @@ ___
 ### options
 
 • **options**: [*CommandErrorOptions*](../interfaces/command_commanderror.commanderroroptions.md)
+
+___
+
+### stack
+
+• `Optional` **stack**: *undefined* \| *string*
+
+___
+
+### prepareStackTrace
+
+▪ `Optional` `Static` **prepareStackTrace**: *undefined* \| (`err`: Error, `stackTraces`: CallSite[]) => *any*
+
+Optional override for formatting stack traces
+
+**`see`** https://github.com/v8/v8/wiki/Stack%20Trace%20API#customizing-stack-traces
+
+___
+
+### stackTraceLimit
+
+▪ `Static` **stackTraceLimit**: *number*
 
 ## Methods
 
@@ -87,3 +127,20 @@ Name | Type | Default value | Description |
 **Returns:** [*CommandError*](command_commanderror.commanderror.md)
 
 The error embed.
+
+___
+
+### captureStackTrace
+
+▸ `Static`**captureStackTrace**(`targetObject`: *object*, `constructorOpt?`: Function): *void*
+
+Create .stack property on a target object
+
+#### Parameters:
+
+Name | Type |
+:------ | :------ |
+`targetObject` | *object* |
+`constructorOpt?` | Function |
+
+**Returns:** *void*
