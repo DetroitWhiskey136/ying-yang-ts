@@ -14,4 +14,4 @@ title: "Module: managers"
 
 ### GuildMemberWarningManager
 
-Renames and exports: [default](../classes/managers_guildmemberwarningmanager.default.md)
+Re-exports: [GuildMemberWarningManager](../classes/managers_guildmemberwarningmanager.guildmemberwarningmanager.md)

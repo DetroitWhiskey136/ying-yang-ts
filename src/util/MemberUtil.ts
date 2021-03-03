@@ -1,7 +1,7 @@
-import { BotClient } from '@client/index';
+import { BotClient } from '@client/BotClient';
 import { MessageMentions, Guild } from 'discord.js';
 
-class MemberUtil {
+export class MemberUtil {
   static parseMemberFromID(id: string, guild: Guild) {
     return guild.members.resolve(id);
   }
@@ -12,5 +12,3 @@ class MemberUtil {
   static parseMember(exp: string, guild: Guild) {
   }
 }
-
-export default MemberUtil;

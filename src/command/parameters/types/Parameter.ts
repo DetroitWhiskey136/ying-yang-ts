@@ -12,7 +12,7 @@ export declare interface ParameterOptions {
   whitelist?: string[],
 }
 
-declare interface Parameter {
+export declare interface Parameter {
   types?: any;
   aliases?: string[],
   full?: boolean,
@@ -26,7 +26,7 @@ declare interface Parameter {
 
 const defVal = (o: any, k: any, d: any) => (typeof o[k] === 'undefined' ? d : o[k]);
 
-class Parameter {
+export class Parameter {
   static parseOptions(options: ParameterOptions | any = {}) {
     return {
       aliases: options.aliases,
@@ -61,5 +61,3 @@ class Parameter {
     return arg;
   }
 }
-
-export default Parameter;

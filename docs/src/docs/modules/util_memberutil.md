@@ -9,7 +9,3 @@ title: "Module: util/MemberUtil"
 ### Classes
 
 - [MemberUtil](../classes/util_memberutil.memberutil.md)
-
-### Interfaces
-
-- [Members](../interfaces/util_memberutil.members.md)

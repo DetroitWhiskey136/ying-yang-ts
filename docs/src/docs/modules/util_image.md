@@ -8,4 +8,4 @@ title: "Module: util/Image"
 
 ### Classes
 
-- [default](../classes/util_image.default.md)
+- [ImageUtil](../classes/util_image.imageutil.md)

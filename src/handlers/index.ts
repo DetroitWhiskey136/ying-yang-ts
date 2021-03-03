@@ -1,2 +1,2 @@
-export { default as Command } from './Command';
-export { default as Event } from './Event';
+export { Command } from './Command';
+export { Event } from './Event';

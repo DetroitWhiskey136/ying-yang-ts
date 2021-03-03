@@ -8,4 +8,4 @@ title: "Module: database/EnmapProvider"
 
 ### Classes
 
-- [default](../classes/database_enmapprovider.default.md)
+- [EnmapProvider](../classes/database_enmapprovider.enmapprovider.md)

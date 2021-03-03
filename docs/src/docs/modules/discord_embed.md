@@ -8,4 +8,4 @@ title: "Module: discord/Embed"
 
 ### Classes
 
-- [default](../classes/discord_embed.default.md)
+- [Embed](../classes/discord_embed.embed.md)

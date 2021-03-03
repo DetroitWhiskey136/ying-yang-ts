@@ -39,6 +39,7 @@ rules: {
       ],
     }
   ],
+  import/prefer-default-export: 0,
   sort-keys: [
     'error',
     'asc',

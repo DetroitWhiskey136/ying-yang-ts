@@ -8,4 +8,4 @@ title: "Module: handlers/Command"
 
 ### Classes
 
-- [default](../classes/handlers_command.default.md)
+- [Command](../classes/handlers_command.command.md)

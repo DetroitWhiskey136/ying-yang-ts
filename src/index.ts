@@ -3,7 +3,7 @@ import 'dotenv/config';
 import 'tsconfig-paths/register';
 import './structures';
 
-import { BotClient } from './client';
+import { BotClient } from './client/BotClient';
 import { clientOptions } from './util/Constants';
 
 const bot = new BotClient(clientOptions);

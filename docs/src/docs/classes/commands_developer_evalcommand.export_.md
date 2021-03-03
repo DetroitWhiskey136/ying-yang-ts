@@ -6,17 +6,7 @@ title: "Class: export="
 
 [commands/Developer/EvalCommand](../modules/commands_developer_evalcommand.md).export=
 
-## Hierarchy
-
-* [*default*](handlers_command.default.md)
-
-  ↳ **export=**
-
 ## Table of contents
-
-### Constructors
-
-- [constructor](commands_developer_evalcommand.export_.md#constructor)
 
 ### Properties
 
@@ -38,29 +28,11 @@ title: "Class: export="
 - [clean](commands_developer_evalcommand.export_.md#clean)
 - [run](commands_developer_evalcommand.export_.md#run)
 
-## Constructors
-
-### constructor
-
-\+ **new export=**(`bot`: [*BotClient*](client_botclient.botclient.md)): [*export=*](commands_developer_evalcommand.export_.md)
-
-#### Parameters:
-
-Name | Type |
-:------ | :------ |
-`bot` | [*BotClient*](client_botclient.botclient.md) |
-
-**Returns:** [*export=*](commands_developer_evalcommand.export_.md)
-
-Inherited from: [default](handlers_command.default.md)
-
 ## Properties
 
 ### aliases
 
 • **aliases**: *string*[]
-
-Inherited from: [default](handlers_command.default.md).[aliases](handlers_command.default.md#aliases)
 
 ___
 
@@ -68,15 +40,11 @@ ___
 
 • **bot**: [*BotClient*](client_botclient.botclient.md)
 
-Inherited from: [default](handlers_command.default.md).[bot](handlers_command.default.md#bot)
-
 ___
 
 ### category
 
 • **category**: *string*
-
-Inherited from: [default](handlers_command.default.md).[category](handlers_command.default.md#category)
 
 ___
 
@@ -84,15 +52,11 @@ ___
 
 • **description**: *string*
 
-Inherited from: [default](handlers_command.default.md).[description](handlers_command.default.md#description)
-
 ___
 
 ### enabled
 
 • **enabled**: *boolean*
-
-Inherited from: [default](handlers_command.default.md).[enabled](handlers_command.default.md#enabled)
 
 ___
 
@@ -100,15 +64,11 @@ ___
 
 • **guildOnly**: *boolean*
 
-Inherited from: [default](handlers_command.default.md).[guildOnly](handlers_command.default.md#guildonly)
-
 ___
 
 ### name
 
 • **name**: *string*
-
-Inherited from: [default](handlers_command.default.md).[name](handlers_command.default.md#name)
 
 ___
 
@@ -116,15 +76,11 @@ ___
 
 • **options**: commandOptions
 
-Inherited from: [default](handlers_command.default.md).[options](handlers_command.default.md#options)
-
 ___
 
 ### parameters
 
 • **parameters**: *object*[]
-
-Inherited from: [default](handlers_command.default.md).[parameters](handlers_command.default.md#parameters)
 
 ___
 
@@ -132,15 +88,11 @@ ___
 
 • **type**: *string*
 
-Inherited from: [default](handlers_command.default.md).[type](handlers_command.default.md#type)
-
 ___
 
 ### usage
 
 • **usage**: *string*
-
-Inherited from: [default](handlers_command.default.md).[usage](handlers_command.default.md#usage)
 
 ## Methods
 
@@ -155,8 +107,6 @@ Name | Type |
 `ctx` | [*CommandContext*](command_commandcontext.commandcontext.md) |
 
 **Returns:** *Promise*<void\>
-
-Inherited from: [default](handlers_command.default.md)
 
 ___
 
@@ -185,5 +135,3 @@ Name | Type |
 `ctx` | [*CommandContext*](command_commandcontext.commandcontext.md) |
 
 **Returns:** *Promise*<void\>
-
-Overrides: [default](handlers_command.default.md)

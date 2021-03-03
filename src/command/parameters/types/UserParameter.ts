@@ -2,18 +2,18 @@
 import { User } from 'discord.js';
 import { CommandContext } from '../../CommandContext';
 import { CommandError } from '../../CommandError';
-import Parameter from './Parameter';
+import { Parameter } from './Parameter';
 
 type ParsedUser = User | undefined | null
 
-declare interface OptionErrors {
+export declare interface OptionErrors {
   acceptBotError: string
   acceptSelfError: string,
   acceptUserError: string,
   invalidUserError: string,
 }
 
-declare interface UserParameterOptions {
+export declare interface UserParameterOptions {
   acceptBot: boolean,
   acceptSelf: boolean,
   acceptUser: boolean,
@@ -26,7 +26,7 @@ const MENTION_REGEX = /^(?:<@!?)?([0-9]{16,18})(?:>)?$/;
 
 const defVal = (o: any, k: any, d: any) => (typeof o[k] === 'undefined' ? d : o[k]);
 
-class UserParameter extends Parameter {
+export class UserParameter extends Parameter {
   static fetchGlobal: boolean;
 
   static moreParams: any;
@@ -154,5 +154,3 @@ class UserParameter extends Parameter {
     return user;
   }
 }
-
-export default UserParameter;

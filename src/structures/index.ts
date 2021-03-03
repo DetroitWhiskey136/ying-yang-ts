@@ -4,4 +4,4 @@ export { default as YinYangUser } from './YinYangUser';
 export { default as YinYangMember } from './YinYangMember';
 
 // custom datas
-export { default as Warning } from './Warning';
+export { Warning } from './Warning';

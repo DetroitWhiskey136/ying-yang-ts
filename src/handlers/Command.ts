@@ -1,6 +1,6 @@
 import { BotClient, DiscordClient } from '../client/index';
 import { CommandContext } from '../command/CommandContext';
-import CommandParameters from '../command/parameters/CommandParameters';
+import { CommandParameters } from '../command/parameters/CommandParameters';
 
 // #region Scope Declaration
 interface commandOptions {
@@ -15,7 +15,7 @@ interface commandOptions {
 }
 // #endregion
 
-declare interface Command {
+export declare interface Command {
   bot: BotClient;
   options: commandOptions;
   parameters: Array<object>
@@ -29,7 +29,7 @@ declare interface Command {
   type: string;
 }
 
-class Command {
+export class Command {
   constructor(bot: BotClient, options: commandOptions, parameters: Array<object>) {
     this.bot = bot;
     this.parameters = parameters;
@@ -74,5 +74,3 @@ class Command {
   }
   // #endregion
 }
-
-export default Command;

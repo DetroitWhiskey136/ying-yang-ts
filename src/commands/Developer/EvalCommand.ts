@@ -3,10 +3,10 @@ import { inspect } from 'util';
 import {
   Constants, Logger, Strings, Util,
 } from '@util/index';
-import { BotClient } from '../../client/index';
+import { BotClient } from '../../client/BotClient';
 
 import { CommandContext } from '../../command/CommandContext';
-import Embed from '../../discord/Embed';
+import { Embed } from '../../discord/Embed';
 import { Command } from '../../handlers';
 
 const { isEmpty, isPromise } = Util;
@@ -18,7 +18,7 @@ const hrToSeconds = (hrtime: [number, number]) => (hrtime[0] + (hrtime[1] / 1e9)
 // eslint-disable-next-line global-require
 const exec = (c: any) => require('child_process').execSync(c).toString();
 
-class EvalCommand extends Command {
+export = class EvalCommand extends Command {
   constructor(bot: BotClient) {
     super(bot, {
       aliases: ['compile', 'ev', 'js'],
@@ -85,5 +85,3 @@ class EvalCommand extends Command {
     return typeof str === 'string' ? str.replace(/`/g, `\`${blankSpace}`).replace(/@/g, `@${blankSpace}`) : str;
   }
 }
-
-export = EvalCommand;

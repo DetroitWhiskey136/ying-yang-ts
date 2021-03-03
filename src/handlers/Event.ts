@@ -1,4 +1,3 @@
-// #region Scope Declaration
 /**
  * Set the types of the various options in the eventOptions
  * @param name string
@@ -6,17 +5,16 @@
  * @param type string
  * @interface eventOptions
  */
-interface eventOptions {
+export interface eventOptions {
   name: string,
   enabled: boolean,
 }
-// #endregion
 
 /**
  * The Event Class.
  * @class Event
  */
-export default class Event {
+export class Event {
   // #region Type Declarations
   name: string;
 

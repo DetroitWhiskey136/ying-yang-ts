@@ -1,15 +1,15 @@
+import { Strings } from '@util/index';
 import { Guild, GuildMember, Collection } from 'discord.js';
 import { MemberWarning } from '../database/models';
 import { Warning } from '../structures';
-import { StringUtil } from '../util';
 
-declare interface GuildMemberWarningManager {
+export declare interface GuildMemberWarningManager {
   member: GuildMember;
   guild: Guild;
   cache: Collection<string, Warning>;
 }
 
-class GuildMemberWarningManager {
+export class GuildMemberWarningManager {
   // #region Constructor
   constructor(member: GuildMember) {
     this.member = member;
@@ -44,9 +44,9 @@ class GuildMemberWarningManager {
     const db = this.member.client.bot.database;
     const { warnings } = db.members.get(this.member.id).guilds[this.guild.id];
 
-    let id = StringUtil.makeID(18);
+    let id = Strings.makeID(18);
     while (this.cache && this.cache.has(id)) {
-      id = StringUtil.makeID(18);
+      id = Strings.makeID(18);
     }
 
     warnings.push(
@@ -127,5 +127,3 @@ class GuildMemberWarningManager {
   }
   // #endregion
 }
-
-export default GuildMemberWarningManager;

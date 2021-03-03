@@ -8,4 +8,8 @@ title: "Module: handlers/Event"
 
 ### Classes
 
-- [default](../classes/handlers_event.default.md)
+- [Event](../classes/handlers_event.event.md)
+
+### Interfaces
+
+- [eventOptions](../interfaces/handlers_event.eventoptions.md)

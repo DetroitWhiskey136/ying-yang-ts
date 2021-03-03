@@ -8,7 +8,7 @@ title: "Module: command/parameters/types/BooleanParameter"
 
 ### Classes
 
-- [default](../classes/command_parameters_types_booleanparameter.default.md)
+- [BooleanParameter](../classes/command_parameters_types_booleanparameter.booleanparameter.md)
 
 ### Interfaces
 

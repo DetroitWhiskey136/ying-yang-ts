@@ -2,7 +2,7 @@
 import Enmap from 'enmap';
 
 // #region Scope Declaration
-declare interface EnmapProvider<D> {
+export declare interface EnmapProvider<D> {
   model: any;
   help: object;
   __proto__: any;
@@ -15,7 +15,7 @@ declare interface EnmapProvider<D> {
  * @class EnmapProvider
  * @template D
  */
-class EnmapProvider<D> {
+export class EnmapProvider<D> {
   // #region Constructor
   constructor(model: Enmap) {
     this.model = model;
@@ -89,5 +89,3 @@ class EnmapProvider<D> {
   }
   // #endregion
 }
-
-export default EnmapProvider;

@@ -1,4 +1,4 @@
-import { DiscordClient } from '@client/index';
+import { DiscordClient } from '@client/DiscordClient';
 import { Collection, ClientOptions } from 'discord.js';
 import { Database } from '../database';
 import { Command, Event } from '../handlers';
@@ -8,10 +8,9 @@ const fileUtil = new FileUtil();
 
 /**
  * The BotClient Interface
- * @export
  * @interface BotClient
  */
-export declare interface BotClient {
+export interface BotClient {
   client: DiscordClient;
   logger: Logger;
   events: Collection<string, Event>;
@@ -21,10 +20,9 @@ export declare interface BotClient {
 }
 
 /**
- * The BotClient Class.
- * @exports
- * @class BotClient
- */
+* The BotClient Class.
+* @class BotClient
+*/
 export class BotClient {
   constructor(options: ClientOptions) {
     this.client = new DiscordClient(options, this);

@@ -8,7 +8,7 @@ title: "Class: default"
 
 ## Hierarchy
 
-* [*default*](handlers_event.default.md)
+* [*Event*](handlers_event.event.md)
 
   ↳ **default**
 
@@ -39,7 +39,7 @@ title: "Class: default"
 
 **Returns:** [*default*](events_message_messageevent.default.md)
 
-Inherited from: [default](handlers_event.default.md)
+Inherited from: [Event](handlers_event.event.md)
 
 ## Properties
 
@@ -47,7 +47,7 @@ Inherited from: [default](handlers_event.default.md)
 
 • **enabled**: *boolean*
 
-Inherited from: [default](handlers_event.default.md).[enabled](handlers_event.default.md#enabled)
+Inherited from: [Event](handlers_event.event.md).[enabled](handlers_event.event.md#enabled)
 
 ___
 
@@ -55,7 +55,7 @@ ___
 
 • **name**: *string*
 
-Inherited from: [default](handlers_event.default.md).[name](handlers_event.default.md#name)
+Inherited from: [Event](handlers_event.event.md).[name](handlers_event.event.md#name)
 
 ___
 
@@ -63,7 +63,7 @@ ___
 
 • **type**: *string*
 
-Inherited from: [default](handlers_event.default.md).[type](handlers_event.default.md#type)
+Inherited from: [Event](handlers_event.event.md).[type](handlers_event.event.md#type)
 
 ## Methods
 

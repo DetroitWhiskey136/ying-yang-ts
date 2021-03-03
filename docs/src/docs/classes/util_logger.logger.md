@@ -18,14 +18,10 @@ The Logger Class, every project should have this.
 
 ### Methods
 
-- [appendLogs](util_logger.logger.md#appendlogs)
 - [debug](util_logger.logger.md#debug)
 - [error](util_logger.logger.md#error)
-- [formatTime](util_logger.logger.md#formattime)
 - [info](util_logger.logger.md#info)
 - [log](util_logger.logger.md#log)
-- [timestamp](util_logger.logger.md#timestamp)
-- [type](util_logger.logger.md#type)
 - [warn](util_logger.logger.md#warn)
 - [appendLogs](util_logger.logger.md#appendlogs)
 - [formatTime](util_logger.logger.md#formattime)
@@ -42,19 +38,7 @@ The Logger Class, every project should have this.
 
 ## Methods
 
-### appendLogs
-
-▸ **appendLogs**(): *void*
-
-**Returns:** *void*
-
-___
-
 ### debug
-
-▸ **debug**(): *void*
-
-**Returns:** *void*
 
 ▸ **debug**(...`content`: *any*[]): *void*
 
@@ -76,10 +60,6 @@ ___
 
 ### error
 
-▸ **error**(): *void*
-
-**Returns:** *void*
-
 ▸ **error**(...`content`: *any*[]): *void*
 
 Sends a Error message
@@ -98,19 +78,7 @@ Name | Type | Description |
 
 ___
 
-### formatTime
-
-▸ **formatTime**(): *string*
-
-**Returns:** *string*
-
-___
-
 ### info
-
-▸ **info**(): *void*
-
-**Returns:** *void*
 
 ▸ **info**(...`content`: *any*[]): *void*
 
@@ -132,10 +100,6 @@ ___
 
 ### log
 
-▸ **log**(): *void*
-
-**Returns:** *void*
-
 ▸ **log**(...`content`: *any*[]): *void*
 
 Sends a Log message
@@ -154,27 +118,7 @@ Name | Type | Description |
 
 ___
 
-### timestamp
-
-▸ **timestamp**(): *string*[]
-
-**Returns:** *string*[]
-
-___
-
-### type
-
-▸ **type**(): *string*[]
-
-**Returns:** *string*[]
-
-___
-
 ### warn
-
-▸ **warn**(): *void*
-
-**Returns:** *void*
 
 ▸ **warn**(...`content`: *any*[]): *void*
 

@@ -16,8 +16,6 @@ export interface Member {
   guilds: { [id: string]: MemberGuild };
 }
 
-const MemberSchema: Member = {
+export const MemberSchema: Member = {
   guilds: {},
 };
-
-export default MemberSchema;

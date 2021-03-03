@@ -1,7 +1,7 @@
 import path from 'path';
 import { BotClient } from '@client/BotClient';
 import klaw from 'klaw';
-import Logger from './Logger';
+import { Logger } from './Logger';
 
 const logger = new Logger();
 
@@ -9,7 +9,7 @@ const logger = new Logger();
  * Standard File Handler Class
  * @class FileUtil
  */
-class FileUtil {
+export class FileUtil {
   // #region Type Declarations
   message: string | null;
   // #endregion

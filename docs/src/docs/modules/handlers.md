@@ -15,10 +15,10 @@ title: "Module: handlers"
 
 ### Command
 
-Renames and exports: [default](../classes/handlers_command.default.md)
+Re-exports: [Command](../classes/handlers_command.command.md)
 
 ___
 
 ### Event
 
-Renames and exports: [default](../classes/handlers_event.default.md)
+Re-exports: [Event](../classes/handlers_event.event.md)

@@ -8,10 +8,8 @@ export interface User {
   level: numberResolvable;
 }
 
-const UserSchema: User = {
+export const UserSchema: User = {
   botAdmin: false,
   botSupport: false,
   level: 0,
 };
-
-export default UserSchema;

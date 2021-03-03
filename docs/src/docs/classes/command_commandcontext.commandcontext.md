@@ -84,7 +84,7 @@ ___
 
 ### database
 
-• **database**: [*default*](database_database.default.md)
+• **database**: [*Database*](database_database.database.md)
 
 ___
 

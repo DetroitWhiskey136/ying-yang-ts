@@ -73,22 +73,22 @@ ___
 
 ### guilds
 
-Renames and exports: [default](database_models_guild.md#default)
+Renames and exports: [GuildSchema](database_models_guild.md#guildschema)
 
 ___
 
 ### members
 
-Renames and exports: [default](database_models_member.md#default)
+Renames and exports: [MemberSchema](database_models_member.md#memberschema)
 
 ___
 
 ### settings
 
-Renames and exports: [default](database_models_settings.md#default)
+Renames and exports: [SettingsSchema](database_models_settings.md#settingsschema)
 
 ___
 
 ### users
 
-Renames and exports: [default](database_models_user.md#default)
+Renames and exports: [UserSchema](database_models_user.md#userschema)

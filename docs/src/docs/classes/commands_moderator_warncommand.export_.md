@@ -8,7 +8,7 @@ title: "Class: export="
 
 ## Hierarchy
 
-* [*default*](handlers_command.default.md)
+* [*Command*](handlers_command.command.md)
 
   ↳ **export=**
 
@@ -51,7 +51,7 @@ Name | Type |
 
 **Returns:** [*export=*](commands_moderator_warncommand.export_.md)
 
-Inherited from: [default](handlers_command.default.md)
+Inherited from: [Command](handlers_command.command.md)
 
 ## Properties
 
@@ -59,7 +59,7 @@ Inherited from: [default](handlers_command.default.md)
 
 • **aliases**: *string*[]
 
-Inherited from: [default](handlers_command.default.md).[aliases](handlers_command.default.md#aliases)
+Inherited from: [Command](handlers_command.command.md).[aliases](handlers_command.command.md#aliases)
 
 ___
 
@@ -67,7 +67,7 @@ ___
 
 • **bot**: [*BotClient*](client_botclient.botclient.md)
 
-Inherited from: [default](handlers_command.default.md).[bot](handlers_command.default.md#bot)
+Inherited from: [Command](handlers_command.command.md).[bot](handlers_command.command.md#bot)
 
 ___
 
@@ -75,7 +75,7 @@ ___
 
 • **category**: *string*
 
-Inherited from: [default](handlers_command.default.md).[category](handlers_command.default.md#category)
+Inherited from: [Command](handlers_command.command.md).[category](handlers_command.command.md#category)
 
 ___
 
@@ -83,7 +83,7 @@ ___
 
 • **description**: *string*
 
-Inherited from: [default](handlers_command.default.md).[description](handlers_command.default.md#description)
+Inherited from: [Command](handlers_command.command.md).[description](handlers_command.command.md#description)
 
 ___
 
@@ -91,7 +91,7 @@ ___
 
 • **enabled**: *boolean*
 
-Inherited from: [default](handlers_command.default.md).[enabled](handlers_command.default.md#enabled)
+Inherited from: [Command](handlers_command.command.md).[enabled](handlers_command.command.md#enabled)
 
 ___
 
@@ -99,7 +99,7 @@ ___
 
 • **guildOnly**: *boolean*
 
-Inherited from: [default](handlers_command.default.md).[guildOnly](handlers_command.default.md#guildonly)
+Inherited from: [Command](handlers_command.command.md).[guildOnly](handlers_command.command.md#guildonly)
 
 ___
 
@@ -107,7 +107,7 @@ ___
 
 • **name**: *string*
 
-Inherited from: [default](handlers_command.default.md).[name](handlers_command.default.md#name)
+Inherited from: [Command](handlers_command.command.md).[name](handlers_command.command.md#name)
 
 ___
 
@@ -115,7 +115,7 @@ ___
 
 • **options**: commandOptions
 
-Inherited from: [default](handlers_command.default.md).[options](handlers_command.default.md#options)
+Inherited from: [Command](handlers_command.command.md).[options](handlers_command.command.md#options)
 
 ___
 
@@ -123,7 +123,7 @@ ___
 
 • **parameters**: *object*[]
 
-Inherited from: [default](handlers_command.default.md).[parameters](handlers_command.default.md#parameters)
+Inherited from: [Command](handlers_command.command.md).[parameters](handlers_command.command.md#parameters)
 
 ___
 
@@ -131,7 +131,7 @@ ___
 
 • **type**: *string*
 
-Inherited from: [default](handlers_command.default.md).[type](handlers_command.default.md#type)
+Inherited from: [Command](handlers_command.command.md).[type](handlers_command.command.md#type)
 
 ___
 
@@ -139,7 +139,7 @@ ___
 
 • **usage**: *string*
 
-Inherited from: [default](handlers_command.default.md).[usage](handlers_command.default.md#usage)
+Inherited from: [Command](handlers_command.command.md).[usage](handlers_command.command.md#usage)
 
 ## Methods
 
@@ -155,7 +155,7 @@ Name | Type |
 
 **Returns:** *Promise*<void\>
 
-Inherited from: [default](handlers_command.default.md)
+Inherited from: [Command](handlers_command.command.md)
 
 ___
 
@@ -171,4 +171,4 @@ Name | Type |
 
 **Returns:** *void*
 
-Overrides: [default](handlers_command.default.md)
+Overrides: [Command](handlers_command.command.md)

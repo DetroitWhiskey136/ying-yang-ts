@@ -8,4 +8,14 @@ title: "Module: util/Channel"
 
 ### Classes
 
-- [default](../classes/util_channel.default.md)
+- [ChannelUtil](../classes/util_channel.channelutil.md)
+
+### Type aliases
+
+- [channelResolvable](util_channel.md#channelresolvable)
+
+## Type aliases
+
+### channelResolvable
+
+Ƭ **channelResolvable**: GuildChannel \| TextChannel \| VoiceChannel \| CategoryChannel \| Channel \| NewsChannel \| DMChannel \| *null*

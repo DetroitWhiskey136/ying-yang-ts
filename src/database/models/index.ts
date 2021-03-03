@@ -1,8 +1,8 @@
 // Models
-export { default as settings } from './Settings';
-export { default as guilds } from './Guild';
-export { default as users } from './User';
-export { default as members } from './Member';
+export { SettingsSchema as settings } from './Settings';
+export { GuildSchema as guilds } from './Guild';
+export { UserSchema as users } from './User';
+export { MemberSchema as members } from './Member';
 
 // Interfaces
 export { Settings, Admins, Support } from './Settings';

@@ -2,7 +2,7 @@
 import { Util } from 'discord.js';
 import { CommandContext } from '../../CommandContext';
 import { CommandError } from '../../CommandError';
-import Parameter from './Parameter';
+import { Parameter } from './Parameter';
 
 export declare interface StringOptions {
   clean: boolean;
@@ -13,7 +13,7 @@ export declare interface StringOptions {
   truncate: boolean;
 }
 
-interface StringParameter {
+export interface StringParameter {
   clean: boolean;
   errorRegex: any;
   forceLowerCase: boolean;
@@ -22,7 +22,7 @@ interface StringParameter {
   truncate: boolean;
 }
 
-class StringParameter extends Parameter {
+export class StringParameter extends Parameter {
   static clean: boolean;
 
   static errorRegex: any;
@@ -73,5 +73,3 @@ class StringParameter extends Parameter {
     return arg;
   }
 }
-
-export default StringParameter;

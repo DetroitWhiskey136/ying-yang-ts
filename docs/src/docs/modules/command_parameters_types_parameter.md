@@ -8,7 +8,7 @@ title: "Module: command/parameters/types/Parameter"
 
 ### Classes
 
-- [default](../classes/command_parameters_types_parameter.default.md)
+- [Parameter](../classes/command_parameters_types_parameter.parameter.md)
 
 ### Interfaces
 

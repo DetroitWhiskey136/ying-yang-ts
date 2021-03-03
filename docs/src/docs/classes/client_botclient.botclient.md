@@ -53,19 +53,19 @@ ___
 
 ### commands
 
-• **commands**: *Collection*<string, [*default*](handlers_command.default.md)\>
+• **commands**: *Collection*<string, [*Command*](handlers_command.command.md)\>
 
 ___
 
 ### database
 
-• **database**: [*default*](database_database.default.md)
+• **database**: [*Database*](database_database.database.md)
 
 ___
 
 ### events
 
-• **events**: *Collection*<string, [*default*](handlers_event.default.md)\>
+• **events**: *Collection*<string, [*Event*](handlers_event.event.md)\>
 
 ___
 

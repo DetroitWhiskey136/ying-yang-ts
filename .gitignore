@@ -6,3 +6,4 @@ data/logs
 data/enmap_data
 yarn-error.log
 .file
+*docs/

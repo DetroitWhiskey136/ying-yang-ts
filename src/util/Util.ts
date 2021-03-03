@@ -1,7 +1,7 @@
 /**
  * @class Utils
  */
-export default class Util {
+export class Util {
   // #region Methods
   /**
    * Checks if something is empty as in if their size/length is 0.

@@ -2,7 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import Enmap from 'enmap';
 
-import EnmapProvider from '../database/EnmapProvider';
+import { EnmapProvider } from '../database/EnmapProvider';
 import {
   Settings, settings, Guild, guilds, User, users, Member, members,
 } from './models';
@@ -13,10 +13,7 @@ if (!fs.existsSync(dataDir)) {
   fs.mkdirSync(dataDir);
 }
 
-// #region Scope Declaration
-// #endregion
-
-class Database {
+export class Database {
   // #region Type Declarations
   settings: EnmapProvider<Settings> = new EnmapProvider(new Enmap('settings', { dataDir }));
 
@@ -33,5 +30,3 @@ class Database {
   // #region Methods
   // #endregion
 }
-
-export default Database;

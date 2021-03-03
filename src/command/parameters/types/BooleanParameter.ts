@@ -1,12 +1,12 @@
 import { CommandError } from '../../CommandError';
-import Parameter from './Parameter';
+import { Parameter } from './Parameter';
 
 export declare interface BooleanOptions {
   falseValues: string[];
   trueValues: string[];
 }
 
-class BooleanParameter extends Parameter {
+export class BooleanParameter extends Parameter {
   static falseValues: string[];
 
   static trueValues: string[];
@@ -35,5 +35,3 @@ class BooleanParameter extends Parameter {
     return this.trueValues.includes(arg);
   }
 }
-
-export default BooleanParameter;

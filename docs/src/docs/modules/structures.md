@@ -17,7 +17,7 @@ title: "Module: structures"
 
 ### Warning
 
-Renames and exports: [default](../classes/structures_warning.default.md)
+Re-exports: [Warning](../classes/structures_warning.warning.md)
 
 ___
 

@@ -2,7 +2,7 @@ import { BotClient } from '../../client/index';
 import { CommandContext } from '../../command/CommandContext';
 import { Command } from '../../handlers/index';
 
-class TestCommand extends Command {
+export = class TestCommand extends Command {
   constructor(bot: BotClient) {
     super(bot, {
       aliases: [],
@@ -24,5 +24,3 @@ class TestCommand extends Command {
     ctx.channel.send(`hello from test the result was: ${ctx.args.join(' ')}`);
   }
 }
-
-export = TestCommand;

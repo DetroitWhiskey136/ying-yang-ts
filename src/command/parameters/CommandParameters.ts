@@ -1,9 +1,9 @@
 import { CommandContext } from '../CommandContext';
 import { CommandError } from '../CommandError';
 import { ParameterTypes } from './types';
-import Parameter, { ParameterOptions } from './types/Parameter';
+import { Parameter, ParameterOptions } from './types/Parameter';
 
-declare interface CommandsParameterOptions {
+export interface CommandsParameterOptions {
   flags: any;
   parameters: Array<Parameter>;
 }
@@ -27,7 +27,7 @@ const normalizeParam = (options: any) => {
   return { moreParams: parameters.length > 1, ...options, types: parameters };
 };
 
-class CommandParameters {
+export class CommandParameters {
   constructor() {
     throw new Error(`This ${this.constructor.name} class may not be instantiated`);
   }
@@ -170,5 +170,3 @@ class CommandParameters {
     return parsedArg;
   }
 }
-
-export default CommandParameters;

@@ -21,7 +21,7 @@ title: "Module: util"
 
 ### ChannelUtil
 
-Renames and exports: [default](../classes/util_channel.default.md)
+Re-exports: [ChannelUtil](../classes/util_channel.channelutil.md)
 
 ___
 
@@ -33,13 +33,13 @@ ___
 
 ### FileUtil
 
-Renames and exports: [default](../classes/util_file.default.md)
+Re-exports: [FileUtil](../classes/util_file.fileutil.md)
 
 ___
 
 ### ImageUtil
 
-Renames and exports: [default](../classes/util_image.default.md)
+Re-exports: [ImageUtil](../classes/util_image.imageutil.md)
 
 ___
 

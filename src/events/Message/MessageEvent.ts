@@ -3,7 +3,7 @@ import {
 } from 'discord.js';
 import { BotClient, DiscordClient } from '../../client';
 import { CommandContext } from '../../command/CommandContext';
-import Embed from '../../discord/Embed';
+import { Embed } from '../../discord/Embed';
 import { Event } from '../../handlers';
 import { Strings, Constants } from '../../util';
 

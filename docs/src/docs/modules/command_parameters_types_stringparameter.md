@@ -8,7 +8,7 @@ title: "Module: command/parameters/types/StringParameter"
 
 ### Classes
 
-- [default](../classes/command_parameters_types_stringparameter.default.md)
+- [StringParameter](../classes/command_parameters_types_stringparameter.stringparameter.md)
 
 ### Interfaces
 

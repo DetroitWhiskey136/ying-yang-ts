@@ -8,4 +8,4 @@ title: "Module: database/Database"
 
 ### Classes
 
-- [default](../classes/database_database.default.md)
+- [Database](../classes/database_database.database.md)

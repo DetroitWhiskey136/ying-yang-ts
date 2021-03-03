@@ -8,4 +8,9 @@ title: "Module: command/parameters/types/UserParameter"
 
 ### Classes
 
-- [default](../classes/command_parameters_types_userparameter.default.md)
+- [UserParameter](../classes/command_parameters_types_userparameter.userparameter.md)
+
+### Interfaces
+
+- [OptionErrors](../interfaces/command_parameters_types_userparameter.optionerrors.md)
+- [UserParameterOptions](../interfaces/command_parameters_types_userparameter.userparameteroptions.md)

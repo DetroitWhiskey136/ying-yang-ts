@@ -8,4 +8,4 @@ title: "Module: managers/GuildMemberWarningManager"
 
 ### Classes
 
-- [default](../classes/managers_guildmemberwarningmanager.default.md)
+- [GuildMemberWarningManager](../classes/managers_guildmemberwarningmanager.guildmemberwarningmanager.md)

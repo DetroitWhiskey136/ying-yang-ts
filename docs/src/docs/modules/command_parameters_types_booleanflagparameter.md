@@ -8,4 +8,4 @@ title: "Module: command/parameters/types/BooleanFlagParameter"
 
 ### Classes
 
-- [default](../classes/command_parameters_types_booleanflagparameter.default.md)
+- [BooleanFlagParameter](../classes/command_parameters_types_booleanflagparameter.booleanflagparameter.md)

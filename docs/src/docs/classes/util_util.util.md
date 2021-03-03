@@ -6,8 +6,6 @@ title: "Class: Util"
 
 [util/Util](../modules/util_util.md).Util
 
-**`static`** 
-
 ## Table of contents
 
 ### Constructors
@@ -44,7 +42,7 @@ Name | Type | Description |
 
 **Returns:** *string* \| *boolean*
 
-reutrns the represented value as a boolean else returns the str.
+If the value was a boolean.
 
 ___
 
@@ -80,4 +78,4 @@ Name | Type | Description |
 
 **Returns:** *boolean*
 
-Whether it is a promise or not.
+If the value was a promise.

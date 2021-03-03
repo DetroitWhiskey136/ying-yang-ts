@@ -8,12 +8,10 @@ export interface Guild {
   welcomeChannel: stringResolvable;
 }
 
-const GuildSchema: Guild = {
+export const GuildSchema: Guild = {
   joinMessage: null,
   leaveMessage: null,
   log: null,
   prefix: '/',
   welcomeChannel: null,
 };
-
-export default GuildSchema;

@@ -8,4 +8,4 @@ title: "Module: structures/Warning"
 
 ### Classes
 
-- [default](../classes/structures_warning.default.md)
+- [Warning](../classes/structures_warning.warning.md)

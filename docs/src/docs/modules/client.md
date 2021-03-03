@@ -4,8 +4,6 @@ title: "Module: client"
 
 # Module: client
 
-This is the client module.
-
 ## Table of contents
 
 ### References

@@ -1,4 +1,4 @@
-import { BotClient } from '@client/index';
+import { BotClient } from '@client/BotClient';
 import { Client, ClientOptions } from 'discord.js';
 
 declare module 'discord.js' {
@@ -7,7 +7,7 @@ declare module 'discord.js' {
   }
 }
 
-export declare interface DiscordClient {
+export interface DiscordClient {
   bot: BotClient;
 }
 
