@@ -16,7 +16,7 @@ interface commandContext {
   args: string[];
 }
 
-declare interface CommandContext {
+export declare interface CommandContext {
   bot: BotClient;
   message: Message;
   mentions: MessageMentions;
@@ -39,7 +39,7 @@ declare interface CommandContext {
  * The CommandContext Class
  * @class CommandContext
  */
-class CommandContext {
+export class CommandContext {
   // #region Constructor
   constructor(options: commandContext) {
     this.bot = options.bot;
@@ -81,5 +81,3 @@ class CommandContext {
   }
   // #endregion
 }
-
-export default CommandContext;

@@ -1,5 +1,5 @@
 import { BotClient } from '../../client/index';
-import CommandContext from '../../command/CommandContext';
+import { CommandContext } from '../../command/CommandContext';
 import { Command } from '../../handlers/index';
 
 class TestCommand extends Command {

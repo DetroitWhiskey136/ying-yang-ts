@@ -1,16 +1,16 @@
 /* eslint-disable no-eval, no-unused-vars */
 import { inspect } from 'util';
 import {
-  Constants, Logger, StringUtil, Util,
+  Constants, Logger, Strings, Util,
 } from '@util/index';
 import { BotClient } from '../../client/index';
 
-import CommandContext from '../../command/CommandContext';
+import { CommandContext } from '../../command/CommandContext';
 import Embed from '../../discord/Embed';
 import { Command } from '../../handlers';
 
 const { isEmpty, isPromise } = Util;
-const { code } = StringUtil;
+const { code } = Strings;
 
 const token = process.env.TOKEN || '';
 const value = (str: string) => code(str, 'js').replace(token, () => '*'.repeat(20));

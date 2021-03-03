@@ -1,5 +1,5 @@
-import CommandContext from '../CommandContext';
-import CommandError from '../CommandError';
+import { CommandContext } from '../CommandContext';
+import { CommandError } from '../CommandError';
 import { ParameterTypes } from './types';
 import Parameter, { ParameterOptions } from './types/Parameter';
 

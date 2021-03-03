@@ -1,7 +1,7 @@
 /* eslint-disable no-else-return */
 import { User } from 'discord.js';
-import CommandContext from '../../CommandContext';
-import CommandError from '../../CommandError';
+import { CommandContext } from '../../CommandContext';
+import { CommandError } from '../../CommandError';
 import Parameter from './Parameter';
 
 type ParsedUser = User | undefined | null

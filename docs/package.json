@@ -1,0 +1,24 @@
+{
+  "name": "yin-yang-ts",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "authors": {
+    "name": "Danno3817",
+    "email": ""
+  },
+  "repository": "https://github.com/DetroitWhiskey136/ying-yang-ts/yin-yang-ts",
+  "scripts": {
+    "dev": "vuepress dev src",
+    "build": "vuepress build src"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@vuepress/plugin-back-to-top": "^1.8.2",
+    "@vuepress/plugin-medium-zoom": "^1.8.2",
+    "typedoc": "^0.20.28",
+    "typedoc-plugin-markdown": "^3.6.0",
+    "vuepress": "^1.5.3",
+    "vuepress-plugin-typedoc": "^0.5.0"
+  }
+}

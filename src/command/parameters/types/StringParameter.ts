@@ -1,7 +1,7 @@
 /* eslint-disable no-param-reassign */
 import { Util } from 'discord.js';
-import CommandContext from '../../CommandContext';
-import CommandError from '../../CommandError';
+import { CommandContext } from '../../CommandContext';
+import { CommandError } from '../../CommandError';
 import Parameter from './Parameter';
 
 export declare interface StringOptions {

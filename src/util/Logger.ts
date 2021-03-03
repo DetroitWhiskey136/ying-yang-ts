@@ -1,11 +1,10 @@
 import fs from 'fs';
 
-// #region Scope Declaration
 /**
  * The type definitions for Logger Types
  * @interface LoggerTypes
  */
-interface LoggerTypes {
+export interface LoggerTypes {
   LOG: string[];
   INFO: string[];
   DEBUG: string[];
@@ -18,7 +17,7 @@ interface LoggerTypes {
  *
  * @enum {number}
  */
-enum Colors {
+export enum Colors {
   FgBlue = '\x1b[34m',
   FgCyan = '\x1b[36m',
   FgGreen = '\x1b[32m',
@@ -29,7 +28,7 @@ enum Colors {
   FgDarkGray = '\x1b[90m',
 }
 
-const TerminalFormatter = {
+export const TerminalFormatter = {
   bold(text: string): string {
     return `\x1b[1m${text}\x1b[0m`;
   },
@@ -40,15 +39,13 @@ const TerminalFormatter = {
     return `\x1b[4m${text}\x1b[0m`;
   },
 };
-// #endregion
 
 /**
  * The Logger Class, every project should have this.
  * @export
  * @class Logger
  */
-export default class Logger {
-  // #region Methods
+export class Logger {
   /**
    * Adds 0 to the beginning of the number if less than 10
    * @private
@@ -218,5 +215,4 @@ export default class Logger {
     console.log(Logger.type('ERROR')[0], tm[0], ...content);
     Logger.appendLogs(tm, `${Logger.type('ERROR')[1]} ${tm[2]} ${content.join(' ')}`);
   }
-  // #endregion
 }

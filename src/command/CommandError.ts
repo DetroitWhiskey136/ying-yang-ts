@@ -1,23 +1,23 @@
-declare interface CommandErrorField {
+export declare interface CommandErrorField {
   inline: boolean,
   name: string,
   value: string
 }
 
-declare interface CommandErrorOptions {
+export declare interface CommandErrorOptions {
   onUsage?: boolean,
   fields?: Array<CommandErrorField>,
   delete?: boolean,
 }
 
-declare interface CommandError {
+export declare interface CommandError {
   options: CommandErrorOptions,
   onUsage: boolean,
   fields: Array<CommandErrorField>,
   delete: boolean
 }
 
-class CommandError extends Error {
+export class CommandError extends Error {
   constructor(message: string, options: CommandErrorOptions) {
     super(message);
     this.options = options;
@@ -38,5 +38,3 @@ class CommandError extends Error {
     return this;
   }
 }
-
-export default CommandError;

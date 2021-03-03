@@ -1,6 +1,6 @@
 import { BotClient } from '../../client/index';
-import CommandContext from '../../command/CommandContext';
-import CommandError from '../../command/CommandError';
+import { CommandContext } from '../../command/CommandContext';
+import { CommandError } from '../../command/CommandError';
 import Embed from '../../discord/Embed';
 import { Command } from '../../handlers/index';
 

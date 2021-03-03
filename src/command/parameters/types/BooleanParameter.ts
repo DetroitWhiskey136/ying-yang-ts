@@ -1,4 +1,4 @@
-import CommandError from '../../CommandError';
+import { CommandError } from '../../CommandError';
 import Parameter from './Parameter';
 
 export declare interface BooleanOptions {

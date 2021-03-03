@@ -1,5 +1,5 @@
 import { BotClient, DiscordClient } from '../client/index';
-import CommandContext from '../command/CommandContext';
+import { CommandContext } from '../command/CommandContext';
 import CommandParameters from '../command/parameters/CommandParameters';
 
 // #region Scope Declaration

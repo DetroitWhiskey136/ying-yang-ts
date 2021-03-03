@@ -2,10 +2,10 @@ import {
   Message, TextChannel, DMChannel, NewsChannel, ColorResolvable,
 } from 'discord.js';
 import { BotClient, DiscordClient } from '../../client';
-import CommandContext from '../../command/CommandContext';
+import { CommandContext } from '../../command/CommandContext';
 import Embed from '../../discord/Embed';
 import { Event } from '../../handlers';
-import { StringUtil, Constants } from '../../util';
+import { Strings, Constants } from '../../util';
 
 const { MESSAGES, OPTIONS } = Constants;
 
@@ -27,8 +27,8 @@ export default class MessageEvent extends Event {
   }
 
   private getPrefix(prefix: string, { client, content }: Message): string | null {
-    const fixedPrefix = StringUtil.escapeRegExp(prefix);
-    const fixedUsername = StringUtil.escapeRegExp(String(client.user?.username));
+    const fixedPrefix = Strings.escapeRegExp(prefix);
+    const fixedUsername = Strings.escapeRegExp(String(client.user?.username));
 
     const PrefixRegex = new RegExp(`^(<@!?${client.user?.id}>|${fixedPrefix}|${fixedUsername})?`, 'i');
 
@@ -72,7 +72,7 @@ export default class MessageEvent extends Event {
     const mentioned = MentionRegex.test(message.content);
 
     if (mentioned && !usedPrefix) {
-      this.createEmbed(channel, 'BLUE', StringUtil.hasPlaceholder(MESSAGES.PREFIX, '{prefix}', `\`${prefix}\``));
+      this.createEmbed(channel, 'BLUE', Strings.hasPlaceholder(MESSAGES.PREFIX, '{prefix}', `\`${prefix}\``));
 
       return;
     }
@@ -84,7 +84,7 @@ export default class MessageEvent extends Event {
       || bot.commands.get(String(bot.aliases.get(commandName)));
 
     if (mentioned && !command) {
-      this.createEmbed(channel, 'BLUE', StringUtil.hasPlaceholder(MESSAGES.PREFIX, '{prefix}', `\`${prefix}\``));
+      this.createEmbed(channel, 'BLUE', Strings.hasPlaceholder(MESSAGES.PREFIX, '{prefix}', `\`${prefix}\``));
 
       return;
     }
