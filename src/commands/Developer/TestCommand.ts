@@ -2,7 +2,7 @@ import { BotClient } from '../../client/index';
 import { CommandContext } from '../../command/CommandContext';
 import { Command } from '../../handlers/index';
 
-export = class TestCommand extends Command {
+export class TestCommand extends Command {
   constructor(bot: BotClient) {
     super(bot, {
       aliases: [],

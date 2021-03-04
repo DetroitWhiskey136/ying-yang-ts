@@ -6,6 +6,11 @@ title: "Class: DiscordClient"
 
 [client/DiscordClient](../modules/client_discordclient.md).DiscordClient
 
+The DiscordClient class is a speical class it's effectively the discord.js
+Client class but with a magic circular reference to the BotClient class (bot).
+
+**`important`** The only time this class should be called is in the BotClient class.
+
 ## Hierarchy
 
 * *Client*

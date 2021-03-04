@@ -1,7 +1,2 @@
-import { BotClient } from './BotClient';
-import { DiscordClient } from './DiscordClient';
-
-export {
-  BotClient,
-  DiscordClient,
-};
+export { BotClient } from './BotClient';
+export { DiscordClient } from './DiscordClient';

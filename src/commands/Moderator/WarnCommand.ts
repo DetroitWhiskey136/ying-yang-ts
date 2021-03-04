@@ -4,7 +4,7 @@ import { CommandError } from '../../command/CommandError';
 import { Embed } from '../../discord/Embed';
 import { Command } from '../../handlers/index';
 
-class WarnCommand extends Command {
+export class WarnCommand extends Command {
   constructor(bot: BotClient) {
     super(bot, {
       aliases: [],
@@ -49,5 +49,3 @@ class WarnCommand extends Command {
     }
   }
 }
-
-export = WarnCommand;

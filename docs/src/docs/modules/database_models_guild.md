@@ -12,4 +12,10 @@ title: "Module: database/models/Guild"
 
 ### Variables
 
-- [GuildSchema](../variables/database_models_guild.guildschema.md)
+- [GuildSchema](database_models_guild.md#guildschema)
+
+## Variables
+
+### GuildSchema
+
+• `Const` **GuildSchema**: [*Guild*](../interfaces/database_models_guild.guild.md)

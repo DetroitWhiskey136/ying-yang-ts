@@ -18,16 +18,16 @@ title: "Interface: User"
 
 ### botAdmin
 
-• **botAdmin**: [*booleanResolvable*](../types/util_constants.booleanresolvable.md)
+• **botAdmin**: [*booleanResolvable*](../modules/util_constants.md#booleanresolvable)
 
 ___
 
 ### botSupport
 
-• **botSupport**: [*booleanResolvable*](../types/util_constants.booleanresolvable.md)
+• **botSupport**: [*booleanResolvable*](../modules/util_constants.md#booleanresolvable)
 
 ___
 
 ### level
 
-• **level**: [*numberResolvable*](../types/util_constants.numberresolvable.md)
+• **level**: [*numberResolvable*](../modules/util_constants.md#numberresolvable)

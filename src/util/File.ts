@@ -10,11 +10,8 @@ const logger = new Logger();
  * @class FileUtil
  */
 export class FileUtil {
-  // #region Type Declarations
   message: string | null;
-  // #endregion
 
-  // #region Constructor
   /**
    * Creates an instance of FileUtil.
    * @memberof FileUtil
@@ -22,9 +19,7 @@ export class FileUtil {
   constructor() {
     this.message = null;
   }
-  // #endregion
 
-  // #region Methods
   /**
    * Load all files in a folder and
    * gets them ready for the loadFile method
@@ -40,7 +35,7 @@ export class FileUtil {
       if (!parsedItem.ext || !['.js', '.ts'].includes(parsedItem.ext)) return;
 
       const parsedName = `${parsedItem.name}${parsedItem.ext}`;
-      if (process.env.DEBUG === 'true') logger.debug(`${parsedItem.name} Loading`);
+      if (process.env.NODE_ENV !== 'production') logger.debug(`${parsedItem.name} Loading`);
 
       await this.LoadFile(parsedItem.dir, parsedName, bot);
       if (this.message) logger.error(this.message);
@@ -62,8 +57,9 @@ export class FileUtil {
       this.message = null;
 
       const importedFile = await import(path.resolve(filePath, fileName));
+      const propName = Object.keys(importedFile)[0];
       // eslint-disable-next-line new-cap
-      const props = new importedFile.default(importedFile.default.name);
+      const props = new importedFile[propName](importedFile[propName]);
 
       if (!props.enabled) {
         this.message = `${fileName.split('.').slice(0, 1)} File Disabled: not adding to Collection.`;
@@ -87,11 +83,9 @@ export class FileUtil {
         });
       }
 
-      if (process.env.DEBUG === 'true') logger.debug(`${fileName.split('.').slice(0, 1)} loaded`);
+      if (process.env.NODE_ENV !== 'production') logger.debug(`${fileName.split('.').slice(0, 1)} loaded`);
     } catch (error) {
       this.message = `Unable to load command ${fileName}: ${error.message}`;
     }
   }
-  // #endregion
 }
-export default FileUtil;

@@ -87,22 +87,22 @@ ___
 
 ### guilds
 
-Renames and exports: [GuildSchema](../variables/database_models_guild.guildschema.md)
+Renames and exports: [GuildSchema](database_models_guild.md#guildschema)
 
 ___
 
 ### members
 
-Renames and exports: [MemberSchema](../variables/database_models_member.memberschema.md)
+Renames and exports: [MemberSchema](database_models_member.md#memberschema)
 
 ___
 
 ### settings
 
-Renames and exports: [SettingsSchema](../variables/database_models_settings.settingsschema.md)
+Renames and exports: [SettingsSchema](database_models_settings.md#settingsschema)
 
 ___
 
 ### users
 
-Renames and exports: [UserSchema](../variables/database_models_user.userschema.md)
+Renames and exports: [UserSchema](database_models_user.md#userschema)

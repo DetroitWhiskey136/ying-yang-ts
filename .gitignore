@@ -7,3 +7,4 @@ data/enmap_data
 yarn-error.log
 .file
 docs
+dist

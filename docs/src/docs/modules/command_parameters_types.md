@@ -8,4 +8,10 @@ title: "Module: command/parameters/types"
 
 ### Variables
 
-- [ParameterTypes](../variables/command_parameters_types.parametertypes.md)
+- [ParameterTypes](command_parameters_types.md#parametertypes)
+
+## Variables
+
+### ParameterTypes
+
+• `Const` **ParameterTypes**: *any*

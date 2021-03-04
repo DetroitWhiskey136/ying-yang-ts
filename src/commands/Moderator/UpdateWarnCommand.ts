@@ -1,7 +1,7 @@
 import { BotClient } from '../../client/index';
 import { Command } from '../../handlers/index';
 
-class UpdateWarnCommand extends Command {
+export class UpdateWarnCommand extends Command {
   constructor(bot: BotClient) {
     super(bot, {
       aliases: ['uw', 'uwarn'],
@@ -18,5 +18,3 @@ class UpdateWarnCommand extends Command {
 
   }
 }
-
-export = UpdateWarnCommand;

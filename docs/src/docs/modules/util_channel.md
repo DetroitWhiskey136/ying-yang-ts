@@ -12,4 +12,10 @@ title: "Module: util/Channel"
 
 ### Type aliases
 
-- [channelResolvable](../types/util_channel.channelresolvable.md)
+- [channelResolvable](util_channel.md#channelresolvable)
+
+## Type aliases
+
+### channelResolvable
+
+Ƭ **channelResolvable**: GuildChannel \| TextChannel \| VoiceChannel \| CategoryChannel \| Channel \| NewsChannel \| DMChannel \| *null*

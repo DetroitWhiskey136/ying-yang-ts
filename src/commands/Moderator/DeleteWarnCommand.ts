@@ -1,7 +1,7 @@
 import { BotClient } from '../../client/index';
 import { Command } from '../../handlers/index';
 
-class DeleteWarnCommand extends Command {
+export class DeleteWarnCommand extends Command {
   constructor(bot: BotClient) {
     super(bot, {
       aliases: ['delwarn', 'dw', 'dwarn'],
@@ -18,5 +18,3 @@ class DeleteWarnCommand extends Command {
 
   }
 }
-
-export = DeleteWarnCommand;

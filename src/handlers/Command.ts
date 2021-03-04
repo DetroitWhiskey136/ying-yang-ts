@@ -1,4 +1,4 @@
-import { BotClient, DiscordClient } from '../client/index';
+import { BotClient } from '../client/index';
 import { CommandContext } from '../command/CommandContext';
 import { CommandParameters } from '../command/parameters/CommandParameters';
 

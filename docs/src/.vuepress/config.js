@@ -56,13 +56,20 @@ module.exports = {
 
       // Plugin / TypeDoc options (see typedoc --help)
       {
-        entryPoints: ['G:/BotDevelopment/ying_yang/yin-yang-ts/src/'],
+        entryPoints: [
+          'G:/BotDevelopment/ying_yang/yin-yang-ts/src/client',
+          'G:/BotDevelopment/ying_yang/yin-yang-ts/src/command',
+          'G:/BotDevelopment/ying_yang/yin-yang-ts/src/database',
+          'G:/BotDevelopment/ying_yang/yin-yang-ts/src/discord',
+          'G:/BotDevelopment/ying_yang/yin-yang-ts/src/handlers',
+          'G:/BotDevelopment/ying_yang/yin-yang-ts/src/managers',
+          'G:/BotDevelopment/ying_yang/yin-yang-ts/src/structures',
+          'G:/BotDevelopment/ying_yang/yin-yang-ts/src/util',
+        ],
         tsconfig: 'G:/BotDevelopment/ying_yang/yin-yang-ts/tsconfig.json',
         disableSources: true,
         readme: 'none',
-        categoryOrder: ["Classes", "*"],
-        categorizeByGroup: true,
-        allReflectionsHaveOwnDocument: true,
+        categorizeByGroup: false,
         hideGenerator: true,
         out: 'docs',
         sidebar: {
@@ -72,8 +79,12 @@ module.exports = {
         markedOptions: {
           smartLists: true,
           smartypants: true
-        }
+        },
+        emit: true,
       },
     ],
-  ]
+  ],
+  markdown: {
+    lineNumbers: true,
+  }
 }

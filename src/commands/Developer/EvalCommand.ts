@@ -1,13 +1,14 @@
 /* eslint-disable no-eval, no-unused-vars */
+import { execSync } from 'child_process';
 import { inspect } from 'util';
+import { BotClient } from 'src/client/index';
+
+import { CommandContext } from 'src/command/CommandContext';
+import { Embed } from 'src/discord/Embed';
+import { Command } from 'src/handlers';
 import {
   Constants, Logger, Strings, Util,
-} from '@util/index';
-import { BotClient } from '../../client/BotClient';
-
-import { CommandContext } from '../../command/CommandContext';
-import { Embed } from '../../discord/Embed';
-import { Command } from '../../handlers';
+} from 'src/util/index';
 
 const { isEmpty, isPromise } = Util;
 const { code } = Strings;
@@ -15,10 +16,9 @@ const { code } = Strings;
 const token = process.env.TOKEN || '';
 const value = (str: string) => code(str, 'js').replace(token, () => '*'.repeat(20));
 const hrToSeconds = (hrtime: [number, number]) => (hrtime[0] + (hrtime[1] / 1e9)).toFixed(3);
-// eslint-disable-next-line global-require
-const exec = (c: any) => require('child_process').execSync(c).toString();
+const exec = (c: any) => execSync(c).toString();
 
-export = class EvalCommand extends Command {
+export class EvalCommand extends Command {
   constructor(bot: BotClient) {
     super(bot, {
       aliases: ['compile', 'ev', 'js'],

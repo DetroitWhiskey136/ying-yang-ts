@@ -20,28 +20,28 @@ title: "Interface: Guild"
 
 ### joinMessage
 
-• **joinMessage**: [*stringResolvable*](../types/util_constants.stringresolvable.md)
+• **joinMessage**: [*stringResolvable*](../modules/util_constants.md#stringresolvable)
 
 ___
 
 ### leaveMessage
 
-• **leaveMessage**: [*stringResolvable*](../types/util_constants.stringresolvable.md)
+• **leaveMessage**: [*stringResolvable*](../modules/util_constants.md#stringresolvable)
 
 ___
 
 ### log
 
-• **log**: [*stringResolvable*](../types/util_constants.stringresolvable.md)
+• **log**: [*stringResolvable*](../modules/util_constants.md#stringresolvable)
 
 ___
 
 ### prefix
 
-• **prefix**: [*stringResolvable*](../types/util_constants.stringresolvable.md)
+• **prefix**: [*stringResolvable*](../modules/util_constants.md#stringresolvable)
 
 ___
 
 ### welcomeChannel
 
-• **welcomeChannel**: [*stringResolvable*](../types/util_constants.stringresolvable.md)
+• **welcomeChannel**: [*stringResolvable*](../modules/util_constants.md#stringresolvable)

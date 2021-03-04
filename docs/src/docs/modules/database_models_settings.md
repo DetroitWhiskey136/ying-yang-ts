@@ -14,4 +14,10 @@ title: "Module: database/models/Settings"
 
 ### Variables
 
-- [SettingsSchema](../variables/database_models_settings.settingsschema.md)
+- [SettingsSchema](database_models_settings.md#settingsschema)
+
+## Variables
+
+### SettingsSchema
+
+• `Const` **SettingsSchema**: [*Settings*](../interfaces/database_models_settings.settings.md)

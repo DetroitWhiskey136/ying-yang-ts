@@ -1,7 +1,7 @@
 import {
   Message, TextChannel, DMChannel, NewsChannel, ColorResolvable,
 } from 'discord.js';
-import { BotClient, DiscordClient } from '../../client';
+import { BotClient, DiscordClient } from '../../client/index';
 import { CommandContext } from '../../command/CommandContext';
 import { Embed } from '../../discord/Embed';
 import { Event } from '../../handlers';
@@ -11,7 +11,7 @@ const { MESSAGES, OPTIONS } = Constants;
 
 type Channel = TextChannel | DMChannel | NewsChannel;
 
-export default class MessageEvent extends Event {
+export class MessageEvent extends Event {
   constructor() {
     super({
       enabled: true,

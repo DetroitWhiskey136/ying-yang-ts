@@ -6,7 +6,10 @@ title: "Class: BotClient"
 
 [client/BotClient](../modules/client_botclient.md).BotClient
 
-The BotClient Class.
+The BotClient class is used to keep the bots various classes seperate from
+the discord.js Client class.
+
+**`param`** discord.js Client options.
 
 ## Table of contents
 
