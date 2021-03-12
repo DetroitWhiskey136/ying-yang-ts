@@ -19,7 +19,7 @@ export interface BotClient {
 }
 
 /**
- * The BotClient class is used to keep the bots various classes seperate from
+ * The BotClient class is used to keep the bots various classes separate from
  * the discord.js Client class.
  * @class BotClient
  * @param { ClientOptions } options discord.js Client options.
