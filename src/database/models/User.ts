@@ -1,14 +1,14 @@
 import {
   booleanResolvable, numberResolvable,
-} from '@util/Constants';
+} from '../../index';
 
-export interface User {
+export interface IUser {
   botAdmin: booleanResolvable;
   botSupport: booleanResolvable
   level: numberResolvable;
 }
 
-export const UserSchema: User = {
+export const User: IUser = {
   botAdmin: false,
   botSupport: false,
   level: 0,

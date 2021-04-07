@@ -1,5 +1,5 @@
 import { Client, ClientOptions } from 'discord.js';
-import { BotClient } from './BotClient';
+import { BotClient } from '../index';
 
 declare module 'discord.js' {
   interface Client {
@@ -17,6 +17,9 @@ export interface DiscordClient {
 /**
  * The DiscordClient class is a speical class it's effectively the discord.js
  * Client class but with a magic circular reference to the BotClient class (bot).
+ * ```javascript
+ * new DiscordClient(options, bot)
+ * ```
  * @important The only time this class should be called is in the BotClient class.
  */
 export class DiscordClient extends Client {
@@ -24,6 +27,11 @@ export class DiscordClient extends Client {
     throw new Error('Method not implemented.');
   }
 
+  /**
+   *Creates an instance of DiscordClient.
+   * @param options - the ClientOptions
+   * @param bot - The BotClient
+   */
   constructor(options: ClientOptions, bot: BotClient) {
     super(options);
     /** note this is bad practice and should be revised asap */

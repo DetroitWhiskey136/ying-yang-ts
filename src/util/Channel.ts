@@ -2,9 +2,7 @@ import {
   TextChannel, VoiceChannel, GuildChannel, CategoryChannel, Channel, NewsChannel, DMChannel,
 } from 'discord.js';
 
-export type channelResolvable =
-  GuildChannel | TextChannel | VoiceChannel | CategoryChannel |
-  Channel | NewsChannel | DMChannel | null;
+import { channelResolvable } from '../index';
 
 export class ChannelUtil {
   static resolveTextChannel(channel: channelResolvable) {

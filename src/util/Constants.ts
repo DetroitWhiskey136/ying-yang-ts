@@ -1,4 +1,7 @@
-import { ClientOptions, Intents, TextChannel } from 'discord.js';
+import {
+  ClientOptions, Intents,
+  TextChannel, VoiceChannel, GuildChannel, CategoryChannel, Channel, NewsChannel, DMChannel,
+} from 'discord.js';
 
 export const clientOptions: ClientOptions = {
   disableMentions: 'everyone',
@@ -35,6 +38,8 @@ export const OPTIONS = {
 };
 
 export type stringResolvable = string | undefined | null;
-export type channelResolvable = TextChannel | undefined | null;
 export type numberResolvable = number | undefined | null;
 export type booleanResolvable = boolean | undefined | null;
+export type channelResolvable =
+  GuildChannel | TextChannel | VoiceChannel | CategoryChannel |
+  Channel | NewsChannel | DMChannel | null;

@@ -1,6 +1,5 @@
 import { Structures, Guild } from 'discord.js';
-import { GuildMemberWarningManager } from 'src/managers';
-import { DiscordClient } from '../client/DiscordClient';
+import { GuildMemberWarningManager, DiscordClient } from '../index';
 
 // #region Scope Declaration
 declare module 'discord.js' {

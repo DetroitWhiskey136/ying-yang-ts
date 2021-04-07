@@ -1,6 +1,5 @@
 import { GuildMember, Guild, Client } from 'discord.js';
-import { MemberWarning } from 'src/database';
-import { DiscordClient } from '../client/DiscordClient';
+import { DiscordClient, IMemberWarning } from '../index';
 
 export declare interface Warning {
   client: DiscordClient | Client;
@@ -14,7 +13,7 @@ export declare interface Warning {
 
 export class Warning {
   // #region Constructor
-  constructor(client: DiscordClient | Client, data: MemberWarning, member: GuildMember) {
+  constructor(client: DiscordClient | Client, data: IMemberWarning, member: GuildMember) {
     this.client = client;
     this.guild = member.guild;
     this.member = member;

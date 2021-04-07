@@ -1,7 +1,5 @@
 import { Structures, TextChannel, Invite } from 'discord.js';
-import { DiscordClient } from '../client/index';
-import { stringResolvable } from '../util/Constants';
-import YinYangMember from './YinYangMember';
+import { DiscordClient, stringResolvable, YinYangMember } from '../index';
 
 // #region Scope Declaration
 declare module 'discord.js' {

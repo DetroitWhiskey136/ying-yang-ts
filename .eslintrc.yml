@@ -10,8 +10,10 @@ parserOptions:
 plugins:
   - '@typescript-eslint'
 rules: {
+  valid-jsdoc: ["warn", {
+    requireParamType: false
+  }],
   no-redeclare: 0,
-  valid-jsdoc: ["error"],
   semi: [2, "always"],
   no-unused-vars: 0,
   import/no-unresolved: 0,

@@ -1,6 +1,5 @@
 import { ChannelUtil } from './Channel';
-import * as Constants from './Constants';
-import { FileUtil } from './File';
+import { Files } from './File';
 import { ImageUtil } from './Image';
 import { Logger } from './Logger';
 import { MemberUtil } from './MemberUtil';
@@ -9,11 +8,12 @@ import { Util } from './Util';
 
 export {
   ChannelUtil,
-  Constants,
-  FileUtil,
+  Files,
   ImageUtil,
   Logger,
   MemberUtil,
   Strings,
   Util,
 };
+
+export * from './Constants';

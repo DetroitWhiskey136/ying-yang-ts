@@ -1,7 +1,5 @@
-import { Strings } from '@util/index';
 import { Guild, GuildMember, Collection } from 'discord.js';
-import { MemberWarning } from '../database/models';
-import { Warning } from '../structures';
+import { Strings, IMemberWarning, Warning } from '../index';
 
 export declare interface GuildMemberWarningManager {
   member: GuildMember;
@@ -34,7 +32,7 @@ export class GuildMemberWarningManager {
       if (!warnings) {
         return;
       }
-      warnings.forEach((warning: MemberWarning) => this.cache.set(
+      warnings.forEach((warning: IMemberWarning) => this.cache.set(
         warning.id, new Warning(this.member.client, warning, this.member),
       ));
     }
@@ -75,11 +73,11 @@ export class GuildMemberWarningManager {
 
     if (!warnings) return `Error: [${this.member.user.username}(${this.member.id})] does not have any warnings in [${this.guild.name}(${this.guild.id})]`;
 
-    const warning = warnings.filter((warning: MemberWarning) => warning.id === id);
+    const warning = warnings.filter((warning: IMemberWarning) => warning.id === id);
 
     if (warning.length === 0) return `Error: warning id not found: ID '${id}'`;
 
-    warnings = warnings.filter((warning: MemberWarning) => warning.id !== id);
+    warnings = warnings.filter((warning: IMemberWarning) => warning.id !== id);
 
     db.members.model.delete(
       this.member.id,
@@ -93,11 +91,11 @@ export class GuildMemberWarningManager {
     return this.member.warnings.cache;
   }
 
-  private update(id: string, data?: MemberWarning) {
+  private update(id: string, data?: IMemberWarning) {
     const db = this.member.client.bot.database;
     const { warnings } = db.members.get(this.member.id).guilds[this.guild.id];
 
-    const warning = warnings.filter((warning: MemberWarning) => warning.id === id);
+    const warning = warnings.filter((warning: IMemberWarning) => warning.id === id);
 
     if (warning.length === 0) return `Error: warning does not exist with id: ID '${id}'`;
 

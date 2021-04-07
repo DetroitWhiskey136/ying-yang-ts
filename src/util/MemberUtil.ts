@@ -1,5 +1,5 @@
-import { BotClient } from '@client/BotClient';
 import { MessageMentions, Guild } from 'discord.js';
+import { BotClient } from '../index';
 
 export class MemberUtil {
   static parseMemberFromID(id: string, guild: Guild) {

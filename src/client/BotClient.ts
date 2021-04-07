@@ -1,10 +1,7 @@
 import { Collection, ClientOptions } from 'discord.js';
-import { Database } from '../database';
-import { Command, Event } from '../handlers';
-import { Logger, FileUtil } from '../util';
-import { DiscordClient } from './DiscordClient';
-
-const fileUtil = new FileUtil();
+import {
+  Database, Command, Event, Logger, Files, DiscordClient,
+} from '../index';
 
 /**
  * @interface BotClient
@@ -49,11 +46,11 @@ export class BotClient {
       ? process.env.NODE_ENV.indexOf('production') > -1
       : false
     )) {
-      fileUtil.LoadFiles('src/events', this);
-      fileUtil.LoadFiles('src/commands', this);
+      Files.LoadFiles('src/events', this);
+      Files.LoadFiles('src/commands', this);
     } else {
-      fileUtil.LoadFiles('dist/events', this);
-      fileUtil.LoadFiles('dist/commands', this);
+      Files.LoadFiles('dist/src/events', this);
+      Files.LoadFiles('dist/src/commands', this);
     }
   }
 }

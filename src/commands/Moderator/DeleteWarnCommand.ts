@@ -1,5 +1,4 @@
-import { BotClient } from '../../client/index';
-import { Command } from '../../handlers/index';
+import { BotClient, Command } from '../../index';
 
 export class DeleteWarnCommand extends Command {
   constructor(bot: BotClient) {

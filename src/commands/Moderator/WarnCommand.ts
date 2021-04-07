@@ -1,8 +1,8 @@
-import { BotClient } from '../../client/index';
 import { CommandContext } from '../../command/CommandContext';
 import { CommandError } from '../../command/CommandError';
-import { Embed } from '../../discord/Embed';
-import { Command } from '../../handlers/index';
+import {
+  BotClient, Embed, Command,
+} from '../../index';
 
 export class WarnCommand extends Command {
   constructor(bot: BotClient) {

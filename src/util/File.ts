@@ -1,25 +1,18 @@
 import path from 'path';
-import { BotClient } from '@client/BotClient';
 import klaw from 'klaw';
-import { Logger } from './Logger';
+import { BotClient } from '../index';
 
-const logger = new Logger();
+export interface Files {
+  message: string | null;
+  LoadFiles(url: string, bot: BotClient): void;
+  LoadFile(filePath: string, fileName: string, bot: BotClient): Promise<void>;
+}
 
 /**
  * Standard File Handler Class
  * @class FileUtil
  */
-export class FileUtil {
-  message: string | null;
-
-  /**
-   * Creates an instance of FileUtil.
-   * @memberof FileUtil
-   */
-  constructor() {
-    this.message = null;
-  }
-
+export class Files {
   /**
    * Load all files in a folder and
    * gets them ready for the loadFile method
@@ -29,16 +22,15 @@ export class FileUtil {
    * @returns {void}
    * @memberof FileUtil
    */
-  public LoadFiles(url: string, bot: BotClient) {
+  public static LoadFiles(url: string, bot: BotClient) {
     klaw(url).on('data', async (item: klaw.Item) => {
       const parsedItem = path.parse(item.path);
       if (!parsedItem.ext || !['.js', '.ts'].includes(parsedItem.ext)) return;
 
       const parsedName = `${parsedItem.name}${parsedItem.ext}`;
-      if (process.env.NODE_ENV !== 'production') logger.debug(`${parsedItem.name} Loading`);
+      if (process.env.NODE_ENV !== 'production') bot.logger.debug(`${parsedItem.name} Loading`);
 
-      await this.LoadFile(parsedItem.dir, parsedName, bot);
-      if (this.message) logger.error(this.message);
+      await Files.LoadFile(parsedItem.dir, parsedName, bot);
     });
   }
 
@@ -52,17 +44,14 @@ export class FileUtil {
    * @returns {Promise<void>} A void Promise
    * @memberof FileUtil
    */
-  private async LoadFile(filePath: string, fileName: string, bot: BotClient) {
+  public static async LoadFile(filePath: string, fileName: string, bot: BotClient) {
     try {
-      this.message = null;
-
       const importedFile = await import(path.resolve(filePath, fileName));
       const propName = Object.keys(importedFile)[0];
       // eslint-disable-next-line new-cap
       const props = new importedFile[propName](importedFile[propName]);
 
       if (!props.enabled) {
-        this.message = `${fileName.split('.').slice(0, 1)} File Disabled: not adding to Collection.`;
         return;
       }
 
@@ -83,9 +72,9 @@ export class FileUtil {
         });
       }
 
-      if (process.env.NODE_ENV !== 'production') logger.debug(`${fileName.split('.').slice(0, 1)} loaded`);
-    } catch (error) {
-      this.message = `Unable to load command ${fileName}: ${error.message}`;
+      if (process.env.NODE_ENV !== 'production') bot.logger.debug(`${fileName.split('.').slice(0, 1)} loaded`);
+    } catch (err) {
+      bot.logger.error(`Error in FileLoading: ${err}`);
     }
   }
 }

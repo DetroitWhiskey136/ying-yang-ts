@@ -1,6 +1,5 @@
-import { BotClient } from '../../client/index';
 import { CommandContext } from '../../command/CommandContext';
-import { Command } from '../../handlers/index';
+import { BotClient, Command } from '../../index';
 
 export class TestCommand extends Command {
   constructor(bot: BotClient) {

@@ -1,14 +1,10 @@
 /* eslint-disable no-eval, no-unused-vars */
 import { execSync } from 'child_process';
 import { inspect } from 'util';
-import { BotClient } from 'src/client/index';
-
-import { CommandContext } from 'src/command/CommandContext';
-import { Embed } from 'src/discord/Embed';
-import { Command } from 'src/handlers';
+import { CommandContext } from '../../command/CommandContext';
 import {
-  Constants, Logger, Strings, Util,
-} from 'src/util/index';
+  BotClient, Command, Embed, Logger, Strings, Util,
+} from '../../index';
 
 const { isEmpty, isPromise } = Util;
 const { code } = Strings;

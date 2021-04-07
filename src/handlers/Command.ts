@@ -1,6 +1,6 @@
-import { BotClient } from '../client/index';
 import { CommandContext } from '../command/CommandContext';
 import { CommandParameters } from '../command/parameters/CommandParameters';
+import { BotClient } from '../index';
 
 interface commandOptions {
   name: string;

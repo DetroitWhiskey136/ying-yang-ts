@@ -1,4 +1,4 @@
-export interface MemberWarning {
+export interface IMemberWarning {
     [ x: string ]: any;
     id: string;
     reason: string;
@@ -6,16 +6,16 @@ export interface MemberWarning {
     moderator: string;
 }
 
-export interface MemberGuild {
-  warnings: MemberWarning;
+export interface IMemberGuild {
+  warnings: IMemberWarning;
   dj: boolean;
   level: number;
 }
 
-export interface Member {
-  guilds: { [id: string]: MemberGuild };
+export interface IMember {
+  guilds: { [id: string]: IMemberGuild };
 }
 
-export const MemberSchema: Member = {
+export const Member: IMember = {
   guilds: {},
 };

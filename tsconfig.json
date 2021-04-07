@@ -5,21 +5,12 @@
     "target": "es2019",
     "module": "commonjs",
     "noImplicitAny": true,
-    "outDir": "dist",
+    "outDir": "dist/src",
     "baseUrl": ".",
     "paths": {
-      "@client/*": ["src/client/*"],
-      "@util/*": ["src/util/*"],
-      "@event/*": ["src/event/*"],
-      "@command/*": ["src/command/*"],
-      "@events/*": ["data/events/*"],
-      "@commands/*": ["data/commands/*"],
-      "@discord/*": ["src/discord/*"],
-      "@structures/*": ["src/structures/*"],
-      "@handlers/*": ["src/handlers/*"]
     },
     "resolveJsonModule": true,
-    "rootDir": "src",
+    "rootDirs": ["src", "dist/src"],
     "skipLibCheck": true,
     "strict": true,
     "strictNullChecks": true,
@@ -33,7 +24,7 @@
   ],
 
   "typedocOptions": {
-    "entryPoints": ["src"],
+    "entryPoints": ["src/index.ts"],
     "out": "docs",
     "name": "Yin Yang TS Documentation",
     "json": "docs/docs.json",

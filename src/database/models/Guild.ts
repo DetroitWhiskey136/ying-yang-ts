@@ -1,6 +1,6 @@
-import { stringResolvable } from '@util/Constants';
+import { stringResolvable } from '../../index';
 
-export interface Guild {
+export interface IGuild {
   prefix: stringResolvable;
   log: stringResolvable;
   joinMessage: stringResolvable;
@@ -8,7 +8,7 @@ export interface Guild {
   welcomeChannel: stringResolvable;
 }
 
-export const GuildSchema: Guild = {
+export const Guild: IGuild = {
   joinMessage: null,
   leaveMessage: null,
   log: null,

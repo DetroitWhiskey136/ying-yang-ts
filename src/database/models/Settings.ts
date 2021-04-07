@@ -1,20 +1,20 @@
-export interface Admins {
+export interface IAdmins {
   id: string;
 }
 
-export interface Support {
+export interface ISupport {
   id: string;
 }
 
-export interface Settings {
-  admins: Admins[];
-  support: Support[];
+export interface ISettings {
+  admins: IAdmins[];
+  support: ISupport[];
   guilds: number;
   restart: boolean;
 
 }
 
-export const SettingsSchema: Settings = {
+export const Settings: ISettings = {
   admins: [],
   guilds: 0,
   restart: false,

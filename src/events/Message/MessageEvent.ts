@@ -1,13 +1,11 @@
 import {
   Message, TextChannel, DMChannel, NewsChannel, ColorResolvable,
 } from 'discord.js';
-import { BotClient, DiscordClient } from '../../client/index';
 import { CommandContext } from '../../command/CommandContext';
-import { Embed } from '../../discord/Embed';
-import { Event } from '../../handlers';
-import { Strings, Constants } from '../../util';
-
-const { MESSAGES, OPTIONS } = Constants;
+import {
+  BotClient, DiscordClient, Embed,
+  Event, Strings, MESSAGES, OPTIONS,
+} from '../../index';
 
 type Channel = TextChannel | DMChannel | NewsChannel;
 
