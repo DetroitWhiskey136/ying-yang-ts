@@ -1,6 +1,5 @@
 import fs from 'fs';
 import path from 'path';
-import Enmap from 'enmap';
 
 import { EnmapProvider } from '../database/EnmapProvider';
 import {
@@ -14,19 +13,11 @@ if (!fs.existsSync(dataDir)) {
 }
 
 export class Database {
-  // #region Type Declarations
-  settings: EnmapProvider<Settings> = new EnmapProvider(new Enmap('settings', { dataDir }));
+  settings: EnmapProvider<Settings> = new EnmapProvider({ dataDir, name: 'settings' });
 
-  guilds: EnmapProvider<Guild> = new EnmapProvider(new Enmap('guilds', { dataDir }));
+  guilds: EnmapProvider<Guild> = new EnmapProvider({ dataDir, name: 'guilds' });
 
-  users: EnmapProvider<User> = new EnmapProvider(new Enmap('users', { dataDir }));
+  users: EnmapProvider<User> = new EnmapProvider({ dataDir, name: 'users' });
 
-  members: EnmapProvider<Member> = new EnmapProvider(new Enmap('members', { dataDir }));
-  // #endregion
-
-  // #region Constructor
-  // #endregion
-
-  // #region Methods
-  // #endregion
+  members: EnmapProvider<Member> = new EnmapProvider({ dataDir, name: 'members' });
 }

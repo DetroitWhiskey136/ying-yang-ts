@@ -6,6 +6,9 @@ import { DiscordClient } from '../client/DiscordClient';
 declare module 'discord.js' {
   interface GuildMember {
     warnings: GuildMemberWarningManager;
+    dj: boolean;
+    level: number;
+    addLevel(): Promise<void>;
   }
 }
 // #endregion
@@ -17,6 +20,9 @@ export default Structures.extend('GuildMember', (GuildMember) => {
       super(client, data, guild);
       this.warnings = new GuildMemberWarningManager(this);
       this.init();
+
+      this.dj = client.bot.database.members.get(this.id).guilds[guild.id].dj;
+      this.level = client.bot.database.members.get(this.id).guilds[guild.id].level;
     }
     // #endregion
 
@@ -40,6 +46,11 @@ export default Structures.extend('GuildMember', (GuildMember) => {
       } else if (!member.guilds[id]) {
         await this.client.bot.database.members.update(this.id, options);
       }
+    }
+
+    public async addLevel() {
+      await this.client.bot.database.members.model.inc(this.id, `guilds.${this.guild.id}.level`);
+      return this.init();
     }
     // #endregion
   }

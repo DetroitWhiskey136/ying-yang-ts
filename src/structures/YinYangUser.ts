@@ -8,6 +8,9 @@ declare module 'discord.js' {
     botAdmin: booleanResolvable;
     botSupport: booleanResolvable;
     level: numberResolvable;
+    setBotAdmin(value: boolean): Promise<this>;
+    setBotSupport(value: boolean): Promise<booleanResolvable>;
+    setLevel(value: number): Promise<numberResolvable>;
   }
 }
 // #endregion

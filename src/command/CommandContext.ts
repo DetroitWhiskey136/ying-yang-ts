@@ -7,7 +7,6 @@ import { BotClient } from '../client/BotClient';
 import { DiscordClient } from '../client/DiscordClient';
 import { Database } from '../database';
 
-// #region Scope Declaration
 interface commandContext {
   bot: BotClient;
   message: Message;
@@ -33,14 +32,12 @@ export declare interface CommandContext {
   flags: object;
   parseState?: object;
 }
-// #endregion
 
 /**
  * The CommandContext Class
  * @class CommandContext
  */
 export class CommandContext {
-  // #region Constructor
   constructor(options: commandContext) {
     this.bot = options.bot;
     this.message = options.message;
@@ -58,9 +55,7 @@ export class CommandContext {
     this.flags = {};
     this.parseState = {};
   }
-  // #endregion
 
-  // #region Methods
   /**
    * Gets a voicechannel if it exists/in-use.
    * @private
@@ -79,5 +74,4 @@ export class CommandContext {
     }
     return null;
   }
-  // #endregion
 }

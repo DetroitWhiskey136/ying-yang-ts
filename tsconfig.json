@@ -30,5 +30,24 @@
   },
   "exclude": [
     "node_modules"
-  ]
+  ],
+
+  "typedocOptions": {
+    "entryPoints": ["src"],
+    "out": "docs",
+    "name": "Yin Yang TS Documentation",
+    "json": "docs/docs.json",
+    "excludePrivate": true,
+    "excludeInternal": true,
+    "highlightTheme": "dark-plus",
+    "disableOutputCheck": true,
+    "includeVersion": true,
+    "disableSources": true,
+    "readme": "none",
+    "defaultCategory": "Misc",
+    "hideGenerator": true,
+    "toc": [],
+    "listInvalidSymbolLinks": true,
+    "emit": true,
+  }
 }

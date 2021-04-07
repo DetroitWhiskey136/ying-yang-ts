@@ -2,7 +2,6 @@ import { BotClient } from '../client/index';
 import { CommandContext } from '../command/CommandContext';
 import { CommandParameters } from '../command/parameters/CommandParameters';
 
-// #region Scope Declaration
 interface commandOptions {
   name: string;
   description: string;
@@ -13,26 +12,25 @@ interface commandOptions {
   aliases?: string[];
   type?: string;
 }
-// #endregion
 
 export declare interface Command {
+  aliases: string[];
   bot: BotClient;
-  options: commandOptions;
-  parameters: Array<object>
-  name: string;
-  description: string;
   category: string;
-  usage: string;
+  description: string;
   enabled: boolean;
   guildOnly: boolean;
-  aliases: string[];
+  name: string;
+  options: commandOptions;
+  parameters: Array<object>
   type: string;
+  usage: string;
 }
 
 export class Command {
-  constructor(bot: BotClient, options: commandOptions, parameters: Array<object>) {
+  constructor(bot: BotClient, options: commandOptions, parameters?: Array<object>) {
     this.bot = bot;
-    this.parameters = parameters;
+    this.parameters = parameters || [];
     this.setup(options);
   }
 
@@ -58,7 +56,7 @@ export class Command {
     throw new Error(`${this.constructor.name} doesn't have a run() method.`);
   }
 
-  public async _run(ctx: CommandContext) {
+  public async _run(ctx: CommandContext): Promise<void> {
     const { client } = ctx;
     // eslint-disable-next-line prefer-destructuring
     let args = ctx.args;

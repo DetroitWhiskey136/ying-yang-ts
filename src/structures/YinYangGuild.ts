@@ -1,4 +1,4 @@
-import { Structures, TextChannel } from 'discord.js';
+import { Structures, TextChannel, Invite } from 'discord.js';
 import { DiscordClient } from '../client/index';
 import { stringResolvable } from '../util/Constants';
 import YinYangMember from './YinYangMember';
@@ -11,6 +11,11 @@ declare module 'discord.js' {
     joinMessage: stringResolvable;
     leaveMessage: stringResolvable;
     welcomeChannel: stringResolvable;
+    setPrefix(value: string): Promise<stringResolvable>;
+    setLog(value: string): Promise<stringResolvable>;
+    setJoinMessage(value: string): Promise<stringResolvable>;
+    setLeaveMessage(value: string): Promise<stringResolvable>;
+    setWelcomeChannel(value: TextChannel): Promise<stringResolvable>;
   }
 }
 // #endregion

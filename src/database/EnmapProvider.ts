@@ -1,8 +1,12 @@
-// eslint-disable-next-line max-classes-per-file
 import Enmap from 'enmap';
 
+interface EnmapOptions {
+  name: string;
+  dataDir: string;
+}
+
 // #region Scope Declaration
-export declare interface EnmapProvider<D> {
+export interface EnmapProvider<D> {
   model: any;
   help: object;
   __proto__: any;
@@ -17,8 +21,8 @@ export declare interface EnmapProvider<D> {
  */
 export class EnmapProvider<D> {
   // #region Constructor
-  constructor(model: Enmap) {
-    this.model = model;
+  constructor(options: EnmapOptions) {
+    this.model = new Enmap(options.name, { dataDir: options.dataDir });
     // eslint-disable-next-line no-proto
     this.help = this.__proto__;
   }

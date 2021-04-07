@@ -1,0 +1,1306 @@
+yarn run v1.22.10
+$ typedoc --tsconfig tsconfig.json
+[31mError: [39m[96mnode_modules/danno-tools/src/utils/Logger.ts[0m:[93m70[0m:[93m43[0m - [91merror[0m[90m TS2322: [0mType 'null' is not assignable to type 'string'.
+
+[7m70[0m   constructor (options: LoggerOptions = { path: null, WTF: false }) {
+[7m  [0m [91m                                          ~~~~[0m
+
+  [96mnode_modules/danno-tools/src/utils/Logger.ts[0m:[93m14[0m:[93m3[0m
+    [7m14[0m   path: string;
+    [7m  [0m [96m  ~~~~[0m
+    The expected type comes from property 'path' which is declared here on type 'LoggerOptions'
+
+[31mError: [39m[96mnode_modules/danno-tools/src/utils/Logger.ts[0m:[93m104[0m:[93m31[0m - [91merror[0m[90m TS2345: [0mArgument of type 'string | undefined' is not assignable to parameter of type 'ColorResolvable'.
+  Type 'undefined' is not assignable to type 'ColorResolvable'.
+
+[7m104[0m       TerminalFormatter.color(Colors.Black.ForegroundLight, `${formatedDate} ${formatedTime}`),
+[7m   [0m [91m                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[31mError: [39m[96mnode_modules/danno-tools/src/utils/Logger.ts[0m:[93m139[0m:[93m13[0m - [91merror[0m[90m TS2345: [0mArgument of type 'string | undefined' is not assignable to parameter of type 'ColorResolvable'.
+  Type 'undefined' is not assignable to type 'ColorResolvable'.
+
+[7m139[0m             Colors.Magenta.ForegroundLight, 'DEBUG'
+[7m   [0m [91m            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m30[0m:[93m19[0m - [91merror[0m[90m TS1110: [0mType expected.
+
+[7m30[0m                 | `${Key}.${Path<T[Key], Exclude<keyof T[Key], keyof any[]>> &
+[7m  [0m [91m                  ~~~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m30[0m:[93m78[0m - [91merror[0m[90m TS1005: [0m'(' expected.
+
+[7m30[0m                 | `${Key}.${Path<T[Key], Exclude<keyof T[Key], keyof any[]>> &
+[7m  [0m [91m                                                                             ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m31[0m:[93m25[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m31[0m                   string}`
+[7m  [0m [91m                        ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m32[0m:[93m64[0m - [91merror[0m[90m TS1005: [0m'(' expected.
+
+[7m32[0m                 | `${Key}.${Exclude<keyof T[Key], keyof any[]> & string}`
+[7m  [0m [91m                                                               ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m32[0m:[93m72[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m32[0m                 | `${Key}.${Exclude<keyof T[Key], keyof any[]> & string}`
+[7m  [0m [91m                                                                       ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m34[0m:[93m13[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m34[0m             : never
+[7m  [0m [91m            ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m37[0m:[93m54[0m - [91merror[0m[90m TS1110: [0mType expected.
+
+[7m37[0m     type PathValue<T, P extends Path<T>> = P extends `${infer Key}.${infer Rest}`
+[7m  [0m [91m                                                     ~~~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m37[0m:[93m63[0m - [91merror[0m[90m TS1005: [0m'}' expected.
+
+[7m37[0m     type PathValue<T, P extends Path<T>> = P extends `${infer Key}.${infer Rest}`
+[7m  [0m [91m                                                              ~~~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m37[0m:[93m67[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m37[0m     type PathValue<T, P extends Path<T>> = P extends `${infer Key}.${infer Rest}`
+[7m  [0m [91m                                                                  ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m37[0m:[93m69[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m37[0m     type PathValue<T, P extends Path<T>> = P extends `${infer Key}.${infer Rest}`
+[7m  [0m [91m                                                                    ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m37[0m:[93m76[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m37[0m     type PathValue<T, P extends Path<T>> = P extends `${infer Key}.${infer Rest}`
+[7m  [0m [91m                                                                           ~~~~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m222[0m:[93m27[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m222[0m          *   console.log(`Value of ${keyName} has changed from: \n${oldValue}\nto\n${newValue});
+[7m   [0m [91m                          ~~~~~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m222[0m:[93m33[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m222[0m          *   console.log(`Value of ${keyName} has changed from: \n${oldValue}\nto\n${newValue});
+[7m   [0m [91m                                ~~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m222[0m:[93m36[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m222[0m          *   console.log(`Value of ${keyName} has changed from: \n${oldValue}\nto\n${newValue});
+[7m   [0m [91m                                   ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m222[0m:[93m37[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m222[0m          *   console.log(`Value of ${keyName} has changed from: \n${oldValue}\nto\n${newValue});
+[7m   [0m [91m                                    ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m222[0m:[93m51[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m222[0m          *   console.log(`Value of ${keyName} has changed from: \n${oldValue}\nto\n${newValue});
+[7m   [0m [91m                                                  ~~~~~~~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m222[0m:[93m59[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m222[0m          *   console.log(`Value of ${keyName} has changed from: \n${oldValue}\nto\n${newValue});
+[7m   [0m [91m                                                          ~~~~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m222[0m:[93m65[0m - [91merror[0m[90m TS1127: [0mInvalid character.
+
+[7m222[0m          *   console.log(`Value of ${keyName} has changed from: \n${oldValue}\nto\n${newValue});
+[7m   [0m [91m                                                                [0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m222[0m:[93m68[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m222[0m          *   console.log(`Value of ${keyName} has changed from: \n${oldValue}\nto\n${newValue});
+[7m   [0m [91m                                                                   ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m222[0m:[93m78[0m - [91merror[0m[90m TS1127: [0mInvalid character.
+
+[7m222[0m          *   console.log(`Value of ${keyName} has changed from: \n${oldValue}\nto\n${newValue});
+[7m   [0m [91m                                                                             [0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m222[0m:[93m82[0m - [91merror[0m[90m TS1127: [0mInvalid character.
+
+[7m222[0m          *   console.log(`Value of ${keyName} has changed from: \n${oldValue}\nto\n${newValue});
+[7m   [0m [91m                                                                                 [0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m222[0m:[93m85[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m222[0m          *   console.log(`Value of ${keyName} has changed from: \n${oldValue}\nto\n${newValue});
+[7m   [0m [91m                                                                                    ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m222[0m:[93m95[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m222[0m          *   console.log(`Value of ${keyName} has changed from: \n${oldValue}\nto\n${newValue});
+[7m   [0m [91m                                                                                              ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m223[0m:[93m10[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m223[0m          * });
+[7m   [0m [91m         ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m223[0m:[93m12[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m223[0m          * });
+[7m   [0m [91m           ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m223[0m:[93m13[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m223[0m          * });
+[7m   [0m [91m            ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m224[0m:[93m10[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m224[0m          * @param cb A callback function that will be called whenever data changes in the enmap.
+[7m   [0m [91m         ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m224[0m:[93m12[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m224[0m          * @param cb A callback function that will be called whenever data changes in the enmap.
+[7m   [0m [91m           ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m224[0m:[93m18[0m - [91merror[0m[90m TS1146: [0mDeclaration expected.
+
+[7m224[0m          * @param cb A callback function that will be called whenever data changes in the enmap.
+[7m   [0m [91m                 [0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m224[0m:[93m22[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m224[0m          * @param cb A callback function that will be called whenever data changes in the enmap.
+[7m   [0m [91m                     ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m224[0m:[93m24[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m224[0m          * @param cb A callback function that will be called whenever data changes in the enmap.
+[7m   [0m [91m                       ~~~~~~~~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m224[0m:[93m33[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m224[0m          * @param cb A callback function that will be called whenever data changes in the enmap.
+[7m   [0m [91m                                ~~~~~~~~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m224[0m:[93m47[0m - [91merror[0m[90m TS1005: [0m'(' expected.
+
+[7m224[0m          * @param cb A callback function that will be called whenever data changes in the enmap.
+[7m   [0m [91m                                              ~~~~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m224[0m:[93m52[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m224[0m          * @param cb A callback function that will be called whenever data changes in the enmap.
+[7m   [0m [91m                                                   ~~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m224[0m:[93m55[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m224[0m          * @param cb A callback function that will be called whenever data changes in the enmap.
+[7m   [0m [91m                                                      ~~~~~~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m224[0m:[93m62[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m224[0m          * @param cb A callback function that will be called whenever data changes in the enmap.
+[7m   [0m [91m                                                             ~~~~~~~~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m224[0m:[93m71[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m224[0m          * @param cb A callback function that will be called whenever data changes in the enmap.
+[7m   [0m [91m                                                                      ~~~~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m224[0m:[93m76[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m224[0m          * @param cb A callback function that will be called whenever data changes in the enmap.
+[7m   [0m [91m                                                                           ~~~~~~~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m224[0m:[93m91[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m224[0m          * @param cb A callback function that will be called whenever data changes in the enmap.
+[7m   [0m [91m                                                                                          ~~~~~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m225[0m:[93m10[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m225[0m          */
+[7m   [0m [91m         ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m225[0m:[93m12[0m - [91merror[0m[90m TS1161: [0mUnterminated regular expression literal.
+
+[7m225[0m          */
+[7m   [0m [91m           [0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m226[0m:[93m9[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m226[0m         public changed(cb: (key: K, oldValue: V | undefined, newValue: V | undefined) => void): void;
+[7m   [0m [91m        ~~~~~~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m226[0m:[93m26[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m226[0m         public changed(cb: (key: K, oldValue: V | undefined, newValue: V | undefined) => void): void;
+[7m   [0m [91m                         ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m226[0m:[93m94[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m226[0m         public changed(cb: (key: K, oldValue: V | undefined, newValue: V | undefined) => void): void;
+[7m   [0m [91m                                                                                             ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m226[0m:[93m95[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m226[0m         public changed(cb: (key: K, oldValue: V | undefined, newValue: V | undefined) => void): void;
+[7m   [0m [91m                                                                                              ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m226[0m:[93m101[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m226[0m         public changed(cb: (key: K, oldValue: V | undefined, newValue: V | undefined) => void): void;
+[7m   [0m [91m                                                                                                    ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m234[0m:[93m9[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m234[0m         public close(): Promise<void>;
+[7m   [0m [91m        ~~~~~~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m234[0m:[93m23[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m234[0m         public close(): Promise<void>;
+[7m   [0m [91m                      ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m234[0m:[93m38[0m - [91merror[0m[90m TS1005: [0m'(' expected.
+
+[7m234[0m         public close(): Promise<void>;
+[7m   [0m [91m                                     ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m246[0m:[93m9[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m246[0m         public setProp(key: K, path: string, val: any): this;
+[7m   [0m [91m        ~~~~~~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m246[0m:[93m27[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m246[0m         public setProp(key: K, path: string, val: any): this;
+[7m   [0m [91m                          ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m246[0m:[93m36[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m246[0m         public setProp(key: K, path: string, val: any): this;
+[7m   [0m [91m                                   ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m246[0m:[93m49[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m246[0m         public setProp(key: K, path: string, val: any): this;
+[7m   [0m [91m                                                ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m246[0m:[93m55[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m246[0m         public setProp(key: K, path: string, val: any): this;
+[7m   [0m [91m                                                      ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m265[0m:[93m9[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m265[0m         public push(key: K, val: any, path?: string, allowDupes?: boolean): this;
+[7m   [0m [91m        ~~~~~~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m265[0m:[93m24[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m265[0m         public push(key: K, val: any, path?: string, allowDupes?: boolean): this;
+[7m   [0m [91m                       ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m265[0m:[93m32[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m265[0m         public push(key: K, val: any, path?: string, allowDupes?: boolean): this;
+[7m   [0m [91m                               ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m265[0m:[93m44[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m265[0m         public push(key: K, val: any, path?: string, allowDupes?: boolean): this;
+[7m   [0m [91m                                           ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m265[0m:[93m65[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m265[0m         public push(key: K, val: any, path?: string, allowDupes?: boolean): this;
+[7m   [0m [91m                                                                ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m265[0m:[93m75[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m265[0m         public push(key: K, val: any, path?: string, allowDupes?: boolean): this;
+[7m   [0m [91m                                                                          ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m277[0m:[93m9[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m277[0m         public pushIn(key: K, path: string, val: any, allowDupes?: boolean): this;
+[7m   [0m [91m        ~~~~~~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m277[0m:[93m26[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m277[0m         public pushIn(key: K, path: string, val: any, allowDupes?: boolean): this;
+[7m   [0m [91m                         ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m277[0m:[93m35[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m277[0m         public pushIn(key: K, path: string, val: any, allowDupes?: boolean): this;
+[7m   [0m [91m                                  ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m277[0m:[93m48[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m277[0m         public pushIn(key: K, path: string, val: any, allowDupes?: boolean): this;
+[7m   [0m [91m                                               ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m277[0m:[93m66[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m277[0m         public pushIn(key: K, path: string, val: any, allowDupes?: boolean): this;
+[7m   [0m [91m                                                                 ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m277[0m:[93m76[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m277[0m         public pushIn(key: K, path: string, val: any, allowDupes?: boolean): this;
+[7m   [0m [91m                                                                           ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m300[0m:[93m9[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m300[0m         public math(key: K, operation: MathOps, operand: number, path?: string): this;
+[7m   [0m [91m        ~~~~~~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m300[0m:[93m24[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m300[0m         public math(key: K, operation: MathOps, operand: number, path?: string): this;
+[7m   [0m [91m                       ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m300[0m:[93m38[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m300[0m         public math(key: K, operation: MathOps, operand: number, path?: string): this;
+[7m   [0m [91m                                     ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m300[0m:[93m56[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m300[0m         public math(key: K, operation: MathOps, operand: number, path?: string): this;
+[7m   [0m [91m                                                       ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m300[0m:[93m71[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m300[0m         public math(key: K, operation: MathOps, operand: number, path?: string): this;
+[7m   [0m [91m                                                                      ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m300[0m:[93m80[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m300[0m         public math(key: K, operation: MathOps, operand: number, path?: string): this;
+[7m   [0m [91m                                                                               ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m315[0m:[93m9[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m315[0m         public inc(key: K, path?: string): this;
+[7m   [0m [91m        ~~~~~~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m315[0m:[93m23[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m315[0m         public inc(key: K, path?: string): this;
+[7m   [0m [91m                      ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m315[0m:[93m33[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m315[0m         public inc(key: K, path?: string): this;
+[7m   [0m [91m                                ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m315[0m:[93m42[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m315[0m         public inc(key: K, path?: string): this;
+[7m   [0m [91m                                         ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m330[0m:[93m9[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m330[0m         public dec(key: K, path?: string): this;
+[7m   [0m [91m        ~~~~~~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m330[0m:[93m23[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m330[0m         public dec(key: K, path?: string): this;
+[7m   [0m [91m                      ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m330[0m:[93m33[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m330[0m         public dec(key: K, path?: string): this;
+[7m   [0m [91m                                ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m330[0m:[93m42[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m330[0m         public dec(key: K, path?: string): this;
+[7m   [0m [91m                                         ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m339[0m:[93m9[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m339[0m         public getProp(key: K, path: string): any;
+[7m   [0m [91m        ~~~~~~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m339[0m:[93m27[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m339[0m         public getProp(key: K, path: string): any;
+[7m   [0m [91m                          ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m339[0m:[93m36[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m339[0m         public getProp(key: K, path: string): any;
+[7m   [0m [91m                                   ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m339[0m:[93m45[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m339[0m         public getProp(key: K, path: string): any;
+[7m   [0m [91m                                            ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m359[0m:[93m9[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m359[0m         public ensure(key: K, defaultValue: V, path?: string): V;
+[7m   [0m [91m        ~~~~~~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m359[0m:[93m26[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m359[0m         public ensure(key: K, defaultValue: V, path?: string): V;
+[7m   [0m [91m                         ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m359[0m:[93m43[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m359[0m         public ensure(key: K, defaultValue: V, path?: string): V;
+[7m   [0m [91m                                          ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m359[0m:[93m53[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m359[0m         public ensure(key: K, defaultValue: V, path?: string): V;
+[7m   [0m [91m                                                    ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m359[0m:[93m62[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m359[0m         public ensure(key: K, defaultValue: V, path?: string): V;
+[7m   [0m [91m                                                             ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m376[0m:[93m9[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m376[0m         public has(key: K, path?: string): boolean;
+[7m   [0m [91m        ~~~~~~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m376[0m:[93m23[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m376[0m         public has(key: K, path?: string): boolean;
+[7m   [0m [91m                      ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m376[0m:[93m33[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m376[0m         public has(key: K, path?: string): boolean;
+[7m   [0m [91m                                ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m376[0m:[93m42[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m376[0m         public has(key: K, path?: string): boolean;
+[7m   [0m [91m                                         ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m385[0m:[93m9[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m385[0m         public hasProp(key: K, path: string): boolean;
+[7m   [0m [91m        ~~~~~~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m385[0m:[93m27[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m385[0m         public hasProp(key: K, path: string): boolean;
+[7m   [0m [91m                          ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m385[0m:[93m36[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m385[0m         public hasProp(key: K, path: string): boolean;
+[7m   [0m [91m                                   ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m385[0m:[93m45[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m385[0m         public hasProp(key: K, path: string): boolean;
+[7m   [0m [91m                                            ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m395[0m:[93m9[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m395[0m         public delete(key: K, path?: string): this;
+[7m   [0m [91m        ~~~~~~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m395[0m:[93m26[0m - [91merror[0m[90m TS1005: [0m')' expected.
+
+[7m395[0m         public delete(key: K, path?: string): this;
+[7m   [0m [91m                         ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m395[0m:[93m36[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m395[0m         public delete(key: K, path?: string): this;
+[7m   [0m [91m                                   ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m395[0m:[93m44[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m395[0m         public delete(key: K, path?: string): this;
+[7m   [0m [91m                                           ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m395[0m:[93m45[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m395[0m         public delete(key: K, path?: string): this;
+[7m   [0m [91m                                            ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m403[0m:[93m9[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m403[0m         public deleteProp(key: K, path: string): void;
+[7m   [0m [91m        ~~~~~~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m403[0m:[93m30[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m403[0m         public deleteProp(key: K, path: string): void;
+[7m   [0m [91m                             ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m403[0m:[93m39[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m403[0m         public deleteProp(key: K, path: string): void;
+[7m   [0m [91m                                      ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m403[0m:[93m48[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m403[0m         public deleteProp(key: K, path: string): void;
+[7m   [0m [91m                                               ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m403[0m:[93m54[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m403[0m         public deleteProp(key: K, path: string): void;
+[7m   [0m [91m                                                     ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m408[0m:[93m9[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m408[0m         public deleteAll(): void;
+[7m   [0m [91m        ~~~~~~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m408[0m:[93m27[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m408[0m         public deleteAll(): void;
+[7m   [0m [91m                          ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m408[0m:[93m33[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m408[0m         public deleteAll(): void;
+[7m   [0m [91m                                ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m410[0m:[93m9[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m410[0m         public clear(): void;
+[7m   [0m [91m        ~~~~~~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m410[0m:[93m23[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m410[0m         public clear(): void;
+[7m   [0m [91m                      ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m410[0m:[93m29[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m410[0m         public clear(): void;
+[7m   [0m [91m                            ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m423[0m:[93m9[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m423[0m         public remove(key: K, val: V, path?: string): this;
+[7m   [0m [91m        ~~~~~~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m423[0m:[93m26[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m423[0m         public remove(key: K, val: V, path?: string): this;
+[7m   [0m [91m                         ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m423[0m:[93m34[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m423[0m         public remove(key: K, val: V, path?: string): this;
+[7m   [0m [91m                                 ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m423[0m:[93m44[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m423[0m         public remove(key: K, val: V, path?: string): this;
+[7m   [0m [91m                                           ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m423[0m:[93m53[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m423[0m         public remove(key: K, val: V, path?: string): this;
+[7m   [0m [91m                                                    ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m435[0m:[93m9[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m435[0m         public removeFrom(key: K, path: string, val: any): this;
+[7m   [0m [91m        ~~~~~~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m435[0m:[93m30[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m435[0m         public removeFrom(key: K, path: string, val: any): this;
+[7m   [0m [91m                             ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m435[0m:[93m39[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m435[0m         public removeFrom(key: K, path: string, val: any): this;
+[7m   [0m [91m                                      ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m435[0m:[93m52[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m435[0m         public removeFrom(key: K, path: string, val: any): this;
+[7m   [0m [91m                                                   ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m435[0m:[93m58[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m435[0m         public removeFrom(key: K, path: string, val: any): this;
+[7m   [0m [91m                                                         ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m452[0m:[93m9[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m452[0m         public static multi<K extends string | number, V>(names: string[], options?: EnmapOptions): Enmap<K, V>[];
+[7m   [0m [91m        ~~~~~~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m452[0m:[93m16[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m452[0m         public static multi<K extends string | number, V>(names: string[], options?: EnmapOptions): Enmap<K, V>[];
+[7m   [0m [91m               ~~~~~~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m452[0m:[93m54[0m - [91merror[0m[90m TS1005: [0m'?' expected.
+
+[7m452[0m         public static multi<K extends string | number, V>(names: string[], options?: EnmapOptions): Enmap<K, V>[];
+[7m   [0m [91m                                                     ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m452[0m:[93m64[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m452[0m         public static multi<K extends string | number, V>(names: string[], options?: EnmapOptions): Enmap<K, V>[];
+[7m   [0m [91m                                                               ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m452[0m:[93m73[0m - [91merror[0m[90m TS1011: [0mAn element access expression should take an argument.
+
+[7m452[0m         public static multi<K extends string | number, V>(names: string[], options?: EnmapOptions): Enmap<K, V>[];
+[7m   [0m [91m                                                                        [0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m452[0m:[93m84[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m452[0m         public static multi<K extends string | number, V>(names: string[], options?: EnmapOptions): Enmap<K, V>[];
+[7m   [0m [91m                                                                                   ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m452[0m:[93m99[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m452[0m         public static multi<K extends string | number, V>(names: string[], options?: EnmapOptions): Enmap<K, V>[];
+[7m   [0m [91m                                                                                                  ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m461[0m:[93m9[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m461[0m         private _init(pool: any): Promise<void>;
+[7m   [0m [91m        ~~~~~~~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m461[0m:[93m27[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m461[0m         private _init(pool: any): Promise<void>;
+[7m   [0m [91m                          ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m461[0m:[93m33[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m461[0m         private _init(pool: any): Promise<void>;
+[7m   [0m [91m                                ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m461[0m:[93m48[0m - [91merror[0m[90m TS1005: [0m'(' expected.
+
+[7m461[0m         private _init(pool: any): Promise<void>;
+[7m   [0m [91m                                               ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m470[0m:[93m9[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m470[0m         private _check(key: K, type: string, path?: string): void;
+[7m   [0m [91m        ~~~~~~~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m470[0m:[93m27[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m470[0m         private _check(key: K, type: string, path?: string): void;
+[7m   [0m [91m                          ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m470[0m:[93m36[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m470[0m         private _check(key: K, type: string, path?: string): void;
+[7m   [0m [91m                                   ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m470[0m:[93m51[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m470[0m         private _check(key: K, type: string, path?: string): void;
+[7m   [0m [91m                                                  ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m470[0m:[93m60[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m470[0m         private _check(key: K, type: string, path?: string): void;
+[7m   [0m [91m                                                           ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m470[0m:[93m66[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m470[0m         private _check(key: K, type: string, path?: string): void;
+[7m   [0m [91m                                                                 ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m480[0m:[93m9[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m480[0m         private _mathop(base: number, op: string, opand: number): number;
+[7m   [0m [91m        ~~~~~~~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m480[0m:[93m29[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m480[0m         private _mathop(base: number, op: string, opand: number): number;
+[7m   [0m [91m                            ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m480[0m:[93m41[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m480[0m         private _mathop(base: number, op: string, opand: number): number;
+[7m   [0m [91m                                        ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m480[0m:[93m56[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m480[0m         private _mathop(base: number, op: string, opand: number): number;
+[7m   [0m [91m                                                       ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m480[0m:[93m65[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m480[0m         private _mathop(base: number, op: string, opand: number): number;
+[7m   [0m [91m                                                                ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m485[0m:[93m9[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m485[0m         private _validateName(): void;
+[7m   [0m [91m        ~~~~~~~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m485[0m:[93m32[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m485[0m         private _validateName(): void;
+[7m   [0m [91m                               ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m485[0m:[93m38[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m485[0m         private _validateName(): void;
+[7m   [0m [91m                                     ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m492[0m:[93m9[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m492[0m         private _fetchCheck(key: K, force?: boolean): void;
+[7m   [0m [91m        ~~~~~~~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m492[0m:[93m32[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m492[0m         private _fetchCheck(key: K, force?: boolean): void;
+[7m   [0m [91m                               ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m492[0m:[93m43[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m492[0m         private _fetchCheck(key: K, force?: boolean): void;
+[7m   [0m [91m                                          ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m492[0m:[93m53[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m492[0m         private _fetchCheck(key: K, force?: boolean): void;
+[7m   [0m [91m                                                    ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m492[0m:[93m59[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m492[0m         private _fetchCheck(key: K, force?: boolean): void;
+[7m   [0m [91m                                                          ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m500[0m:[93m9[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m500[0m         private _parseData(data: any): any;
+[7m   [0m [91m        ~~~~~~~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m500[0m:[93m32[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m500[0m         private _parseData(data: any): any;
+[7m   [0m [91m                               ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m500[0m:[93m38[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m500[0m         private _parseData(data: any): any;
+[7m   [0m [91m                                     ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m507[0m:[93m9[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m507[0m         private _clone(data: any): any;
+[7m   [0m [91m        ~~~~~~~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m507[0m:[93m28[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m507[0m         private _clone(data: any): any;
+[7m   [0m [91m                           ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m507[0m:[93m34[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m507[0m         private _clone(data: any): any;
+[7m   [0m [91m                                 ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m512[0m:[93m9[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m512[0m         private _readyCheck(): void;
+[7m   [0m [91m        ~~~~~~~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m512[0m:[93m30[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m512[0m         private _readyCheck(): void;
+[7m   [0m [91m                             ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m512[0m:[93m36[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m512[0m         private _readyCheck(): void;
+[7m   [0m [91m                                   ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m529[0m:[93m9[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m529[0m         public array(): V[];
+[7m   [0m [91m        ~~~~~~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m529[0m:[93m23[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m529[0m         public array(): V[];
+[7m   [0m [91m                      ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m529[0m:[93m27[0m - [91merror[0m[90m TS1011: [0mAn element access expression should take an argument.
+
+[7m529[0m         public array(): V[];
+[7m   [0m [91m                          [0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m537[0m:[93m9[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m537[0m         public keyArray(): K[];
+[7m   [0m [91m        ~~~~~~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m537[0m:[93m26[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m537[0m         public keyArray(): K[];
+[7m   [0m [91m                         ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m537[0m:[93m30[0m - [91merror[0m[90m TS1011: [0mAn element access expression should take an argument.
+
+[7m537[0m         public keyArray(): K[];
+[7m   [0m [91m                             [0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m543[0m:[93m9[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m543[0m         public random(): V;
+[7m   [0m [91m        ~~~~~~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m543[0m:[93m24[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m543[0m         public random(): V;
+[7m   [0m [91m                       ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m550[0m:[93m9[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m550[0m         public random(count: number): V[];
+[7m   [0m [91m        ~~~~~~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m550[0m:[93m28[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m550[0m         public random(count: number): V[];
+[7m   [0m [91m                           ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m550[0m:[93m37[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m550[0m         public random(count: number): V[];
+[7m   [0m [91m                                    ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m550[0m:[93m41[0m - [91merror[0m[90m TS1011: [0mAn element access expression should take an argument.
+
+[7m550[0m         public random(count: number): V[];
+[7m   [0m [91m                                        [0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m556[0m:[93m9[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m556[0m         public randomKey(): K;
+[7m   [0m [91m        ~~~~~~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m556[0m:[93m27[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m556[0m         public randomKey(): K;
+[7m   [0m [91m                          ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m563[0m:[93m9[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m563[0m         public randomKey(count: number): V[];
+[7m   [0m [91m        ~~~~~~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m563[0m:[93m31[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m563[0m         public randomKey(count: number): V[];
+[7m   [0m [91m                              ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m563[0m:[93m40[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m563[0m         public randomKey(count: number): V[];
+[7m   [0m [91m                                       ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m563[0m:[93m44[0m - [91merror[0m[90m TS1011: [0mAn element access expression should take an argument.
+
+[7m563[0m         public randomKey(count: number): V[];
+[7m   [0m [91m                                           [0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m573[0m:[93m9[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m573[0m         public findAll(prop: string, value: any): V[];
+[7m   [0m [91m        ~~~~~~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m573[0m:[93m28[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m573[0m         public findAll(prop: string, value: any): V[];
+[7m   [0m [91m                           ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m573[0m:[93m43[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m573[0m         public findAll(prop: string, value: any): V[];
+[7m   [0m [91m                                          ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m573[0m:[93m49[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m573[0m         public findAll(prop: string, value: any): V[];
+[7m   [0m [91m                                                ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m573[0m:[93m53[0m - [91merror[0m[90m TS1011: [0mAn element access expression should take an argument.
+
+[7m573[0m         public findAll(prop: string, value: any): V[];
+[7m   [0m [91m                                                    [0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m584[0m:[93m9[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m584[0m         public find(fn: (val: V, key: K, enamp: this) => boolean): V | undefined;
+[7m   [0m [91m        ~~~~~~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m584[0m:[93m23[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m584[0m         public find(fn: (val: V, key: K, enamp: this) => boolean): V | undefined;
+[7m   [0m [91m                      ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m584[0m:[93m66[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m584[0m         public find(fn: (val: V, key: K, enamp: this) => boolean): V | undefined;
+[7m   [0m [91m                                                                 ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m597[0m:[93m9[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m597[0m         public find(prop: string, value: any): V | undefined;
+[7m   [0m [91m        ~~~~~~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m597[0m:[93m25[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m597[0m         public find(prop: string, value: any): V | undefined;
+[7m   [0m [91m                        ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m597[0m:[93m40[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m597[0m         public find(prop: string, value: any): V | undefined;
+[7m   [0m [91m                                       ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m597[0m:[93m46[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m597[0m         public find(prop: string, value: any): V | undefined;
+[7m   [0m [91m                                             ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m606[0m:[93m9[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m606[0m         public findKey(fn: (val: V, key: K, enmap: this) => boolean): K | undefined;
+[7m   [0m [91m        ~~~~~~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m606[0m:[93m26[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m606[0m         public findKey(fn: (val: V, key: K, enmap: this) => boolean): K | undefined;
+[7m   [0m [91m                         ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m606[0m:[93m69[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m606[0m         public findKey(fn: (val: V, key: K, enmap: this) => boolean): K | undefined;
+[7m   [0m [91m                                                                    ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m615[0m:[93m9[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m615[0m         public findKey(prop: string, value: any): K | undefined;
+[7m   [0m [91m        ~~~~~~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m615[0m:[93m28[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m615[0m         public findKey(prop: string, value: any): K | undefined;
+[7m   [0m [91m                           ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m615[0m:[93m43[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m615[0m         public findKey(prop: string, value: any): K | undefined;
+[7m   [0m [91m                                          ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m615[0m:[93m49[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m615[0m         public findKey(prop: string, value: any): K | undefined;
+[7m   [0m [91m                                                ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m629[0m:[93m9[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m629[0m         public exists(prop: string, value: any): boolean;
+[7m   [0m [91m        ~~~~~~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m629[0m:[93m27[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m629[0m         public exists(prop: string, value: any): boolean;
+[7m   [0m [91m                          ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m629[0m:[93m42[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m629[0m         public exists(prop: string, value: any): boolean;
+[7m   [0m [91m                                         ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m629[0m:[93m48[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m629[0m         public exists(prop: string, value: any): boolean;
+[7m   [0m [91m                                               ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m637[0m:[93m9[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m637[0m         public sweep(fn: (val: V, key: K, enmap: this) => boolean, thisArg?: any): number;
+[7m   [0m [91m        ~~~~~~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m637[0m:[93m24[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m637[0m         public sweep(fn: (val: V, key: K, enmap: this) => boolean, thisArg?: any): number;
+[7m   [0m [91m                       ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m637[0m:[93m76[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m637[0m         public sweep(fn: (val: V, key: K, enmap: this) => boolean, thisArg?: any): number;
+[7m   [0m [91m                                                                           ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m637[0m:[93m82[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m637[0m         public sweep(fn: (val: V, key: K, enmap: this) => boolean, thisArg?: any): number;
+[7m   [0m [91m                                                                                 ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m645[0m:[93m9[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m645[0m         public filter(fn: (val: V, key: K, enmap: this) => boolean, thisArg?: any): this;
+[7m   [0m [91m        ~~~~~~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m645[0m:[93m25[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m645[0m         public filter(fn: (val: V, key: K, enmap: this) => boolean, thisArg?: any): this;
+[7m   [0m [91m                        ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m645[0m:[93m77[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m645[0m         public filter(fn: (val: V, key: K, enmap: this) => boolean, thisArg?: any): this;
+[7m   [0m [91m                                                                            ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m645[0m:[93m83[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m645[0m         public filter(fn: (val: V, key: K, enmap: this) => boolean, thisArg?: any): this;
+[7m   [0m [91m                                                                                  ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m653[0m:[93m9[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m653[0m         public filterArray(fn: (val: V, key: K, enmap: this) => boolean, thisArg?: any): V[];
+[7m   [0m [91m        ~~~~~~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m653[0m:[93m30[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m653[0m         public filterArray(fn: (val: V, key: K, enmap: this) => boolean, thisArg?: any): V[];
+[7m   [0m [91m                             ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m653[0m:[93m82[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m653[0m         public filterArray(fn: (val: V, key: K, enmap: this) => boolean, thisArg?: any): V[];
+[7m   [0m [91m                                                                                 ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m653[0m:[93m88[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m653[0m         public filterArray(fn: (val: V, key: K, enmap: this) => boolean, thisArg?: any): V[];
+[7m   [0m [91m                                                                                       ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m653[0m:[93m92[0m - [91merror[0m[90m TS1011: [0mAn element access expression should take an argument.
+
+[7m653[0m         public filterArray(fn: (val: V, key: K, enmap: this) => boolean, thisArg?: any): V[];
+[7m   [0m [91m                                                                                           [0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m663[0m:[93m9[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m663[0m         public partition(fn: (val: V, key: K, enmap: this) => boolean, thisArg?: any): [Enmap, Enmap];
+[7m   [0m [91m        ~~~~~~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m663[0m:[93m28[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m663[0m         public partition(fn: (val: V, key: K, enmap: this) => boolean, thisArg?: any): [Enmap, Enmap];
+[7m   [0m [91m                           ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m663[0m:[93m80[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m663[0m         public partition(fn: (val: V, key: K, enmap: this) => boolean, thisArg?: any): [Enmap, Enmap];
+[7m   [0m [91m                                                                               ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m663[0m:[93m86[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m663[0m         public partition(fn: (val: V, key: K, enmap: this) => boolean, thisArg?: any): [Enmap, Enmap];
+[7m   [0m [91m                                                                                     ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m671[0m:[93m9[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m671[0m         public map<R>(fn: (val: V, key: K, enmap: this) => R, thisArg?: any): R[];
+[7m   [0m [91m        ~~~~~~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m671[0m:[93m25[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m671[0m         public map<R>(fn: (val: V, key: K, enmap: this) => R, thisArg?: any): R[];
+[7m   [0m [91m                        ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m671[0m:[93m71[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m671[0m         public map<R>(fn: (val: V, key: K, enmap: this) => R, thisArg?: any): R[];
+[7m   [0m [91m                                                                      ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m671[0m:[93m77[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m671[0m         public map<R>(fn: (val: V, key: K, enmap: this) => R, thisArg?: any): R[];
+[7m   [0m [91m                                                                            ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m671[0m:[93m81[0m - [91merror[0m[90m TS1011: [0mAn element access expression should take an argument.
+
+[7m671[0m         public map<R>(fn: (val: V, key: K, enmap: this) => R, thisArg?: any): R[];
+[7m   [0m [91m                                                                                [0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m679[0m:[93m9[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m679[0m         public some(fn: (val: V, key: K, enmap: this) => boolean, thisArg?: any): boolean;
+[7m   [0m [91m        ~~~~~~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m679[0m:[93m23[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m679[0m         public some(fn: (val: V, key: K, enmap: this) => boolean, thisArg?: any): boolean;
+[7m   [0m [91m                      ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m679[0m:[93m75[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m679[0m         public some(fn: (val: V, key: K, enmap: this) => boolean, thisArg?: any): boolean;
+[7m   [0m [91m                                                                          ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m679[0m:[93m81[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m679[0m         public some(fn: (val: V, key: K, enmap: this) => boolean, thisArg?: any): boolean;
+[7m   [0m [91m                                                                                ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m687[0m:[93m9[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m687[0m         public every(fn: (val: V, key: K, enmap: this) => boolean, thisArg?: any): boolean;
+[7m   [0m [91m        ~~~~~~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m687[0m:[93m24[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m687[0m         public every(fn: (val: V, key: K, enmap: this) => boolean, thisArg?: any): boolean;
+[7m   [0m [91m                       ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m687[0m:[93m76[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m687[0m         public every(fn: (val: V, key: K, enmap: this) => boolean, thisArg?: any): boolean;
+[7m   [0m [91m                                                                           ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m687[0m:[93m82[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m687[0m         public every(fn: (val: V, key: K, enmap: this) => boolean, thisArg?: any): boolean;
+[7m   [0m [91m                                                                                 ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m695[0m:[93m9[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m695[0m         public reduce(fn: (acc: V, val: V, key: K, enmap: this) => V, initialValue?: V): V;
+[7m   [0m [91m        ~~~~~~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m695[0m:[93m25[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m695[0m         public reduce(fn: (acc: V, val: V, key: K, enmap: this) => V, initialValue?: V): V;
+[7m   [0m [91m                        ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m695[0m:[93m84[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m695[0m         public reduce(fn: (acc: V, val: V, key: K, enmap: this) => V, initialValue?: V): V;
+[7m   [0m [91m                                                                                   ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m695[0m:[93m88[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m695[0m         public reduce(fn: (acc: V, val: V, key: K, enmap: this) => V, initialValue?: V): V;
+[7m   [0m [91m                                                                                       ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m703[0m:[93m9[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m703[0m         public reduce<R>(fn: (acc: R, val: V, key: K, enmap: this) => V, initialValue: R): R;
+[7m   [0m [91m        ~~~~~~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m703[0m:[93m28[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m703[0m         public reduce<R>(fn: (acc: R, val: V, key: K, enmap: this) => V, initialValue: R): R;
+[7m   [0m [91m                           ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m703[0m:[93m86[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m703[0m         public reduce<R>(fn: (acc: R, val: V, key: K, enmap: this) => V, initialValue: R): R;
+[7m   [0m [91m                                                                                     ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m703[0m:[93m90[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m703[0m         public reduce<R>(fn: (acc: R, val: V, key: K, enmap: this) => V, initialValue: R): R;
+[7m   [0m [91m                                                                                         ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m710[0m:[93m9[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m710[0m         public clone(): Enmap<K, V>;
+[7m   [0m [91m        ~~~~~~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m710[0m:[93m23[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m710[0m         public clone(): Enmap<K, V>;
+[7m   [0m [91m                      ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m710[0m:[93m36[0m - [91merror[0m[90m TS1005: [0m'(' expected.
+
+[7m710[0m         public clone(): Enmap<K, V>;
+[7m   [0m [91m                                   ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m718[0m:[93m9[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m718[0m         public concat(...enmaps: Enmap<K, V>[]): Enmap<K, V>;
+[7m   [0m [91m        ~~~~~~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m718[0m:[93m32[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m718[0m         public concat(...enmaps: Enmap<K, V>[]): Enmap<K, V>;
+[7m   [0m [91m                               ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m718[0m:[93m48[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m718[0m         public concat(...enmaps: Enmap<K, V>[]): Enmap<K, V>;
+[7m   [0m [91m                                               ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m718[0m:[93m61[0m - [91merror[0m[90m TS1005: [0m'(' expected.
+
+[7m718[0m         public concat(...enmaps: Enmap<K, V>[]): Enmap<K, V>;
+[7m   [0m [91m                                                            ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m727[0m:[93m9[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m727[0m         public equals(enmap: Enmap<K, V>): boolean;
+[7m   [0m [91m        ~~~~~~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m727[0m:[93m28[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m727[0m         public equals(enmap: Enmap<K, V>): boolean;
+[7m   [0m [91m                           ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m727[0m:[93m41[0m - [91merror[0m[90m TS1005: [0m'(' expected.
+
+[7m727[0m         public equals(enmap: Enmap<K, V>): boolean;
+[7m   [0m [91m                                        ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m727[0m:[93m42[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m727[0m         public equals(enmap: Enmap<K, V>): boolean;
+[7m   [0m [91m                                         ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m727[0m:[93m51[0m - [91merror[0m[90m TS1005: [0m')' expected.
+
+[7m727[0m         public equals(enmap: Enmap<K, V>): boolean;
+[7m   [0m [91m                                                  ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m728[0m:[93m5[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m728[0m     }
+[7m   [0m [91m    ~[0m
+
+[31mError: [39m[96mnode_modules/enmap/typings/index.d.ts[0m:[93m729[0m:[93m1[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m729[0m }
+[7m   [0m [91m~[0m
+
+[31mError: [39m[96msrc/database/EnmapProvider.ts[0m:[93m25[0m:[93m22[0m - [91merror[0m[90m TS2351: [0mThis expression is not constructable.
+  Type 'typeof import("enmap")' has no construct signatures.
+
+[7m25[0m     this.model = new Enmap(options.name, { dataDir: options.dataDir });
+[7m  [0m [91m                     ~~~~~[0m
+
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.

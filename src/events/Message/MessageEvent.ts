@@ -63,10 +63,11 @@ export class MessageEvent extends Event {
     } = message;
 
     if (!this.isValidMessage(message)) return;
+    if (!member?.user.bot) {
+      member?.addLevel();
+    }
     const prefix = guild?.prefix ?? OPTIONS.PREFIX;
     const usedPrefix = this.getPrefix(prefix, message);
-
-    // console.log(prefix, usedPrefix);
 
     const MentionRegex = new RegExp(`^(<@!?${client.user?.id}>)`);
     const mentioned = MentionRegex.test(message.content);
