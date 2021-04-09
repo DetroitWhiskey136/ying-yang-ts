@@ -16,29 +16,23 @@ export interface BotClient {
 }
 
 /**
- * The BotClient class is used to keep the bots various classes separate from
+ * This class is used to keep the bots various properties separate from
  * the discord.js Client class.
- * @class BotClient
- * @param { ClientOptions } options discord.js Client options.
-*/
+ * ```js
+ * const bot = new BotClient(options)
+ * ```
+ */
 export class BotClient {
+  /**
+   * Creates an instance of BotClient.
+   * @param options - represents discord.js' ClientOptions
+   */
   constructor(options: ClientOptions) {
-    /** Commands can have aliases to help simplify calling the command. */
     this.aliases = new Collection();
-    /** This is where the discord.js Client is created. */
     this.client = new DiscordClient(options, this);
-    /** Commands are classes called when a user requests then in a discord
-     * channel. e.g. `{prefix} help` is a command */
     this.commands = new Collection();
-    /** The database is a sqlite datastore that uses a json format
-     * {key: value}, its used to store stuff for persistance.
-     * NOTE: avoid storing user data its not worth the work and liability.
-     */
     this.database = new Database();
-    /** Events are a section of code that is ran when a discord does something. */
     this.events = new Collection();
-    /** The logger class sounds super scary i bet, its not tho it just logs
-     * system messages to the console and a file in the data/logs folder. */
     this.logger = new Logger();
 
     console.log();
@@ -52,5 +46,60 @@ export class BotClient {
       Files.LoadFiles('dist/src/events', this);
       Files.LoadFiles('dist/src/commands', this);
     }
+  }
+
+  /**
+   * This method is used to start the bots initialization process
+   * ```js
+   * bot.init(String(process.env.TOKEN), Sentry);
+   * ```
+   * @param token - The bots token from discord.com
+   * @param sentry - Send sentry through so it can be used by the bot
+   * @param options - nothing for now maybe one day.
+   * @returns {void}
+   */
+  init(token: string, sentry: any, options: null = null) {
+    // #region Capture Errors
+    this.client.on('error', (error) => {
+      this.logger.error(error.message);
+      sentry ?? sentry.captureException(error);
+    });
+    // #endregion
+
+    // #region  Client Login
+    this.client.login(token)
+      .then(() => {
+        this.logger.debug('Using token to login');
+      })
+      .catch((error) => {
+        this.logger.error(
+          `${error.name}:\n  ${error.message}\n${error.stack.replace(
+            `${error.name}: ${error.message}`, '',
+          )}`,
+        );
+      })
+      .finally(() => {
+        this.logger.info('Bot is Ready');
+      });
+    // #endregion
+  }
+
+  /**
+   * Used to run some baisc dev related logging, such as discord debugging
+   * ```js
+   * if (process.env.NODE_ENV !== 'production') bot.dev();
+   * ```
+   * @returns {void}
+   */
+  dev() {
+    this.client.on('debug', (debug) => {
+      const words = ['heartbeat', 'heartbeat.', 'token:', 'swept'];
+      const msg = debug.toLowerCase().split(' ');
+      const filtered = msg.filter((word) => words.includes(word));
+
+      if (filtered.length <= 0) {
+        this.logger.debug(debug);
+      }
+    });
   }
 }

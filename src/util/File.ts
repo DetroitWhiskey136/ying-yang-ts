@@ -28,6 +28,7 @@ export class Files {
       if (!parsedItem.ext || !['.js', '.ts'].includes(parsedItem.ext)) return;
 
       const parsedName = `${parsedItem.name}${parsedItem.ext}`;
+
       if (process.env.NODE_ENV !== 'production') bot.logger.debug(`${parsedItem.name} Loading`);
 
       await Files.LoadFile(parsedItem.dir, parsedName, bot);
