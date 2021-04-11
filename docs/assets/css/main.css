@@ -1,25 +1,3 @@
-:root {
-  --color-background: #fdfdfd;
-  --color-text: #222;
-  --color-text-aside: #707070;
-  --color-link: #4da6ff;
-  --color-menu-divider: #eee;
-  --color-menu-divider-focus: #000;
-  --color-menu-label: #707070;
-  --color-panel: #fff;
-  --color-panel-divider: #eee;
-  --color-comment-tag: #707070;
-  --color-comment-tag-text: #fff;
-  --color-code-background: rgba(0, 0, 0, 0.04);
-  --color-ts: #9600ff;
-  --color-ts-interface: #647f1b;
-  --color-ts-enum: #937210;
-  --color-ts-class: #0672de;
-  --color-ts-private: #707070;
-  --color-toolbar: #fff;
-  --color-toolbar-text: #333;
-}
-
 /*! normalize.css v1.1.3 | MIT License | git.io/normalize */
 /* ==========================================================================
  * * HTML5 display definitions
@@ -1607,14 +1585,14 @@ ul.tsd-descriptions > li > :last-child > :last-child > :last-child,
   }
 }
 body {
-  background: var(--color-background);
+  background: #1e1e1e;
   font-family: "Segoe UI", sans-serif;
   font-size: 16px;
-  color: var(--color-text);
+  color: #ececec;
 }
 
 a {
-  color: var(--color-link);
+  color: #4da6ff;
   text-decoration: none;
 }
 a:hover {
@@ -1626,7 +1604,7 @@ code, pre {
   padding: 0.2em;
   margin: 0;
   font-size: 14px;
-  background-color: var(--color-code-background);
+  background-color: #151515;
 }
 
 pre {
@@ -1636,12 +1614,6 @@ pre code {
   padding: 0;
   font-size: 100%;
   background-color: transparent;
-}
-
-blockquote {
-  margin: 1em 0;
-  padding-left: 1em;
-  border-left: 4px solid gray;
 }
 
 .tsd-typography {
@@ -1692,7 +1664,7 @@ blockquote {
     padding: 20px 20px 0 0;
     max-width: 450px;
     visibility: hidden;
-    background-color: var(--color-panel);
+    background-color: #171717;
     transform: translate(100%, 0);
   }
   html.default .col-menu > *:last-child {
@@ -1752,7 +1724,7 @@ html.default.has-menu .col-content {
 .tsd-page-title {
   padding: 70px 0 20px 0;
   margin: 0 0 40px 0;
-  background: var(--color-panel);
+  background: #171717;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.35);
 }
 .tsd-page-title h1 {
@@ -1762,10 +1734,10 @@ html.default.has-menu .col-content {
 .tsd-breadcrumb {
   margin: 0;
   padding: 0;
-  color: var(--color-text-aside);
+  color: #d0d0d0;
 }
 .tsd-breadcrumb a {
-  color: var(--color-text-aside);
+  color: #d0d0d0;
   text-decoration: none;
 }
 .tsd-breadcrumb a:hover {
@@ -1778,58 +1750,6 @@ html.default.has-menu .col-content {
   content: " / ";
 }
 
-html.minimal .container {
-  margin: 0;
-}
-html.minimal .container-main {
-  padding-top: 50px;
-  padding-bottom: 0;
-}
-html.minimal .content-wrap {
-  padding-left: 300px;
-}
-html.minimal .tsd-navigation {
-  position: fixed !important;
-  overflow: auto;
-  -webkit-overflow-scrolling: touch;
-  box-sizing: border-box;
-  z-index: 1;
-  left: 0;
-  top: 40px;
-  bottom: 0;
-  width: 300px;
-  padding: 20px;
-  margin: 0;
-}
-html.minimal .tsd-member .tsd-member {
-  margin-left: 0;
-}
-html.minimal .tsd-page-toolbar {
-  position: fixed;
-  z-index: 2;
-}
-html.minimal #tsd-filter .tsd-filter-group {
-  right: 0;
-  transform: none;
-}
-html.minimal footer {
-  background-color: transparent;
-}
-html.minimal footer .container {
-  padding: 0;
-}
-html.minimal .tsd-generator {
-  padding: 0;
-}
-@media (max-width: 900px) {
-  html.minimal .tsd-navigation {
-    display: none;
-  }
-  html.minimal .content-wrap {
-    padding-left: 0;
-  }
-}
-
 dl.tsd-comment-tags {
   overflow: hidden;
 }
@@ -1838,8 +1758,8 @@ dl.tsd-comment-tags dt {
   padding: 1px 5px;
   margin: 0 10px 0 0;
   border-radius: 4px;
-  border: 1px solid var(--color-comment-tag);
-  color: var(--color-comment-tag);
+  border: 1px solid #5f5f5f;
+  color: #e6e6e6;
   font-size: 0.8em;
   font-weight: normal;
 }
@@ -1909,7 +1829,7 @@ dl.tsd-comment-tags p {
     top: 40px;
     right: 20px;
     height: auto;
-    background-color: var(--color-panel);
+    background-color: #171717;
     visibility: hidden;
     transform: translate(50%, 0);
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
@@ -1931,11 +1851,11 @@ dl.tsd-comment-tags p {
 }
 
 footer {
-  border-top: 1px solid var(--color-panel-divider);
-  background-color: var(--color-panel);
+  border-top: 1px solid #414141;
+  background-color: #171717;
 }
 footer.with-border-bottom {
-  border-bottom: 1px solid var(--color-panel-divider);
+  border-bottom: 1px solid #414141;
 }
 footer .tsd-legend-group {
   font-size: 0;
@@ -1973,7 +1893,7 @@ footer .tsd-legend {
 .tsd-index-panel h3 {
   margin: 0 -20px 10px -20px;
   padding: 0 20px 10px 20px;
-  border-bottom: 1px solid var(--color-panel-divider);
+  border-bottom: 1px solid #414141;
 }
 .tsd-index-panel ul.tsd-index-list {
   -webkit-column-count: 3;
@@ -2017,39 +1937,39 @@ footer .tsd-legend {
 }
 .tsd-index-panel a,
 .tsd-index-panel .tsd-parent-kind-module a {
-  color: var(--color-ts);
+  color: #be60ff;
 }
 .tsd-index-panel .tsd-parent-kind-interface a {
-  color: var(--color-ts-interface);
+  color: #c9ff39;
 }
 .tsd-index-panel .tsd-parent-kind-enum a {
-  color: var(--color-ts-enum);
+  color: #ffbf00;
 }
 .tsd-index-panel .tsd-parent-kind-class a {
-  color: var(--color-ts-class);
+  color: #4da6ff;
 }
 .tsd-index-panel .tsd-kind-module a {
-  color: var(--color-ts);
+  color: #be60ff;
 }
 .tsd-index-panel .tsd-kind-interface a {
-  color: var(--color-ts-interface);
+  color: #c9ff39;
 }
 .tsd-index-panel .tsd-kind-enum a {
-  color: var(--color-ts-enum);
+  color: #ffbf00;
 }
 .tsd-index-panel .tsd-kind-class a {
-  color: var(--color-ts-class);
+  color: #4da6ff;
 }
 .tsd-index-panel .tsd-is-private a {
-  color: var(--color-ts-private);
+  color: #808080;
 }
 
 .tsd-flag {
   display: inline-block;
   padding: 1px 5px;
   border-radius: 4px;
-  color: var(--color-comment-tag-text);
-  background-color: var(--color-comment-tag);
+  color: #e6e6e6;
+  background-color: #282828;
   text-indent: 0;
   font-size: 14px;
   font-weight: normal;
@@ -2069,19 +1989,19 @@ footer .tsd-legend {
   border-bottom: none;
 }
 .tsd-member a[data-tsd-kind] {
-  color: var(--color-ts);
+  color: #be60ff;
 }
 .tsd-member a[data-tsd-kind=Interface] {
-  color: var(--color-ts-interface);
+  color: #c9ff39;
 }
 .tsd-member a[data-tsd-kind=Enum] {
-  color: var(--color-ts-enum);
+  color: #ffbf00;
 }
 .tsd-member a[data-tsd-kind=Class] {
-  color: var(--color-ts-class);
+  color: #4da6ff;
 }
 .tsd-member a[data-tsd-kind=Private] {
-  color: var(--color-ts-private);
+  color: #808080;
 }
 
 .tsd-navigation {
@@ -2092,7 +2012,7 @@ footer .tsd-legend {
   padding-top: 2px;
   padding-bottom: 2px;
   border-left: 2px solid transparent;
-  color: var(--color-text);
+  color: #ececec;
   text-decoration: none;
   transition: border-left-color 0.1s;
 }
@@ -2135,10 +2055,10 @@ footer .tsd-legend {
   padding-left: 105px;
 }
 .tsd-navigation.primary > ul {
-  border-bottom: 1px solid var(--color-panel-divider);
+  border-bottom: 1px solid #414141;
 }
 .tsd-navigation.primary li {
-  border-top: 1px solid var(--color-panel-divider);
+  border-top: 1px solid #414141;
 }
 .tsd-navigation.primary li.current > a {
   font-weight: bold;
@@ -2146,7 +2066,7 @@ footer .tsd-legend {
 .tsd-navigation.primary li.label span {
   display: block;
   padding: 20px 0 6px 5px;
-  color: var(--color-menu-label);
+  color: #5f5f5f;
 }
 .tsd-navigation.primary li.globals + li > span, .tsd-navigation.primary li.globals + li > a {
   padding-top: 20px;
@@ -2186,16 +2106,16 @@ footer .tsd-legend {
   padding-left: 125px;
 }
 .tsd-navigation.secondary ul.current a {
-  border-left-color: var(--color-panel-divider);
+  border-left-color: #414141;
 }
 .tsd-navigation.secondary li.focus > a,
 .tsd-navigation.secondary ul.current li.focus > a {
-  border-left-color: var(--color-menu-divider-focus);
+  border-left-color: #FFF;
 }
 .tsd-navigation.secondary li.current {
   margin-top: 20px;
   margin-bottom: 20px;
-  border-left-color: var(--color-panel-divider);
+  border-left-color: #414141;
 }
 .tsd-navigation.secondary li.current > a {
   font-weight: bold;
@@ -2210,7 +2130,7 @@ footer .tsd-legend {
 .tsd-panel {
   margin: 20px 0;
   padding: 20px;
-  background-color: var(--color-panel);
+  background-color: #171717;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
 }
 .tsd-panel:empty {
@@ -2219,7 +2139,7 @@ footer .tsd-legend {
 .tsd-panel > h1, .tsd-panel > h2, .tsd-panel > h3 {
   margin: 1.5em -20px 10px -20px;
   padding: 0 20px 10px 20px;
-  border-bottom: 1px solid var(--color-panel-divider);
+  border-bottom: 1px solid #414141;
 }
 .tsd-panel > h1.tsd-before-signature, .tsd-panel > h2.tsd-before-signature, .tsd-panel > h3.tsd-before-signature {
   margin-bottom: 0;
@@ -2241,11 +2161,11 @@ footer .tsd-legend {
   border: 1px solid #ddd;
 }
 .tsd-panel table tr {
-  background-color: #fff;
+  background-color: #1e1e1e;
   border-top: 1px solid #ccc;
 }
 .tsd-panel table tr:nth-child(2n) {
-  background-color: #f8f8f8;
+  background-color: #1e1e1e;
 }
 
 .tsd-panel-group {
@@ -2281,7 +2201,7 @@ footer .tsd-legend {
   outline: 0;
   border: 0;
   background: transparent;
-  color: var(--color-text);
+  color: #ececec;
 }
 #tsd-search .field label {
   position: absolute;
@@ -2304,17 +2224,17 @@ footer .tsd-legend {
 }
 #tsd-search .results li {
   padding: 0 10px;
-  background-color: var(--color-background);
+  background-color: #1e1e1e;
 }
 #tsd-search .results li:nth-child(even) {
-  background-color: var(--color-panel);
+  background-color: #171717;
 }
 #tsd-search .results li.state {
   display: none;
 }
 #tsd-search .results li.current,
 #tsd-search .results li:hover {
-  background-color: var(--color-panel-divider);
+  background-color: #282828;
 }
 #tsd-search .results a {
   display: block;
@@ -2323,11 +2243,11 @@ footer .tsd-legend {
   top: 10px;
 }
 #tsd-search .results span.parent {
-  color: var(--color-text-aside);
+  color: #ababab;
   font-weight: normal;
 }
 #tsd-search.has-focus {
-  background-color: var(--color-panel-divider);
+  background-color: #282828;
 }
 #tsd-search.has-focus .field input {
   top: 0;
@@ -2350,7 +2270,7 @@ footer .tsd-legend {
 .tsd-signature {
   margin: 0 0 1em 0;
   padding: 10px;
-  border: 1px solid var(--color-panel-divider);
+  border: 1px solid #414141;
   font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
   font-size: 14px;
   overflow-x: auto;
@@ -2375,19 +2295,20 @@ footer .tsd-legend {
 }
 
 .tsd-signature-symbol {
-  color: var(--color-text-aside);
   font-weight: normal;
+  color: #ababab;
 }
 
 .tsd-signature-type {
   font-style: italic;
   font-weight: normal;
+  color: #ababab;
 }
 
 .tsd-signatures {
   padding: 0;
   margin: 0 0 1em 0;
-  border: 1px solid var(--color-panel-divider);
+  border: 1px solid #414141;
 }
 .tsd-signatures .tsd-signature {
   margin: 0;
@@ -2398,7 +2319,7 @@ footer .tsd-legend {
   border-top-width: 0;
 }
 .tsd-signatures .tsd-signature.current {
-  background-color: var(--color-panel-divider);
+  background-color: #414141;
 }
 .tsd-signatures.active > .tsd-signature {
   cursor: pointer;
@@ -2472,11 +2393,10 @@ ul.tsd-type-parameters .tsd-comment {
 
 .tsd-sources {
   font-size: 14px;
-  color: var(--color-text-aside);
+  color: #ababab;
   margin: 0 0 1em 0;
 }
 .tsd-sources a {
-  color: var(--color-text-aside);
   text-decoration: underline;
 }
 .tsd-sources ul, .tsd-sources p {
@@ -2494,13 +2414,13 @@ ul.tsd-type-parameters .tsd-comment {
   left: 0;
   width: 100%;
   height: 40px;
-  color: var(--color-toolbar-text);
-  background: var(--color-toolbar);
-  border-bottom: 1px solid var(--color-panel-divider);
+  color: #FFF;
+  background: #1e1e1e;
+  border-bottom: 1px solid #414141;
   transition: transform 0.3s linear;
 }
 .tsd-page-toolbar a {
-  color: var(--color-toolbar-text);
+  color: #d0d0d0;
   text-decoration: none;
 }
 .tsd-page-toolbar a.title {
@@ -2560,7 +2480,7 @@ ul.tsd-type-parameters .tsd-comment {
 }
 .tsd-widget.active {
   opacity: 1;
-  background-color: var(--color-panel-divider);
+  background-color: #414141;
 }
 .tsd-widget.no-caption {
   width: 40px;
@@ -2629,16 +2549,16 @@ input[type=checkbox]:checked + .tsd-widget:before {
 }
 .tsd-select .tsd-select-list li {
   padding: 0 20px 0 0;
-  background-color: var(--color-background);
+  background-color: #1e1e1e;
 }
 .tsd-select .tsd-select-list li:before {
   background-position: 40px 0;
 }
 .tsd-select .tsd-select-list li:nth-child(even) {
-  background-color: var(--color-panel);
+  background-color: #171717;
 }
 .tsd-select .tsd-select-list li:hover {
-  background-color: var(--color-panel-divider);
+  background-color: #414141;
 }
 .tsd-select .tsd-select-list li.selected:before {
   background-position: -200px 0;

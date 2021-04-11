@@ -4038,6 +4038,11 @@ typedarray-to-buffer@^3.1.5:
   dependencies:
     is-typedarray "^1.0.0"
 
+typedoc-darker-theme@^1.1.4:
+  version "1.1.4"
+  resolved "https://registry.yarnpkg.com/typedoc-darker-theme/-/typedoc-darker-theme-1.1.4.tgz#71cb52f0c208ae58bd8b559d0ab4067cbd785011"
+  integrity sha512-wUKOXjABxYOExvPCdIh9ruSZIq98teoOZ7kz2NmNyMFe0+uoiCwMnPQzdZNXAaj5mODPCGzdiKcNUt9+pY1jkw==
+
 typedoc-default-themes@^0.12.9:
   version "0.12.10"
   resolved "https://registry.yarnpkg.com/typedoc-default-themes/-/typedoc-default-themes-0.12.10.tgz#614c4222fe642657f37693ea62cad4dafeddf843"

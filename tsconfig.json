@@ -30,7 +30,6 @@
     "json": "docs/docs.json",
     "excludePrivate": true,
     "excludeInternal": true,
-    "highlightTheme": "dark-plus",
     "disableOutputCheck": true,
     "includeVersion": true,
     "disableSources": true,
@@ -40,5 +39,7 @@
     "toc": [],
     "listInvalidSymbolLinks": true,
     "emit": true,
+    "theme": "./node_modules/typedoc-darker-theme/bin/default",
+    "highlightTheme": "material-theme-darker",
   }
 }
