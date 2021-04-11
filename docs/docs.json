@@ -13,7 +13,7 @@
 			"kindString": "Class",
 			"flags": {},
 			"comment": {
-				"shortText": "This class is used to keep the bots various properties separate from\nthe discord.js Client class.\n```typescript\nconst bot = new BotClient(options)\n```"
+				"shortText": "This class is used to keep the bots various properties separate from\nthe discord.js Client class.\n```js\nconst bot = new BotClient(options)\n```"
 			},
 			"children": [
 				{
