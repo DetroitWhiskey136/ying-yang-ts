@@ -4,6 +4,7 @@ import { DiscordClient, stringResolvable, YinYangMember } from '../index';
 // #region Scope Declaration
 declare module 'discord.js' {
   interface Guild {
+    autoFormatUsernames: boolean;
     prefix: stringResolvable;
     log: stringResolvable;
     joinMessage: stringResolvable;
@@ -25,6 +26,7 @@ export default Structures.extend('Guild', (Guild) => {
       super(client, data);
       this.init();
 
+      this.autoFormatUsernames = client.bot.database.guilds.get(this.id).autoFormatUsernames;
       this.prefix = client.bot.database.guilds.get(this.id).prefix;
       this.log = client.bot.database.guilds.get(this.id).log;
       this.joinMessage = client.bot.database.guilds.get(this.id).joinMessage;
@@ -83,6 +85,14 @@ export default Structures.extend('Guild', (Guild) => {
       const data = await
       this.client.bot.database.guilds.get(this.id)?.welcomeChannel;
       this.welcomeChannel = data;
+      return data;
+    }
+
+    async setAutoFormatUsernames(value: boolean) {
+      await this.client.bot.database.guilds.update(this.id, { autoFormatUsernames: value });
+      const data = await
+      this.client.bot.database.guilds.get(this.id)?.autoFormatUsernames;
+      this.autoFormatUsernames = data;
       return data;
     }
     // #endregion

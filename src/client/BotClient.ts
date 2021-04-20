@@ -51,6 +51,9 @@ export class BotClient {
   /**
    * This method is used to start the bots initialization process
    * ```js
+   * without sentry support.
+   * bot.init(String(process.env.TOKEN));
+   * with sentry support.
    * bot.init(String(process.env.TOKEN), Sentry);
    * ```
    * @param token - The bots token from discord.com
@@ -58,11 +61,12 @@ export class BotClient {
    * @param options - nothing for now maybe one day.
    * @returns {void}
    */
-  init(token: string, sentry: any, options: null = null) {
+  init(token: string, sentry?: any, options?: null) {
     // #region Capture Errors
     this.client.on('error', (error) => {
-      this.logger.error(error.message);
-      sentry ?? sentry.captureException(error);
+      this.logger.error(error);
+
+      sentry?.captureException?.(error) ?? this.logger.info('Sentry was not provided');
     });
     // #endregion
 

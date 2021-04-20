@@ -10,7 +10,7 @@
     "run:pro": "yarn build && cross-env NODE_ENV=production node .",
     "build:ini": "rimraf dist",
     "build": "yarn build:ini && tsc",
-    "build:docs": "typedoc --tsconfig tsconfig.json",
+    "docs:build": "typedoc --tsconfig tsconfig.json",
     "docs:watch": "typedoc --watch --tsconfig tsconfig.json"
   },
   "repository": {

@@ -5,30 +5,27 @@ interface EnmapOptions {
   dataDir: string;
 }
 
-// #region Scope Declaration
 export interface EnmapProvider<D> {
   model: any;
   help: object;
   __proto__: any;
 }
 
-// #endregion
-
 /**
  * The EnmapProvider class.
+ * ``` javascript
+ * EnmapProvider({ dataDir: path-to-enmap-storage, name: 'name-of-table' })
+ * ```
  * @class EnmapProvider
  * @template D
  */
 export class EnmapProvider<D> {
-  // #region Constructor
   constructor(options: EnmapOptions) {
     this.model = new Enmap(options.name, { dataDir: options.dataDir });
     // eslint-disable-next-line no-proto
     this.help = this.__proto__;
   }
-  // #endregion
 
-  // #region Methods
   /**
    * Gets a document from the db / returns an error if not found.
    * @param {string} key The key of the document.
@@ -91,5 +88,4 @@ export class EnmapProvider<D> {
       ? this.model.delete(key)
       : new Error(`Data not found: ${key}`);
   }
-  // #endregion
 }

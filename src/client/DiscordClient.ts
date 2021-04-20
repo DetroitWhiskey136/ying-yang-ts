@@ -23,10 +23,6 @@ export interface DiscordClient {
  * @important The only time this class should be called is in the BotClient class.
  */
 export class DiscordClient extends Client {
-  getGuild(arg0: string) {
-    throw new Error('Method not implemented.');
-  }
-
   /**
    *Creates an instance of DiscordClient.
    * @param options - the ClientOptions

@@ -1,6 +1,7 @@
 import { stringResolvable } from '../../index';
 
 export interface IGuild {
+  autoFormatUsernames: boolean;
   prefix: stringResolvable;
   log: stringResolvable;
   joinMessage: stringResolvable;
@@ -9,6 +10,7 @@ export interface IGuild {
 }
 
 export const Guild: IGuild = {
+  autoFormatUsernames: false,
   joinMessage: null,
   leaveMessage: null,
   log: null,

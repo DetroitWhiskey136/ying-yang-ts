@@ -1,19 +1,20 @@
-import { GuildMember, Guild, Client } from 'discord.js';
+import {
+  GuildMemberResolvable, GuildMember, Guild, Client,
+} from 'discord.js';
 import { DiscordClient, IMemberWarning } from '../index';
 
 export declare interface Warning {
-  client: DiscordClient | Client;
+  client: DiscordClient;
   guild: Guild
   member: GuildMember;
   id: string;
   reason: string;
   points: number;
-  moderator: GuildMember | string;
+  moderator: GuildMemberResolvable;
 }
 
 export class Warning {
-  // #region Constructor
-  constructor(client: DiscordClient | Client, data: IMemberWarning, member: GuildMember) {
+  constructor(client: DiscordClient, data: IMemberWarning, member: GuildMember) {
     this.client = client;
     this.guild = member.guild;
     this.member = member;
@@ -22,10 +23,8 @@ export class Warning {
     this.points = data.points;
     this.moderator = this.getMod(data.moderator);
   }
-  // #endregion
 
-  // #region Methods
-  private getMod(moderator: string): GuildMember | string {
+  private getMod(moderator: string): GuildMemberResolvable {
     this.guild.members.fetch(moderator).then((mod) => {
       this.moderator = mod;
     }).catch(() => {
@@ -33,5 +32,4 @@ export class Warning {
     });
     return this.moderator;
   }
-  // #endregion
 }

@@ -9,7 +9,7 @@ import {
 const dataDir = `${process.cwd()}${path.sep}${path.join('data', 'enmap_data')}`;
 
 if (!fs.existsSync(dataDir)) {
-  fs.mkdirSync(dataDir);
+  fs.mkdirSync(dataDir, { recursive: true });
 }
 
 export class Database {

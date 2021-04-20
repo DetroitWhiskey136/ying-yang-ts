@@ -1,7 +1,7 @@
 import { CommandContext } from '../../command/CommandContext';
 import { CommandError } from '../../command/CommandError';
 import {
-  BotClient, Embed, Command,
+  BotClient, Embed, Command, MemberUtil,
 } from '../../index';
 
 export class WarnCommand extends Command {
@@ -20,12 +20,14 @@ export class WarnCommand extends Command {
   // eslint-disable-next-line consistent-return
   run(ctx: CommandContext) {
     const {
-      author, args, client, database, guild, member, bot, channel,
+      author, args, client, database, guild, member, bot, channel, mentions,
     } = ctx;
     const [user, points, ...reason] = args;
     const embed = new Embed();
 
-    const mem = guild?.members.cache.get(user);
+    const mem = MemberUtil.parseMemberFromID(user, guild!)
+      ?? MemberUtil.parseMemberFromMention(mentions, guild!);
+    // const mem = guild?.members.cache.get(user);
 
     if (!mem) return bot.logger.error('Member is not defined');
     if (user) {

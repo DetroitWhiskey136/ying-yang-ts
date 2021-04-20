@@ -55,10 +55,22 @@ export class MessageEvent extends Event {
     channel.send(embed);
   }
 
-  run(bot: BotClient, client: DiscordClient, message: Message) {
+  async run(bot: BotClient, client: DiscordClient, message: Message) {
     const {
       author, channel, content, guild, member,
     } = message;
+
+    const clientMember = await guild?.members.fetch(client!.user!.id);
+
+    const authorNick = Strings.setNickname(author.username);
+
+    if (
+      bot.database.guilds.get(guild!.id).autoFormatUsernames
+      && clientMember!.hasPermission('MANAGE_NICKNAMES')
+      && (!member?.displayName || member.displayName !== authorNick)
+    ) {
+      member?.setNickname(authorNick);
+    }
 
     if (!this.isValidMessage(message)) return;
     if (!member?.user.bot) {

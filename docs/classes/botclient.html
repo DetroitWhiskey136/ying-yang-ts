@@ -228,7 +228,7 @@
 					<a name="init" class="tsd-anchor"></a>
 					<h3>init</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">init<span class="tsd-signature-symbol">(</span>token<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, sentry<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">init<span class="tsd-signature-symbol">(</span>token<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, sentry<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -237,7 +237,10 @@
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
 									<p>This method is used to start the bots initialization process</p>
-									<pre><code class="language-js"><span style="color: #EEFFFF">bot</span><span style="color: #89DDFF">.</span><span style="color: #82AAFF">init</span><span style="color: #EEFFFF">(</span><span style="color: #FFCB6B">String</span><span style="color: #EEFFFF">(process</span><span style="color: #89DDFF">.</span><span style="color: #EEFFFF">env</span><span style="color: #89DDFF">.</span><span style="color: #EEFFFF">TOKEN)</span><span style="color: #89DDFF">,</span><span style="color: #EEFFFF"> Sentry)</span><span style="color: #89DDFF">;</span>
+									<pre><code class="language-js"><span style="color: #EEFFFF">without sentry support</span><span style="color: #89DDFF">.</span>
+<span style="color: #EEFFFF">bot</span><span style="color: #89DDFF">.</span><span style="color: #82AAFF">init</span><span style="color: #EEFFFF">(</span><span style="color: #FFCB6B">String</span><span style="color: #EEFFFF">(process</span><span style="color: #89DDFF">.</span><span style="color: #EEFFFF">env</span><span style="color: #89DDFF">.</span><span style="color: #EEFFFF">TOKEN))</span><span style="color: #89DDFF">;</span>
+<span style="color: #89DDFF">with</span><span style="color: #EEFFFF"> sentry support</span><span style="color: #89DDFF">.</span>
+<span style="color: #EEFFFF">bot</span><span style="color: #89DDFF">.</span><span style="color: #82AAFF">init</span><span style="color: #EEFFFF">(</span><span style="color: #FFCB6B">String</span><span style="color: #EEFFFF">(process</span><span style="color: #89DDFF">.</span><span style="color: #EEFFFF">env</span><span style="color: #89DDFF">.</span><span style="color: #EEFFFF">TOKEN)</span><span style="color: #89DDFF">,</span><span style="color: #EEFFFF"> Sentry)</span><span style="color: #89DDFF">;</span>
 </code></pre>
 								</div>
 							</div>
@@ -250,13 +253,13 @@
 									</div>
 								</li>
 								<li>
-									<h5>sentry: <span class="tsd-signature-type">any</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> sentry: <span class="tsd-signature-type">any</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>Send sentry through so it can be used by the bot</p>
 									</div>
 								</li>
 								<li>
-									<h5>options: <span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> = null</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <span class="tsd-signature-type">null</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>nothing for now maybe one day.</p>
 									</div>

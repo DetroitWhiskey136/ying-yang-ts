@@ -8,8 +8,8 @@ declare module 'discord.js' {
     botSupport: booleanResolvable;
     level: numberResolvable;
     setBotAdmin(value: boolean): Promise<this>;
-    setBotSupport(value: boolean): Promise<booleanResolvable>;
-    setLevel(value: number): Promise<numberResolvable>;
+    setBotSupport(value: boolean): Promise<this>;
+    setLevel(value: number): Promise<this>;
   }
 }
 // #endregion
@@ -55,7 +55,7 @@ export default Structures.extend('User', (User) => {
       const data = await
       this.client.bot.database.users.get(this.id)?.botSupport;
       this.botSupport = data;
-      return data;
+      return this;
     }
 
     async setLevel(value: number) {
@@ -66,7 +66,7 @@ export default Structures.extend('User', (User) => {
       const data = await
       this.client.bot.database.users.get(this.id)?.level;
       this.level = data;
-      return data;
+      return this;
     }
     // #endregion
   }

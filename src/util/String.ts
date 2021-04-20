@@ -42,4 +42,9 @@ export class Strings {
 
     return result;
   }
+
+  static setNickname(username: string): string {
+    const parsedUsername = username.replace(/([!@#$%^&*()])/g, '');
+    return parsedUsername.length > 0 ? parsedUsername : 'Nickname Not Found';
+  }
 }
