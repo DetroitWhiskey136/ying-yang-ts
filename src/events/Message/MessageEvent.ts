@@ -24,7 +24,7 @@ export class MessageEvent extends Event {
       && !channel.permissionsFor(String(client.user?.id))?.has('SEND_MESSAGES'));
   }
 
-  private getPrefix(prefix: string, { client, content }: Message): string | null {
+  private getPrefix(prefix: string, { client, content }: Message): RegExpMatchArray | null {
     const fixedPrefix = Strings.escapeRegExp(prefix);
     const fixedUsername = Strings.escapeRegExp(String(client.user?.username));
 
@@ -32,8 +32,8 @@ export class MessageEvent extends Event {
 
     const matchPrefix = content.match(PrefixRegex);
 
-    if (matchPrefix && matchPrefix.length) {
-      return matchPrefix[0];
+    if (matchPrefix && matchPrefix.length > 1) {
+      return matchPrefix;
     }
     return null;
   }
@@ -77,7 +77,7 @@ export class MessageEvent extends Event {
       member?.addLevel();
     }
     const prefix = guild?.prefix ?? OPTIONS.PREFIX;
-    const usedPrefix = this.getPrefix(prefix, message);
+    const usedPrefix = this.getPrefix(prefix, message)?.[0];
 
     const MentionRegex = new RegExp(`^(<@!?${client.user?.id}>)`);
     const mentioned = MentionRegex.test(message.content);
@@ -90,9 +90,9 @@ export class MessageEvent extends Event {
 
     const args = content.slice(usedPrefix?.length).trim().split(/ +/g);
 
-    const commandName = args.shift()?.toLowerCase() || '';
+    const commandName = args.shift()?.toLowerCase()!;
     const command = bot.commands.get(commandName)
-      || bot.commands.get(String(bot.aliases.get(commandName)));
+      || bot.commands.get(bot.aliases.get(commandName)!);
 
     if (mentioned && !command) {
       this.createEmbed(channel, 'BLUE', Strings.hasPlaceholder(MESSAGES.PREFIX, '{prefix}', `\`${prefix}\``));
@@ -107,5 +107,6 @@ export class MessageEvent extends Event {
     };
 
     command._run(new CommandContext(params));
+    bot.logger.debug(`Command: ${command.name} ran by ${author.username}`);
   }
 }

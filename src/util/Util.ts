@@ -1,8 +1,25 @@
+import { Collection } from 'discord.js';
+
 /**
+ * This module is used to keep all the useful DRY code that can
+ * be called at any time from anywhere in the project.
+ *
+ * For more specific method calls you might want to look in the other util files listed below
+ * * Strings
+ * * Files
+ * * MemberUtil
+ * * Logger
+ * * ImageUtil
+ * * ChannelUtil
+ *
+ * Calling this class:
+ * ```js
+ * import * from 'path-to-this-file'
+ * ```
+ *
  * @class Utils
  */
 export class Util {
-  // #region Methods
   /**
    * Checks if something is empty as in if their size/length is 0.
    * @param {*} val The value to be checked if empty.
@@ -70,5 +87,30 @@ export class Util {
         : (result = str);
     return result;
   }
-  // #endregion
+
+  /**
+   * Groups items in a list based on a common-matched value.
+   * @template K Is gernerally intended to be a property of V.
+   * @template V List of items
+   * @param {(Collection<string, V> | Array<V> | Map<string, V>)} list The list of items
+   * @param {(input: V) => K} keyGetter The command-matched value to index from
+   * @returns {Map<K, Array<V>>} Map of the grouped arrays
+   */
+
+  static groupBy<K, V>(
+    list: Collection<string, V> | Array<V> | Map<string, V>,
+    keyGetter: (input: V) => K,
+  ): Map<K, Array<V>> {
+    const map = new Map();
+    list.forEach((command: V) => {
+      const key = keyGetter(command);
+      const collection = map.get(key);
+      if (!collection) {
+        map.set(key, [command]);
+      } else {
+        collection.push(command);
+      }
+    });
+    return map;
+  }
 }

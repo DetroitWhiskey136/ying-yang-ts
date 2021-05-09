@@ -7,7 +7,7 @@ export class TestCommand extends Command {
       aliases: [],
       category: 'Developer',
       description: 'tests a command',
-      enabled: true,
+      enabled: false,
       guildOnly: true,
       name: 'test',
       usage: 'test',

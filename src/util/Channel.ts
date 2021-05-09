@@ -1,14 +1,30 @@
 import {
-  TextChannel, VoiceChannel, GuildChannel, CategoryChannel, Channel, NewsChannel, DMChannel,
+  TextChannel, VoiceChannel, GuildChannel, CategoryChannel,
+  NewsChannel, DMChannel, StoreChannel,
 } from 'discord.js';
 
-import { channelResolvable } from '../index';
-
 export class ChannelUtil {
-  static resolveTextChannel(channel: channelResolvable) {
-    if (!((channel): channel is TextChannel => channel?.type === 'text')(channel)) return;
+  static resolveTextChannel(channel: GuildChannel) {
+    return ((channel): channel is TextChannel => channel.type === 'text')(channel) ?? null;
+  }
 
-    // eslint-disable-next-line consistent-return
-    return channel;
+  static resolveVoiceChannel(channel: GuildChannel) {
+    return ((channel): channel is VoiceChannel => channel.type === 'voice')(channel) ?? null;
+  }
+
+  static resolveCategoryChannel(channel: GuildChannel) {
+    return ((channel): channel is CategoryChannel => channel.type === 'category')(channel) ?? null;
+  }
+
+  static resolveNewsChannel(channel: GuildChannel) {
+    return ((channel): channel is NewsChannel => channel.type === 'news')(channel) ?? null;
+  }
+
+  static resolveStoreChannel(channel: GuildChannel) {
+    return ((channel): channel is StoreChannel => channel.type === 'store')(channel) ?? null;
+  }
+
+  static resolveDMChannel(channel: DMChannel) {
+    return ((channel): channel is DMChannel => channel.type === 'dm')(channel) ?? null;
   }
 }

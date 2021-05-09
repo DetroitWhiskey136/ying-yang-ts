@@ -1,0 +1,3866 @@
+[
+  {
+    "name": "Greenwich Mean Time",
+    "abbr": "GMT",
+    "gmt": "GMT -00",
+    "zoneId": "Africa/Abidjan"
+  },
+  {
+    "name": "Greenwich Mean Time",
+    "abbr": "GMT",
+    "gmt": "GMT -00",
+    "zoneId": "Africa/Accra"
+  },
+  {
+    "name": "East Africa Time",
+    "abbr": "EAT",
+    "gmt": "GMT +03",
+    "zoneId": "Africa/Addis_Ababa"
+  },
+  {
+    "name": "Central European Standard Time",
+    "abbr": "CET",
+    "gmt": "GMT +01",
+    "zoneId": "Africa/Algiers"
+  },
+  {
+    "name": "East Africa Time",
+    "abbr": "EAT",
+    "gmt": "GMT +03",
+    "zoneId": "Africa/Asmara"
+  },
+  {
+    "name": "East Africa Time",
+    "abbr": "EAT",
+    "gmt": "GMT +03",
+    "zoneId": "Africa/Asmera"
+  },
+  {
+    "name": "Greenwich Mean Time",
+    "abbr": "GMT",
+    "gmt": "GMT -00",
+    "zoneId": "Africa/Bamako"
+  },
+  {
+    "name": "West Africa Standard Time",
+    "abbr": "WAT",
+    "gmt": "GMT +01",
+    "zoneId": "Africa/Bangui"
+  },
+  {
+    "name": "Greenwich Mean Time",
+    "abbr": "GMT",
+    "gmt": "GMT -00",
+    "zoneId": "Africa/Banjul"
+  },
+  {
+    "name": "Greenwich Mean Time",
+    "abbr": "GMT",
+    "gmt": "GMT -00",
+    "zoneId": "Africa/Bissau"
+  },
+  {
+    "name": "Central Africa Time",
+    "abbr": "CAT",
+    "gmt": "GMT +02",
+    "zoneId": "Africa/Blantyre"
+  },
+  {
+    "name": "West Africa Standard Time",
+    "abbr": "WAT",
+    "gmt": "GMT +01",
+    "zoneId": "Africa/Brazzaville"
+  },
+  {
+    "name": "Central Africa Time",
+    "abbr": "CAT",
+    "gmt": "GMT +02",
+    "zoneId": "Africa/Bujumbura"
+  },
+  {
+    "name": "Eastern European Standard Time",
+    "abbr": "EET",
+    "gmt": "GMT +02",
+    "zoneId": "Africa/Cairo"
+  },
+  {
+    "name": "Western European Time",
+    "abbr": "WET",
+    "gmt": "GMT -00",
+    "zoneId": "Africa/Casablanca"
+  },
+  {
+    "name": "Central European Standard Time",
+    "abbr": "CET",
+    "gmt": "GMT +01",
+    "zoneId": "Africa/Ceuta"
+  },
+  {
+    "name": "Greenwich Mean Time",
+    "abbr": "GMT",
+    "gmt": "GMT -00",
+    "zoneId": "Africa/Conakry"
+  },
+  {
+    "name": "Greenwich Mean Time",
+    "abbr": "GMT",
+    "gmt": "GMT -00",
+    "zoneId": "Africa/Dakar"
+  },
+  {
+    "name": "East Africa Time",
+    "abbr": "EAT",
+    "gmt": "GMT +03",
+    "zoneId": "Africa/Dar_es_Salaam"
+  },
+  {
+    "name": "East Africa Time",
+    "abbr": "EAT",
+    "gmt": "GMT +03",
+    "zoneId": "Africa/Djibouti"
+  },
+  {
+    "name": "West Africa Standard Time",
+    "abbr": "WAT",
+    "gmt": "GMT +01",
+    "zoneId": "Africa/Douala"
+  },
+  {
+    "name": "Western European Time",
+    "abbr": "WET",
+    "gmt": "GMT -00",
+    "zoneId": "Africa/El_Aaiun"
+  },
+  {
+    "name": "Greenwich Mean Time",
+    "abbr": "GMT",
+    "gmt": "GMT -00",
+    "zoneId": "Africa/Freetown"
+  },
+  {
+    "name": "Central Africa Time",
+    "abbr": "CAT",
+    "gmt": "GMT +02",
+    "zoneId": "Africa/Gaborone"
+  },
+  {
+    "name": "Central Africa Time",
+    "abbr": "CAT",
+    "gmt": "GMT +02",
+    "zoneId": "Africa/Harare"
+  },
+  {
+    "name": "South Africa Standard Time",
+    "abbr": "SAST",
+    "gmt": "GMT +02",
+    "zoneId": "Africa/Johannesburg"
+  },
+  {
+    "name": "East Africa Time",
+    "abbr": "EAT",
+    "gmt": "GMT +03",
+    "zoneId": "Africa/Juba"
+  },
+  {
+    "name": "East Africa Time",
+    "abbr": "EAT",
+    "gmt": "GMT +03",
+    "zoneId": "Africa/Kampala"
+  },
+  {
+    "name": "Central Africa Time",
+    "abbr": "CAT",
+    "gmt": "GMT +02",
+    "zoneId": "Africa/Khartoum"
+  },
+  {
+    "name": "Central Africa Time",
+    "abbr": "CAT",
+    "gmt": "GMT +02",
+    "zoneId": "Africa/Kigali"
+  },
+  {
+    "name": "West Africa Standard Time",
+    "abbr": "WAT",
+    "gmt": "GMT +01",
+    "zoneId": "Africa/Kinshasa"
+  },
+  {
+    "name": "West Africa Standard Time",
+    "abbr": "WAT",
+    "gmt": "GMT +01",
+    "zoneId": "Africa/Lagos"
+  },
+  {
+    "name": "West Africa Standard Time",
+    "abbr": "WAT",
+    "gmt": "GMT +01",
+    "zoneId": "Africa/Libreville"
+  },
+  {
+    "name": "Greenwich Mean Time",
+    "abbr": "GMT",
+    "gmt": "GMT -00",
+    "zoneId": "Africa/Lome"
+  },
+  {
+    "name": "West Africa Standard Time",
+    "abbr": "WAT",
+    "gmt": "GMT +01",
+    "zoneId": "Africa/Luanda"
+  },
+  {
+    "name": "Central Africa Time",
+    "abbr": "CAT",
+    "gmt": "GMT +02",
+    "zoneId": "Africa/Lubumbashi"
+  },
+  {
+    "name": "Central Africa Time",
+    "abbr": "CAT",
+    "gmt": "GMT +02",
+    "zoneId": "Africa/Lusaka"
+  },
+  {
+    "name": "West Africa Standard Time",
+    "abbr": "WAT",
+    "gmt": "GMT +01",
+    "zoneId": "Africa/Malabo"
+  },
+  {
+    "name": "Central Africa Time",
+    "abbr": "CAT",
+    "gmt": "GMT +02",
+    "zoneId": "Africa/Maputo"
+  },
+  {
+    "name": "South Africa Standard Time",
+    "abbr": "SAST",
+    "gmt": "GMT +02",
+    "zoneId": "Africa/Maseru"
+  },
+  {
+    "name": "South Africa Standard Time",
+    "abbr": "SAST",
+    "gmt": "GMT +02",
+    "zoneId": "Africa/Mbabane"
+  },
+  {
+    "name": "East Africa Time",
+    "abbr": "EAT",
+    "gmt": "GMT +03",
+    "zoneId": "Africa/Mogadishu"
+  },
+  {
+    "name": "Greenwich Mean Time",
+    "abbr": "GMT",
+    "gmt": "GMT -00",
+    "zoneId": "Africa/Monrovia"
+  },
+  {
+    "name": "East Africa Time",
+    "abbr": "EAT",
+    "gmt": "GMT +03",
+    "zoneId": "Africa/Nairobi"
+  },
+  {
+    "name": "West Africa Standard Time",
+    "abbr": "WAT",
+    "gmt": "GMT +01",
+    "zoneId": "Africa/Ndjamena"
+  },
+  {
+    "name": "West Africa Standard Time",
+    "abbr": "WAT",
+    "gmt": "GMT +01",
+    "zoneId": "Africa/Niamey"
+  },
+  {
+    "name": "Greenwich Mean Time",
+    "abbr": "GMT",
+    "gmt": "GMT -00",
+    "zoneId": "Africa/Nouakchott"
+  },
+  {
+    "name": "Greenwich Mean Time",
+    "abbr": "GMT",
+    "gmt": "GMT -00",
+    "zoneId": "Africa/Ouagadougou"
+  },
+  {
+    "name": "West Africa Standard Time",
+    "abbr": "WAT",
+    "gmt": "GMT +01",
+    "zoneId": "Africa/Porto-Novo"
+  },
+  {
+    "name": "Greenwich Mean Time",
+    "abbr": "GMT",
+    "gmt": "GMT -00",
+    "zoneId": "Africa/Sao_Tome"
+  },
+  {
+    "name": "Greenwich Mean Time",
+    "abbr": "GMT",
+    "gmt": "GMT -00",
+    "zoneId": "Africa/Timbuktu"
+  },
+  {
+    "name": "Eastern European Standard Time",
+    "abbr": "EET",
+    "gmt": "GMT +02",
+    "zoneId": "Africa/Tripoli"
+  },
+  {
+    "name": "Central European Standard Time",
+    "abbr": "CET",
+    "gmt": "GMT +01",
+    "zoneId": "Africa/Tunis"
+  },
+  {
+    "name": "Central Africa Time",
+    "abbr": "CAT",
+    "gmt": "GMT +01",
+    "zoneId": "Africa/Windhoek"
+  },
+  {
+    "name": "Hawaii-Aleutian Standard Time",
+    "abbr": "HST",
+    "gmt": "GMT -10",
+    "zoneId": "America/Adak"
+  },
+  {
+    "name": "Alaska Standard Time",
+    "abbr": "AKST",
+    "gmt": "GMT -09",
+    "zoneId": "America/Anchorage"
+  },
+  {
+    "name": "Atlantic Standard Time",
+    "abbr": "AST",
+    "gmt": "GMT -04",
+    "zoneId": "America/Anguilla"
+  },
+  {
+    "name": "Atlantic Standard Time",
+    "abbr": "AST",
+    "gmt": "GMT -04",
+    "zoneId": "America/Antigua"
+  },
+  {
+    "name": "Brasilia Standard Time",
+    "abbr": "BRT",
+    "gmt": "GMT -03",
+    "zoneId": "America/Araguaina"
+  },
+  {
+    "name": "Argentina Standard Time",
+    "abbr": "ART",
+    "gmt": "GMT -03",
+    "zoneId": "America/Argentina/Buenos_Aires"
+  },
+  {
+    "name": "Argentina Standard Time",
+    "abbr": "ART",
+    "gmt": "GMT -03",
+    "zoneId": "America/Argentina/Catamarca"
+  },
+  {
+    "name": "Argentina Standard Time",
+    "abbr": "ART",
+    "gmt": "GMT -03",
+    "zoneId": "America/Argentina/ComodRivadavia"
+  },
+  {
+    "name": "Argentina Standard Time",
+    "abbr": "ART",
+    "gmt": "GMT -03",
+    "zoneId": "America/Argentina/Cordoba"
+  },
+  {
+    "name": "Argentina Standard Time",
+    "abbr": "ART",
+    "gmt": "GMT -03",
+    "zoneId": "America/Argentina/Jujuy"
+  },
+  {
+    "name": "Argentina Standard Time",
+    "abbr": "ART",
+    "gmt": "GMT -03",
+    "zoneId": "America/Argentina/La_Rioja"
+  },
+  {
+    "name": "Argentina Standard Time",
+    "abbr": "ART",
+    "gmt": "GMT -03",
+    "zoneId": "America/Argentina/Mendoza"
+  },
+  {
+    "name": "Argentina Standard Time",
+    "abbr": "ART",
+    "gmt": "GMT -03",
+    "zoneId": "America/Argentina/Rio_Gallegos"
+  },
+  {
+    "name": "Argentina Standard Time",
+    "abbr": "ART",
+    "gmt": "GMT -03",
+    "zoneId": "America/Argentina/Salta"
+  },
+  {
+    "name": "Argentina Standard Time",
+    "abbr": "ART",
+    "gmt": "GMT -03",
+    "zoneId": "America/Argentina/San_Juan"
+  },
+  {
+    "name": "Argentina Standard Time",
+    "abbr": "ART",
+    "gmt": "GMT -03",
+    "zoneId": "America/Argentina/San_Luis"
+  },
+  {
+    "name": "Argentina Standard Time",
+    "abbr": "ART",
+    "gmt": "GMT -03",
+    "zoneId": "America/Argentina/Tucuman"
+  },
+  {
+    "name": "Argentina Standard Time",
+    "abbr": "ART",
+    "gmt": "GMT -03",
+    "zoneId": "America/Argentina/Ushuaia"
+  },
+  {
+    "name": "Atlantic Standard Time",
+    "abbr": "AST",
+    "gmt": "GMT -04",
+    "zoneId": "America/Aruba"
+  },
+  {
+    "name": "Paraguay Standard Time",
+    "abbr": "PYT",
+    "gmt": "GMT -04",
+    "zoneId": "America/Asuncion"
+  },
+  {
+    "name": "Eastern Standard Time",
+    "abbr": "EST",
+    "gmt": "GMT -05",
+    "zoneId": "America/Atikokan"
+  },
+  {
+    "name": "Hawaii-Aleutian Standard Time",
+    "abbr": "HST",
+    "gmt": "GMT -10",
+    "zoneId": "America/Atka"
+  },
+  {
+    "name": "Brasilia Standard Time",
+    "abbr": "BRT",
+    "gmt": "GMT -03",
+    "zoneId": "America/Bahia"
+  },
+  {
+    "name": "Central Standard Time",
+    "abbr": "CST",
+    "gmt": "GMT -06",
+    "zoneId": "America/Bahia_Banderas"
+  },
+  {
+    "name": "Atlantic Standard Time",
+    "abbr": "AST",
+    "gmt": "GMT -04",
+    "zoneId": "America/Barbados"
+  },
+  {
+    "name": "Brasilia Standard Time",
+    "abbr": "BRT",
+    "gmt": "GMT -03",
+    "zoneId": "America/Belem"
+  },
+  {
+    "name": "Central Standard Time",
+    "abbr": "CST",
+    "gmt": "GMT -06",
+    "zoneId": "America/Belize"
+  },
+  {
+    "name": "Atlantic Standard Time",
+    "abbr": "AST",
+    "gmt": "GMT -04",
+    "zoneId": "America/Blanc-Sablon"
+  },
+  {
+    "name": "Amazon Standard Time",
+    "abbr": "AMT",
+    "gmt": "GMT -04",
+    "zoneId": "America/Boa_Vista"
+  },
+  {
+    "name": "Colombia Standard Time",
+    "abbr": "COT",
+    "gmt": "GMT -05",
+    "zoneId": "America/Bogota"
+  },
+  {
+    "name": "Mountain Standard Time",
+    "abbr": "MST",
+    "gmt": "GMT -07",
+    "zoneId": "America/Boise"
+  },
+  {
+    "name": "Argentina Standard Time",
+    "abbr": "ART",
+    "gmt": "GMT -03",
+    "zoneId": "America/Buenos_Aires"
+  },
+  {
+    "name": "Mountain Standard Time",
+    "abbr": "MST",
+    "gmt": "GMT -07",
+    "zoneId": "America/Cambridge_Bay"
+  },
+  {
+    "name": "Amazon Standard Time",
+    "abbr": "AMT",
+    "gmt": "GMT -04",
+    "zoneId": "America/Campo_Grande"
+  },
+  {
+    "name": "Eastern Standard Time",
+    "abbr": "EST",
+    "gmt": "GMT -05",
+    "zoneId": "America/Cancun"
+  },
+  {
+    "name": "Venezuela Time",
+    "abbr": "VET",
+    "gmt": "GMT -04",
+    "zoneId": "America/Caracas"
+  },
+  {
+    "name": "Argentina Standard Time",
+    "abbr": "ART",
+    "gmt": "GMT -03",
+    "zoneId": "America/Catamarca"
+  },
+  {
+    "name": "French Guiana Time",
+    "abbr": "GFT",
+    "gmt": "GMT -03",
+    "zoneId": "America/Cayenne"
+  },
+  {
+    "name": "Eastern Standard Time",
+    "abbr": "EST",
+    "gmt": "GMT -05",
+    "zoneId": "America/Cayman"
+  },
+  {
+    "name": "Central Standard Time",
+    "abbr": "CST",
+    "gmt": "GMT -06",
+    "zoneId": "America/Chicago"
+  },
+  {
+    "name": "Mexican Pacific Standard Time",
+    "abbr": "MST",
+    "gmt": "GMT -07",
+    "zoneId": "America/Chihuahua"
+  },
+  {
+    "name": "Eastern Standard Time",
+    "abbr": "EST",
+    "gmt": "GMT -05",
+    "zoneId": "America/Coral_Harbour"
+  },
+  {
+    "name": "Argentina Standard Time",
+    "abbr": "ART",
+    "gmt": "GMT -03",
+    "zoneId": "America/Cordoba"
+  },
+  {
+    "name": "Central Standard Time",
+    "abbr": "CST",
+    "gmt": "GMT -06",
+    "zoneId": "America/Costa_Rica"
+  },
+  {
+    "name": "Mountain Standard Time",
+    "abbr": "MST",
+    "gmt": "GMT -07",
+    "zoneId": "America/Creston"
+  },
+  {
+    "name": "Amazon Standard Time",
+    "abbr": "AMT",
+    "gmt": "GMT -04",
+    "zoneId": "America/Cuiaba"
+  },
+  {
+    "name": "Atlantic Standard Time",
+    "abbr": "AST",
+    "gmt": "GMT -04",
+    "zoneId": "America/Curacao"
+  },
+  {
+    "name": "Greenwich Mean Time",
+    "abbr": "GMT",
+    "gmt": "GMT -00",
+    "zoneId": "America/Danmarkshavn"
+  },
+  {
+    "name": "Pacific Standard Time",
+    "abbr": "MST",
+    "gmt": "GMT -07",
+    "zoneId": "America/Dawson"
+  },
+  {
+    "name": "Mountain Standard Time",
+    "abbr": "MST",
+    "gmt": "GMT -07",
+    "zoneId": "America/Dawson_Creek"
+  },
+  {
+    "name": "Mountain Standard Time",
+    "abbr": "MST",
+    "gmt": "GMT -07",
+    "zoneId": "America/Denver"
+  },
+  {
+    "name": "Eastern Standard Time",
+    "abbr": "EST",
+    "gmt": "GMT -05",
+    "zoneId": "America/Detroit"
+  },
+  {
+    "name": "Atlantic Standard Time",
+    "abbr": "AST",
+    "gmt": "GMT -04",
+    "zoneId": "America/Dominica"
+  },
+  {
+    "name": "Mountain Standard Time",
+    "abbr": "MST",
+    "gmt": "GMT -07",
+    "zoneId": "America/Edmonton"
+  },
+  {
+    "name": "Acre Standard Time",
+    "abbr": "ACT",
+    "gmt": "GMT -05",
+    "zoneId": "America/Eirunepe"
+  },
+  {
+    "name": "Central Standard Time",
+    "abbr": "CST",
+    "gmt": "GMT -06",
+    "zoneId": "America/El_Salvador"
+  },
+  {
+    "name": "Pacific Standard Time",
+    "abbr": "PST",
+    "gmt": "GMT -08",
+    "zoneId": "America/Ensenada"
+  },
+  {
+    "name": "Mountain Standard Time",
+    "abbr": "MST",
+    "gmt": "GMT -07",
+    "zoneId": "America/Fort_Nelson"
+  },
+  {
+    "name": "Eastern Standard Time",
+    "abbr": "EST",
+    "gmt": "GMT -05",
+    "zoneId": "America/Fort_Wayne"
+  },
+  {
+    "name": "Brasilia Standard Time",
+    "abbr": "BRT",
+    "gmt": "GMT -03",
+    "zoneId": "America/Fortaleza"
+  },
+  {
+    "name": "Atlantic Standard Time",
+    "abbr": "AST",
+    "gmt": "GMT -04",
+    "zoneId": "America/Glace_Bay"
+  },
+  {
+    "name": "West Greenland Standard Time",
+    "abbr": "WGT",
+    "gmt": "GMT -03",
+    "zoneId": "America/Godthab"
+  },
+  {
+    "name": "Atlantic Standard Time",
+    "abbr": "AST",
+    "gmt": "GMT -04",
+    "zoneId": "America/Goose_Bay"
+  },
+  {
+    "name": "Eastern Standard Time",
+    "abbr": "EST",
+    "gmt": "GMT -05",
+    "zoneId": "America/Grand_Turk"
+  },
+  {
+    "name": "Atlantic Standard Time",
+    "abbr": "AST",
+    "gmt": "GMT -04",
+    "zoneId": "America/Grenada"
+  },
+  {
+    "name": "Atlantic Standard Time",
+    "abbr": "AST",
+    "gmt": "GMT -04",
+    "zoneId": "America/Guadeloupe"
+  },
+  {
+    "name": "Central Standard Time",
+    "abbr": "CST",
+    "gmt": "GMT -06",
+    "zoneId": "America/Guatemala"
+  },
+  {
+    "name": "Ecuador Time",
+    "abbr": "ECT",
+    "gmt": "GMT -05",
+    "zoneId": "America/Guayaquil"
+  },
+  {
+    "name": "Guyana Time",
+    "abbr": "GYT",
+    "gmt": "GMT -04",
+    "zoneId": "America/Guyana"
+  },
+  {
+    "name": "Atlantic Standard Time",
+    "abbr": "AST",
+    "gmt": "GMT -04",
+    "zoneId": "America/Halifax"
+  },
+  {
+    "name": "Cuba Standard Time",
+    "abbr": "CST",
+    "gmt": "GMT -05",
+    "zoneId": "America/Havana"
+  },
+  {
+    "name": "Mexican Pacific Standard Time",
+    "abbr": "MST",
+    "gmt": "GMT -07",
+    "zoneId": "America/Hermosillo"
+  },
+  {
+    "name": "Eastern Standard Time",
+    "abbr": "EST",
+    "gmt": "GMT -05",
+    "zoneId": "America/Indiana/Indianapolis"
+  },
+  {
+    "name": "Central Standard Time",
+    "abbr": "CST",
+    "gmt": "GMT -06",
+    "zoneId": "America/Indiana/Knox"
+  },
+  {
+    "name": "Eastern Standard Time",
+    "abbr": "EST",
+    "gmt": "GMT -05",
+    "zoneId": "America/Indiana/Marengo"
+  },
+  {
+    "name": "Eastern Standard Time",
+    "abbr": "EST",
+    "gmt": "GMT -05",
+    "zoneId": "America/Indiana/Petersburg"
+  },
+  {
+    "name": "Central Standard Time",
+    "abbr": "CST",
+    "gmt": "GMT -06",
+    "zoneId": "America/Indiana/Tell_City"
+  },
+  {
+    "name": "Eastern Standard Time",
+    "abbr": "EST",
+    "gmt": "GMT -05",
+    "zoneId": "America/Indiana/Vevay"
+  },
+  {
+    "name": "Eastern Standard Time",
+    "abbr": "EST",
+    "gmt": "GMT -05",
+    "zoneId": "America/Indiana/Vincennes"
+  },
+  {
+    "name": "Eastern Standard Time",
+    "abbr": "EST",
+    "gmt": "GMT -05",
+    "zoneId": "America/Indiana/Winamac"
+  },
+  {
+    "name": "Eastern Standard Time",
+    "abbr": "EST",
+    "gmt": "GMT -05",
+    "zoneId": "America/Indianapolis"
+  },
+  {
+    "name": "Mountain Standard Time",
+    "abbr": "MST",
+    "gmt": "GMT -07",
+    "zoneId": "America/Inuvik"
+  },
+  {
+    "name": "Eastern Standard Time",
+    "abbr": "EST",
+    "gmt": "GMT -05",
+    "zoneId": "America/Iqaluit"
+  },
+  {
+    "name": "Eastern Standard Time",
+    "abbr": "EST",
+    "gmt": "GMT -05",
+    "zoneId": "America/Jamaica"
+  },
+  {
+    "name": "Argentina Standard Time",
+    "abbr": "ART",
+    "gmt": "GMT -03",
+    "zoneId": "America/Jujuy"
+  },
+  {
+    "name": "Alaska Standard Time",
+    "abbr": "AKST",
+    "gmt": "GMT -09",
+    "zoneId": "America/Juneau"
+  },
+  {
+    "name": "Eastern Standard Time",
+    "abbr": "EST",
+    "gmt": "GMT -05",
+    "zoneId": "America/Kentucky/Louisville"
+  },
+  {
+    "name": "Eastern Standard Time",
+    "abbr": "EST",
+    "gmt": "GMT -05",
+    "zoneId": "America/Kentucky/Monticello"
+  },
+  {
+    "name": "Central Standard Time",
+    "abbr": "CST",
+    "gmt": "GMT -06",
+    "zoneId": "America/Knox_IN"
+  },
+  {
+    "name": "Atlantic Standard Time",
+    "abbr": "AST",
+    "gmt": "GMT -04",
+    "zoneId": "America/Kralendijk"
+  },
+  {
+    "name": "Bolivia Time",
+    "abbr": "BOT",
+    "gmt": "GMT -04",
+    "zoneId": "America/La_Paz"
+  },
+  {
+    "name": "Peru Standard Time",
+    "abbr": "PET",
+    "gmt": "GMT -05",
+    "zoneId": "America/Lima"
+  },
+  {
+    "name": "Pacific Standard Time",
+    "abbr": "PST",
+    "gmt": "GMT -08",
+    "zoneId": "America/Los_Angeles"
+  },
+  {
+    "name": "Eastern Standard Time",
+    "abbr": "EST",
+    "gmt": "GMT -05",
+    "zoneId": "America/Louisville"
+  },
+  {
+    "name": "Atlantic Standard Time",
+    "abbr": "AST",
+    "gmt": "GMT -04",
+    "zoneId": "America/Lower_Princes"
+  },
+  {
+    "name": "Brasilia Standard Time",
+    "abbr": "BRT",
+    "gmt": "GMT -03",
+    "zoneId": "America/Maceio"
+  },
+  {
+    "name": "Central Standard Time",
+    "abbr": "CST",
+    "gmt": "GMT -06",
+    "zoneId": "America/Managua"
+  },
+  {
+    "name": "Amazon Standard Time",
+    "abbr": "AMT",
+    "gmt": "GMT -04",
+    "zoneId": "America/Manaus"
+  },
+  {
+    "name": "Atlantic Standard Time",
+    "abbr": "AST",
+    "gmt": "GMT -04",
+    "zoneId": "America/Marigot"
+  },
+  {
+    "name": "Atlantic Standard Time",
+    "abbr": "AST",
+    "gmt": "GMT -04",
+    "zoneId": "America/Martinique"
+  },
+  {
+    "name": "Central Standard Time",
+    "abbr": "CST",
+    "gmt": "GMT -06",
+    "zoneId": "America/Matamoros"
+  },
+  {
+    "name": "Mexican Pacific Standard Time",
+    "abbr": "MST",
+    "gmt": "GMT -07",
+    "zoneId": "America/Mazatlan"
+  },
+  {
+    "name": "Argentina Standard Time",
+    "abbr": "ART",
+    "gmt": "GMT -03",
+    "zoneId": "America/Mendoza"
+  },
+  {
+    "name": "Central Standard Time",
+    "abbr": "CST",
+    "gmt": "GMT -06",
+    "zoneId": "America/Menominee"
+  },
+  {
+    "name": "Central Standard Time",
+    "abbr": "CST",
+    "gmt": "GMT -06",
+    "zoneId": "America/Merida"
+  },
+  {
+    "name": "Alaska Standard Time",
+    "abbr": "AKST",
+    "gmt": "GMT -09",
+    "zoneId": "America/Metlakatla"
+  },
+  {
+    "name": "Central Standard Time",
+    "abbr": "CST",
+    "gmt": "GMT -06",
+    "zoneId": "America/Mexico_City"
+  },
+  {
+    "name": "St. Pierre \u0026 Miquelon Standard Time",
+    "abbr": "PMST",
+    "gmt": "GMT -03",
+    "zoneId": "America/Miquelon"
+  },
+  {
+    "name": "Atlantic Standard Time",
+    "abbr": "AST",
+    "gmt": "GMT -04",
+    "zoneId": "America/Moncton"
+  },
+  {
+    "name": "Central Standard Time",
+    "abbr": "CST",
+    "gmt": "GMT -06",
+    "zoneId": "America/Monterrey"
+  },
+  {
+    "name": "Uruguay Standard Time",
+    "abbr": "UYT",
+    "gmt": "GMT -03",
+    "zoneId": "America/Montevideo"
+  },
+  {
+    "name": "Eastern Standard Time",
+    "abbr": "EST",
+    "gmt": "GMT -05",
+    "zoneId": "America/Montreal"
+  },
+  {
+    "name": "Atlantic Standard Time",
+    "abbr": "AST",
+    "gmt": "GMT -04",
+    "zoneId": "America/Montserrat"
+  },
+  {
+    "name": "Eastern Standard Time",
+    "abbr": "EST",
+    "gmt": "GMT -05",
+    "zoneId": "America/Nassau"
+  },
+  {
+    "name": "Eastern Standard Time",
+    "abbr": "EST",
+    "gmt": "GMT -05",
+    "zoneId": "America/New_York"
+  },
+  {
+    "name": "Eastern Standard Time",
+    "abbr": "EST",
+    "gmt": "GMT -05",
+    "zoneId": "America/Nipigon"
+  },
+  {
+    "name": "Alaska Standard Time",
+    "abbr": "AKST",
+    "gmt": "GMT -09",
+    "zoneId": "America/Nome"
+  },
+  {
+    "name": "Fernando de Noronha Standard Time",
+    "abbr": "FNT",
+    "gmt": "GMT -02",
+    "zoneId": "America/Noronha"
+  },
+  {
+    "name": "Central Standard Time",
+    "abbr": "CST",
+    "gmt": "GMT -06",
+    "zoneId": "America/North_Dakota/Beulah"
+  },
+  {
+    "name": "Central Standard Time",
+    "abbr": "CST",
+    "gmt": "GMT -06",
+    "zoneId": "America/North_Dakota/Center"
+  },
+  {
+    "name": "Central Standard Time",
+    "abbr": "CST",
+    "gmt": "GMT -06",
+    "zoneId": "America/North_Dakota/New_Salem"
+  },
+  {
+    "name": "Western Greenland Time",
+    "abbr": "WGT",
+    "gmt": "GMT -03",
+    "zoneId": "America/Nuuk"
+  },
+  {
+    "name": "Mountain Standard Time",
+    "abbr": "MST",
+    "gmt": "GMT -07",
+    "zoneId": "America/Ojinaga"
+  },
+  {
+    "name": "Eastern Standard Time",
+    "abbr": "EST",
+    "gmt": "GMT -05",
+    "zoneId": "America/Panama"
+  },
+  {
+    "name": "Eastern Standard Time",
+    "abbr": "EST",
+    "gmt": "GMT -05",
+    "zoneId": "America/Pangnirtung"
+  },
+  {
+    "name": "Suriname Time",
+    "abbr": "SRT",
+    "gmt": "GMT -03",
+    "zoneId": "America/Paramaribo"
+  },
+  {
+    "name": "Mountain Standard Time",
+    "abbr": "MST",
+    "gmt": "GMT -07",
+    "zoneId": "America/Phoenix"
+  },
+  {
+    "name": "Eastern Standard Time",
+    "abbr": "EST",
+    "gmt": "GMT -05",
+    "zoneId": "America/Port-au-Prince"
+  },
+  {
+    "name": "Atlantic Standard Time",
+    "abbr": "AST",
+    "gmt": "GMT -04",
+    "zoneId": "America/Port_of_Spain"
+  },
+  {
+    "name": "Acre Standard Time",
+    "abbr": "ACT",
+    "gmt": "GMT -05",
+    "zoneId": "America/Porto_Acre"
+  },
+  {
+    "name": "Amazon Standard Time",
+    "abbr": "AMT",
+    "gmt": "GMT -04",
+    "zoneId": "America/Porto_Velho"
+  },
+  {
+    "name": "Atlantic Standard Time",
+    "abbr": "AST",
+    "gmt": "GMT -04",
+    "zoneId": "America/Puerto_Rico"
+  },
+  {
+    "name": "Punta Arenas Standard Time",
+    "abbr": "GMT-03:00",
+    "gmt": "GMT -03",
+    "zoneId": "America/Punta_Arenas"
+  },
+  {
+    "name": "Central Standard Time",
+    "abbr": "CST",
+    "gmt": "GMT -06",
+    "zoneId": "America/Rainy_River"
+  },
+  {
+    "name": "Central Standard Time",
+    "abbr": "CST",
+    "gmt": "GMT -06",
+    "zoneId": "America/Rankin_Inlet"
+  },
+  {
+    "name": "Brasilia Standard Time",
+    "abbr": "BRT",
+    "gmt": "GMT -03",
+    "zoneId": "America/Recife"
+  },
+  {
+    "name": "Central Standard Time",
+    "abbr": "CST",
+    "gmt": "GMT -06",
+    "zoneId": "America/Regina"
+  },
+  {
+    "name": "Central Standard Time",
+    "abbr": "CST",
+    "gmt": "GMT -06",
+    "zoneId": "America/Resolute"
+  },
+  {
+    "name": "Acre Standard Time",
+    "abbr": "ACT",
+    "gmt": "GMT -05",
+    "zoneId": "America/Rio_Branco"
+  },
+  {
+    "name": "Argentina Standard Time",
+    "abbr": "ART",
+    "gmt": "GMT -03",
+    "zoneId": "America/Rosario"
+  },
+  {
+    "name": "Northwest Mexico Standard Time",
+    "abbr": "PST",
+    "gmt": "GMT -08",
+    "zoneId": "America/Santa_Isabel"
+  },
+  {
+    "name": "Brasilia Standard Time",
+    "abbr": "BRT",
+    "gmt": "GMT -03",
+    "zoneId": "America/Santarem"
+  },
+  {
+    "name": "Chile Standard Time",
+    "abbr": "CLT",
+    "gmt": "GMT -04",
+    "zoneId": "America/Santiago"
+  },
+  {
+    "name": "Atlantic Standard Time",
+    "abbr": "AST",
+    "gmt": "GMT -04",
+    "zoneId": "America/Santo_Domingo"
+  },
+  {
+    "name": "Brasilia Standard Time",
+    "abbr": "BRT",
+    "gmt": "GMT -03",
+    "zoneId": "America/Sao_Paulo"
+  },
+  {
+    "name": "East Greenland Standard Time",
+    "abbr": "EGT",
+    "gmt": "GMT -01",
+    "zoneId": "America/Scoresbysund"
+  },
+  {
+    "name": "Mountain Standard Time",
+    "abbr": "MST",
+    "gmt": "GMT -07",
+    "zoneId": "America/Shiprock"
+  },
+  {
+    "name": "Alaska Standard Time",
+    "abbr": "AKST",
+    "gmt": "GMT -09",
+    "zoneId": "America/Sitka"
+  },
+  {
+    "name": "Atlantic Standard Time",
+    "abbr": "AST",
+    "gmt": "GMT -04",
+    "zoneId": "America/St_Barthelemy"
+  },
+  {
+    "name": "Newfoundland Standard Time",
+    "abbr": "NST",
+    "gmt": "GMT -03",
+    "zoneId": "America/St_Johns"
+  },
+  {
+    "name": "Atlantic Standard Time",
+    "abbr": "AST",
+    "gmt": "GMT -04",
+    "zoneId": "America/St_Kitts"
+  },
+  {
+    "name": "Atlantic Standard Time",
+    "abbr": "AST",
+    "gmt": "GMT -04",
+    "zoneId": "America/St_Lucia"
+  },
+  {
+    "name": "Atlantic Standard Time",
+    "abbr": "AST",
+    "gmt": "GMT -04",
+    "zoneId": "America/St_Thomas"
+  },
+  {
+    "name": "Atlantic Standard Time",
+    "abbr": "AST",
+    "gmt": "GMT -04",
+    "zoneId": "America/St_Vincent"
+  },
+  {
+    "name": "Central Standard Time",
+    "abbr": "CST",
+    "gmt": "GMT -06",
+    "zoneId": "America/Swift_Current"
+  },
+  {
+    "name": "Central Standard Time",
+    "abbr": "CST",
+    "gmt": "GMT -06",
+    "zoneId": "America/Tegucigalpa"
+  },
+  {
+    "name": "Atlantic Standard Time",
+    "abbr": "AST",
+    "gmt": "GMT -04",
+    "zoneId": "America/Thule"
+  },
+  {
+    "name": "Eastern Standard Time",
+    "abbr": "EST",
+    "gmt": "GMT -05",
+    "zoneId": "America/Thunder_Bay"
+  },
+  {
+    "name": "Pacific Standard Time",
+    "abbr": "PST",
+    "gmt": "GMT -08",
+    "zoneId": "America/Tijuana"
+  },
+  {
+    "name": "Eastern Standard Time",
+    "abbr": "EST",
+    "gmt": "GMT -05",
+    "zoneId": "America/Toronto"
+  },
+  {
+    "name": "Atlantic Standard Time",
+    "abbr": "AST",
+    "gmt": "GMT -04",
+    "zoneId": "America/Tortola"
+  },
+  {
+    "name": "Pacific Standard Time",
+    "abbr": "PST",
+    "gmt": "GMT -08",
+    "zoneId": "America/Vancouver"
+  },
+  {
+    "name": "Atlantic Standard Time",
+    "abbr": "AST",
+    "gmt": "GMT -04",
+    "zoneId": "America/Virgin"
+  },
+  {
+    "name": "Pacific Standard Time",
+    "abbr": "MST",
+    "gmt": "GMT -07",
+    "zoneId": "America/Whitehorse"
+  },
+  {
+    "name": "Central Standard Time",
+    "abbr": "CST",
+    "gmt": "GMT -06",
+    "zoneId": "America/Winnipeg"
+  },
+  {
+    "name": "Alaska Standard Time",
+    "abbr": "AKST",
+    "gmt": "GMT -09",
+    "zoneId": "America/Yakutat"
+  },
+  {
+    "name": "Mountain Standard Time",
+    "abbr": "MST",
+    "gmt": "GMT -07",
+    "zoneId": "America/Yellowknife"
+  },
+  {
+    "name": "Australian Western Standard Time",
+    "abbr": "AWST",
+    "gmt": "GMT +08",
+    "zoneId": "Antarctica/Casey"
+  },
+  {
+    "name": "Davis Time",
+    "abbr": "DAVT",
+    "gmt": "GMT +07",
+    "zoneId": "Antarctica/Davis"
+  },
+  {
+    "name": "Dumont-d’Urville Time",
+    "abbr": "DDUT",
+    "gmt": "GMT +10",
+    "zoneId": "Antarctica/DumontDUrville"
+  },
+  {
+    "name": "Macquarie Island Time",
+    "abbr": "MIST",
+    "gmt": "GMT +11",
+    "zoneId": "Antarctica/Macquarie"
+  },
+  {
+    "name": "Mawson Time",
+    "abbr": "MAWT",
+    "gmt": "GMT +05",
+    "zoneId": "Antarctica/Mawson"
+  },
+  {
+    "name": "New Zealand Standard Time",
+    "abbr": "NZST",
+    "gmt": "GMT +12",
+    "zoneId": "Antarctica/McMurdo"
+  },
+  {
+    "name": "Chile Time",
+    "abbr": "CLT",
+    "gmt": "GMT -03",
+    "zoneId": "Antarctica/Palmer"
+  },
+  {
+    "name": "Rothera Time",
+    "abbr": "ROTT",
+    "gmt": "GMT -03",
+    "zoneId": "Antarctica/Rothera"
+  },
+  {
+    "name": "New Zealand Standard Time",
+    "abbr": "NZST",
+    "gmt": "GMT +12",
+    "zoneId": "Antarctica/South_Pole"
+  },
+  {
+    "name": "Syowa Time",
+    "abbr": "SYOT",
+    "gmt": "GMT +03",
+    "zoneId": "Antarctica/Syowa"
+  },
+  {
+    "name": "Greenwich Mean Time",
+    "abbr": "UTC",
+    "gmt": "GMT -00",
+    "zoneId": "Antarctica/Troll"
+  },
+  {
+    "name": "Vostok Time",
+    "abbr": "VOST",
+    "gmt": "GMT +06",
+    "zoneId": "Antarctica/Vostok"
+  },
+  {
+    "name": "Central European Standard Time",
+    "abbr": "CET",
+    "gmt": "GMT +01",
+    "zoneId": "Arctic/Longyearbyen"
+  },
+  {
+    "name": "Arabian Standard Time",
+    "abbr": "AST",
+    "gmt": "GMT +03",
+    "zoneId": "Asia/Aden"
+  },
+  {
+    "name": "East Kazakhstan Time",
+    "abbr": "ALMT",
+    "gmt": "GMT +06",
+    "zoneId": "Asia/Almaty"
+  },
+  {
+    "name": "Eastern European Standard Time",
+    "abbr": "EET",
+    "gmt": "GMT +02",
+    "zoneId": "Asia/Amman"
+  },
+  {
+    "name": "Anadyr Standard Time",
+    "abbr": "ANAT",
+    "gmt": "GMT +12",
+    "zoneId": "Asia/Anadyr"
+  },
+  {
+    "name": "West Kazakhstan Time",
+    "abbr": "AQTT",
+    "gmt": "GMT +05",
+    "zoneId": "Asia/Aqtau"
+  },
+  {
+    "name": "West Kazakhstan Time",
+    "abbr": "AQTT",
+    "gmt": "GMT +05",
+    "zoneId": "Asia/Aqtobe"
+  },
+  {
+    "name": "Turkmenistan Standard Time",
+    "abbr": "TMT",
+    "gmt": "GMT +05",
+    "zoneId": "Asia/Ashgabat"
+  },
+  {
+    "name": "Turkmenistan Standard Time",
+    "abbr": "TMT",
+    "gmt": "GMT +05",
+    "zoneId": "Asia/Ashkhabad"
+  },
+  {
+    "name": "West Kazakhstan Time",
+    "abbr": "GMT+05:00",
+    "gmt": "GMT +05",
+    "zoneId": "Asia/Atyrau"
+  },
+  {
+    "name": "Arabian Standard Time",
+    "abbr": "AST",
+    "gmt": "GMT +03",
+    "zoneId": "Asia/Baghdad"
+  },
+  {
+    "name": "Arabian Standard Time",
+    "abbr": "AST",
+    "gmt": "GMT +03",
+    "zoneId": "Asia/Bahrain"
+  },
+  {
+    "name": "Azerbaijan Standard Time",
+    "abbr": "AZT",
+    "gmt": "GMT +04",
+    "zoneId": "Asia/Baku"
+  },
+  {
+    "name": "Indochina Time",
+    "abbr": "ICT",
+    "gmt": "GMT +07",
+    "zoneId": "Asia/Bangkok"
+  },
+  {
+    "name": "Barnaul Standard Time",
+    "abbr": "GMT+07:00",
+    "gmt": "GMT +07",
+    "zoneId": "Asia/Barnaul"
+  },
+  {
+    "name": "Eastern European Standard Time",
+    "abbr": "EET",
+    "gmt": "GMT +02",
+    "zoneId": "Asia/Beirut"
+  },
+  {
+    "name": "Kyrgyzstan Time",
+    "abbr": "KGT",
+    "gmt": "GMT +06",
+    "zoneId": "Asia/Bishkek"
+  },
+  {
+    "name": "Brunei Darussalam Time",
+    "abbr": "BNT",
+    "gmt": "GMT +08",
+    "zoneId": "Asia/Brunei"
+  },
+  {
+    "name": "India Standard Time",
+    "abbr": "IST",
+    "gmt": "GMT +05",
+    "zoneId": "Asia/Calcutta"
+  },
+  {
+    "name": "Yakutsk Standard Time",
+    "abbr": "YAKT",
+    "gmt": "GMT +09",
+    "zoneId": "Asia/Chita"
+  },
+  {
+    "name": "Ulaanbaatar Standard Time",
+    "abbr": "CHOT",
+    "gmt": "GMT +08",
+    "zoneId": "Asia/Choibalsan"
+  },
+  {
+    "name": "China Standard Time",
+    "abbr": "CST",
+    "gmt": "GMT +08",
+    "zoneId": "Asia/Chongqing"
+  },
+  {
+    "name": "China Standard Time",
+    "abbr": "CST",
+    "gmt": "GMT +08",
+    "zoneId": "Asia/Chungking"
+  },
+  {
+    "name": "India Standard Time",
+    "abbr": "IST",
+    "gmt": "GMT +05",
+    "zoneId": "Asia/Colombo"
+  },
+  {
+    "name": "Bangladesh Standard Time",
+    "abbr": "BDT",
+    "gmt": "GMT +06",
+    "zoneId": "Asia/Dacca"
+  },
+  {
+    "name": "Eastern European Standard Time",
+    "abbr": "EET",
+    "gmt": "GMT +02",
+    "zoneId": "Asia/Damascus"
+  },
+  {
+    "name": "Bangladesh Standard Time",
+    "abbr": "BDT",
+    "gmt": "GMT +06",
+    "zoneId": "Asia/Dhaka"
+  },
+  {
+    "name": "East Timor Time",
+    "abbr": "TLT",
+    "gmt": "GMT +09",
+    "zoneId": "Asia/Dili"
+  },
+  {
+    "name": "Gulf Standard Time",
+    "abbr": "GST",
+    "gmt": "GMT +04",
+    "zoneId": "Asia/Dubai"
+  },
+  {
+    "name": "Tajikistan Time",
+    "abbr": "TJT",
+    "gmt": "GMT +05",
+    "zoneId": "Asia/Dushanbe"
+  },
+  {
+    "name": "Eastern European Time",
+    "abbr": "EET",
+    "gmt": "GMT +02",
+    "zoneId": "Asia/Famagusta"
+  },
+  {
+    "name": "Eastern European Standard Time",
+    "abbr": "EET",
+    "gmt": "GMT +02",
+    "zoneId": "Asia/Gaza"
+  },
+  {
+    "name": "China Standard Time",
+    "abbr": "CST",
+    "gmt": "GMT +08",
+    "zoneId": "Asia/Harbin"
+  },
+  {
+    "name": "Eastern European Standard Time",
+    "abbr": "EET",
+    "gmt": "GMT +02",
+    "zoneId": "Asia/Hebron"
+  },
+  {
+    "name": "Indochina Time",
+    "abbr": "ICT",
+    "gmt": "GMT +07",
+    "zoneId": "Asia/Ho_Chi_Minh"
+  },
+  {
+    "name": "Hong Kong Standard Time",
+    "abbr": "HKT",
+    "gmt": "GMT +08",
+    "zoneId": "Asia/Hong_Kong"
+  },
+  {
+    "name": "Hovd Standard Time",
+    "abbr": "HOVT",
+    "gmt": "GMT +07",
+    "zoneId": "Asia/Hovd"
+  },
+  {
+    "name": "Irkutsk Standard Time",
+    "abbr": "IRKT",
+    "gmt": "GMT +08",
+    "zoneId": "Asia/Irkutsk"
+  },
+  {
+    "name": "Turkey Time",
+    "abbr": "EET",
+    "gmt": "GMT +03",
+    "zoneId": "Asia/Istanbul"
+  },
+  {
+    "name": "Western Indonesia Time",
+    "abbr": "WIB",
+    "gmt": "GMT +07",
+    "zoneId": "Asia/Jakarta"
+  },
+  {
+    "name": "Eastern Indonesia Time",
+    "abbr": "WIT",
+    "gmt": "GMT +09",
+    "zoneId": "Asia/Jayapura"
+  },
+  {
+    "name": "Israel Standard Time",
+    "abbr": "IST",
+    "gmt": "GMT +02",
+    "zoneId": "Asia/Jerusalem"
+  },
+  {
+    "name": "Afghanistan Time",
+    "abbr": "AFT",
+    "gmt": "GMT +04",
+    "zoneId": "Asia/Kabul"
+  },
+  {
+    "name": "Petropavlovsk-Kamchatski Standard Time",
+    "abbr": "PETT",
+    "gmt": "GMT +12",
+    "zoneId": "Asia/Kamchatka"
+  },
+  {
+    "name": "Pakistan Standard Time",
+    "abbr": "PKT",
+    "gmt": "GMT +05",
+    "zoneId": "Asia/Karachi"
+  },
+  {
+    "name": "Xinjiang Standard Time",
+    "abbr": "XJT",
+    "gmt": "GMT +06",
+    "zoneId": "Asia/Kashgar"
+  },
+  {
+    "name": "Nepal Time",
+    "abbr": "NPT",
+    "gmt": "GMT +05",
+    "zoneId": "Asia/Kathmandu"
+  },
+  {
+    "name": "Nepal Time",
+    "abbr": "NPT",
+    "gmt": "GMT +05",
+    "zoneId": "Asia/Katmandu"
+  },
+  {
+    "name": "Yakutsk Standard Time",
+    "abbr": "YAKT",
+    "gmt": "GMT +09",
+    "zoneId": "Asia/Khandyga"
+  },
+  {
+    "name": "India Standard Time",
+    "abbr": "IST",
+    "gmt": "GMT +05",
+    "zoneId": "Asia/Kolkata"
+  },
+  {
+    "name": "Krasnoyarsk Standard Time",
+    "abbr": "KRAT",
+    "gmt": "GMT +07",
+    "zoneId": "Asia/Krasnoyarsk"
+  },
+  {
+    "name": "Malaysia Time",
+    "abbr": "MYT",
+    "gmt": "GMT +08",
+    "zoneId": "Asia/Kuala_Lumpur"
+  },
+  {
+    "name": "Malaysia Time",
+    "abbr": "MYT",
+    "gmt": "GMT +08",
+    "zoneId": "Asia/Kuching"
+  },
+  {
+    "name": "Arabian Standard Time",
+    "abbr": "AST",
+    "gmt": "GMT +03",
+    "zoneId": "Asia/Kuwait"
+  },
+  {
+    "name": "China Standard Time",
+    "abbr": "CST",
+    "gmt": "GMT +08",
+    "zoneId": "Asia/Macao"
+  },
+  {
+    "name": "China Standard Time",
+    "abbr": "CST",
+    "gmt": "GMT +08",
+    "zoneId": "Asia/Macau"
+  },
+  {
+    "name": "Magadan Standard Time",
+    "abbr": "MAGT",
+    "gmt": "GMT +11",
+    "zoneId": "Asia/Magadan"
+  },
+  {
+    "name": "Central Indonesia Time",
+    "abbr": "WITA",
+    "gmt": "GMT +08",
+    "zoneId": "Asia/Makassar"
+  },
+  {
+    "name": "Philippine Standard Time",
+    "abbr": "PST",
+    "gmt": "GMT +08",
+    "zoneId": "Asia/Manila"
+  },
+  {
+    "name": "Gulf Standard Time",
+    "abbr": "GST",
+    "gmt": "GMT +04",
+    "zoneId": "Asia/Muscat"
+  },
+  {
+    "name": "Eastern European Standard Time",
+    "abbr": "EET",
+    "gmt": "GMT +02",
+    "zoneId": "Asia/Nicosia"
+  },
+  {
+    "name": "Krasnoyarsk Standard Time",
+    "abbr": "KRAT",
+    "gmt": "GMT +07",
+    "zoneId": "Asia/Novokuznetsk"
+  },
+  {
+    "name": "Novosibirsk Standard Time",
+    "abbr": "NOVT",
+    "gmt": "GMT +07",
+    "zoneId": "Asia/Novosibirsk"
+  },
+  {
+    "name": "Omsk Standard Time",
+    "abbr": "OMST",
+    "gmt": "GMT +06",
+    "zoneId": "Asia/Omsk"
+  },
+  {
+    "name": "West Kazakhstan Time",
+    "abbr": "ORAT",
+    "gmt": "GMT +05",
+    "zoneId": "Asia/Oral"
+  },
+  {
+    "name": "Indochina Time",
+    "abbr": "ICT",
+    "gmt": "GMT +07",
+    "zoneId": "Asia/Phnom_Penh"
+  },
+  {
+    "name": "Western Indonesia Time",
+    "abbr": "WIB",
+    "gmt": "GMT +07",
+    "zoneId": "Asia/Pontianak"
+  },
+  {
+    "name": "Korean Standard Time",
+    "abbr": "KST",
+    "gmt": "GMT +09",
+    "zoneId": "Asia/Pyongyang"
+  },
+  {
+    "name": "Arabian Standard Time",
+    "abbr": "AST",
+    "gmt": "GMT +03",
+    "zoneId": "Asia/Qatar"
+  },
+  {
+    "name": "East Kazakhstan Time",
+    "abbr": "QOST",
+    "gmt": "GMT +06",
+    "zoneId": "Asia/Qostanay"
+  },
+  {
+    "name": "West Kazakhstan Time",
+    "abbr": "QYZT",
+    "gmt": "GMT +05",
+    "zoneId": "Asia/Qyzylorda"
+  },
+  {
+    "name": "Myanmar Time",
+    "abbr": "MMT",
+    "gmt": "GMT +06",
+    "zoneId": "Asia/Rangoon"
+  },
+  {
+    "name": "Arabian Standard Time",
+    "abbr": "AST",
+    "gmt": "GMT +03",
+    "zoneId": "Asia/Riyadh"
+  },
+  {
+    "name": "Indochina Time",
+    "abbr": "ICT",
+    "gmt": "GMT +07",
+    "zoneId": "Asia/Saigon"
+  },
+  {
+    "name": "Sakhalin Standard Time",
+    "abbr": "SAKT",
+    "gmt": "GMT +11",
+    "zoneId": "Asia/Sakhalin"
+  },
+  {
+    "name": "Uzbekistan Standard Time",
+    "abbr": "UZT",
+    "gmt": "GMT +05",
+    "zoneId": "Asia/Samarkand"
+  },
+  {
+    "name": "Korean Standard Time",
+    "abbr": "KST",
+    "gmt": "GMT +09",
+    "zoneId": "Asia/Seoul"
+  },
+  {
+    "name": "China Standard Time",
+    "abbr": "CST",
+    "gmt": "GMT +08",
+    "zoneId": "Asia/Shanghai"
+  },
+  {
+    "name": "Singapore Standard Time",
+    "abbr": "SGT",
+    "gmt": "GMT +08",
+    "zoneId": "Asia/Singapore"
+  },
+  {
+    "name": "Srednekolymsk Time",
+    "abbr": "SRET",
+    "gmt": "GMT +11",
+    "zoneId": "Asia/Srednekolymsk"
+  },
+  {
+    "name": "Taipei Standard Time",
+    "abbr": "CST",
+    "gmt": "GMT +08",
+    "zoneId": "Asia/Taipei"
+  },
+  {
+    "name": "Uzbekistan Standard Time",
+    "abbr": "UZT",
+    "gmt": "GMT +05",
+    "zoneId": "Asia/Tashkent"
+  },
+  {
+    "name": "Georgia Standard Time",
+    "abbr": "GET",
+    "gmt": "GMT +04",
+    "zoneId": "Asia/Tbilisi"
+  },
+  {
+    "name": "Iran Standard Time",
+    "abbr": "IRST",
+    "gmt": "GMT +03",
+    "zoneId": "Asia/Tehran"
+  },
+  {
+    "name": "Israel Standard Time",
+    "abbr": "IST",
+    "gmt": "GMT +02",
+    "zoneId": "Asia/Tel_Aviv"
+  },
+  {
+    "name": "Bhutan Time",
+    "abbr": "BTT",
+    "gmt": "GMT +06",
+    "zoneId": "Asia/Thimbu"
+  },
+  {
+    "name": "Bhutan Time",
+    "abbr": "BTT",
+    "gmt": "GMT +06",
+    "zoneId": "Asia/Thimphu"
+  },
+  {
+    "name": "Japan Standard Time",
+    "abbr": "JST",
+    "gmt": "GMT +09",
+    "zoneId": "Asia/Tokyo"
+  },
+  {
+    "name": "Tomsk Standard Time",
+    "abbr": "GMT+07:00",
+    "gmt": "GMT +07",
+    "zoneId": "Asia/Tomsk"
+  },
+  {
+    "name": "Central Indonesia Time",
+    "abbr": "WITA",
+    "gmt": "GMT +08",
+    "zoneId": "Asia/Ujung_Pandang"
+  },
+  {
+    "name": "Ulaanbaatar Standard Time",
+    "abbr": "ULAT",
+    "gmt": "GMT +08",
+    "zoneId": "Asia/Ulaanbaatar"
+  },
+  {
+    "name": "Ulaanbaatar Standard Time",
+    "abbr": "ULAT",
+    "gmt": "GMT +08",
+    "zoneId": "Asia/Ulan_Bator"
+  },
+  {
+    "name": "Xinjiang Standard Time",
+    "abbr": "XJT",
+    "gmt": "GMT +06",
+    "zoneId": "Asia/Urumqi"
+  },
+  {
+    "name": "Vladivostok Standard Time",
+    "abbr": "VLAT",
+    "gmt": "GMT +10",
+    "zoneId": "Asia/Ust-Nera"
+  },
+  {
+    "name": "Indochina Time",
+    "abbr": "ICT",
+    "gmt": "GMT +07",
+    "zoneId": "Asia/Vientiane"
+  },
+  {
+    "name": "Vladivostok Standard Time",
+    "abbr": "VLAT",
+    "gmt": "GMT +10",
+    "zoneId": "Asia/Vladivostok"
+  },
+  {
+    "name": "Yakutsk Standard Time",
+    "abbr": "YAKT",
+    "gmt": "GMT +09",
+    "zoneId": "Asia/Yakutsk"
+  },
+  {
+    "name": "Myanmar Time",
+    "abbr": "MMT",
+    "gmt": "GMT +06",
+    "zoneId": "Asia/Yangon"
+  },
+  {
+    "name": "Yekaterinburg Standard Time",
+    "abbr": "YEKT",
+    "gmt": "GMT +05",
+    "zoneId": "Asia/Yekaterinburg"
+  },
+  {
+    "name": "Armenia Standard Time",
+    "abbr": "AMT",
+    "gmt": "GMT +04",
+    "zoneId": "Asia/Yerevan"
+  },
+  {
+    "name": "Azores Standard Time",
+    "abbr": "AZOT",
+    "gmt": "GMT -01",
+    "zoneId": "Atlantic/Azores"
+  },
+  {
+    "name": "Atlantic Standard Time",
+    "abbr": "AST",
+    "gmt": "GMT -04",
+    "zoneId": "Atlantic/Bermuda"
+  },
+  {
+    "name": "Western European Standard Time",
+    "abbr": "WET",
+    "gmt": "GMT -00",
+    "zoneId": "Atlantic/Canary"
+  },
+  {
+    "name": "Cape Verde Standard Time",
+    "abbr": "CVT",
+    "gmt": "GMT -01",
+    "zoneId": "Atlantic/Cape_Verde"
+  },
+  {
+    "name": "Western European Standard Time",
+    "abbr": "WET",
+    "gmt": "GMT -00",
+    "zoneId": "Atlantic/Faeroe"
+  },
+  {
+    "name": "Western European Standard Time",
+    "abbr": "WET",
+    "gmt": "GMT -00",
+    "zoneId": "Atlantic/Faroe"
+  },
+  {
+    "name": "Central European Standard Time",
+    "abbr": "CET",
+    "gmt": "GMT +01",
+    "zoneId": "Atlantic/Jan_Mayen"
+  },
+  {
+    "name": "Western European Standard Time",
+    "abbr": "WET",
+    "gmt": "GMT -00",
+    "zoneId": "Atlantic/Madeira"
+  },
+  {
+    "name": "Greenwich Mean Time",
+    "abbr": "GMT",
+    "gmt": "GMT -00",
+    "zoneId": "Atlantic/Reykjavik"
+  },
+  {
+    "name": "South Georgia Time",
+    "abbr": "GST",
+    "gmt": "GMT -02",
+    "zoneId": "Atlantic/South_Georgia"
+  },
+  {
+    "name": "Greenwich Mean Time",
+    "abbr": "GMT",
+    "gmt": "GMT -00",
+    "zoneId": "Atlantic/St_Helena"
+  },
+  {
+    "name": "Falkland Islands Standard Time",
+    "abbr": "FKT",
+    "gmt": "GMT -03",
+    "zoneId": "Atlantic/Stanley"
+  },
+  {
+    "name": "Australian Eastern Standard Time",
+    "abbr": "AEST",
+    "gmt": "GMT +10",
+    "zoneId": "Australia/ACT"
+  },
+  {
+    "name": "Australian Central Standard Time",
+    "abbr": "ACST",
+    "gmt": "GMT +09",
+    "zoneId": "Australia/Adelaide"
+  },
+  {
+    "name": "Australian Eastern Standard Time",
+    "abbr": "AEST",
+    "gmt": "GMT +10",
+    "zoneId": "Australia/Brisbane"
+  },
+  {
+    "name": "Australian Central Standard Time",
+    "abbr": "ACST",
+    "gmt": "GMT +09",
+    "zoneId": "Australia/Broken_Hill"
+  },
+  {
+    "name": "Australian Eastern Standard Time",
+    "abbr": "AEST",
+    "gmt": "GMT +10",
+    "zoneId": "Australia/Canberra"
+  },
+  {
+    "name": "Australian Eastern Standard Time",
+    "abbr": "AEST",
+    "gmt": "GMT +10",
+    "zoneId": "Australia/Currie"
+  },
+  {
+    "name": "Australian Central Standard Time",
+    "abbr": "ACST",
+    "gmt": "GMT +09",
+    "zoneId": "Australia/Darwin"
+  },
+  {
+    "name": "Australian Central Western Standard Time",
+    "abbr": "ACWST",
+    "gmt": "GMT +08",
+    "zoneId": "Australia/Eucla"
+  },
+  {
+    "name": "Australian Eastern Standard Time",
+    "abbr": "AEST",
+    "gmt": "GMT +10",
+    "zoneId": "Australia/Hobart"
+  },
+  {
+    "name": "Lord Howe Standard Time",
+    "abbr": "LHST",
+    "gmt": "GMT +10",
+    "zoneId": "Australia/LHI"
+  },
+  {
+    "name": "Australian Eastern Standard Time",
+    "abbr": "AEST",
+    "gmt": "GMT +10",
+    "zoneId": "Australia/Lindeman"
+  },
+  {
+    "name": "Lord Howe Standard Time",
+    "abbr": "LHST",
+    "gmt": "GMT +10",
+    "zoneId": "Australia/Lord_Howe"
+  },
+  {
+    "name": "Australian Eastern Standard Time",
+    "abbr": "AEST",
+    "gmt": "GMT +10",
+    "zoneId": "Australia/Melbourne"
+  },
+  {
+    "name": "Australian Eastern Standard Time",
+    "abbr": "AEST",
+    "gmt": "GMT +10",
+    "zoneId": "Australia/NSW"
+  },
+  {
+    "name": "Australian Central Standard Time",
+    "abbr": "ACST",
+    "gmt": "GMT +09",
+    "zoneId": "Australia/North"
+  },
+  {
+    "name": "Australian Western Standard Time",
+    "abbr": "AWST",
+    "gmt": "GMT +08",
+    "zoneId": "Australia/Perth"
+  },
+  {
+    "name": "Australian Eastern Standard Time",
+    "abbr": "AEST",
+    "gmt": "GMT +10",
+    "zoneId": "Australia/Queensland"
+  },
+  {
+    "name": "Australian Central Standard Time",
+    "abbr": "ACST",
+    "gmt": "GMT +09",
+    "zoneId": "Australia/South"
+  },
+  {
+    "name": "Australian Eastern Standard Time",
+    "abbr": "AEST",
+    "gmt": "GMT +10",
+    "zoneId": "Australia/Sydney"
+  },
+  {
+    "name": "Australian Eastern Standard Time",
+    "abbr": "AEST",
+    "gmt": "GMT +10",
+    "zoneId": "Australia/Tasmania"
+  },
+  {
+    "name": "Australian Eastern Standard Time",
+    "abbr": "AEST",
+    "gmt": "GMT +10",
+    "zoneId": "Australia/Victoria"
+  },
+  {
+    "name": "Australian Western Standard Time",
+    "abbr": "AWST",
+    "gmt": "GMT +08",
+    "zoneId": "Australia/West"
+  },
+  {
+    "name": "Australian Central Standard Time",
+    "abbr": "ACST",
+    "gmt": "GMT +09",
+    "zoneId": "Australia/Yancowinna"
+  },
+  {
+    "name": "Acre Standard Time",
+    "abbr": "ACT",
+    "gmt": "GMT -05",
+    "zoneId": "Brazil/Acre"
+  },
+  {
+    "name": "Fernando de Noronha Standard Time",
+    "abbr": "FNT",
+    "gmt": "GMT -02",
+    "zoneId": "Brazil/DeNoronha"
+  },
+  {
+    "name": "Brasilia Standard Time",
+    "abbr": "BRT",
+    "gmt": "GMT -03",
+    "zoneId": "Brazil/East"
+  },
+  {
+    "name": "Amazon Standard Time",
+    "abbr": "AMT",
+    "gmt": "GMT -04",
+    "zoneId": "Brazil/West"
+  },
+  {
+    "name": "Central European Time",
+    "abbr": "CET",
+    "gmt": "GMT +01",
+    "zoneId": "CET"
+  },
+  {
+    "name": "Central Standard Time",
+    "abbr": "CST",
+    "gmt": "GMT -06",
+    "zoneId": "CST6CDT"
+  },
+  {
+    "name": "Atlantic Standard Time",
+    "abbr": "AST",
+    "gmt": "GMT -04",
+    "zoneId": "Canada/Atlantic"
+  },
+  {
+    "name": "Central Standard Time",
+    "abbr": "CST",
+    "gmt": "GMT -06",
+    "zoneId": "Canada/Central"
+  },
+  {
+    "name": "Eastern Standard Time",
+    "abbr": "EST",
+    "gmt": "GMT -05",
+    "zoneId": "Canada/Eastern"
+  },
+  {
+    "name": "Mountain Standard Time",
+    "abbr": "MST",
+    "gmt": "GMT -07",
+    "zoneId": "Canada/Mountain"
+  },
+  {
+    "name": "Newfoundland Standard Time",
+    "abbr": "NST",
+    "gmt": "GMT -03",
+    "zoneId": "Canada/Newfoundland"
+  },
+  {
+    "name": "Pacific Standard Time",
+    "abbr": "PST",
+    "gmt": "GMT -08",
+    "zoneId": "Canada/Pacific"
+  },
+  {
+    "name": "Central Standard Time",
+    "abbr": "CST",
+    "gmt": "GMT -06",
+    "zoneId": "Canada/Saskatchewan"
+  },
+  {
+    "name": "Pacific Standard Time",
+    "abbr": "MST",
+    "gmt": "GMT -07",
+    "zoneId": "Canada/Yukon"
+  },
+  {
+    "name": "Chile Standard Time",
+    "abbr": "CLT",
+    "gmt": "GMT -04",
+    "zoneId": "Chile/Continental"
+  },
+  {
+    "name": "Easter Island Standard Time",
+    "abbr": "EAST",
+    "gmt": "GMT -06",
+    "zoneId": "Chile/EasterIsland"
+  },
+  {
+    "name": "Cuba Standard Time",
+    "abbr": "CST",
+    "gmt": "GMT -05",
+    "zoneId": "Cuba"
+  },
+  {
+    "name": "Eastern European Time",
+    "abbr": "EET",
+    "gmt": "GMT +02",
+    "zoneId": "EET"
+  },
+  {
+    "name": "Eastern Standard Time",
+    "abbr": "EST",
+    "gmt": "GMT -05",
+    "zoneId": "EST5EDT"
+  },
+  {
+    "name": "Eastern European Standard Time",
+    "abbr": "EET",
+    "gmt": "GMT +02",
+    "zoneId": "Egypt"
+  },
+  {
+    "name": "Greenwich Mean Time",
+    "abbr": "GMT",
+    "gmt": "GMT -00",
+    "zoneId": "Eire"
+  },
+  {
+    "name": "Greenwich Mean Time",
+    "abbr": "GMT",
+    "gmt": "GMT -00",
+    "zoneId": "Etc/GMT"
+  },
+  {
+    "name": "Greenwich Mean Time",
+    "abbr": "GMT",
+    "gmt": "GMT -00",
+    "zoneId": "Etc/GMT+0"
+  },
+  {
+    "name": "GMT-01:00",
+    "abbr": "GMT-01:00",
+    "gmt": "GMT -01",
+    "zoneId": "Etc/GMT+1"
+  },
+  {
+    "name": "GMT-10:00",
+    "abbr": "GMT-10:00",
+    "gmt": "GMT -10",
+    "zoneId": "Etc/GMT+10"
+  },
+  {
+    "name": "GMT-11:00",
+    "abbr": "GMT-11:00",
+    "gmt": "GMT -11",
+    "zoneId": "Etc/GMT+11"
+  },
+  {
+    "name": "GMT-12:00",
+    "abbr": "GMT-12:00",
+    "gmt": "GMT -12",
+    "zoneId": "Etc/GMT+12"
+  },
+  {
+    "name": "GMT-02:00",
+    "abbr": "GMT-02:00",
+    "gmt": "GMT -02",
+    "zoneId": "Etc/GMT+2"
+  },
+  {
+    "name": "GMT-03:00",
+    "abbr": "GMT-03:00",
+    "gmt": "GMT -03",
+    "zoneId": "Etc/GMT+3"
+  },
+  {
+    "name": "GMT-04:00",
+    "abbr": "GMT-04:00",
+    "gmt": "GMT -04",
+    "zoneId": "Etc/GMT+4"
+  },
+  {
+    "name": "GMT-05:00",
+    "abbr": "GMT-05:00",
+    "gmt": "GMT -05",
+    "zoneId": "Etc/GMT+5"
+  },
+  {
+    "name": "GMT-06:00",
+    "abbr": "GMT-06:00",
+    "gmt": "GMT -06",
+    "zoneId": "Etc/GMT+6"
+  },
+  {
+    "name": "GMT-07:00",
+    "abbr": "GMT-07:00",
+    "gmt": "GMT -07",
+    "zoneId": "Etc/GMT+7"
+  },
+  {
+    "name": "GMT-08:00",
+    "abbr": "GMT-08:00",
+    "gmt": "GMT -08",
+    "zoneId": "Etc/GMT+8"
+  },
+  {
+    "name": "GMT-09:00",
+    "abbr": "GMT-09:00",
+    "gmt": "GMT -09",
+    "zoneId": "Etc/GMT+9"
+  },
+  {
+    "name": "Greenwich Mean Time",
+    "abbr": "GMT",
+    "gmt": "GMT -00",
+    "zoneId": "Etc/GMT-0"
+  },
+  {
+    "name": "GMT+01:00",
+    "abbr": "GMT+01:00",
+    "gmt": "GMT +01",
+    "zoneId": "Etc/GMT-1"
+  },
+  {
+    "name": "GMT+10:00",
+    "abbr": "GMT+10:00",
+    "gmt": "GMT +10",
+    "zoneId": "Etc/GMT-10"
+  },
+  {
+    "name": "GMT+11:00",
+    "abbr": "GMT+11:00",
+    "gmt": "GMT +11",
+    "zoneId": "Etc/GMT-11"
+  },
+  {
+    "name": "GMT+12:00",
+    "abbr": "GMT+12:00",
+    "gmt": "GMT +12",
+    "zoneId": "Etc/GMT-12"
+  },
+  {
+    "name": "GMT+13:00",
+    "abbr": "GMT+13:00",
+    "gmt": "GMT +13",
+    "zoneId": "Etc/GMT-13"
+  },
+  {
+    "name": "GMT+14:00",
+    "abbr": "GMT+14:00",
+    "gmt": "GMT +14",
+    "zoneId": "Etc/GMT-14"
+  },
+  {
+    "name": "GMT+02:00",
+    "abbr": "GMT+02:00",
+    "gmt": "GMT +02",
+    "zoneId": "Etc/GMT-2"
+  },
+  {
+    "name": "GMT+03:00",
+    "abbr": "GMT+03:00",
+    "gmt": "GMT +03",
+    "zoneId": "Etc/GMT-3"
+  },
+  {
+    "name": "GMT+04:00",
+    "abbr": "GMT+04:00",
+    "gmt": "GMT +04",
+    "zoneId": "Etc/GMT-4"
+  },
+  {
+    "name": "GMT+05:00",
+    "abbr": "GMT+05:00",
+    "gmt": "GMT +05",
+    "zoneId": "Etc/GMT-5"
+  },
+  {
+    "name": "GMT+06:00",
+    "abbr": "GMT+06:00",
+    "gmt": "GMT +06",
+    "zoneId": "Etc/GMT-6"
+  },
+  {
+    "name": "GMT+07:00",
+    "abbr": "GMT+07:00",
+    "gmt": "GMT +07",
+    "zoneId": "Etc/GMT-7"
+  },
+  {
+    "name": "GMT+08:00",
+    "abbr": "GMT+08:00",
+    "gmt": "GMT +08",
+    "zoneId": "Etc/GMT-8"
+  },
+  {
+    "name": "GMT+09:00",
+    "abbr": "GMT+09:00",
+    "gmt": "GMT +09",
+    "zoneId": "Etc/GMT-9"
+  },
+  {
+    "name": "Greenwich Mean Time",
+    "abbr": "GMT",
+    "gmt": "GMT -00",
+    "zoneId": "Etc/GMT0"
+  },
+  {
+    "name": "Greenwich Mean Time",
+    "abbr": "GMT",
+    "gmt": "GMT -00",
+    "zoneId": "Etc/Greenwich"
+  },
+  {
+    "name": "Coordinated Universal Time",
+    "abbr": "UTC",
+    "gmt": "GMT -00",
+    "zoneId": "Etc/UCT"
+  },
+  {
+    "name": "Coordinated Universal Time",
+    "abbr": "UTC",
+    "gmt": "GMT -00",
+    "zoneId": "Etc/UTC"
+  },
+  {
+    "name": "Coordinated Universal Time",
+    "abbr": "UTC",
+    "gmt": "GMT -00",
+    "zoneId": "Etc/Universal"
+  },
+  {
+    "name": "Coordinated Universal Time",
+    "abbr": "UTC",
+    "gmt": "GMT -00",
+    "zoneId": "Etc/Zulu"
+  },
+  {
+    "name": "Central European Standard Time",
+    "abbr": "CET",
+    "gmt": "GMT +01",
+    "zoneId": "Europe/Amsterdam"
+  },
+  {
+    "name": "Central European Standard Time",
+    "abbr": "CET",
+    "gmt": "GMT +01",
+    "zoneId": "Europe/Andorra"
+  },
+  {
+    "name": "Astrakhan Standard Time",
+    "abbr": "GMT+04:00",
+    "gmt": "GMT +04",
+    "zoneId": "Europe/Astrakhan"
+  },
+  {
+    "name": "Eastern European Standard Time",
+    "abbr": "EET",
+    "gmt": "GMT +02",
+    "zoneId": "Europe/Athens"
+  },
+  {
+    "name": "Greenwich Mean Time",
+    "abbr": "GMT",
+    "gmt": "GMT -00",
+    "zoneId": "Europe/Belfast"
+  },
+  {
+    "name": "Central European Standard Time",
+    "abbr": "CET",
+    "gmt": "GMT +01",
+    "zoneId": "Europe/Belgrade"
+  },
+  {
+    "name": "Central European Standard Time",
+    "abbr": "CET",
+    "gmt": "GMT +01",
+    "zoneId": "Europe/Berlin"
+  },
+  {
+    "name": "Central European Standard Time",
+    "abbr": "CET",
+    "gmt": "GMT +01",
+    "zoneId": "Europe/Bratislava"
+  },
+  {
+    "name": "Central European Standard Time",
+    "abbr": "CET",
+    "gmt": "GMT +01",
+    "zoneId": "Europe/Brussels"
+  },
+  {
+    "name": "Eastern European Standard Time",
+    "abbr": "EET",
+    "gmt": "GMT +02",
+    "zoneId": "Europe/Bucharest"
+  },
+  {
+    "name": "Central European Standard Time",
+    "abbr": "CET",
+    "gmt": "GMT +01",
+    "zoneId": "Europe/Budapest"
+  },
+  {
+    "name": "Central European Standard Time",
+    "abbr": "CET",
+    "gmt": "GMT +01",
+    "zoneId": "Europe/Busingen"
+  },
+  {
+    "name": "Eastern European Standard Time",
+    "abbr": "EET",
+    "gmt": "GMT +02",
+    "zoneId": "Europe/Chisinau"
+  },
+  {
+    "name": "Central European Standard Time",
+    "abbr": "CET",
+    "gmt": "GMT +01",
+    "zoneId": "Europe/Copenhagen"
+  },
+  {
+    "name": "Greenwich Mean Time",
+    "abbr": "GMT",
+    "gmt": "GMT -00",
+    "zoneId": "Europe/Dublin"
+  },
+  {
+    "name": "Central European Standard Time",
+    "abbr": "CET",
+    "gmt": "GMT +01",
+    "zoneId": "Europe/Gibraltar"
+  },
+  {
+    "name": "Greenwich Mean Time",
+    "abbr": "GMT",
+    "gmt": "GMT -00",
+    "zoneId": "Europe/Guernsey"
+  },
+  {
+    "name": "Eastern European Standard Time",
+    "abbr": "EET",
+    "gmt": "GMT +02",
+    "zoneId": "Europe/Helsinki"
+  },
+  {
+    "name": "Greenwich Mean Time",
+    "abbr": "GMT",
+    "gmt": "GMT -00",
+    "zoneId": "Europe/Isle_of_Man"
+  },
+  {
+    "name": "Turkey Time",
+    "abbr": "EET",
+    "gmt": "GMT +03",
+    "zoneId": "Europe/Istanbul"
+  },
+  {
+    "name": "Greenwich Mean Time",
+    "abbr": "GMT",
+    "gmt": "GMT -00",
+    "zoneId": "Europe/Jersey"
+  },
+  {
+    "name": "Eastern European Standard Time",
+    "abbr": "EET",
+    "gmt": "GMT +02",
+    "zoneId": "Europe/Kaliningrad"
+  },
+  {
+    "name": "Eastern European Standard Time",
+    "abbr": "EET",
+    "gmt": "GMT +02",
+    "zoneId": "Europe/Kiev"
+  },
+  {
+    "name": "Kirov Standard Time",
+    "abbr": "GMT+03:00",
+    "gmt": "GMT +03",
+    "zoneId": "Europe/Kirov"
+  },
+  {
+    "name": "Western European Standard Time",
+    "abbr": "WET",
+    "gmt": "GMT -00",
+    "zoneId": "Europe/Lisbon"
+  },
+  {
+    "name": "Central European Standard Time",
+    "abbr": "CET",
+    "gmt": "GMT +01",
+    "zoneId": "Europe/Ljubljana"
+  },
+  {
+    "name": "Greenwich Mean Time",
+    "abbr": "GMT",
+    "gmt": "GMT -00",
+    "zoneId": "Europe/London"
+  },
+  {
+    "name": "Central European Standard Time",
+    "abbr": "CET",
+    "gmt": "GMT +01",
+    "zoneId": "Europe/Luxembourg"
+  },
+  {
+    "name": "Central European Standard Time",
+    "abbr": "CET",
+    "gmt": "GMT +01",
+    "zoneId": "Europe/Madrid"
+  },
+  {
+    "name": "Central European Standard Time",
+    "abbr": "CET",
+    "gmt": "GMT +01",
+    "zoneId": "Europe/Malta"
+  },
+  {
+    "name": "Eastern European Standard Time",
+    "abbr": "EET",
+    "gmt": "GMT +02",
+    "zoneId": "Europe/Mariehamn"
+  },
+  {
+    "name": "Moscow Standard Time",
+    "abbr": "MSK",
+    "gmt": "GMT +03",
+    "zoneId": "Europe/Minsk"
+  },
+  {
+    "name": "Central European Standard Time",
+    "abbr": "CET",
+    "gmt": "GMT +01",
+    "zoneId": "Europe/Monaco"
+  },
+  {
+    "name": "Moscow Standard Time",
+    "abbr": "MSK",
+    "gmt": "GMT +03",
+    "zoneId": "Europe/Moscow"
+  },
+  {
+    "name": "Eastern European Standard Time",
+    "abbr": "EET",
+    "gmt": "GMT +02",
+    "zoneId": "Europe/Nicosia"
+  },
+  {
+    "name": "Central European Standard Time",
+    "abbr": "CET",
+    "gmt": "GMT +01",
+    "zoneId": "Europe/Oslo"
+  },
+  {
+    "name": "Central European Standard Time",
+    "abbr": "CET",
+    "gmt": "GMT +01",
+    "zoneId": "Europe/Paris"
+  },
+  {
+    "name": "Central European Standard Time",
+    "abbr": "CET",
+    "gmt": "GMT +01",
+    "zoneId": "Europe/Podgorica"
+  },
+  {
+    "name": "Central European Standard Time",
+    "abbr": "CET",
+    "gmt": "GMT +01",
+    "zoneId": "Europe/Prague"
+  },
+  {
+    "name": "Eastern European Standard Time",
+    "abbr": "EET",
+    "gmt": "GMT +02",
+    "zoneId": "Europe/Riga"
+  },
+  {
+    "name": "Central European Standard Time",
+    "abbr": "CET",
+    "gmt": "GMT +01",
+    "zoneId": "Europe/Rome"
+  },
+  {
+    "name": "Samara Standard Time",
+    "abbr": "SAMT",
+    "gmt": "GMT +04",
+    "zoneId": "Europe/Samara"
+  },
+  {
+    "name": "Central European Standard Time",
+    "abbr": "CET",
+    "gmt": "GMT +01",
+    "zoneId": "Europe/San_Marino"
+  },
+  {
+    "name": "Central European Standard Time",
+    "abbr": "CET",
+    "gmt": "GMT +01",
+    "zoneId": "Europe/Sarajevo"
+  },
+  {
+    "name": "Saratov Standard Time",
+    "abbr": "GMT+04:00",
+    "gmt": "GMT +04",
+    "zoneId": "Europe/Saratov"
+  },
+  {
+    "name": "Moscow Standard Time",
+    "abbr": "MSK",
+    "gmt": "GMT +03",
+    "zoneId": "Europe/Simferopol"
+  },
+  {
+    "name": "Central European Standard Time",
+    "abbr": "CET",
+    "gmt": "GMT +01",
+    "zoneId": "Europe/Skopje"
+  },
+  {
+    "name": "Eastern European Standard Time",
+    "abbr": "EET",
+    "gmt": "GMT +02",
+    "zoneId": "Europe/Sofia"
+  },
+  {
+    "name": "Central European Standard Time",
+    "abbr": "CET",
+    "gmt": "GMT +01",
+    "zoneId": "Europe/Stockholm"
+  },
+  {
+    "name": "Eastern European Standard Time",
+    "abbr": "EET",
+    "gmt": "GMT +02",
+    "zoneId": "Europe/Tallinn"
+  },
+  {
+    "name": "Central European Standard Time",
+    "abbr": "CET",
+    "gmt": "GMT +01",
+    "zoneId": "Europe/Tirane"
+  },
+  {
+    "name": "Eastern European Standard Time",
+    "abbr": "EET",
+    "gmt": "GMT +02",
+    "zoneId": "Europe/Tiraspol"
+  },
+  {
+    "name": "Ulyanovsk Standard Time",
+    "abbr": "GMT+04:00",
+    "gmt": "GMT +04",
+    "zoneId": "Europe/Ulyanovsk"
+  },
+  {
+    "name": "Eastern European Standard Time",
+    "abbr": "EET",
+    "gmt": "GMT +02",
+    "zoneId": "Europe/Uzhgorod"
+  },
+  {
+    "name": "Central European Standard Time",
+    "abbr": "CET",
+    "gmt": "GMT +01",
+    "zoneId": "Europe/Vaduz"
+  },
+  {
+    "name": "Central European Standard Time",
+    "abbr": "CET",
+    "gmt": "GMT +01",
+    "zoneId": "Europe/Vatican"
+  },
+  {
+    "name": "Central European Standard Time",
+    "abbr": "CET",
+    "gmt": "GMT +01",
+    "zoneId": "Europe/Vienna"
+  },
+  {
+    "name": "Eastern European Standard Time",
+    "abbr": "EET",
+    "gmt": "GMT +02",
+    "zoneId": "Europe/Vilnius"
+  },
+  {
+    "name": "Volgograd Standard Time",
+    "abbr": "MSK",
+    "gmt": "GMT +04",
+    "zoneId": "Europe/Volgograd"
+  },
+  {
+    "name": "Central European Standard Time",
+    "abbr": "CET",
+    "gmt": "GMT +01",
+    "zoneId": "Europe/Warsaw"
+  },
+  {
+    "name": "Central European Standard Time",
+    "abbr": "CET",
+    "gmt": "GMT +01",
+    "zoneId": "Europe/Zagreb"
+  },
+  {
+    "name": "Eastern European Standard Time",
+    "abbr": "EET",
+    "gmt": "GMT +02",
+    "zoneId": "Europe/Zaporozhye"
+  },
+  {
+    "name": "Central European Standard Time",
+    "abbr": "CET",
+    "gmt": "GMT +01",
+    "zoneId": "Europe/Zurich"
+  },
+  {
+    "name": "Greenwich Mean Time",
+    "abbr": "GMT",
+    "gmt": "GMT -00",
+    "zoneId": "GB"
+  },
+  {
+    "name": "Greenwich Mean Time",
+    "abbr": "GMT",
+    "gmt": "GMT -00",
+    "zoneId": "GB-Eire"
+  },
+  {
+    "name": "Greenwich Mean Time",
+    "abbr": "GMT",
+    "gmt": "GMT -00",
+    "zoneId": "GMT"
+  },
+  {
+    "name": "Greenwich Mean Time",
+    "abbr": "GMT",
+    "gmt": "GMT -00",
+    "zoneId": "GMT0"
+  },
+  {
+    "name": "Greenwich Mean Time",
+    "abbr": "GMT",
+    "gmt": "GMT -00",
+    "zoneId": "Greenwich"
+  },
+  {
+    "name": "Hong Kong Standard Time",
+    "abbr": "HKT",
+    "gmt": "GMT +08",
+    "zoneId": "Hongkong"
+  },
+  {
+    "name": "Greenwich Mean Time",
+    "abbr": "GMT",
+    "gmt": "GMT -00",
+    "zoneId": "Iceland"
+  },
+  {
+    "name": "East Africa Time",
+    "abbr": "EAT",
+    "gmt": "GMT +03",
+    "zoneId": "Indian/Antananarivo"
+  },
+  {
+    "name": "Indian Ocean Time",
+    "abbr": "IOT",
+    "gmt": "GMT +06",
+    "zoneId": "Indian/Chagos"
+  },
+  {
+    "name": "Christmas Island Time",
+    "abbr": "CXT",
+    "gmt": "GMT +07",
+    "zoneId": "Indian/Christmas"
+  },
+  {
+    "name": "Cocos Islands Time",
+    "abbr": "CCT",
+    "gmt": "GMT +06",
+    "zoneId": "Indian/Cocos"
+  },
+  {
+    "name": "East Africa Time",
+    "abbr": "EAT",
+    "gmt": "GMT +03",
+    "zoneId": "Indian/Comoro"
+  },
+  {
+    "name": "French Southern \u0026 Antarctic Time",
+    "abbr": "TFT",
+    "gmt": "GMT +05",
+    "zoneId": "Indian/Kerguelen"
+  },
+  {
+    "name": "Seychelles Time",
+    "abbr": "SCT",
+    "gmt": "GMT +04",
+    "zoneId": "Indian/Mahe"
+  },
+  {
+    "name": "Maldives Time",
+    "abbr": "MVT",
+    "gmt": "GMT +05",
+    "zoneId": "Indian/Maldives"
+  },
+  {
+    "name": "Mauritius Standard Time",
+    "abbr": "MUT",
+    "gmt": "GMT +04",
+    "zoneId": "Indian/Mauritius"
+  },
+  {
+    "name": "East Africa Time",
+    "abbr": "EAT",
+    "gmt": "GMT +03",
+    "zoneId": "Indian/Mayotte"
+  },
+  {
+    "name": "Réunion Time",
+    "abbr": "RET",
+    "gmt": "GMT +04",
+    "zoneId": "Indian/Reunion"
+  },
+  {
+    "name": "Iran Standard Time",
+    "abbr": "IRST",
+    "gmt": "GMT +03",
+    "zoneId": "Iran"
+  },
+  {
+    "name": "Israel Standard Time",
+    "abbr": "IST",
+    "gmt": "GMT +02",
+    "zoneId": "Israel"
+  },
+  {
+    "name": "Eastern Standard Time",
+    "abbr": "EST",
+    "gmt": "GMT -05",
+    "zoneId": "Jamaica"
+  },
+  {
+    "name": "Japan Standard Time",
+    "abbr": "JST",
+    "gmt": "GMT +09",
+    "zoneId": "Japan"
+  },
+  {
+    "name": "Marshall Islands Time",
+    "abbr": "MHT",
+    "gmt": "GMT +12",
+    "zoneId": "Kwajalein"
+  },
+  {
+    "name": "Eastern European Standard Time",
+    "abbr": "EET",
+    "gmt": "GMT +02",
+    "zoneId": "Libya"
+  },
+  {
+    "name": "Middle Europe Time",
+    "abbr": "MET",
+    "gmt": "GMT +01",
+    "zoneId": "MET"
+  },
+  {
+    "name": "Mountain Standard Time",
+    "abbr": "MST",
+    "gmt": "GMT -07",
+    "zoneId": "MST7MDT"
+  },
+  {
+    "name": "Pacific Standard Time",
+    "abbr": "PST",
+    "gmt": "GMT -08",
+    "zoneId": "Mexico/BajaNorte"
+  },
+  {
+    "name": "Mexican Pacific Standard Time",
+    "abbr": "MST",
+    "gmt": "GMT -07",
+    "zoneId": "Mexico/BajaSur"
+  },
+  {
+    "name": "Central Standard Time",
+    "abbr": "CST",
+    "gmt": "GMT -06",
+    "zoneId": "Mexico/General"
+  },
+  {
+    "name": "New Zealand Standard Time",
+    "abbr": "NZST",
+    "gmt": "GMT +12",
+    "zoneId": "NZ"
+  },
+  {
+    "name": "Chatham Standard Time",
+    "abbr": "CHAST",
+    "gmt": "GMT +12",
+    "zoneId": "NZ-CHAT"
+  },
+  {
+    "name": "Mountain Standard Time",
+    "abbr": "MST",
+    "gmt": "GMT -07",
+    "zoneId": "Navajo"
+  },
+  {
+    "name": "China Standard Time",
+    "abbr": "CST",
+    "gmt": "GMT +08",
+    "zoneId": "PRC"
+  },
+  {
+    "name": "Pacific Standard Time",
+    "abbr": "PST",
+    "gmt": "GMT -08",
+    "zoneId": "PST8PDT"
+  },
+  {
+    "name": "Apia Standard Time",
+    "abbr": "WSST",
+    "gmt": "GMT +13",
+    "zoneId": "Pacific/Apia"
+  },
+  {
+    "name": "New Zealand Standard Time",
+    "abbr": "NZST",
+    "gmt": "GMT +12",
+    "zoneId": "Pacific/Auckland"
+  },
+  {
+    "name": "Bougainville Standard Time",
+    "abbr": "BST",
+    "gmt": "GMT +11",
+    "zoneId": "Pacific/Bougainville"
+  },
+  {
+    "name": "Chatham Standard Time",
+    "abbr": "CHAST",
+    "gmt": "GMT +12",
+    "zoneId": "Pacific/Chatham"
+  },
+  {
+    "name": "Chuuk Time",
+    "abbr": "CHUT",
+    "gmt": "GMT +10",
+    "zoneId": "Pacific/Chuuk"
+  },
+  {
+    "name": "Easter Island Standard Time",
+    "abbr": "EAST",
+    "gmt": "GMT -06",
+    "zoneId": "Pacific/Easter"
+  },
+  {
+    "name": "Vanuatu Standard Time",
+    "abbr": "VUT",
+    "gmt": "GMT +11",
+    "zoneId": "Pacific/Efate"
+  },
+  {
+    "name": "Phoenix Islands Time",
+    "abbr": "PHOT",
+    "gmt": "GMT +13",
+    "zoneId": "Pacific/Enderbury"
+  },
+  {
+    "name": "Tokelau Time",
+    "abbr": "TKT",
+    "gmt": "GMT +13",
+    "zoneId": "Pacific/Fakaofo"
+  },
+  {
+    "name": "Fiji Standard Time",
+    "abbr": "FJT",
+    "gmt": "GMT +12",
+    "zoneId": "Pacific/Fiji"
+  },
+  {
+    "name": "Tuvalu Time",
+    "abbr": "TVT",
+    "gmt": "GMT +12",
+    "zoneId": "Pacific/Funafuti"
+  },
+  {
+    "name": "Galapagos Time",
+    "abbr": "GALT",
+    "gmt": "GMT -06",
+    "zoneId": "Pacific/Galapagos"
+  },
+  {
+    "name": "Gambier Time",
+    "abbr": "GAMT",
+    "gmt": "GMT -09",
+    "zoneId": "Pacific/Gambier"
+  },
+  {
+    "name": "Solomon Islands Time",
+    "abbr": "SBT",
+    "gmt": "GMT +11",
+    "zoneId": "Pacific/Guadalcanal"
+  },
+  {
+    "name": "Chamorro Standard Time",
+    "abbr": "ChST",
+    "gmt": "GMT +10",
+    "zoneId": "Pacific/Guam"
+  },
+  {
+    "name": "Hawaii-Aleutian Standard Time",
+    "abbr": "HST",
+    "gmt": "GMT -10",
+    "zoneId": "Pacific/Honolulu"
+  },
+  {
+    "name": "Hawaii-Aleutian Standard Time",
+    "abbr": "HST",
+    "gmt": "GMT -10",
+    "zoneId": "Pacific/Johnston"
+  },
+  {
+    "name": "Line Islands Time",
+    "abbr": "LINT",
+    "gmt": "GMT +14",
+    "zoneId": "Pacific/Kiritimati"
+  },
+  {
+    "name": "Kosrae Time",
+    "abbr": "KOST",
+    "gmt": "GMT +11",
+    "zoneId": "Pacific/Kosrae"
+  },
+  {
+    "name": "Marshall Islands Time",
+    "abbr": "MHT",
+    "gmt": "GMT +12",
+    "zoneId": "Pacific/Kwajalein"
+  },
+  {
+    "name": "Marshall Islands Time",
+    "abbr": "MHT",
+    "gmt": "GMT +12",
+    "zoneId": "Pacific/Majuro"
+  },
+  {
+    "name": "Marquesas Time",
+    "abbr": "MART",
+    "gmt": "GMT -09",
+    "zoneId": "Pacific/Marquesas"
+  },
+  {
+    "name": "Samoa Standard Time",
+    "abbr": "SST",
+    "gmt": "GMT -11",
+    "zoneId": "Pacific/Midway"
+  },
+  {
+    "name": "Nauru Time",
+    "abbr": "NRT",
+    "gmt": "GMT +12",
+    "zoneId": "Pacific/Nauru"
+  },
+  {
+    "name": "Niue Time",
+    "abbr": "NUT",
+    "gmt": "GMT -11",
+    "zoneId": "Pacific/Niue"
+  },
+  {
+    "name": "Norfolk Island Standard Time",
+    "abbr": "NFT",
+    "gmt": "GMT +11",
+    "zoneId": "Pacific/Norfolk"
+  },
+  {
+    "name": "New Caledonia Standard Time",
+    "abbr": "NCT",
+    "offset": 11,
+    "gmt": "GMT +11",
+    "zoneId": "Pacific/Noumea"
+  },
+  {
+    "name": "Samoa Standard Time",
+    "abbr": "SST",
+    "offset": -11,
+    "gmt": "GMT -11",
+    "zoneId": "Pacific/Pago_Pago"
+  },
+  {
+    "name": "Palau Time",
+    "abbr": "PWT",
+    "offset": 9,
+    "gmt": "GMT +09",
+    "zoneId": "Pacific/Palau"
+  },
+  {
+    "name": "Pitcairn Time",
+    "abbr": "PST",
+    "offset": -8,
+    "gmt": "GMT -08",
+    "zoneId": "Pacific/Pitcairn"
+  },
+  {
+    "name": "Ponape Time",
+    "abbr": "PONT",
+    "offset": 11,
+    "gmt": "GMT +11",
+    "zoneId": "Pacific/Pohnpei"
+  },
+  {
+    "name": "Ponape Time",
+    "abbr": "PONT",
+    "offset": 11,
+    "gmt": "GMT +11",
+    "zoneId": "Pacific/Ponape"
+  },
+  {
+    "name": "Papua New Guinea Time",
+    "abbr": "PGT",
+    "offset": 10,
+    "gmt": "GMT +10",
+    "zoneId": "Pacific/Port_Moresby"
+  },
+  {
+    "name": "Cook Islands Standard Time",
+    "abbr": "CKT",
+    "offset": -10,
+    "gmt": "GMT -10",
+    "zoneId": "Pacific/Rarotonga"
+  },
+  {
+    "name": "Chamorro Standard Time",
+    "abbr": "ChST",
+    "offset": 10,
+    "gmt": "GMT +10",
+    "zoneId": "Pacific/Saipan"
+  },
+  {
+    "name": "Samoa Standard Time",
+    "abbr": "SST",
+    "offset": -11,
+    "gmt": "GMT -11",
+    "zoneId": "Pacific/Samoa"
+  },
+  {
+    "name": "Tahiti Time",
+    "abbr": "TAHT",
+    "offset": -10,
+    "gmt": "GMT -10",
+    "zoneId": "Pacific/Tahiti"
+  },
+  {
+    "name": "Gilbert Islands Time",
+    "abbr": "GILT",
+    "offset": 12,
+    "gmt": "GMT +12",
+    "zoneId": "Pacific/Tarawa"
+  },
+  {
+    "name": "Tonga Standard Time",
+    "abbr": "TOT",
+    "offset": 13,
+    "gmt": "GMT +13",
+    "zoneId": "Pacific/Tongatapu"
+  },
+  {
+    "name": "Chuuk Time",
+    "abbr": "CHUT",
+    "offset": 10,
+    "gmt": "GMT +10",
+    "zoneId": "Pacific/Truk"
+  },
+  {
+    "name": "Wake Island Time",
+    "abbr": "WAKT",
+    "offset": 12,
+    "gmt": "GMT +12",
+    "zoneId": "Pacific/Wake"
+  },
+  {
+    "name": "Wallis \u0026 Futuna Time",
+    "abbr": "WFT",
+    "offset": 12,
+    "gmt": "GMT +12",
+    "zoneId": "Pacific/Wallis"
+  },
+  {
+    "name": "Chuuk Time",
+    "abbr": "CHUT",
+    "offset": 10,
+    "gmt": "GMT +10",
+    "zoneId": "Pacific/Yap"
+  },
+  {
+    "name": "Central European Standard Time",
+    "abbr": "CET",
+    "offset": 1,
+    "gmt": "GMT +01",
+    "zoneId": "Poland"
+  },
+  {
+    "name": "Western European Standard Time",
+    "abbr": "WET",
+    "offset": 0,
+    "gmt": "GMT -00",
+    "zoneId": "Portugal"
+  },
+  {
+    "name": "Korean Standard Time",
+    "abbr": "KST",
+    "offset": 9,
+    "gmt": "GMT +09",
+    "zoneId": "ROK"
+  },
+  {
+    "name": "Singapore Standard Time",
+    "abbr": "SGT",
+    "offset": 8,
+    "gmt": "GMT +08",
+    "zoneId": "Singapore"
+  },
+  {
+    "name": "Atlantic Standard Time",
+    "abbr": "AST",
+    "offset": -4,
+    "gmt": "GMT -04",
+    "zoneId": "SystemV/AST4"
+  },
+  {
+    "name": "Atlantic Standard Time",
+    "abbr": "AST",
+    "offset": -4,
+    "gmt": "GMT -04",
+    "zoneId": "SystemV/AST4ADT"
+  },
+  {
+    "name": "Central Standard Time",
+    "abbr": "CST",
+    "offset": -6,
+    "gmt": "GMT -06",
+    "zoneId": "SystemV/CST6"
+  },
+  {
+    "name": "Central Standard Time",
+    "abbr": "CST",
+    "offset": -6,
+    "gmt": "GMT -06",
+    "zoneId": "SystemV/CST6CDT"
+  },
+  {
+    "name": "Eastern Standard Time",
+    "abbr": "EST",
+    "offset": -5,
+    "gmt": "GMT -05",
+    "zoneId": "SystemV/EST5"
+  },
+  {
+    "name": "Eastern Standard Time",
+    "abbr": "EST",
+    "offset": -5,
+    "gmt": "GMT -05",
+    "zoneId": "SystemV/EST5EDT"
+  },
+  {
+    "name": "Hawaii-Aleutian Standard Time",
+    "abbr": "HST",
+    "offset": -10,
+    "gmt": "GMT -10",
+    "zoneId": "SystemV/HST10"
+  },
+  {
+    "name": "Mountain Standard Time",
+    "abbr": "MST",
+    "offset": -7,
+    "gmt": "GMT -07",
+    "zoneId": "SystemV/MST7"
+  },
+  {
+    "name": "Mountain Standard Time",
+    "abbr": "MST",
+    "offset": -7,
+    "gmt": "GMT -07",
+    "zoneId": "SystemV/MST7MDT"
+  },
+  {
+    "name": "Pitcairn Time",
+    "abbr": "PST",
+    "offset": -8,
+    "gmt": "GMT -08",
+    "zoneId": "SystemV/PST8"
+  },
+  {
+    "name": "Pacific Standard Time",
+    "abbr": "PST",
+    "offset": -8,
+    "gmt": "GMT -08",
+    "zoneId": "SystemV/PST8PDT"
+  },
+  {
+    "name": "Gambier Time",
+    "abbr": "AKST",
+    "offset": -9,
+    "gmt": "GMT -09",
+    "zoneId": "SystemV/YST9"
+  },
+  {
+    "name": "Alaska Standard Time",
+    "abbr": "AKST",
+    "offset": -9,
+    "gmt": "GMT -09",
+    "zoneId": "SystemV/YST9YDT"
+  },
+  {
+    "name": "Turkey Time",
+    "abbr": "EET",
+    "offset": 3,
+    "gmt": "GMT +03",
+    "zoneId": "Turkey"
+  },
+  {
+    "name": "Coordinated Universal Time",
+    "abbr": "UTC",
+    "offset": 0,
+    "gmt": "GMT -00",
+    "zoneId": "UCT"
+  },
+  {
+    "name": "Alaska Standard Time",
+    "abbr": "AKST",
+    "offset": -9,
+    "gmt": "GMT -09",
+    "zoneId": "US/Alaska"
+  },
+  {
+    "name": "Hawaii-Aleutian Standard Time",
+    "abbr": "HST",
+    "offset": -10,
+    "gmt": "GMT -10",
+    "zoneId": "US/Aleutian"
+  },
+  {
+    "name": "Mountain Standard Time",
+    "abbr": "MST",
+    "offset": -7,
+    "gmt": "GMT -07",
+    "zoneId": "US/Arizona"
+  },
+  {
+    "name": "Central Standard Time",
+    "abbr": "CST",
+    "offset": -6,
+    "gmt": "GMT -06",
+    "zoneId": "US/Central"
+  },
+  {
+    "name": "Eastern Standard Time",
+    "abbr": "EST",
+    "offset": -5,
+    "gmt": "GMT -05",
+    "zoneId": "US/East-Indiana"
+  },
+  {
+    "name": "Eastern Standard Time",
+    "abbr": "EST",
+    "offset": -5,
+    "gmt": "GMT -05",
+    "zoneId": "US/Eastern"
+  },
+  {
+    "name": "Hawaii-Aleutian Standard Time",
+    "abbr": "HST",
+    "offset": -10,
+    "gmt": "GMT -10",
+    "zoneId": "US/Hawaii"
+  },
+  {
+    "name": "Central Standard Time",
+    "abbr": "CST",
+    "offset": -6,
+    "gmt": "GMT -06",
+    "zoneId": "US/Indiana-Starke"
+  },
+  {
+    "name": "Eastern Standard Time",
+    "abbr": "EST",
+    "offset": -5,
+    "gmt": "GMT -05",
+    "zoneId": "US/Michigan"
+  },
+  {
+    "name": "Mountain Standard Time",
+    "abbr": "MST",
+    "offset": -7,
+    "gmt": "GMT -07",
+    "zoneId": "US/Mountain"
+  },
+  {
+    "name": "Pacific Standard Time",
+    "abbr": "PST",
+    "offset": -8,
+    "gmt": "GMT -08",
+    "zoneId": "US/Pacific"
+  },
+  {
+    "name": "Pacific Standard Time",
+    "abbr": "PST",
+    "offset": -8,
+    "gmt": "GMT -08",
+    "zoneId": "US/Pacific-New"
+  },
+  {
+    "name": "Samoa Standard Time",
+    "abbr": "SST",
+    "offset": -11,
+    "gmt": "GMT -11",
+    "zoneId": "US/Samoa"
+  },
+  {
+    "name": "Coordinated Universal Time",
+    "abbr": "UTC",
+    "offset": 0,
+    "gmt": "GMT -00",
+    "zoneId": "UTC"
+  },
+  {
+    "name": "Coordinated Universal Time",
+    "abbr": "UTC",
+    "offset": 0,
+    "gmt": "GMT -00",
+    "zoneId": "Universal"
+  },
+  {
+    "name": "Moscow Standard Time",
+    "abbr": "MSK",
+    "offset": 3,
+    "gmt": "GMT +03",
+    "zoneId": "W-SU"
+  },
+  {
+    "name": "Western European Time",
+    "abbr": "WET",
+    "offset": 0,
+    "gmt": "GMT -00",
+    "zoneId": "WET"
+  },
+  {
+    "name": "Coordinated Universal Time",
+    "abbr": "UTC",
+    "offset": 0,
+    "gmt": "GMT -00",
+    "zoneId": "Zulu"
+  },
+  {
+    "name": "Eastern Standard Time",
+    "abbr": "EST",
+    "offset": -5,
+    "gmt": "GMT -05",
+    "zoneId": "-05:00"
+  },
+  {
+    "name": "Hawaii Standard Time",
+    "abbr": "HST",
+    "offset": -10,
+    "gmt": "GMT -10",
+    "zoneId": "-10:00"
+  },
+  {
+    "name": "Mountain Standard Time",
+    "abbr": "MST",
+    "offset": -7,
+    "gmt": "GMT -07",
+    "zoneId": "-07:00"
+  },
+  {
+    "name": "Australian Central Standard Time",
+    "abbr": "ACST",
+    "offset": 9,
+    "gmt": "GMT +09",
+    "zoneId": "Australia/Darwin"
+  },
+  {
+    "name": "Australian Eastern Standard Time",
+    "abbr": "AEST",
+    "offset": 10,
+    "gmt": "GMT +10",
+    "zoneId": "Australia/Sydney"
+  },
+  {
+    "name": "Argentine Time",
+    "abbr": "ART",
+    "offset": -3,
+    "gmt": "GMT -03",
+    "zoneId": "America/Argentina/Buenos_Aires"
+  },
+  {
+    "name": "Eastern European Standard Time",
+    "abbr": "EET",
+    "offset": 2,
+    "gmt": "GMT +02",
+    "zoneId": "Africa/Cairo"
+  },
+  {
+    "name": "Alaska Standard Time",
+    "abbr": "AKST",
+    "offset": -9,
+    "gmt": "GMT -09",
+    "zoneId": "America/Anchorage"
+  },
+  {
+    "name": "Brasilia Standard Time",
+    "abbr": "BRT",
+    "offset": -3,
+    "gmt": "GMT -03",
+    "zoneId": "America/Sao_Paulo"
+  },
+  {
+    "name": "Bangladesh Standard Time",
+    "abbr": "BDT",
+    "offset": 6,
+    "gmt": "GMT +06",
+    "zoneId": "Asia/Dhaka"
+  },
+  {
+    "name": "Central Africa Time",
+    "abbr": "CAT",
+    "offset": 2,
+    "gmt": "GMT +02",
+    "zoneId": "Africa/Harare"
+  },
+  {
+    "name": "Newfoundland Standard Time",
+    "abbr": "NST",
+    "offset": -3,
+    "gmt": "GMT -03",
+    "zoneId": "America/St_Johns"
+  },
+  {
+    "name": "Central Standard Time",
+    "abbr": "CST",
+    "offset": -6,
+    "gmt": "GMT -06",
+    "zoneId": "America/Chicago"
+  },
+  {
+    "name": "China Standard Time",
+    "abbr": "CST",
+    "offset": 8,
+    "gmt": "GMT +08",
+    "zoneId": "Asia/Shanghai"
+  },
+  {
+    "name": "East Africa Time",
+    "abbr": "EAT",
+    "offset": 3,
+    "gmt": "GMT +03",
+    "zoneId": "Africa/Addis_Ababa"
+  },
+  {
+    "name": "Central European Standard Time",
+    "abbr": "CET",
+    "offset": 1,
+    "gmt": "GMT +01",
+    "zoneId": "Europe/Paris"
+  },
+  {
+    "name": "Eastern Standard Time",
+    "abbr": "EST",
+    "offset": -5,
+    "gmt": "GMT -05",
+    "zoneId": "America/Indiana/Indianapolis"
+  },
+  {
+    "name": "India Standard Time",
+    "abbr": "IST",
+    "offset": 5,
+    "gmt": "GMT +05",
+    "zoneId": "Asia/Kolkata"
+  },
+  {
+    "name": "Japan Standard Time",
+    "abbr": "JST",
+    "offset": 9,
+    "gmt": "GMT +09",
+    "zoneId": "Asia/Tokyo"
+  },
+  {
+    "name": "Apia Standard Time",
+    "abbr": "WSST",
+    "offset": 13,
+    "gmt": "GMT +13",
+    "zoneId": "Pacific/Apia"
+  },
+  {
+    "name": "Armenia Standard Time",
+    "abbr": "AMT",
+    "offset": 4,
+    "gmt": "GMT +04",
+    "zoneId": "Asia/Yerevan"
+  },
+  {
+    "name": "New Zealand Standard Time",
+    "abbr": "NZST",
+    "offset": 12,
+    "gmt": "GMT +12",
+    "zoneId": "Pacific/Auckland"
+  },
+  {
+    "name": "Pakistan Standard Time",
+    "abbr": "PKT",
+    "offset": 5,
+    "gmt": "GMT +05",
+    "zoneId": "Asia/Karachi"
+  },
+  {
+    "name": "Mountain Standard Time",
+    "abbr": "MST",
+    "offset": -7,
+    "gmt": "GMT -07",
+    "zoneId": "America/Phoenix"
+  },
+  {
+    "name": "Atlantic Standard Time",
+    "abbr": "AST",
+    "offset": -4,
+    "gmt": "GMT -04",
+    "zoneId": "America/Puerto_Rico"
+  },
+  {
+    "name": "Pacific Standard Time",
+    "abbr": "PST",
+    "offset": -8,
+    "gmt": "GMT -08",
+    "zoneId": "America/Los_Angeles"
+  },
+  {
+    "name": "Solomon Islands Time",
+    "abbr": "SBT",
+    "offset": 11,
+    "gmt": "GMT +11",
+    "zoneId": "Pacific/Guadalcanal"
+  },
+  {
+    "name": "Indochina Time",
+    "abbr": "ICT",
+    "offset": 7,
+    "gmt": "GMT +07",
+    "zoneId": "Asia/Ho_Chi_Minh"
+  },
+  {
+    "abbr": "DANNO",
+    "zoneId": "America/Vancouver"
+  },
+  {
+    "abbr": "SHIRU",
+    "zoneId": "Asia/Seoul"
+  }
+]

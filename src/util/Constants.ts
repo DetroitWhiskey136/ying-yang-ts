@@ -40,6 +40,3 @@ export const OPTIONS = {
 export type stringResolvable = string | undefined | null;
 export type numberResolvable = number | undefined | null;
 export type booleanResolvable = boolean | undefined | null;
-export type channelResolvable =
-  GuildChannel | TextChannel | VoiceChannel | CategoryChannel |
-  Channel | NewsChannel | DMChannel | null;
