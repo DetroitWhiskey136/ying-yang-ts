@@ -2,7 +2,7 @@ export * from './client';
 export { Database, EnmapProvider } from './database';
 export * from './database/models';
 export { Embed } from './discord/Embed';
-export { Command, Event } from './handlers';
+export { Command, Event, SlashCommand } from './handlers';
 export {
   GuildMemberWarningManager,
 } from './managers';

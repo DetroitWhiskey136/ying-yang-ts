@@ -1,6 +1,6 @@
 import {
   Message, MessageMentions, GuildMember, Guild, User,
-  TextChannel, DMChannel, VoiceChannel, NewsChannel,
+  TextChannel, DMChannel, VoiceChannel, NewsChannel, StageChannel,
 } from 'discord.js';
 
 import {
@@ -24,7 +24,7 @@ export declare interface CommandContext {
   author: User;
   channel: TextChannel | DMChannel | NewsChannel;
   client: DiscordClient;
-  voiceChannel: VoiceChannel | null;
+  voiceChannel: VoiceChannel | StageChannel | null;
   prefix: string | null;
   query: string;
   args: string[];
@@ -66,7 +66,7 @@ export class CommandContext {
    * @memberof CommandContext
    */
   private getVoiceChannel(member: GuildMember | null, guild: Guild | null, client: DiscordClient):
-  VoiceChannel | null {
+  VoiceChannel | StageChannel | null {
     if (member) {
       return member.voice.channel;
     } if (guild && client.voice) {

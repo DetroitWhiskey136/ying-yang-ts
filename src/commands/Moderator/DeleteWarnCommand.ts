@@ -6,7 +6,7 @@ export class DeleteWarnCommand extends Command {
       aliases: ['delwarn', 'dw', 'dwarn'],
       category: 'Moderator',
       description: 'Deletes a users warning',
-      enabled: true,
+      enabled: false,
       guildOnly: true,
       name: 'deletewarn',
       usage: 'deletewarn <warningID>',

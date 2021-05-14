@@ -6,7 +6,7 @@ export class UpdateWarnCommand extends Command {
       aliases: ['uw', 'uwarn'],
       category: 'Moderator',
       description: 'Update a warning for a user',
-      enabled: true,
+      enabled: false,
       guildOnly: true,
       name: 'updatewarn',
       usage: 'updatewarn <user> <points> <reason>',

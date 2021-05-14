@@ -6,7 +6,7 @@ export class ClearWarnCommand extends Command {
       aliases: ['cw', 'cwarn'],
       category: 'Moderator',
       description: 'Clears all warnings for a user',
-      enabled: true,
+      enabled: false,
       guildOnly: true,
       name: 'clearwarns',
       usage: 'clearwarns <user>',

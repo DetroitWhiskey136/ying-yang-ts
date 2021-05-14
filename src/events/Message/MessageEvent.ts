@@ -66,7 +66,7 @@ export class MessageEvent extends Event {
 
     if (
       bot.database.guilds.get(guild!.id).autoFormatUsernames
-      && clientMember!.hasPermission('MANAGE_NICKNAMES')
+      && clientMember!.permissions.has('MANAGE_NICKNAMES')
       && (!member?.displayName || member.displayName !== authorNick)
     ) {
       member?.setNickname(authorNick);

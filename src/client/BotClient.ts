@@ -1,6 +1,6 @@
 import { Collection, ClientOptions } from 'discord.js';
 import {
-  Database, Command, Event, Logger, Files, DiscordClient,
+  Database, Command, SlashCommand, Event, Logger, Files, DiscordClient,
 } from '../index';
 
 /**
@@ -10,6 +10,7 @@ export interface BotClient {
   aliases: Collection<string, string>;
   client: DiscordClient;
   commands: Collection<string, Command>;
+  slashCommands: Collection<string, SlashCommand>
   database: Database;
   events: Collection<string, Event>;
   logger: Logger;
@@ -31,6 +32,7 @@ export class BotClient {
     this.aliases = new Collection();
     this.client = new DiscordClient(options, this);
     this.commands = new Collection();
+    this.slashCommands = new Collection();
     this.database = new Database();
     this.events = new Collection();
     this.logger = new Logger();

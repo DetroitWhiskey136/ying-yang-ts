@@ -109,6 +109,8 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-external"><a href="discordclient.html#application"
+								class="tsd-kind-icon">application</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="discordclient.html#bot"
 								class="tsd-kind-icon">bot</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-external"><a href="discordclient.html#channels"
@@ -164,8 +166,6 @@
 								class="tsd-kind-icon">emit</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="discordclient.html#eventnames"
 								class="tsd-kind-icon">event<wbr>Names</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="discordclient.html#fetchapplication"
-								class="tsd-kind-icon">fetch<wbr>Application</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="discordclient.html#fetchguildpreview"
 								class="tsd-kind-icon">fetch<wbr>Guild<wbr>Preview</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="discordclient.html#fetchguildtemplate"
@@ -264,6 +264,13 @@
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-external">
+					<a name="application" class="tsd-anchor"></a>
+					<h3>application</h3>
+					<div class="tsd-signature tsd-kind-icon">application<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">ClientApplication</span></div>
+					<aside class="tsd-sources">
+					</aside>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="bot" class="tsd-anchor"></a>
 					<h3>bot</h3>
@@ -281,7 +288,7 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-external">
 					<a name="emojis" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> emojis</h3>
-					<div class="tsd-signature tsd-kind-icon">emojis<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">GuildEmojiManager</span></div>
+					<div class="tsd-signature tsd-kind-icon">emojis<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">BaseGuildEmojiManager</span></div>
 					<aside class="tsd-sources">
 					</aside>
 				</section>
@@ -351,7 +358,7 @@
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-external">
 					<a name="voice" class="tsd-anchor"></a>
 					<h3>voice</h3>
-					<div class="tsd-signature tsd-kind-icon">voice<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">ClientVoiceManager</span></div>
+					<div class="tsd-signature tsd-kind-icon">voice<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">ClientVoiceManager</span></div>
 					<aside class="tsd-sources">
 					</aside>
 				</section>
@@ -588,20 +595,6 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-external">
-					<a name="fetchapplication" class="tsd-anchor"></a>
-					<h3>fetch<wbr>Application</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">fetch<wbr>Application<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ClientApplication</span><span class="tsd-signature-symbol">&gt;</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-							</aside>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ClientApplication</span><span class="tsd-signature-symbol">&gt;</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-external">
 					<a name="fetchguildpreview" class="tsd-anchor"></a>
 					<h3>fetch<wbr>Guild<wbr>Preview</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
@@ -702,7 +695,7 @@
 					<a name="generateinvite" class="tsd-anchor"></a>
 					<h3>generate<wbr>Invite</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">generate<wbr>Invite<span class="tsd-signature-symbol">(</span>options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">InviteGenerationOptions</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">PermissionResolvable</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">generate<wbr>Invite<span class="tsd-signature-symbol">(</span>options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">InviteGenerationOptions</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -711,10 +704,10 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <span class="tsd-signature-type">InviteGenerationOptions</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">PermissionResolvable</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <span class="tsd-signature-type">InviteGenerationOptions</span></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -1543,6 +1536,9 @@
 							<li class=" tsd-kind-constructor tsd-parent-kind-class">
 								<a href="discordclient.html#constructor" class="tsd-kind-icon">constructor</a>
 							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-external">
+								<a href="discordclient.html#application" class="tsd-kind-icon">application</a>
+							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="discordclient.html#bot" class="tsd-kind-icon">bot</a>
 							</li>
@@ -1617,9 +1613,6 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-external">
 								<a href="discordclient.html#eventnames" class="tsd-kind-icon">event<wbr>Names</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-external">
-								<a href="discordclient.html#fetchapplication" class="tsd-kind-icon">fetch<wbr>Application</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-external">
 								<a href="discordclient.html#fetchguildpreview" class="tsd-kind-icon">fetch<wbr>Guild<wbr>Preview</a>
@@ -1731,6 +1724,9 @@
 						<a href="memberutil.html" class="tsd-kind-icon">Member<wbr>Util</a>
 					</li>
 					<li class=" tsd-kind-class">
+						<a href="slashcommand.html" class="tsd-kind-icon">Slash<wbr>Command</a>
+					</li>
+					<li class=" tsd-kind-class">
 						<a href="strings.html" class="tsd-kind-icon">Strings</a>
 					</li>
 					<li class=" tsd-kind-class">
@@ -1825,6 +1821,10 @@
 			<ul class="tsd-legend">
 				<li class="tsd-kind-property tsd-parent-kind-interface"><span
 				class="tsd-kind-icon">Property</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited"><span
+				class="tsd-kind-icon">Inherited constructor</span></li>
 			</ul>
 			<ul class="tsd-legend">
 				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><span

@@ -4,8 +4,7 @@ import {
 } from 'discord.js';
 
 export const clientOptions: ClientOptions = {
-  disableMentions: 'everyone',
-  fetchAllMembers: true,
+  intents: Intents.ALL,
   messageCacheLifetime: 240,
   messageCacheMaxSize: 100,
   messageSweepInterval: 300,
@@ -15,7 +14,6 @@ export const clientOptions: ClientOptions = {
   ],
   retryLimit: 3,
   ws: {
-    intents: Intents.ALL,
     large_threshold: 100,
   },
 };

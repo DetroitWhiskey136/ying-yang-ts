@@ -59,7 +59,7 @@ export class StringParameter extends Parameter {
     arg = arg ? typeof arg === 'string' ? arg : String(arg) : null;
     if (!arg) return null;
 
-    if (this.clean) arg = Util.cleanContent(arg, message);
+    if (this.clean) arg = Util.cleanContent(arg, message.channel);
 
     if (this.maxLength > 0 && arg.length > this.maxLength) {
       if (!this.truncate) throw new CommandError(`The string you inputted was too big (Max: ${this.maxLength})`, {});

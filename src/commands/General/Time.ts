@@ -10,7 +10,7 @@ export class TimeCommand extends Command {
       aliases: [],
       category: 'General',
       description: 'shows the time in a specified timezone',
-      enabled: true,
+      enabled: false,
       guildOnly: true,
       name: 'time',
       usage: 'time <timezone>',
