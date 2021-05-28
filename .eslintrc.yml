@@ -54,4 +54,5 @@ rules: {
   sort-vars: [
     'error',
   ],
+  linebreak-style: 0,
 }
