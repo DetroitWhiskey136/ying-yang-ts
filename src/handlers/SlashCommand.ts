@@ -1,5 +1,7 @@
 import {
-  ApplicationCommand, ApplicationCommandData, CommandInteraction,
+  ApplicationCommand,
+  ApplicationCommandData,
+  CommandInteraction,
 } from 'discord.js';
 import { BotClient } from '../index';
 
@@ -16,7 +18,11 @@ export interface SlashCommand extends ApplicationCommand {
 }
 
 export class SlashCommand extends ApplicationCommand {
-  constructor(bot: BotClient, data: ApplicationCommandData, options: CommandOptions) {
+  constructor(
+    bot: BotClient,
+    data: ApplicationCommandData,
+    options: CommandOptions,
+  ) {
     super(bot.client, data);
     this.bot = bot;
     this.setup(options);
@@ -31,7 +37,10 @@ export class SlashCommand extends ApplicationCommand {
     throw new Error(`${this.constructor.name} doesn't have a run() method.`);
   }
 
-  public async _run(bot: BotClient, interaction: CommandInteraction): Promise<void> {
+  public async _run(
+    bot: BotClient,
+    interaction: CommandInteraction,
+  ): Promise<void> {
     try {
       await this.run(bot, interaction);
     } catch (error) {

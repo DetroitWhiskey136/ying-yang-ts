@@ -5,8 +5,8 @@ export class Strings {
    * If string is longer than max length will cut string down
    * @param {String} str The string
    * @param {String} lang The markdown lang
-   * @param {Number} minLength The minumim length
-   * @param {Number} maxLength The maximum langth
+   * @param {Number} minLength The minimum length
+   * @param {Number} maxLength The maximum length
    * @returns {string} The formated string of code?
    */
   static code(str: string, lang: string, minLength: number = 0, maxLength: number = 1024): string {

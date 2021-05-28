@@ -1,5 +1,7 @@
+import { MessageButton } from 'discord-buttons';
+
 import { CommandContext } from '../../command/CommandContext';
-import { BotClient, Command } from '../../index';
+import { BotClient, Command, Embed } from '../../index';
 
 export class TestCommand extends Command {
   constructor(bot: BotClient) {
@@ -7,19 +9,28 @@ export class TestCommand extends Command {
       aliases: [],
       category: 'Developer',
       description: 'tests a command',
-      enabled: false,
+      enabled: true,
       guildOnly: true,
       name: 'test',
       usage: 'test',
     }, [
-      {
-        required: true,
-        type: 'string',
-      },
     ]);
   }
 
-  run(ctx: CommandContext) {
-    ctx.channel.send(`hello from test the result was: ${ctx.args.join(' ')}`);
+  async run(ctx: CommandContext) {
+    const embed = new Embed()
+      .setTitle('This is testing out the new buttons stuff on discord');
+
+    const button = new MessageButton()
+      .setStyle('green')
+      .setLabel('Did this work?')
+      .setID('1');
+
+    ctx.channel.send({ button, embed })
+      .then((msg) => {
+        setTimeout(() => msg.delete(), 60000);
+      })
+      .catch((error) => ctx.client.emit('error', error))
+      .finally(() => ctx.bot.logger.info('this worked!'));
   }
 }

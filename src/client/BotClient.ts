@@ -91,7 +91,7 @@ export class BotClient {
   }
 
   /**
-   * Used to run some baisc dev related logging, such as discord debugging
+   * Used to run some basic dev related logging, such as discord debugging
    * ```js
    * if (process.env.NODE_ENV !== 'production') bot.dev();
    * ```

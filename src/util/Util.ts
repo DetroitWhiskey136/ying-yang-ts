@@ -90,7 +90,7 @@ export class Util {
 
   /**
    * Groups items in a list based on a common-matched value.
-   * @template K Is gernerally intended to be a property of V.
+   * @template K Is generally intended to be a property of V.
    * @template V List of items
    * @param {(Collection<string, V> | Array<V> | Map<string, V>)} list The list of items
    * @param {(input: V) => K} keyGetter The command-matched value to index from

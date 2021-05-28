@@ -15,7 +15,7 @@ export interface DiscordClient {
 }
 
 /**
- * The DiscordClient class is a speical class it's effectively the discord.js
+ * The DiscordClient class is a special class it's effectively the discord.js
  * Client class but with a magic circular reference to the BotClient class (bot).
  * ```javascript
  * new DiscordClient(options, bot)

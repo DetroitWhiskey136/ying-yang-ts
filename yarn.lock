@@ -1161,6 +1161,11 @@ dir-glob@^3.0.1:
   dependencies:
     path-type "^4.0.0"
 
+discord-buttons@^2.4.1:
+  version "2.4.1"
+  resolved "https://registry.yarnpkg.com/discord-buttons/-/discord-buttons-2.4.1.tgz#220bef222e05f7d8722d72c2a7334687f339d9c1"
+  integrity sha512-oJkG0TpFtgL4UiFc+y4nFVSm62KxU4zX+cH/UPCq1cIy05etfN7swGh80j9AIDxRMf8HJEWNSbvd3HNuZWeZVg==
+
 discord.js@discordjs/discord.js:
   version "12.5.0"
   resolved "https://codeload.github.com/discordjs/discord.js/tar.gz/c7334363b36c5f7f1c7880fe77a2e9b2eb1a6442"

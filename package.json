@@ -29,6 +29,7 @@
     "@sentry/node": "^5.27.1",
     "@sentry/tracing": "^5.27.1",
     "canvas": "^2.6.1",
+    "discord-buttons": "^2.4.1",
     "discord.js": "discordjs/discord.js",
     "dotenv": "^8.2.0",
     "enmap": "^5.8.0",

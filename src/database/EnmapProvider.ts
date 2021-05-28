@@ -41,7 +41,7 @@ export class EnmapProvider<D> {
    * sets a document from the db, returns an error if it exists
    * @param {string} key The key of the document.
    * @param {*} value The object value of the document.
-   * @returns {D} An error if document exists or creates the docment.
+   * @returns {D} An error if document exists or creates the document.
    * @memberof EnmapProvider
    */
   public set(key: string, value: any): D {
@@ -54,7 +54,7 @@ export class EnmapProvider<D> {
   /**
    * updates a document from the db, returns an error if it doesn't exist (allows dot-notaion)
    * @param {string} key The key of the document.
-   * @param {*} value The new value of the docuemnt.
+   * @param {*} value The new value of the document.
    * @returns {object} The document or an error.
    * @memberof EnmapProvider
    */
