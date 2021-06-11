@@ -1,3 +1,4 @@
+import { MessageEmbed } from 'discord.js';
 import { CommandContext } from '../../command/CommandContext';
 import {
   BotClient, Command, Util, Embed,
@@ -33,7 +34,7 @@ export class HelpCommand extends Command {
         });
         embed.addField(categoryName, content.join('\n'));
       });
-      channel.send(embed);
+      channel.send({ embed });
     } else {
       const commandName = args.shift()?.toLowerCase()!;
       const cmd = bot.commands.get(commandName)
@@ -47,7 +48,7 @@ export class HelpCommand extends Command {
         ].join(' '))
           .setDescription(cmd.description ?? 'no description provided')
           .setFooter(`Category: ${cmd.category} | Enabled: ${cmd.enabled}`);
-        channel.send(embed);
+        channel.send({ embed });
       } else {
         channel.send(`Command: \`${commandName}\` not found use \`${prefix}help\` to see all commands`);
       }

@@ -39,7 +39,7 @@ export class WarnCommand extends Command {
             .setFooter(`Warned by: ${member?.displayName}`)
             .setTimestamp();
 
-          channel.send(embed);
+          channel.send({ embed });
         } else {
           bot.logger.error('reason is not defined');
         }

@@ -1,5 +1,4 @@
 import * as Sentry from '@sentry/node';
-import disbut from 'discord-buttons';
 import 'dotenv/config';
 import 'tsconfig-paths/register';
 import './structures';
@@ -7,13 +6,6 @@ import './structures';
 import { BotClient, clientOptions } from './index';
 
 const bot = new BotClient(clientOptions);
-disbut(bot.client);
-
-bot.client.on('clickButton', async (button) => {
-  if (button.id === '1') {
-    button.reply.send(`${button.clicker.user.tag} clicked button!`);
-  }
-});
 
 Sentry.init({
   attachStacktrace: true,

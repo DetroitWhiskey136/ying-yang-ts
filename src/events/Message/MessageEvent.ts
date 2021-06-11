@@ -52,7 +52,7 @@ export class MessageEvent extends Event {
       .setDescription(message);
 
     if (!channel || channel === undefined) throw new Error('Channel not provided please check your work!');
-    channel.send(embed);
+    channel.send({ embed });
   }
 
   async run(bot: BotClient, client: DiscordClient, message: Message) {

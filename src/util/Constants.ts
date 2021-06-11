@@ -1,9 +1,10 @@
 import {
-  ClientOptions, Intents,
+  ClientOptions, Intents, MessageMentionOptions,
   TextChannel, VoiceChannel, GuildChannel, CategoryChannel, Channel, NewsChannel, DMChannel,
 } from 'discord.js';
 
 export const clientOptions: ClientOptions = {
+  allowedMentions: { repliedUser: true },
   intents: Intents.ALL,
   messageCacheLifetime: 240,
   messageCacheMaxSize: 100,
