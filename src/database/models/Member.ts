@@ -1,9 +1,11 @@
+import { GuildMemberResolvable } from 'discord.js';
+
 export interface IMemberWarning {
     [ x: string ]: any;
     id: string;
     reason: string;
     points: number;
-    moderator: string;
+    moderator: GuildMemberResolvable;
 }
 
 export interface IMemberGuild {

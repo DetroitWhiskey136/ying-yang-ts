@@ -24,7 +24,7 @@ export class Warning {
     this.moderator = this.getMod(data.moderator);
   }
 
-  private getMod(moderator: string): GuildMemberResolvable {
+  private getMod(moderator: GuildMemberResolvable): GuildMemberResolvable {
     this.guild.members.fetch(moderator).then((mod) => {
       this.moderator = mod;
     }).catch(() => {

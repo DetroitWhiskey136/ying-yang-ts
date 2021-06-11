@@ -3,7 +3,8 @@
 
 import crypto from 'crypto';
 import {
-  Guild, GuildMember, MessageAttachment, MessageEmbed, User, MessageEmbedOptions, ImageURLOptions,
+  Guild, GuildMember, MessageAttachment, MessageEmbed,
+  User, MessageEmbedOptions, ImageURLOptions, EmbedFieldData,
 } from 'discord.js';
 import { ImageUtil } from '../index';
 
@@ -191,14 +192,14 @@ export class Embed extends MessageEmbed {
 
   /**
    * Adds a field to the embed (max 25).
-   * @param {string | number} name The name of this field
-   * @param {string | number} value The value of this field
+   * @param {string} name The name of this field
+   * @param {string} value The value of this field
    * @param {boolean} inline If this field will be displayed inline
    * @returns {this} This?
    */
   addField(
-    name: string | number,
-    value: string | number,
+    name: string,
+    value: string,
     inline = false,
   ): this {
     return this
@@ -214,7 +215,7 @@ export class Embed extends MessageEmbed {
    * @param {FieldOptions[]} fields The fields to add
    * @returns {this} This?
    */
-  addFields(...fields: FieldOptions[]): this {
+  addFields(...fields: EmbedFieldData[]): this {
     // eslint-disable-next-line no-restricted-syntax
     for (const data of fields) {
       const {

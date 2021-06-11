@@ -30,7 +30,7 @@ export class EvalCommand extends Command {
   async run(ctx: CommandContext) {
     const {
       bot, message, mentions, member, guild, author, channel, client,
-      voiceChannel, prefix, query, args, database,
+      prefix, query, args, database,
     } = ctx;
     if (!author.botAdmin && author.id !== '190324299083546624') return;
 

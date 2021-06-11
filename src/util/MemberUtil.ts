@@ -1,8 +1,10 @@
-import { GuildMemberResolvable, MessageMentions, Guild } from 'discord.js';
+import {
+  GuildMemberResolvable, MessageMentions, Guild, Snowflake,
+} from 'discord.js';
 import { BotClient } from '../index';
 
 export class MemberUtil {
-  static parseMemberFromID(id: string, guild: Guild) {
+  static parseMemberFromID(id: Snowflake, guild: Guild) {
     return guild.members.resolve(id);
   }
 

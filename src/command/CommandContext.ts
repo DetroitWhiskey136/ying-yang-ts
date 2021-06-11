@@ -24,7 +24,7 @@ export declare interface CommandContext {
   author: User;
   channel: TextChannel | DMChannel | NewsChannel;
   client: DiscordClient;
-  voiceChannel: VoiceChannel | StageChannel | null;
+  // voiceChannel: VoiceChannel | StageChannel | null;
   prefix: string | null;
   query: string;
   args: string[];
@@ -47,7 +47,7 @@ export class CommandContext {
     this.author = options.message.author;
     this.channel = options.message.channel;
     this.client = options.bot.client;
-    this.voiceChannel = this.getVoiceChannel(this.member, this.guild, this.client);
+    // this.voiceChannel = this.getVoiceChannel(this.member, this.guild, this.client);
     this.prefix = options.prefix || null;
     this.query = options.query;
     this.args = options.args;
@@ -65,6 +65,7 @@ export class CommandContext {
    * @returns {VoiceChannel | null} return the voicechannel or null.
    * @memberof CommandContext
    */
+  /*
   private getVoiceChannel(member: GuildMember | null, guild: Guild | null, client: DiscordClient):
   VoiceChannel | StageChannel | null {
     if (member) {
@@ -73,5 +74,5 @@ export class CommandContext {
       return client.voice.connections.get(guild.id)?.channel || null;
     }
     return null;
-  }
+  } */
 }

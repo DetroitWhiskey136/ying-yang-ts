@@ -1,3 +1,4 @@
+import { Snowflake } from 'discord.js';
 import { CommandContext } from '../../command/CommandContext';
 import { CommandError } from '../../command/CommandError';
 import {
@@ -18,14 +19,14 @@ export class WarnCommand extends Command {
   }
 
   // eslint-disable-next-line consistent-return
-  run(ctx: CommandContext) {
+  async run(ctx: CommandContext) {
     const {
       author, args, client, database, guild, member, bot, channel, mentions,
     } = ctx;
     const [user, points, ...reason] = args;
     const embed = new Embed();
 
-    const mem = MemberUtil.parseMemberFromID(user, guild!)
+    const mem = MemberUtil.parseMemberFromID(user as Snowflake, guild!)
       ?? MemberUtil.parseMemberFromMention(mentions, guild!);
     // const mem = guild?.members.cache.get(user);
 
@@ -33,7 +34,7 @@ export class WarnCommand extends Command {
     if (user) {
       if (points) {
         if (reason) {
-          mem.warnings.add(reason.join(' '), parseInt(points, 2), member);
+          await mem.warnings.add(reason.join(' '), parseInt(points, 2), member);
           embed
             .setDescription(`${mem.user.username} has been warned, \n${reason.join(' ')}`)
             .setFooter(`Warned by: ${member?.displayName}`)

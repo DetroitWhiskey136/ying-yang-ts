@@ -1,5 +1,5 @@
 /* eslint-disable no-else-return */
-import { User } from 'discord.js';
+import { Snowflake, User } from 'discord.js';
 import { CommandContext } from '../../CommandContext';
 import { CommandError } from '../../CommandError';
 import { Parameter } from './Parameter';
@@ -69,7 +69,7 @@ export class UserParameter extends Parameter {
     if (!arg) return null;
 
     const regexResult = MENTION_REGEX.exec(arg);
-    const id: string = (regexResult && regexResult[1]) || '';
+    const id = regexResult?.[1] as Snowflake | null;
     const lower = arg.toLowerCase();
     const guildMember = guild && guild.members.cache.find((m) => m.user.tag.toLowerCase() === lower
       || m.user.username.toLowerCase().includes(lower)
@@ -79,12 +79,16 @@ export class UserParameter extends Parameter {
       && client.users.cache.find((u: User) => u.tag.toLowerCase() === lower
       || u.username.toLowerCase().includes(lower));
 
-    let user: ParsedUser = client.users.resolve(id)
+    let user: ParsedUser;
+    if (id) {
+      user = client.users.resolve(id)
       || (!!guildMember && guildMember.user)
       || globalMember;
-    if (!user && this.fetchGlobal) {
-      user = await client.users.fetch(id).catch(() => null);
-      // if (user) user.isPartial = true;
+
+      if (id && !user && this.fetchGlobal) {
+        user = await client.users.fetch(id).catch(() => null);
+        // if (user) user.isPartial = true;
+      }
     }
 
     const opts = { };
