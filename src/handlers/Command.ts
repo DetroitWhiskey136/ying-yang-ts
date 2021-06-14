@@ -78,6 +78,9 @@ export namespace YinYangCommand {
   }
   // #endregion
 
+  /**
+   * These are the available Categories for the bots commands.
+   */
   export enum CommandCategories {
     GENERAL = 'General',
     ADMIN = 'Admin',
