@@ -1223,10 +1223,10 @@ discord-api-types@^0.18.1:
   resolved "https://registry.yarnpkg.com/discord-api-types/-/discord-api-types-0.18.1.tgz#5d08ed1263236be9c21a22065d0e6b51f790f492"
   integrity sha512-hNC38R9ZF4uaujaZQtQfm5CdQO58uhdkoHQAVvMfIL0LgOSZeW575W8H6upngQOuoxWd8tiRII3LLJm9zuQKYg==
 
-discord.js@^13.0.0-dev.f5f3f772865ee98bbb44df938e0e71f9f8865c10:
-  version "13.0.0-dev.fdad14099779e61cb84dcd1cb2497e0e853a6144"
-  resolved "https://registry.yarnpkg.com/discord.js/-/discord.js-13.0.0-dev.fdad14099779e61cb84dcd1cb2497e0e853a6144.tgz#536791b22a90ed3e0bac943f0dd1d0c6fedfcd7c"
-  integrity sha512-lhK0y/52bRLfzAWvZXR+IMqjHk45H/UDCIOWhy9OK3NvsrkjtSdlcUYkbyNBpf4QtISHiCz24XCz/cPNd+tWfA==
+discord.js@^13.0.0-dev.918921e8211fc16e9b12d2502f3168264246ea22:
+  version "13.0.0-dev.918921e8211fc16e9b12d2502f3168264246ea22"
+  resolved "https://registry.yarnpkg.com/discord.js/-/discord.js-13.0.0-dev.918921e8211fc16e9b12d2502f3168264246ea22.tgz#660c333e2c0b6dcd570e2b036edf82e23cbd38c0"
+  integrity sha512-5luHBdny+Mx4N5TvCJofL4N+YcySNtlrHupR2tuKI0z53V1/VAN5hvba1n42JzO5r+PmeCZlU8Xg+8dMsxwt7Q==
   dependencies:
     "@discordjs/collection" "^0.1.6"
     "@discordjs/form-data" "^3.0.1"
@@ -1235,8 +1235,6 @@ discord.js@^13.0.0-dev.f5f3f772865ee98bbb44df938e0e71f9f8865c10:
     abort-controller "^3.0.0"
     discord-api-types "^0.18.1"
     node-fetch "^2.6.1"
-    prism-media "^1.2.9"
-    tweetnacl "^1.0.3"
     ws "^7.4.6"
 
 doctrine@^2.1.0:
@@ -3962,11 +3960,6 @@ tunnel-agent@^0.6.0:
   integrity sha1-J6XeoGs2sEoKmWZ3SykIaPD8QP0=
   dependencies:
     safe-buffer "^5.0.1"
-
-tweetnacl@^1.0.3:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/tweetnacl/-/tweetnacl-1.0.3.tgz#ac0af71680458d8a6378d0d0d050ab1407d35596"
-  integrity sha512-6rt+RN7aOi1nGMyC4Xa5DdYiukl2UWCbcJft7YhxReBGQD7OAM8Pbxw6YMo4r2diNEA8FEmu32YOn9rhaiE5yw==
 
 type-check@^0.4.0, type-check@~0.4.0:
   version "0.4.0"

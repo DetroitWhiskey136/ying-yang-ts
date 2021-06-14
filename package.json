@@ -32,7 +32,7 @@
     "@types/color-thief-node": "^1.0.1",
     "canvas": "^2.6.1",
     "color-thief-node": "^1.0.4",
-    "discord.js": "^13.0.0-dev.f5f3f772865ee98bbb44df938e0e71f9f8865c10",
+    "discord.js": "^13.0.0-dev.918921e8211fc16e9b12d2502f3168264246ea22",
     "dotenv": "^8.2.0",
     "enmap": "^5.8.0",
     "klaw": "^3.0.0",

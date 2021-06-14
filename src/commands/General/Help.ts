@@ -48,7 +48,7 @@ export class HelpCommand extends YinYangCommand.Command {
       embed.setTitle(`${embed.title} - ${cmd.aliases.join(', ')}`);
     }
 
-    channel.send({ embed });
+    channel.send({ embeds: [embed] });
   }
 
   private sendCategories(
@@ -71,6 +71,6 @@ export class HelpCommand extends YinYangCommand.Command {
       embed.addField(categoryName, content.join('\n'));
     });
 
-    channel.send({ embed });
+    channel.send({ embeds: [embed] });
   }
 }

@@ -71,7 +71,7 @@ export class EvalCommand extends YinYangCommand.Command {
       }
     } finally {
       embed.setDescription(String(res));
-      await channel.send({ embed });
+      await channel.send({ embeds: [embed] });
     }
   }
 

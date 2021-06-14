@@ -70,11 +70,48 @@
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>The Command Class</p>
+					</div>
+					<pre><code class="language-javascript"><span style="color: #545454">// Usage</span>
+<span style="color: #89DDFF">export</span><span style="color: #EEFFFF"> </span><span style="color: #C792EA">class</span><span style="color: #EEFFFF"> </span><span style="color: #89DDFF">&lt;</span><span style="color: #FFCB6B">CommandName</span><span style="color: #89DDFF">&gt;</span><span style="color: #FFCB6B">Command</span><span style="color: #EEFFFF"> </span><span style="color: #C792EA">extends</span><span style="color: #EEFFFF"> </span><span style="color: #FFCB6B">YinYangCommand</span><span style="color: #89DDFF">.</span><span style="color: #FFCB6B">Command</span><span style="color: #EEFFFF"> </span><span style="color: #89DDFF">{</span>
+<span style="color: #EEFFFF">  </span><span style="color: #C792EA">constructor</span><span style="color: #89DDFF">()</span><span style="color: #EEFFFF"> </span><span style="color: #89DDFF">{</span>
+<span style="color: #F07178">    </span><span style="color: #EEFFFF">super</span><span style="color: #F07178">(</span><span style="color: #89DDFF">{</span>
+<span style="color: #F07178">      aliases</span><span style="color: #89DDFF">:</span><span style="color: #F07178"> [</span><span style="color: #89DDFF">&lt;</span><span style="color: #89DDFF">&#039;</span><span style="color: #C3E88D">aliasname</span><span style="color: #89DDFF">&#039;</span><span style="color: #89DDFF">&gt;</span><span style="color: #F07178">]</span><span style="color: #89DDFF">,</span>
+<span style="color: #F07178">      category</span><span style="color: #89DDFF">:</span><span style="color: #F07178"> </span><span style="color: #EEFFFF">YinYangCommand</span><span style="color: #89DDFF">.</span><span style="color: #EEFFFF">CommandCategories</span><span style="color: #89DDFF">.&lt;</span><span style="color: #EEFFFF">CategoryName</span><span style="color: #89DDFF">&gt;,</span>
+<span style="color: #F07178">      description</span><span style="color: #89DDFF">:</span><span style="color: #F07178"> </span><span style="color: #89DDFF">&#039;</span><span style="color: #C3E88D">A Description of some sort</span><span style="color: #89DDFF">&#039;</span><span style="color: #89DDFF">,</span>
+<span style="color: #F07178">      enabled</span><span style="color: #89DDFF">:</span><span style="color: #F07178"> </span><span style="color: #FF9CAC">true</span><span style="color: #89DDFF">,</span>
+<span style="color: #F07178">      guildOnly</span><span style="color: #89DDFF">:</span><span style="color: #F07178"> </span><span style="color: #FF9CAC">false</span><span style="color: #89DDFF">,</span>
+<span style="color: #F07178">      name</span><span style="color: #89DDFF">:</span><span style="color: #F07178"> </span><span style="color: #89DDFF">&#039;</span><span style="color: #C3E88D">&lt;commandname&gt;</span><span style="color: #89DDFF">&#039;</span><span style="color: #89DDFF">,</span>
+<span style="color: #F07178">      usage</span><span style="color: #89DDFF">:</span><span style="color: #F07178"> </span><span style="color: #89DDFF">&#039;</span><span style="color: #C3E88D">&lt;commandname&gt; &lt;paramas...&gt;</span><span style="color: #89DDFF">&#039;</span><span style="color: #89DDFF">,</span>
+<span style="color: #F07178">      options</span><span style="color: #89DDFF">:</span><span style="color: #F07178"> [</span><span style="color: #89DDFF">&lt;</span><span style="color: #FFCB6B">CommandInteractionOption</span><span style="color: #89DDFF">&gt;</span><span style="color: #EEFFFF">],</span>
+<span style="color: #EEFFFF">      ownerOnly: false,</span>
+<span style="color: #EEFFFF">    });</span>
+<span style="color: #EEFFFF">  }</span>
+
+<span style="color: #EEFFFF">  runNormal(ctx: YinYangCommand.CommandContext) </span><span style="color: #89DDFF">{</span>
+<span style="color: #EEFFFF">    ctx</span><span style="color: #89DDFF">.</span><span style="color: #EEFFFF">channel</span><span style="color: #89DDFF">.</span><span style="color: #82AAFF">send</span><span style="color: #EEFFFF">(</span><span style="color: #89DDFF">&#039;</span><span style="color: #C3E88D">hi</span><span style="color: #89DDFF">&#039;</span><span style="color: #EEFFFF">);</span>
+<span style="color: #EEFFFF">  </span><span style="color: #89DDFF">}</span>
+
+<span style="color: #EEFFFF">  runSlash(ctx: YinYangCommand.SlashContext) </span><span style="color: #89DDFF">{</span>
+<span style="color: #EEFFFF">    ctx</span><span style="color: #89DDFF">.</span><span style="color: #EEFFFF">commandInteraction</span><span style="color: #89DDFF">.</span><span style="color: #82AAFF">reply</span><span style="color: #EEFFFF">(</span><span style="color: #89DDFF">&#039;</span><span style="color: #C3E88D">hi</span><span style="color: #89DDFF">&#039;</span><span style="color: #EEFFFF">);</span>
+<span style="color: #EEFFFF">  </span><span style="color: #89DDFF">}</span>
+<span style="color: #EEFFFF">}</span>
+</code></pre>
+				</div>
+			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">Command</span>
+						<a href="../interfaces/yinyangcommand.icommand.html" class="tsd-signature-type" data-tsd-kind="Interface">ICommand</a>
+						<ul class="tsd-hierarchy">
+							<li>
+								<span class="target">Command</span>
+							</li>
+						</ul>
 					</li>
 				</ul>
 			</section>
@@ -88,31 +125,33 @@
 				<h2>Index</h2>
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
-						<section class="tsd-index-section ">
+						<section class="tsd-index-section tsd-is-inherited">
 							<h3>Constructors</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="yinyangcommand.command.html#constructor"
+								<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited"><a href="yinyangcommand.command.html#constructor"
 								class="tsd-kind-icon">constructor</a></li>
 							</ul>
 						</section>
-						<section class="tsd-index-section ">
+						<section class="tsd-index-section tsd-is-inherited">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="yinyangcommand.command.html#aliases"
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="yinyangcommand.command.html#aliases"
 								class="tsd-kind-icon">aliases</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="yinyangcommand.command.html#category"
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="yinyangcommand.command.html#category"
 								class="tsd-kind-icon">category</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="yinyangcommand.command.html#description"
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="yinyangcommand.command.html#description"
 								class="tsd-kind-icon">description</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="yinyangcommand.command.html#enabled"
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="yinyangcommand.command.html#enabled"
 								class="tsd-kind-icon">enabled</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="yinyangcommand.command.html#guildonly"
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="yinyangcommand.command.html#guildonly"
 								class="tsd-kind-icon">guild<wbr>Only</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="yinyangcommand.command.html#name"
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="yinyangcommand.command.html#name"
 								class="tsd-kind-icon">name</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="yinyangcommand.command.html#owneronly"
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="yinyangcommand.command.html#options"
+								class="tsd-kind-icon">options</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="yinyangcommand.command.html#owneronly"
 								class="tsd-kind-icon">owner<wbr>Only</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="yinyangcommand.command.html#usage"
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="yinyangcommand.command.html#usage"
 								class="tsd-kind-icon">usage</a></li>
 							</ul>
 						</section>
@@ -123,31 +162,40 @@
 								class="tsd-kind-icon">_run<wbr>Normal</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="yinyangcommand.command.html#_runslash"
 								class="tsd-kind-icon">_run<wbr>Slash</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="yinyangcommand.command.html#runnormal"
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="yinyangcommand.command.html#runnormal"
 								class="tsd-kind-icon">run<wbr>Normal</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="yinyangcommand.command.html#runslash"
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="yinyangcommand.command.html#runslash"
 								class="tsd-kind-icon">run<wbr>Slash</a></li>
 							</ul>
 						</section>
 					</div>
 				</section>
 			</section>
-			<section class="tsd-panel-group tsd-member-group ">
+			<section class="tsd-panel-group tsd-member-group tsd-is-inherited">
 				<h2>Constructors</h2>
-				<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class">
+				<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited">
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
-					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Command<span class="tsd-signature-symbol">(</span>options<span class="tsd-signature-symbol">: </span><a href="../modules/yinyangcommand.html#commandoptions" class="tsd-signature-type" data-tsd-kind="Type alias">CommandOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="yinyangcommand.command.html" class="tsd-signature-type" data-tsd-kind="Class">Command</a></li>
+					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Command<span class="tsd-signature-symbol">(</span>co<span class="tsd-signature-symbol">: </span><a href="../modules/yinyangcommand.html#commandoptions" class="tsd-signature-type" data-tsd-kind="Type alias">CommandOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="yinyangcommand.command.html" class="tsd-signature-type" data-tsd-kind="Class">Command</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Inherited from ICommand.constructor</p>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Command Options</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>options: <a href="../modules/yinyangcommand.html#commandoptions" class="tsd-signature-type" data-tsd-kind="Type alias">CommandOptions</a></h5>
+									<h5>co: <a href="../modules/yinyangcommand.html#commandoptions" class="tsd-signature-type" data-tsd-kind="Type alias">CommandOptions</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>This is the commands options</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="yinyangcommand.command.html" class="tsd-signature-type" data-tsd-kind="Class">Command</a></h4>
@@ -155,70 +203,87 @@
 					</ul>
 				</section>
 			</section>
-			<section class="tsd-panel-group tsd-member-group ">
+			<section class="tsd-panel-group tsd-member-group tsd-is-inherited">
 				<h2>Properties</h2>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 					<a name="aliases" class="tsd-anchor"></a>
 					<h3>aliases</h3>
 					<div class="tsd-signature tsd-kind-icon">aliases<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/yinyangcommand.basecommand.html">BaseCommand</a>.<a href="../interfaces/yinyangcommand.basecommand.html#aliases">aliases</a></p>
+						<p>Inherited from <a href="../interfaces/yinyangcommand.icommand.html">ICommand</a>.<a href="../interfaces/yinyangcommand.icommand.html#aliases">aliases</a></p>
 					</aside>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 					<a name="category" class="tsd-anchor"></a>
 					<h3>category</h3>
 					<div class="tsd-signature tsd-kind-icon">category<span class="tsd-signature-symbol">:</span> <a href="../enums/yinyangcommand.commandcategories.html" class="tsd-signature-type" data-tsd-kind="Enumeration">CommandCategories</a></div>
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/yinyangcommand.basecommand.html">BaseCommand</a>.<a href="../interfaces/yinyangcommand.basecommand.html#category">category</a></p>
+						<p>Inherited from <a href="../interfaces/yinyangcommand.icommand.html">ICommand</a>.<a href="../interfaces/yinyangcommand.icommand.html#category">category</a></p>
 					</aside>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 					<a name="description" class="tsd-anchor"></a>
 					<h3>description</h3>
 					<div class="tsd-signature tsd-kind-icon">description<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/yinyangcommand.basecommand.html">BaseCommand</a>.<a href="../interfaces/yinyangcommand.basecommand.html#description">description</a></p>
+						<p>Inherited from <a href="../interfaces/yinyangcommand.icommand.html">ICommand</a>.<a href="../interfaces/yinyangcommand.icommand.html#description">description</a></p>
 					</aside>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 					<a name="enabled" class="tsd-anchor"></a>
 					<h3>enabled</h3>
 					<div class="tsd-signature tsd-kind-icon">enabled<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/yinyangcommand.basecommand.html">BaseCommand</a>.<a href="../interfaces/yinyangcommand.basecommand.html#enabled">enabled</a></p>
+						<p>Inherited from <a href="../interfaces/yinyangcommand.icommand.html">ICommand</a>.<a href="../interfaces/yinyangcommand.icommand.html#enabled">enabled</a></p>
 					</aside>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 					<a name="guildonly" class="tsd-anchor"></a>
 					<h3>guild<wbr>Only</h3>
 					<div class="tsd-signature tsd-kind-icon">guild<wbr>Only<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/yinyangcommand.basecommand.html">BaseCommand</a>.<a href="../interfaces/yinyangcommand.basecommand.html#guildonly">guildOnly</a></p>
+						<p>Inherited from <a href="../interfaces/yinyangcommand.icommand.html">ICommand</a>.<a href="../interfaces/yinyangcommand.icommand.html#guildonly">guildOnly</a></p>
 					</aside>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 					<a name="name" class="tsd-anchor"></a>
 					<h3>name</h3>
 					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/yinyangcommand.basecommand.html">BaseCommand</a>.<a href="../interfaces/yinyangcommand.basecommand.html#name">name</a></p>
+						<p>Inherited from <a href="../interfaces/yinyangcommand.icommand.html">ICommand</a>.<a href="../interfaces/yinyangcommand.icommand.html#name">name</a></p>
 					</aside>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+					<a name="options" class="tsd-anchor"></a>
+					<h3>options</h3>
+					<div class="tsd-signature tsd-kind-icon">options<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">CommandInteractionOption</span><span class="tsd-signature-symbol">[]</span></div>
+					<aside class="tsd-sources">
+						<p>Implementation of <a href="../interfaces/yinyangcommand.basecommand.html">BaseCommand</a>.<a href="../interfaces/yinyangcommand.basecommand.html#options">options</a></p>
+						<p>Inherited from <a href="../interfaces/yinyangcommand.icommand.html">ICommand</a>.<a href="../interfaces/yinyangcommand.icommand.html#options">options</a></p>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 					<a name="owneronly" class="tsd-anchor"></a>
 					<h3>owner<wbr>Only</h3>
 					<div class="tsd-signature tsd-kind-icon">owner<wbr>Only<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/yinyangcommand.basecommand.html">BaseCommand</a>.<a href="../interfaces/yinyangcommand.basecommand.html#owneronly">ownerOnly</a></p>
+						<p>Inherited from <a href="../interfaces/yinyangcommand.icommand.html">ICommand</a>.<a href="../interfaces/yinyangcommand.icommand.html#owneronly">ownerOnly</a></p>
 					</aside>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 					<a name="usage" class="tsd-anchor"></a>
 					<h3>usage</h3>
 					<div class="tsd-signature tsd-kind-icon">usage<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<p>Implementation of <a href="../interfaces/yinyangcommand.basecommand.html">BaseCommand</a>.<a href="../interfaces/yinyangcommand.basecommand.html#usage">usage</a></p>
+						<p>Inherited from <a href="../interfaces/yinyangcommand.icommand.html">ICommand</a>.<a href="../interfaces/yinyangcommand.icommand.html#usage">usage</a></p>
 					</aside>
 				</section>
 			</section>
@@ -234,13 +299,27 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>The Commands Context.</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>note</dt>
+									<dd><p>Treat this as a internal</p>
+									</dd>
+								</dl>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>ctx: <a href="yinyangcommand.commandcontext.html" class="tsd-signature-type" data-tsd-kind="Class">CommandContext</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>CommandContext.</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<p>the Commands Commands method</p>
 						</li>
 					</ul>
 				</section>
@@ -254,55 +333,87 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>The Slash Commands Context.</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>note</dt>
+									<dd><p>Treat this as a internal</p>
+									</dd>
+								</dl>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>ctx: <a href="yinyangcommand.slashcontext.html" class="tsd-signature-type" data-tsd-kind="Class">SlashContext</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>SlashContext.</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<p>the Slash Commands method</p>
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 					<a name="runnormal" class="tsd-anchor"></a>
 					<h3>run<wbr>Normal</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 						<li class="tsd-signature tsd-kind-icon">run<wbr>Normal<span class="tsd-signature-symbol">(</span>ctx<span class="tsd-signature-symbol">: </span><a href="yinyangcommand.commandcontext.html" class="tsd-signature-type" data-tsd-kind="Class">CommandContext</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Implementation of BaseCommand.runNormal</p>
+								<p>Inherited from ICommand.runNormal</p>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>The Commands Context.</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>ctx: <a href="yinyangcommand.commandcontext.html" class="tsd-signature-type" data-tsd-kind="Class">CommandContext</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>CommandContext.</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<p>the Commands Commands method</p>
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 					<a name="runslash" class="tsd-anchor"></a>
 					<h3>run<wbr>Slash</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 						<li class="tsd-signature tsd-kind-icon">run<wbr>Slash<span class="tsd-signature-symbol">(</span>ctx<span class="tsd-signature-symbol">: </span><a href="yinyangcommand.slashcontext.html" class="tsd-signature-type" data-tsd-kind="Class">SlashContext</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Implementation of BaseCommand.runSlash</p>
+								<p>Inherited from ICommand.runSlash</p>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>The Slash Commands Context.</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>ctx: <a href="yinyangcommand.slashcontext.html" class="tsd-signature-type" data-tsd-kind="Class">SlashContext</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>SlashContext.</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<p>the Slash Commands method</p>
 						</li>
 					</ul>
 				</section>
@@ -329,31 +440,34 @@
 					<li class="current tsd-kind-class tsd-parent-kind-namespace">
 						<a href="yinyangcommand.command.html" class="tsd-kind-icon">Command</a>
 						<ul>
-							<li class=" tsd-kind-constructor tsd-parent-kind-class">
+							<li class=" tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited">
 								<a href="yinyangcommand.command.html#constructor" class="tsd-kind-icon">constructor</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class">
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 								<a href="yinyangcommand.command.html#aliases" class="tsd-kind-icon">aliases</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class">
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 								<a href="yinyangcommand.command.html#category" class="tsd-kind-icon">category</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class">
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 								<a href="yinyangcommand.command.html#description" class="tsd-kind-icon">description</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class">
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 								<a href="yinyangcommand.command.html#enabled" class="tsd-kind-icon">enabled</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class">
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 								<a href="yinyangcommand.command.html#guildonly" class="tsd-kind-icon">guild<wbr>Only</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class">
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 								<a href="yinyangcommand.command.html#name" class="tsd-kind-icon">name</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class">
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+								<a href="yinyangcommand.command.html#options" class="tsd-kind-icon">options</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 								<a href="yinyangcommand.command.html#owneronly" class="tsd-kind-icon">owner<wbr>Only</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class">
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 								<a href="yinyangcommand.command.html#usage" class="tsd-kind-icon">usage</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
@@ -362,10 +476,10 @@
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="yinyangcommand.command.html#_runslash" class="tsd-kind-icon">_run<wbr>Slash</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 								<a href="yinyangcommand.command.html#runnormal" class="tsd-kind-icon">run<wbr>Normal</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 								<a href="yinyangcommand.command.html#runslash" class="tsd-kind-icon">run<wbr>Slash</a>
 							</li>
 						</ul>
@@ -380,6 +494,9 @@
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-namespace">
 						<a href="../interfaces/yinyangcommand.basecommand.html" class="tsd-kind-icon">Base<wbr>Command</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-namespace">
+						<a href="../interfaces/yinyangcommand.icommand.html" class="tsd-kind-icon">ICommand</a>
 					</li>
 					<li class=" tsd-kind-type-alias tsd-parent-kind-namespace">
 						<a href="../modules/yinyangcommand.html#commandoptions" class="tsd-kind-icon">Command<wbr>Options</a>
@@ -400,6 +517,14 @@
 				class="tsd-kind-icon">Property</span></li>
 				<li class="tsd-kind-method tsd-parent-kind-class"><span
 				class="tsd-kind-icon">Method</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited"><span
+				class="tsd-kind-icon">Inherited constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><span
+				class="tsd-kind-icon">Inherited property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><span
+				class="tsd-kind-icon">Inherited method</span></li>
 			</ul>
 			<ul class="tsd-legend">
 				<li class="tsd-kind-property tsd-parent-kind-interface"><span

@@ -51,7 +51,7 @@ export class MessageEvent extends Event {
       .setColor(color)
       .setDescription(content);
 
-    channel.send({ embed });
+    channel.send({ embeds: [embed] });
   }
 
   async run(bot: BotClient, client: DiscordClient, message: Message) {

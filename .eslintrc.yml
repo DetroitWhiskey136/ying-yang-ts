@@ -57,4 +57,5 @@ rules: {
   linebreak-style: 0,
   lines-between-class-members: 0,
   eol-last: 0,
+  max-classes-per-file: 0,
 }

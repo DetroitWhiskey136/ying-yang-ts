@@ -37,7 +37,7 @@ export class WarnCommand extends YinYangCommand.Command {
             .setFooter(`Warned by: ${member?.displayName}`)
             .setTimestamp();
 
-          channel.send({ embed });
+          channel.send({ embeds: [embed] });
         } else {
           bot.logger.error('reason is not defined');
         }

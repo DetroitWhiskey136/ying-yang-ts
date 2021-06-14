@@ -117,7 +117,6 @@ export class Embed extends MessageEmbed {
       if (icon) return icon;
       const defaultIcon = ImageUtil.renderGuildIcon(resolvable.nameAcronym);
       const name = `${crypto.randomBytes(20).toString('hex')}.png`;
-      super.attachFiles([new MessageAttachment(defaultIcon, name)]);
       return `attachment://${name}`;
     }
     return resolvable;
