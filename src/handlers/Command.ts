@@ -162,7 +162,7 @@ export namespace YinYangCommand {
   /**
    * The Command Class
    *
-   * ```javascript
+   * ```ts
    * // Usage
    * export class <CommandName>Command extends YinYangCommand.Command {
    *   constructor() {

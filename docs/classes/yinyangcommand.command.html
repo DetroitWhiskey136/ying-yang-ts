@@ -75,7 +75,7 @@
 					<div class="lead">
 						<p>The Command Class</p>
 					</div>
-					<pre><code class="language-javascript"><span style="color: #545454">// Usage</span>
+					<pre><code class="language-ts"><span style="color: #545454">// Usage</span>
 <span style="color: #89DDFF">export</span><span style="color: #EEFFFF"> </span><span style="color: #C792EA">class</span><span style="color: #EEFFFF"> </span><span style="color: #89DDFF">&lt;</span><span style="color: #FFCB6B">CommandName</span><span style="color: #89DDFF">&gt;</span><span style="color: #FFCB6B">Command</span><span style="color: #EEFFFF"> </span><span style="color: #C792EA">extends</span><span style="color: #EEFFFF"> </span><span style="color: #FFCB6B">YinYangCommand</span><span style="color: #89DDFF">.</span><span style="color: #FFCB6B">Command</span><span style="color: #EEFFFF"> </span><span style="color: #89DDFF">{</span>
 <span style="color: #EEFFFF">  </span><span style="color: #C792EA">constructor</span><span style="color: #89DDFF">()</span><span style="color: #EEFFFF"> </span><span style="color: #89DDFF">{</span>
 <span style="color: #F07178">    </span><span style="color: #EEFFFF">super</span><span style="color: #F07178">(</span><span style="color: #89DDFF">{</span>
@@ -86,19 +86,19 @@
 <span style="color: #F07178">      guildOnly</span><span style="color: #89DDFF">:</span><span style="color: #F07178"> </span><span style="color: #FF9CAC">false</span><span style="color: #89DDFF">,</span>
 <span style="color: #F07178">      name</span><span style="color: #89DDFF">:</span><span style="color: #F07178"> </span><span style="color: #89DDFF">&#039;</span><span style="color: #C3E88D">&lt;commandname&gt;</span><span style="color: #89DDFF">&#039;</span><span style="color: #89DDFF">,</span>
 <span style="color: #F07178">      usage</span><span style="color: #89DDFF">:</span><span style="color: #F07178"> </span><span style="color: #89DDFF">&#039;</span><span style="color: #C3E88D">&lt;commandname&gt; &lt;paramas...&gt;</span><span style="color: #89DDFF">&#039;</span><span style="color: #89DDFF">,</span>
-<span style="color: #F07178">      options</span><span style="color: #89DDFF">:</span><span style="color: #F07178"> [</span><span style="color: #89DDFF">&lt;</span><span style="color: #FFCB6B">CommandInteractionOption</span><span style="color: #89DDFF">&gt;</span><span style="color: #EEFFFF">],</span>
-<span style="color: #EEFFFF">      ownerOnly: false,</span>
-<span style="color: #EEFFFF">    });</span>
-<span style="color: #EEFFFF">  }</span>
+<span style="color: #F07178">      options</span><span style="color: #89DDFF">:</span><span style="color: #F07178"> [</span><span style="color: #89DDFF">&lt;</span><span style="color: #EEFFFF">CommandInteractionOption</span><span style="color: #89DDFF">&gt;</span><span style="color: #F07178">]</span><span style="color: #89DDFF">,</span>
+<span style="color: #F07178">      ownerOnly</span><span style="color: #89DDFF">:</span><span style="color: #F07178"> </span><span style="color: #FF9CAC">false</span><span style="color: #89DDFF">,</span>
+<span style="color: #F07178">    </span><span style="color: #89DDFF">}</span><span style="color: #F07178">)</span><span style="color: #89DDFF">;</span>
+<span style="color: #F07178">  </span><span style="color: #89DDFF">}</span>
 
-<span style="color: #EEFFFF">  runNormal(ctx: YinYangCommand.CommandContext) </span><span style="color: #89DDFF">{</span>
-<span style="color: #EEFFFF">    ctx</span><span style="color: #89DDFF">.</span><span style="color: #EEFFFF">channel</span><span style="color: #89DDFF">.</span><span style="color: #82AAFF">send</span><span style="color: #EEFFFF">(</span><span style="color: #89DDFF">&#039;</span><span style="color: #C3E88D">hi</span><span style="color: #89DDFF">&#039;</span><span style="color: #EEFFFF">);</span>
-<span style="color: #EEFFFF">  </span><span style="color: #89DDFF">}</span>
+<span style="color: #EEFFFF">  </span><span style="color: #F07178">runNormal</span><span style="color: #89DDFF">(</span><span style="color: #EEFFFF">ctx</span><span style="color: #89DDFF">:</span><span style="color: #EEFFFF"> </span><span style="color: #FFCB6B">YinYangCommand</span><span style="color: #89DDFF">.</span><span style="color: #FFCB6B">CommandContext</span><span style="color: #89DDFF">)</span><span style="color: #EEFFFF"> </span><span style="color: #89DDFF">{</span>
+<span style="color: #F07178">    </span><span style="color: #EEFFFF">ctx</span><span style="color: #89DDFF">.</span><span style="color: #EEFFFF">channel</span><span style="color: #89DDFF">.</span><span style="color: #82AAFF">send</span><span style="color: #F07178">(</span><span style="color: #89DDFF">&#039;</span><span style="color: #C3E88D">hi</span><span style="color: #89DDFF">&#039;</span><span style="color: #F07178">)</span><span style="color: #89DDFF">;</span>
+<span style="color: #F07178">  </span><span style="color: #89DDFF">}</span>
 
-<span style="color: #EEFFFF">  runSlash(ctx: YinYangCommand.SlashContext) </span><span style="color: #89DDFF">{</span>
-<span style="color: #EEFFFF">    ctx</span><span style="color: #89DDFF">.</span><span style="color: #EEFFFF">commandInteraction</span><span style="color: #89DDFF">.</span><span style="color: #82AAFF">reply</span><span style="color: #EEFFFF">(</span><span style="color: #89DDFF">&#039;</span><span style="color: #C3E88D">hi</span><span style="color: #89DDFF">&#039;</span><span style="color: #EEFFFF">);</span>
-<span style="color: #EEFFFF">  </span><span style="color: #89DDFF">}</span>
-<span style="color: #EEFFFF">}</span>
+<span style="color: #EEFFFF">  </span><span style="color: #F07178">runSlash</span><span style="color: #89DDFF">(</span><span style="color: #EEFFFF">ctx</span><span style="color: #89DDFF">:</span><span style="color: #EEFFFF"> </span><span style="color: #FFCB6B">YinYangCommand</span><span style="color: #89DDFF">.</span><span style="color: #FFCB6B">SlashContext</span><span style="color: #89DDFF">)</span><span style="color: #EEFFFF"> </span><span style="color: #89DDFF">{</span>
+<span style="color: #F07178">    </span><span style="color: #EEFFFF">ctx</span><span style="color: #89DDFF">.</span><span style="color: #EEFFFF">commandInteraction</span><span style="color: #89DDFF">.</span><span style="color: #82AAFF">reply</span><span style="color: #F07178">(</span><span style="color: #89DDFF">&#039;</span><span style="color: #C3E88D">hi</span><span style="color: #89DDFF">&#039;</span><span style="color: #F07178">)</span><span style="color: #89DDFF">;</span>
+<span style="color: #F07178">  </span><span style="color: #89DDFF">}</span>
+<span style="color: #89DDFF">}</span>
 </code></pre>
 				</div>
 			</section>
