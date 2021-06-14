@@ -1,21 +1,16 @@
-import { CommandContext } from '../../command/CommandContext';
-import { BotClient, Command, Embed } from '../../index';
+import { YinYangCommand } from '../../index';
 
-export class TestCommand extends Command {
-  constructor(bot: BotClient) {
-    super(bot, {
-      aliases: [],
-      category: 'Developer',
-      description: 'tests a command',
-      enabled: false,
-      guildOnly: true,
+export class TestCommand extends YinYangCommand.Command {
+  constructor() {
+    super({
+      category: YinYangCommand.CommandCategories.DEVELOPER,
+      description: 'This is a test',
       name: 'test',
-      usage: 'test',
-    }, [
-    ]);
+      usage: 'test (don\'t use this)',
+    });
   }
 
-  async run(ctx: CommandContext) {
-    return undefined;
+  async runNormal(ctx: YinYangCommand.CommandContext) {
+    console.log('worked?', this);
   }
 }

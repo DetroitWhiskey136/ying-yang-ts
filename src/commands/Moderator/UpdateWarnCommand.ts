@@ -1,16 +1,15 @@
-import { BotClient, Command } from '../../index';
+import { YinYangCommand } from '../../index';
 
-export class UpdateWarnCommand extends Command {
-  constructor(bot: BotClient) {
-    super(bot, {
+export class UpdateWarnCommand extends YinYangCommand.Command {
+  constructor() {
+    super({
       aliases: ['uw', 'uwarn'],
-      category: 'Moderator',
+      category: YinYangCommand.CommandCategories.MODERATOR,
       description: 'Update a warning for a user',
       enabled: false,
-      guildOnly: true,
       name: 'updatewarn',
       usage: 'updatewarn <user> <points> <reason>',
-    }, []);
+    });
   }
 
   run() {

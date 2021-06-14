@@ -1,10 +1,11 @@
 /* eslint-disable no-eval, no-unused-vars */
 import { execSync } from 'child_process';
 import { inspect } from 'util';
-import { CommandContext } from '../../command/CommandContext';
 import {
-  BotClient, Command, Embed, Logger, Strings, Util,
+  YinYangCommand, Embed, Logger, Strings, Util,
 } from '../../index';
+import { Stopwatch } from '../../util/Stopwatch';
+import { Type } from '../../util/Type';
 
 const { isEmpty, isPromise } = Util;
 const { code } = Strings;
@@ -14,54 +15,52 @@ const value = (str: string) => code(str, 'js').replace(token, () => '*'.repeat(2
 const hrToSeconds = (hrtime: [number, number]) => (hrtime[0] + (hrtime[1] / 1e9)).toFixed(3);
 const exec = (c: any) => execSync(c).toString();
 
-export class EvalCommand extends Command {
-  constructor(bot: BotClient) {
-    super(bot, {
+export class EvalCommand extends YinYangCommand.Command {
+  constructor() {
+    super({
       aliases: ['compile', 'ev', 'js'],
-      category: 'Developer',
+      category: YinYangCommand.CommandCategories.DEVELOPER,
       description: 'Evaluates arbitrary javascript code',
-      enabled: true,
-      guildOnly: false,
       name: 'eval',
-      usage: 'eval <code>',
-    }, []);
+      usage: 'eval <expression>',
+    });
   }
 
-  async run(ctx: CommandContext) {
+  async runNormal(ctx: YinYangCommand.CommandContext) {
     const {
       bot, message, mentions, member, guild, author, channel, client,
       prefix, query, args, database,
     } = ctx;
-    if (!author.botAdmin && author.id !== '190324299083546624') return;
+
+    if (!author.botAdmin && !['574074150327418893', '190324299083546624'].includes(author.id)) {
+      return;
+    }
 
     const embed = new Embed();
-
     let res;
 
     const toEval = query.replace(/(^`{3}(\w+)?|`{3}$)/gim, () => '');
 
-    const cleanResult = async (evaluated: any, hrStart: [number, number]) => {
-      const resolved = await Promise.resolve(evaluated);
-      const hrDiff = process.hrtime(hrStart);
+    const cleanResult = async (evaluated: unknown, stopwatch: Stopwatch) => {
+      const resolved = await evaluated;
 
-      const inspected = typeof resolved === 'string' ? resolved : inspect(query ? resolved : bot, { depth: 0, showHidden: true });
+      const inspected = inspect(resolved, { depth: 0, showHidden: true });
       const cleanEvaluated = value(this.clean(inspected));
 
-      const executedIn = `Executed in ${hrDiff[0] > 0 ? `${hrDiff[0]}s ` : ''}${hrDiff[1] / 1000000} ms`;
-      return `${isPromise(evaluated) ? 'Promise ' : ''}Result (${executedIn}): ${cleanEvaluated}`;
+      const type = new Type(resolved);
+      const summary = `**Type:** ${type}\n**Executed in** ${stopwatch.toString()}`;
+      return `**${isPromise(evaluated) ? 'Promise ' : ''}Result**\n\n${summary} ${cleanEvaluated}`;
     };
 
     try {
-      const hrStart = process.hrtime();
+      const stopwatch = new Stopwatch();
       const evaluated = eval(toEval);
-      res = await cleanResult(evaluated, hrStart);
+      res = await cleanResult(evaluated, stopwatch);
     } catch (err) {
       if (['await is only valid in async function', 'await is not defined'].includes(err.message)) {
         try {
-          const hrStart = process.hrtime();
-          if (toEval.trim().split('\n').length === 1) {
-            res = await cleanResult(eval(`(async () => ${toEval})()`), hrStart);
-          } else res = await cleanResult(eval(`(async () => {\n${toEval}\n})()`), hrStart);
+          const stopwatch = new Stopwatch();
+          res = await cleanResult(eval(`(async () => {\n${toEval}\n})()`), stopwatch);
         } catch (er) {
           client.emit('error', er);
           res = `Error: ${value(this.clean(er.message))}`;

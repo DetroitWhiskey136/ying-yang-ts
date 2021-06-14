@@ -55,4 +55,6 @@ rules: {
     'error',
   ],
   linebreak-style: 0,
+  lines-between-class-members: 0,
+  eol-last: 0,
 }

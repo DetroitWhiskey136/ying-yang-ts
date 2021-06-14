@@ -1,74 +1,161 @@
-import { CommandContext } from '../command/CommandContext';
-import { CommandParameters } from '../command/parameters/CommandParameters';
-import { BotClient } from '../index';
+/* eslint-disable max-classes-per-file */
 
-interface commandOptions {
-  name: string;
-  description: string;
-  category: string;
-  usage: string;
-  enabled?: boolean;
-  guildOnly?: boolean;
-  aliases?: string[];
-  type?: string;
-}
+import {
+  Message, MessageMentions, GuildMember, Guild, User,
+  TextChannel, DMChannel, NewsChannel, CommandInteraction,
+} from 'discord.js';
+import {
+  BotClient, DiscordClient, Database,
+} from '../index';
 
-export declare interface Command {
-  aliases: string[];
-  bot: BotClient;
-  category: string;
-  description: string;
-  enabled: boolean;
-  guildOnly: boolean;
-  name: string;
-  options: commandOptions;
-  parameters: Array<object>
-  type: string;
-  usage: string;
-}
+export namespace YinYangCommand {
 
-export class Command {
-  constructor(bot: BotClient, options: commandOptions, parameters?: Array<object>) {
-    this.bot = bot;
-    this.parameters = parameters || [];
-    this.setup(options);
+  // #region Command Context,
+  interface commandContext {
+    bot: BotClient;
+    message: Message;
+    prefix: string | null;
+    query: string;
+    args: string[];
   }
 
-  // #region Methods
-  private setup(options: commandOptions) {
-    this.name = options.name || 'none';
-    this.description = options.description || 'none';
-    this.category = options.category || 'none';
-    this.usage = options.usage || '';
-    this.enabled = options.enabled || false;
-    this.guildOnly = options.guildOnly || true;
-    this.aliases = options.aliases || [];
-    this.type = 'command';
+  export declare interface CommandContext {
+    bot: BotClient;
+    message: Message;
+    mentions: MessageMentions;
+    member: GuildMember | null;
+    guild: Guild | null;
+    author: User;
+    channel: TextChannel | DMChannel | NewsChannel;
+    client: DiscordClient;
+    prefix: string | null;
+    query: string;
+    args: string[];
+    database: Database;
   }
 
   /**
-   * Gets called if the command doesn't have a run method.
-   * @param {CommandContext} ctx The commands context.
-   * @returns {void}
-   * @memberof Command
+   * The CommandContext Class
+   * @class CommandContext
    */
-  run(ctx: CommandContext): Promise<void> | void {
-    throw new Error(`${this.constructor.name} doesn't have a run() method.`);
-  }
-
-  public async _run(ctx: CommandContext): Promise<void> {
-    const { client } = ctx;
-    // eslint-disable-next-line prefer-destructuring
-    let args = ctx.args;
-    try {
-      if (this.parameters) {
-        args = await CommandParameters.handle(ctx, this.parameters, args);
-      }
-
-      await this.run(ctx);
-    } catch (error) {
-      client.emit('error', error);
+  export class CommandContext {
+    constructor(options: commandContext) {
+      this.bot = options.bot;
+      this.message = options.message;
+      this.mentions = options.message.mentions;
+      this.member = options.message?.member;
+      this.guild = options.message.guild;
+      this.author = options.message.author;
+      this.channel = options.message.channel;
+      this.client = options.bot.client;
+      this.prefix = options.prefix || null;
+      this.query = options.query;
+      this.args = options.args;
+      this.database = options.bot.database;
     }
   }
   // #endregion
+
+  // #region Slash Command Context,
+  interface slashContext {
+    bot: BotClient;
+    commandInteraction: CommandInteraction;
+  }
+
+  export declare interface SlashContext {
+    bot: BotClient;
+   commandInteraction: CommandInteraction;
+   client: DiscordClient;
+   database: Database;
+  }
+  export class SlashContext {
+    constructor(options: slashContext) {
+      this.bot = options.bot;
+      this.client = options.bot.client;
+      this.commandInteraction = options.commandInteraction;
+      this.database = options.bot.database;
+    }
+  }
+  // #endregion
+
+  export enum CommandCategories {
+    GENERAL = 'General',
+    ADMIN = 'Admin',
+    MODERATOR = 'Moderator',
+    MUSIC = 'Music',
+    FUN = 'Fun',
+    IMAGES = 'Images',
+    SYSTEM = 'System',
+    GIVEAWAYS = 'Giveaways',
+    UTILITY = 'Utility',
+    DEVELOPER = 'Developer',
+    UNKNOWN = 'Unknown',
+  }
+  export type CommandOptions = {
+    name: string,
+    aliases?: string[],
+    category: CommandCategories,
+    description?: string,
+    guildOnly?: boolean,
+    ownerOnly?: boolean,
+    usage?: string,
+    enabled?: boolean
+}
+
+  export interface BaseCommand {
+    name: string
+    aliases: string[]
+    category: CommandCategories
+    description: string
+    guildOnly: boolean
+    ownerOnly: boolean
+    usage: string
+    enabled: boolean
+
+    runNormal: (ctx: CommandContext) => unknown
+    runSlash: (ctx: SlashContext) => unknown
+  }
+
+  export class Command implements BaseCommand {
+    private options: CommandOptions;
+    public name: string;
+    public aliases: string[];
+    public category: CommandCategories;
+    public description: string;
+    public guildOnly: boolean;
+    public ownerOnly: boolean;
+    public usage: string;
+    public enabled: boolean;
+
+    constructor(options: CommandOptions) {
+      this.options = options;
+      this.name = options.name;
+      this.aliases = options.aliases ?? [];
+      this.category = options.category ?? CommandCategories.UNKNOWN;
+      this.description = options.description ?? 'No description';
+      this.guildOnly = options.guildOnly ?? false;
+      this.ownerOnly = options.ownerOnly ?? false;
+      this.usage = options.usage ?? 'No usage';
+      this.enabled = options.enabled ?? true;
+    }
+
+    async runNormal(ctx: CommandContext) {
+      throw Error('This field is not implemented');
+    }
+
+    async _runNormal(ctx: CommandContext) {
+      this.runNormal(ctx)
+        .catch((e) => ctx.client.emit('error', e));
+    }
+
+    async runSlash(ctx: SlashContext) {
+      throw Error('This field is not implemented');
+    }
+
+    async _runSlash(ctx: SlashContext) {
+      this.runSlash(ctx)
+        .catch((e) => ctx.client.emit('error', e));
+    }
+  }
+
 }

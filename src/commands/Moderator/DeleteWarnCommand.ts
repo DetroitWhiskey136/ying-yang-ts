@@ -1,16 +1,15 @@
-import { BotClient, Command } from '../../index';
+import { YinYangCommand } from '../../index';
 
-export class DeleteWarnCommand extends Command {
-  constructor(bot: BotClient) {
-    super(bot, {
+export class DeleteWarnCommand extends YinYangCommand.Command {
+  constructor() {
+    super({
       aliases: ['delwarn', 'dw', 'dwarn'],
-      category: 'Moderator',
+      category: YinYangCommand.CommandCategories.MODERATOR,
       description: 'Deletes a users warning',
       enabled: false,
-      guildOnly: true,
       name: 'deletewarn',
       usage: 'deletewarn <warningID>',
-    }, []);
+    });
   }
 
   run() {

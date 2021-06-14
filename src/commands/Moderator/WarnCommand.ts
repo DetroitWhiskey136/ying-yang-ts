@@ -1,25 +1,22 @@
 import { Snowflake } from 'discord.js';
-import { CommandContext } from '../../command/CommandContext';
-import { CommandError } from '../../command/CommandError';
 import {
-  BotClient, Embed, Command, MemberUtil,
+  Embed, YinYangCommand, MemberUtil,
 } from '../../index';
 
-export class WarnCommand extends Command {
-  constructor(bot: BotClient) {
-    super(bot, {
+export class WarnCommand extends YinYangCommand.Command {
+  constructor() {
+    super({
       aliases: [],
-      category: 'Moderator',
+      category: YinYangCommand.CommandCategories.MODERATOR,
       description: 'Gives a user a warning',
       enabled: true,
-      guildOnly: true,
       name: 'warn',
       usage: 'warn <user> <points> <reason>',
-    }, []);
+    });
   }
 
   // eslint-disable-next-line consistent-return
-  async run(ctx: CommandContext) {
+  async runNormal(ctx: YinYangCommand.CommandContext) {
     const {
       author, args, client, database, guild, member, bot, channel, mentions,
     } = ctx;

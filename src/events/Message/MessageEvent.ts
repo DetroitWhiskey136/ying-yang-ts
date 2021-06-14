@@ -1,10 +1,10 @@
 import {
   Message, TextChannel, DMChannel, NewsChannel, ColorResolvable,
 } from 'discord.js';
-import { CommandContext } from '../../command/CommandContext';
 import {
   BotClient, DiscordClient, Embed,
   Event, Strings, MESSAGES, OPTIONS,
+  YinYangCommand,
 } from '../../index';
 
 type Channel = TextChannel | DMChannel | NewsChannel;
@@ -21,92 +21,87 @@ export class MessageEvent extends Event {
     const { author, channel, client } = message;
     return !author.bot
       || (channel instanceof TextChannel
-      && !channel.permissionsFor(String(client.user?.id))?.has('SEND_MESSAGES'));
+      && channel.permissionsFor(String(client.user?.id))?.has('SEND_MESSAGES') !== true);
   }
 
-  private getPrefix(prefix: string, { client, content }: Message): RegExpMatchArray | null {
+  private getPrefix(prefix: string, { client, content }: Message): string {
     const fixedPrefix = Strings.escapeRegExp(prefix);
-    const fixedUsername = Strings.escapeRegExp(String(client.user?.username));
+    const fixedUsername = Strings.escapeRegExp(client.user?.username ?? '');
 
-    const PrefixRegex = new RegExp(`^(<@!?${client.user?.id}>|${fixedPrefix}|${fixedUsername})?`, 'i');
+    const PREFIX_REGEX = new RegExp(`^(<@!?${client.user?.id}>|${fixedPrefix}|${fixedUsername})?`, 'i');
+    const matchPrefix = content.match(PREFIX_REGEX);
 
-    const matchPrefix = content.match(PrefixRegex);
-
-    if (matchPrefix && matchPrefix.length > 1) {
-      return matchPrefix;
+    if (matchPrefix !== null && matchPrefix.length > 1) {
+      return matchPrefix[0];
     }
-    return null;
+    return '';
   }
 
   /**
    *  Creates a nice little embed for returning information to the user.
    * @param {Channel} channel the message channel
    * @param {String} color the embed color wanted
-   * @param {String} message the message you want to send to the user i.e. "Don't be a dumbass"
+   * @param {String} content the message you want to send to the user i.e. "Don't be a dumbass"
    * @returns {void}
    */
-  createEmbed(channel: Channel, color: ColorResolvable, message: string): void {
-    if (!color || !message) throw new Error('A argument was not provided please check your work!');
+  createEmbed(channel: Channel, color: ColorResolvable, content: string): void {
+    if (content.length === 0) throw new Error('A content cannot be empty!');
+
     const embed = new Embed()
       .setColor(color)
-      .setDescription(message);
+      .setDescription(content);
 
-    if (!channel || channel === undefined) throw new Error('Channel not provided please check your work!');
     channel.send({ embed });
   }
 
   async run(bot: BotClient, client: DiscordClient, message: Message) {
-    const {
-      author, channel, content, guild, member,
-    } = message;
-
-    const clientMember = await guild?.members.fetch(client!.user!.id);
-
+    const { author, channel, content } = message;
+    const guild = message?.guild;
+    const member = message?.member;
     const authorNick = Strings.setNickname(author.username);
 
     if (
       bot.database.guilds.get(guild!.id).autoFormatUsernames
-      && clientMember!.permissions.has('MANAGE_NICKNAMES')
-      && (!member?.displayName || member.displayName !== authorNick)
+      && guild?.me?.permissions?.has('MANAGE_NICKNAMES') !== false
+      && member?.displayName !== authorNick
     ) {
       member?.setNickname(authorNick);
     }
 
     if (!this.isValidMessage(message)) return;
-    if (!member?.user.bot) {
+    if (!author.bot && member !== null) {
       member?.addLevel();
     }
+
     const prefix = guild?.prefix ?? OPTIONS.PREFIX;
-    const usedPrefix = this.getPrefix(prefix, message)?.[0];
+    const usedPrefix = this.getPrefix(prefix, message);
 
-    const MentionRegex = new RegExp(`^(<@!?${client.user?.id}>)`);
-    const mentioned = MentionRegex.test(message.content);
+    const MENTION_REGEX = new RegExp(`^(<@!?${client.user?.id}>)`);
+    const isMentioned = MENTION_REGEX.test(message.content);
 
-    if (mentioned && !usedPrefix) {
+    if (isMentioned && usedPrefix.length === 0) {
       this.createEmbed(channel, 'BLUE', Strings.hasPlaceholder(MESSAGES.PREFIX, '{prefix}', `\`${prefix}\``));
-
       return;
     }
 
     const args = content.slice(usedPrefix?.length).trim().split(/ +/g);
 
-    const commandName = args.shift()?.toLowerCase()!;
+    const commandName = args.shift()!.toLowerCase();
     const command = bot.commands.get(commandName)
-      || bot.commands.get(bot.aliases.get(commandName)!);
+      ?? bot.commands.get(bot.aliases.get(commandName)!);
 
-    if (mentioned && !command) {
+    if (isMentioned && command === undefined) {
       this.createEmbed(channel, 'BLUE', Strings.hasPlaceholder(MESSAGES.PREFIX, '{prefix}', `\`${prefix}\``));
-
       return;
     }
 
-    if (!command || !usedPrefix) return;
+    if (command === undefined || usedPrefix.length === 0) return;
 
     const params = {
-      args, bot, message, prefix: guild?.prefix || '/', query: args.join(' '),
+      args, bot, message, prefix, query: args.join(' '),
     };
 
-    command._run(new CommandContext(params));
+    command._runNormal(new YinYangCommand.CommandContext(params));
     bot.logger.debug(`Command: ${command.name} ran by ${author.username}`);
   }
 }

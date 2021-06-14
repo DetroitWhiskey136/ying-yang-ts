@@ -1,6 +1,6 @@
 import { Interaction } from 'discord.js';
 import {
-  BotClient, DiscordClient, Event, Files,
+  BotClient, DiscordClient, Event, Files, YinYangCommand,
 } from '../../index';
 
 export class MessageEvent extends Event {
@@ -13,10 +13,13 @@ export class MessageEvent extends Event {
 
   async run(bot: BotClient, client: DiscordClient, interaction: Interaction) {
     if (!interaction.isCommand()) return;
-    try {
-      await bot.slashCommands.get(interaction.commandName)?._run(bot, interaction);
-    } catch (error) {
-      bot.client.emit('error', error);
-    }
+    const command = bot.commands.get(interaction.commandName);
+    if (!command) return;
+
+    const params = {
+      bot, commandInteraction: interaction,
+    };
+    await command?._runSlash(new YinYangCommand.SlashContext(params))
+      .catch((e) => bot.client.emit('error', e));
   }
 }
