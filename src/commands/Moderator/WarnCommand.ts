@@ -1,7 +1,5 @@
-import { GuildMember, Snowflake } from 'discord.js';
-import {
-  Embed, YinYangCommand, MemberUtil,
-} from '../../index';
+import { Snowflake } from 'discord.js';
+import { Embed, YinYangCommand } from '../../index';
 
 export class WarnCommand extends YinYangCommand.Command {
   constructor() {
