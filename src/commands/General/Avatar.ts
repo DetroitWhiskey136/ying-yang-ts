@@ -8,6 +8,7 @@ export class AvatarCommand extends YinYangCommand.Command {
       category: YinYangCommand.CommandCategories.GENERAL,
       description: 'Display a users avatar',
       name: 'avatar',
+      usage: 'avatar [user]'
     });
   }
 
@@ -28,6 +29,6 @@ export class AvatarCommand extends YinYangCommand.Command {
       .setImage(avatarUrl)
       .setTitle(`Profile Picture for ${user.username}`)
       .setColor(dominantColor);
-    interaction.reply({ embeds: [embed] }).catch(console.error);
+    await interaction.reply({ embeds: [embed] });
   }
 }

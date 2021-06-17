@@ -6,11 +6,11 @@ export class TestCommand extends YinYangCommand.Command {
       category: YinYangCommand.CommandCategories.DEVELOPER,
       description: 'This is a test',
       name: 'test',
-      usage: 'test (don\'t use this)',
+      usage: 'test',
     });
   }
 
   async runNormal(ctx: YinYangCommand.CommandContext) {
-    console.log('worked?', this);
+    // Test
   }
 }

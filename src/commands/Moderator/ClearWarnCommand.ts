@@ -3,7 +3,7 @@ import { YinYangCommand } from '../../index';
 export class ClearWarnCommand extends YinYangCommand.Command {
   constructor() {
     super({
-      aliases: ['cw', 'cwarn'],
+      aliases: ['cw', 'cwarn', 'clearwarn'],
       category: YinYangCommand.CommandCategories.MODERATOR,
       description: 'Clears all warnings for a user',
       enabled: false,
@@ -12,7 +12,7 @@ export class ClearWarnCommand extends YinYangCommand.Command {
     });
   }
 
-  run() {
-
+  async runNormal(ctx: YinYangCommand.CommandContext) {
+    // Not implemented
   }
 }

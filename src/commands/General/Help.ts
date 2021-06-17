@@ -18,22 +18,22 @@ export class HelpCommand extends YinYangCommand.Command {
 
   async runNormal(ctx: YinYangCommand.CommandContext) {
     const {
-      bot, args, channel, guild, author, prefix,
+      bot, args, channel, prefix,
     } = ctx;
     const { commands } = bot;
     const embed = new Embed();
 
     if (args[0] === undefined) {
-      this.sendCategories(channel, commands, prefix);
+      await this.sendCategories(channel, commands, prefix);
       return;
     }
 
     const commandName = args.shift()?.toLowerCase()!;
     const cmd = bot.commands.get(commandName)
-        ?? bot.commands.get(bot.aliases.get(commandName) ?? '');
+            ?? bot.commands.get(bot.aliases.get(commandName) ?? '');
 
     if (cmd === undefined) {
-      channel.send(`Command not found. Use \`${prefix}help\` to see all commands`);
+      await channel.send(`Command not found. Use \`${prefix}help\` to see all commands`);
       return;
     }
 
@@ -48,10 +48,10 @@ export class HelpCommand extends YinYangCommand.Command {
       embed.setTitle(`${embed.title} - ${cmd.aliases.join(', ')}`);
     }
 
-    channel.send({ embeds: [embed] });
+    await channel.send({ embeds: [embed] });
   }
 
-  private sendCategories(
+  private async sendCategories(
     channel: TextChannel | DMChannel | NewsChannel,
     commands: Collection<string, YinYangCommand.Command>,
     prefix: string | null,
@@ -71,6 +71,6 @@ export class HelpCommand extends YinYangCommand.Command {
       embed.addField(categoryName, content.join('\n'));
     });
 
-    channel.send({ embeds: [embed] });
+    await channel.send({ embeds: [embed] });
   }
 }
