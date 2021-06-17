@@ -8,11 +8,11 @@ export class UpdateWarnCommand extends YinYangCommand.Command {
       description: 'Update a warning for a user',
       enabled: false,
       name: 'updatewarn',
-      usage: 'updatewarn <user> <points> <reason>',
+      usage: 'updatewarn <user> [points] [reason]',
     });
   }
 
-  run() {
-
+  async runNormal(ctx: YinYangCommand.CommandContext) {
+    // Not implemented
   }
 }

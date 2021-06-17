@@ -1,19 +1,17 @@
 /* eslint-disable no-eval, no-unused-vars */
-import { execSync } from 'child_process';
 import { inspect } from 'util';
 import {
-  YinYangCommand, Embed, Logger, Strings, Util,
+  YinYangCommand, Embed, Strings, Util,
 } from '../../index';
 import { Stopwatch } from '../../util/Stopwatch';
 import { Type } from '../../util/Type';
 
-const { isEmpty, isPromise } = Util;
+const { isPromise } = Util;
 const { code } = Strings;
 
-const token = process.env.TOKEN || '';
-const value = (str: string) => code(str, 'js').replace(token, () => '*'.repeat(20));
-const hrToSeconds = (hrtime: [number, number]) => (hrtime[0] + (hrtime[1] / 1e9)).toFixed(3);
-const exec = (c: any) => execSync(c).toString();
+const token = process.env.TOKEN ?? '';
+const value = (str: string) => code(str, 'js')
+  .replace(token, () => '*'.repeat(token.length));
 
 export class EvalCommand extends YinYangCommand.Command {
   constructor() {
@@ -43,7 +41,6 @@ export class EvalCommand extends YinYangCommand.Command {
 
     const cleanResult = async (evaluated: unknown, stopwatch: Stopwatch) => {
       const resolved = await evaluated;
-
       const inspected = inspect(resolved, { depth: 0, showHidden: true });
       const cleanEvaluated = value(this.clean(inspected));
 
@@ -77,6 +74,7 @@ export class EvalCommand extends YinYangCommand.Command {
 
   clean(str: string) {
     const blankSpace = String.fromCharCode(8203);
-    return typeof str === 'string' ? str.replace(/`/g, `\`${blankSpace}`).replace(/@/g, `@${blankSpace}`) : str;
+    return str.replace(/`/g, `\`${blankSpace}`)
+      .replace(/@/g, `@${blankSpace}`);
   }
 }

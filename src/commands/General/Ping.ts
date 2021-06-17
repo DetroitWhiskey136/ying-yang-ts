@@ -6,12 +6,12 @@ export class PingCommand extends YinYangCommand.Command {
       category: YinYangCommand.CommandCategories.GENERAL,
       description: 'Replies with Pong!',
       name: 'ping',
-      options: [],
+      usage: 'ping',
     });
   }
 
   async runSlash(ctx: YinYangCommand.SlashContext) {
     const { commandInteraction: interaction } = ctx;
-    interaction.reply('Pong!');
+    await interaction.reply('Pong!');
   }
 }

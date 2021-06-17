@@ -12,7 +12,7 @@ export class DeleteWarnCommand extends YinYangCommand.Command {
     });
   }
 
-  run() {
-
+  async runNormal(ctx: YinYangCommand.CommandContext) {
+    // Not implemented
   }
 }
