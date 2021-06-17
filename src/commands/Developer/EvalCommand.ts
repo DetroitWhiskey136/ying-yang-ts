@@ -49,7 +49,7 @@ export class EvalCommand extends YinYangCommand.Command {
 
       const type = new Type(resolved);
       const summary = `**Type:** ${type}\n**Executed in** ${stopwatch.toString()}`;
-      return `**${isPromise(evaluated) ? 'Promise ' : ''}Result**\n\n${summary} ${cleanEvaluated}`;
+      return `${isPromise(evaluated) ? '**Awaited Promise**\n' : ''}${summary} ${cleanEvaluated}`;
     };
 
     try {
@@ -57,17 +57,17 @@ export class EvalCommand extends YinYangCommand.Command {
       const evaluated = eval(toEval);
       res = await cleanResult(evaluated, stopwatch);
     } catch (err) {
-      if (['await is only valid in async function', 'await is not defined'].includes(err.message)) {
+      if (err.message.includes('await is only valid in async functions')) {
         try {
           const stopwatch = new Stopwatch();
           res = await cleanResult(eval(`(async () => {\n${toEval}\n})()`), stopwatch);
         } catch (er) {
           client.emit('error', er);
-          res = `Error: ${value(this.clean(er.message))}`;
+          res = `**Exception** ${value(this.clean(er.message))}`;
         }
       } else {
         client.emit('error', err);
-        res = `Error: ${value(this.clean(err.message))}`;
+        res = `**Exception** ${value(this.clean(err.message))}`;
       }
     } finally {
       embed.setDescription(String(res));
