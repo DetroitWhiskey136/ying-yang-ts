@@ -102,6 +102,6 @@ export class MessageEvent extends Event {
     };
 
     command._runNormal(new YinYangCommand.CommandContext(params));
-    bot.logger.debug(`Command: ${command.name} ran by ${author.username}`);
+    bot.logger.debug(`\nCommand: ${command.name} \nQuery: ${params.query ?? ''} \n ran by ${author.username}`);
   }
 }
