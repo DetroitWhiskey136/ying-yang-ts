@@ -8,7 +8,7 @@ export class AvatarCommand extends YinYangCommand.Command {
       category: YinYangCommand.CommandCategories.GENERAL,
       description: 'Display a users avatar',
       name: 'avatar',
-      usage: 'avatar [user]'
+      usage: 'avatar [user]',
     });
   }
 

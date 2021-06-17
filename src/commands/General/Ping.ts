@@ -7,7 +7,6 @@ export class PingCommand extends YinYangCommand.Command {
       description: 'Replies with Pong!',
       name: 'ping',
       usage: 'ping',
-      options: [],
     });
   }
 
