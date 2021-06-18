@@ -15,13 +15,13 @@ export class InteractionEvent extends Event {
     if (!interaction.isCommand()) return;
 
     const command = bot.commands.get(interaction.commandName);
-    if (!command) return;
+    if (command === undefined) return;
 
     const params = {
       bot, commandInteraction: interaction,
     };
 
-    await command?._runSlash(new YinYangCommand.SlashContext(params))
-      .catch((e) => bot.client.emit('error', e));
+    command._runSlash(new YinYangCommand.SlashContext(params))
+      .catch((e) => client.emit('error', e));
   }
 }

@@ -12,6 +12,6 @@ export class PingCommand extends YinYangCommand.Command {
 
   async runSlash(ctx: YinYangCommand.SlashContext) {
     const { commandInteraction: interaction } = ctx;
-    await interaction.reply('Pong!');
+    await interaction.reply(`Pong! \`${ctx.bot.client.ws.ping}ms\``);
   }
 }

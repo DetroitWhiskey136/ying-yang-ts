@@ -17,14 +17,14 @@ export class MessageEvent extends Event {
     });
   }
 
-  private isValidMessage(message: Message) {
+  private static isValidMessage(message: Message) {
     const { author, channel, client } = message;
     return !author.bot
       || (channel instanceof TextChannel
       && channel.permissionsFor(String(client.user?.id))?.has('SEND_MESSAGES') !== true);
   }
 
-  private getPrefix(prefix: string, { client, content }: Message): string {
+  private static getPrefix(prefix: string, { client, content }: Message): string {
     const fixedPrefix = Strings.escapeRegExp(prefix);
     const fixedUsername = Strings.escapeRegExp(client.user?.username ?? '');
 
@@ -51,7 +51,8 @@ export class MessageEvent extends Event {
       .setColor(color)
       .setDescription(content);
 
-    channel.send({ embeds: [embed] });
+    channel.send({ embeds: [embed] })
+      .catch();
   }
 
   async run(bot: BotClient, client: DiscordClient, message: Message) {
@@ -68,13 +69,13 @@ export class MessageEvent extends Event {
       member?.setNickname(authorNick);
     }
 
-    if (!this.isValidMessage(message)) return;
+    if (!MessageEvent.isValidMessage(message)) return;
     if (!author.bot && member !== null) {
       member?.addLevel();
     }
 
     const prefix = guild?.prefix ?? OPTIONS.PREFIX;
-    const usedPrefix = this.getPrefix(prefix, message);
+    const usedPrefix = MessageEvent.getPrefix(prefix, message);
 
     const MENTION_REGEX = new RegExp(`^(<@!?${client.user?.id}>)`);
     const isMentioned = MENTION_REGEX.test(message.content);
@@ -101,7 +102,8 @@ export class MessageEvent extends Event {
       args, bot, message, prefix, query: args.join(' '),
     };
 
-    command._runNormal(new YinYangCommand.CommandContext(params));
+    command._runNormal(new YinYangCommand.CommandContext(params))
+      .catch((e) => client.emit('error', e));
     bot.logger.debug(`\nCommand: ${command.name} \nQuery: ${params.query ?? ''} \n ran by ${author.username}`);
   }
 }
