@@ -15,7 +15,7 @@ export class WarnCommand extends YinYangCommand.Command {
 
   async runNormal(ctx: YinYangCommand.CommandContext) {
     const {
-      author, args, guild, channel, mentions,
+      author, member, args, guild, channel, mentions,
     } = ctx;
 
     if (guild === null) {
@@ -37,7 +37,9 @@ export class WarnCommand extends YinYangCommand.Command {
     }
 
     let points: number = 1;
-    if (!Number.isNaN(Number(args[1])) && Number(args[1]) === parseInt(args[1], 10)) {
+    const isPointProvided = !Number.isNaN(Number(args[1]))
+        && Number(args[1]) === parseInt(args[1], 10);
+    if (isPointProvided) {
       points = Number(args[1]);
     }
     if (points < 1) {
@@ -46,11 +48,12 @@ export class WarnCommand extends YinYangCommand.Command {
     }
 
     let reason = 'No reason provided';
-    if (args[2] !== undefined) {
-      reason = args.slice(2).join(' ');
+    if (args[isPointProvided ? 2 : 1] !== undefined) {
+      reason = args.slice(isPointProvided ? 2 : 1).join(' ');
     }
 
-    await target.warnings.add(reason, points, target);
+    await target.warnings.add(reason, points, member);
+
     const embed = new Embed().setDescription(`${target} has been warned`)
       .addField('Reason', reason, false)
       .setFooter(`Moderator: ${author.username}`)
