@@ -9,7 +9,7 @@ export class WarnCommand extends YinYangCommand.Command {
       description: 'Gives a user a warning',
       enabled: true,
       name: 'warn',
-      usage: 'warn <user> <points> <reason>',
+      usage: 'warn <user> [points] [reason]',
     });
   }
 
@@ -56,7 +56,7 @@ export class WarnCommand extends YinYangCommand.Command {
 
     const embed = new Embed().setDescription(`${target} has been warned`)
       .addField('Reason', reason, false)
-      .setFooter(`Moderator: ${author.username}`)
+      .setFooter(`Moderator: ${author.username} | ${points} warning point${points !== 1 ? 's' : ''}`)
       .setTimestamp();
     await channel.send({ embeds: [embed] });
   }
