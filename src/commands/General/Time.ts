@@ -17,35 +17,30 @@ export class TimeCommand extends YinYangCommand.Command {
     const { channel, args } = ctx;
 
     if (args.length === 0) {
-      channel.send('You must input a timezone');
+      await channel.send('Please provide a timezone');
       return;
     }
 
-    const timeZone = this.getTimeZone(args.join(' '));
-    const validTZ = moment.tz.zone(timeZone);
-
-    if (validTZ === null) {
-      channel.send('Cannot find a timezone with given name.');
+    const timezone = moment.tz.zone(this.getTimezone(args.join(' ')));
+    if (timezone === null) {
+      await channel.send('Invalid timezone is given.');
       return;
     }
-    channel.send(moment().tz(timeZone).format('YYYY-MM-DD hh:mm:ss a'));
+    await channel.send(moment().tz(timezone.name).format('YYYY-MM-DD hh:mm:ss a'));
   }
 
   async runSlash(ctx: YinYangCommand.SlashContext) {
-    // nice database was the important one imo
     const { commandInteraction: interaction } = ctx;
 
-    const timeZone = this.getTimeZone(interaction.options.first()!.value!.toString());
-    const validTZ = moment.tz.zone(timeZone);
-
-    if (validTZ === null) {
-      interaction.reply(`The timezone format you provided: \`${timeZone}\` is not valid`);
+    const timezone = moment.tz.zone(this.getTimezone(String(interaction.options.first()?.value!)));
+    if (timezone === null) {
+      await interaction.reply('Invalid timezone is given');
       return;
     }
-    interaction.reply(moment().tz(timeZone).format('YYYY-MM-DD hh:mm:ss a'));
+    await interaction.reply(moment().tz(timezone.name).format('YYYY-MM-DD hh:mm:ss a'));
   }
 
-  private getTimeZone(query: string) {
+  private getTimezone(query: string) {
     return tzList.find((tz) => tz.abbr === String(query).toUpperCase())?.zoneId ?? query;
   }
 }
