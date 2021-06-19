@@ -1,7 +1,7 @@
 import {
   Message, MessageMentions, GuildMember, Guild, User,
   TextChannel, DMChannel, NewsChannel, CommandInteraction,
-  Collection, CommandInteractionOption,
+  CommandInteractionOption,
 } from 'discord.js';
 import {
   BotClient, DiscordClient, Database,
