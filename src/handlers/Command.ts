@@ -221,7 +221,7 @@ export namespace YinYangCommand {
      * @param {CommandContext} ctx CommandContext.
      * @returns {Promise<void>} the Commands Commands method
      */
-    async _runNormal(ctx: CommandContext) {
+    _runNormal(ctx: CommandContext) {
       this.runNormal(ctx)
         .catch((e) => ctx.client.emit('error', e));
     }
@@ -241,7 +241,7 @@ export namespace YinYangCommand {
      * @param {SlashContext} ctx SlashContext.
      * @returns {Promise<void>} the Slash Commands method
      */
-    async _runSlash(ctx: SlashContext) {
+    _runSlash(ctx: SlashContext) {
       this.runSlash(ctx)
         .catch((e) => ctx.client.emit('error', e));
     }

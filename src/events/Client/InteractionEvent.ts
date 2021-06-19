@@ -21,7 +21,6 @@ export class InteractionEvent extends Event {
       bot, commandInteraction: interaction,
     };
 
-    command._runSlash(new YinYangCommand.SlashContext(params))
-      .catch((e) => client.emit('error', e));
+    command._runSlash(new YinYangCommand.SlashContext(params));
   }
 }
