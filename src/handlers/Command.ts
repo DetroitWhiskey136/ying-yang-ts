@@ -46,7 +46,7 @@ export namespace YinYangCommand {
   export class CommandContext {
     /**
      * The options for the command context.
-     * @param ctx commandContex options
+     * @param ctx commandContext options
      */
     constructor(ctx: commandContext) {
       this.bot = ctx.bot;
@@ -90,7 +90,7 @@ export namespace YinYangCommand {
   export class SlashContext {
     /**
      * The options for the slash context.
-     * @param ctx slashContex options
+     * @param ctx slashContext options
      */
     constructor(ctx: slashContext) {
       this.bot = ctx.bot;
@@ -167,13 +167,13 @@ export namespace YinYangCommand {
    * export class <CommandName>Command extends YinYangCommand.Command {
    *   constructor() {
    *     super({
-   *       aliases: [<'aliasname'>],
+   *       aliases: [<'aliasName'>],
    *       category: YinYangCommand.CommandCategories.<CategoryName>,
    *       description: 'A Description of some sort',
    *       enabled: true,
    *       guildOnly: false,
-   *       name: '<commandname>',
-   *       usage: '<commandname> <paramas...>',
+   *       name: '<commandName>',
+   *       usage: '<commandName> <params...>',
    *       options: [<CommandInteractionOption>],
    *       ownerOnly: false,
    *     });
