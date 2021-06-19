@@ -31,7 +31,7 @@ export class Event {
    * @param {boolean} [options.enabled] Should be in BotClient?
    * @param {string} [options.type] Use 'event'.
    *
-   * @memberof Event
+   * @memberOf Event
    */
   constructor(options: eventOptions) {
     this.name = options.name;

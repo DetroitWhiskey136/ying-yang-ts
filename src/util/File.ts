@@ -20,7 +20,7 @@ export class Files {
    * @param {string} url The folder of files you want to load
    * @param {BotClient} bot The BotClient object
    * @returns {void}
-   * @memberof FileUtil
+   * @memberOf Files
    */
   public static LoadFiles(url: string, bot: BotClient) {
     klaw(url).on('data', async (item: klaw.Item) => {
@@ -43,7 +43,7 @@ export class Files {
    * @param {string} fileName The files name.
    * @param {BotClient} bot The BotClient.
    * @returns {Promise<void>} A void Promise
-   * @memberof FileUtil
+   * @memberOf Files
    */
   public static async LoadFile(filePath: string, fileName: string, bot: BotClient) {
     try {

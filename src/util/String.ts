@@ -7,7 +7,7 @@ export class Strings {
    * @param {String} lang The markdown lang
    * @param {Number} minLength The minimum length
    * @param {Number} maxLength The maximum length
-   * @returns {string} The formated string of code?
+   * @returns {string} The formatted string of code?
    */
   static code(str: string, lang: string, minLength: number = 0, maxLength: number = 1024): string {
     const data = String(str);
