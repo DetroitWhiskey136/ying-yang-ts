@@ -24,21 +24,18 @@ export default Structures.extend('Guild', (Guild) => {
     // #region Constructor
     constructor(client: DiscordClient, data: any) {
       super(client, data);
-      this.init()
-        .then(() => {
-          this.autoFormatUsernames = client.bot.database.guilds.get(this.id).autoFormatUsernames;
-          this.prefix = client.bot.database.guilds.get(this.id).prefix;
-          this.log = client.bot.database.guilds.get(this.id).log;
-          this.joinMessage = client.bot.database.guilds.get(this.id).joinMessage;
-          this.leaveMessage = client.bot.database.guilds.get(this.id).leaveMessage;
-          this.welcomeChannel = client.bot.database.guilds.get(this.id).welcomeChannel;
-        })
-        .catch();
+      this.init();
+      this.autoFormatUsernames = client.bot.database.guilds.get(this.id).autoFormatUsernames;
+      this.prefix = client.bot.database.guilds.get(this.id).prefix;
+      this.log = client.bot.database.guilds.get(this.id).log;
+      this.joinMessage = client.bot.database.guilds.get(this.id).joinMessage;
+      this.leaveMessage = client.bot.database.guilds.get(this.id).leaveMessage;
+      this.welcomeChannel = client.bot.database.guilds.get(this.id).welcomeChannel;
     }
     // #endregion
 
     // #region Methods
-    async init() {
+    private init() {
       const options = {
         joinMessage: null,
         leaveMessage: null,
@@ -47,7 +44,7 @@ export default Structures.extend('Guild', (Guild) => {
         welcomeChannel: null,
       };
 
-      await this.client.bot.database.guilds.ensure(this.id, options);
+      this.client.bot.database.guilds.ensure(this.id, options);
     }
 
     async setPrefix(value: string) {
