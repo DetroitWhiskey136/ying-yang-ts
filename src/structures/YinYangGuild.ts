@@ -1,5 +1,5 @@
-import { Structures, TextChannel, Invite } from 'discord.js';
-import { DiscordClient, stringResolvable, YinYangMember } from '../index';
+import { Structures, TextChannel } from 'discord.js';
+import { DiscordClient, stringResolvable } from '../index';
 
 // #region Scope Declaration
 declare module 'discord.js' {
@@ -24,14 +24,16 @@ export default Structures.extend('Guild', (Guild) => {
     // #region Constructor
     constructor(client: DiscordClient, data: any) {
       super(client, data);
-      this.init();
-
-      this.autoFormatUsernames = client.bot.database.guilds.get(this.id).autoFormatUsernames;
-      this.prefix = client.bot.database.guilds.get(this.id).prefix;
-      this.log = client.bot.database.guilds.get(this.id).log;
-      this.joinMessage = client.bot.database.guilds.get(this.id).joinMessage;
-      this.leaveMessage = client.bot.database.guilds.get(this.id).leaveMessage;
-      this.welcomeChannel = client.bot.database.guilds.get(this.id).welcomeChannel;
+      this.init()
+        .then(() => {
+          this.autoFormatUsernames = client.bot.database.guilds.get(this.id).autoFormatUsernames;
+          this.prefix = client.bot.database.guilds.get(this.id).prefix;
+          this.log = client.bot.database.guilds.get(this.id).log;
+          this.joinMessage = client.bot.database.guilds.get(this.id).joinMessage;
+          this.leaveMessage = client.bot.database.guilds.get(this.id).leaveMessage;
+          this.welcomeChannel = client.bot.database.guilds.get(this.id).welcomeChannel;
+        })
+        .catch();
     }
     // #endregion
 

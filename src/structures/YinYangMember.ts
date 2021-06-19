@@ -18,10 +18,12 @@ export default Structures.extend('GuildMember', (GuildMember) => {
     constructor(client: DiscordClient, data: object, guild: Guild) {
       super(client, data, guild);
       this.warnings = new GuildMemberWarningManager(this);
-      this.init();
-
-      this.dj = client.bot.database.members.get(this.id).guilds[guild.id].dj;
-      this.level = client.bot.database.members.get(this.id).guilds[guild.id].level;
+      this.init()
+        .then(() => {
+          this.dj = client.bot.database.members.get(this.id).guilds[guild.id].dj;
+          this.level = client.bot.database.members.get(this.id).guilds[guild.id].level;
+        })
+        .catch();
     }
     // #endregion
 

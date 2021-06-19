@@ -1,5 +1,5 @@
 import {
-  GuildMemberResolvable, GuildMember, Guild, Client,
+  GuildMemberResolvable, GuildMember, Guild,
 } from 'discord.js';
 import { DiscordClient, IMemberWarning } from '../index';
 

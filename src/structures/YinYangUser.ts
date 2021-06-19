@@ -1,5 +1,5 @@
 import { Structures } from 'discord.js';
-import { DiscordClient, numberResolvable, booleanResolvable } from '../index';
+import { booleanResolvable, DiscordClient, numberResolvable } from '../index';
 
 // #region Scope Declaration
 declare module 'discord.js' {
@@ -18,10 +18,13 @@ export default Structures.extend('User', (User) => {
     // #region Constructor
     constructor(client: DiscordClient, data: object) {
       super(client, data);
-      this.init();
-      this.botAdmin = client.bot.database.users.get(this.id).botAdmin;
-      this.botSupport = client.bot.database.users.get(this.id).botSupport;
-      this.level = client.bot.database.users.get(this.id).level;
+      this.init()
+        .then(() => {
+          this.botAdmin = client.bot.database.users.get(this.id).botAdmin;
+          this.botSupport = client.bot.database.users.get(this.id).botSupport;
+          this.level = client.bot.database.users.get(this.id).level;
+        })
+        .catch();
     }
     // #endregion
 
@@ -41,9 +44,7 @@ export default Structures.extend('User', (User) => {
         this.id,
         { botAdmin: value },
       );
-      const data = await
-      this.client.bot.database.users.get(this.id)?.botAdmin;
-      this.botAdmin = data;
+      this.botAdmin = await this.client.bot.database.users.get(this.id)?.botAdmin;
       return this;
     }
 
@@ -52,9 +53,7 @@ export default Structures.extend('User', (User) => {
         this.id,
         { botSupport: value },
       );
-      const data = await
-      this.client.bot.database.users.get(this.id)?.botSupport;
-      this.botSupport = data;
+      this.botSupport = await this.client.bot.database.users.get(this.id)?.botSupport;
       return this;
     }
 
@@ -63,9 +62,7 @@ export default Structures.extend('User', (User) => {
         this.id,
         { level: value },
       );
-      const data = await
-      this.client.bot.database.users.get(this.id)?.level;
-      this.level = data;
+      this.level = await this.client.bot.database.users.get(this.id)?.level;
       return this;
     }
     // #endregion

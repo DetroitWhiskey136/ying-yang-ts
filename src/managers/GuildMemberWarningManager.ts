@@ -69,15 +69,12 @@ export class GuildMemberWarningManager {
 
   public remove(id: string) {
     const db = this.member.client.bot.database;
-    let { warnings } = db.members.model.get(this.member.id).guilds[this.guild.id];
+    const { warnings } = db.members.model.get(this.member.id).guilds[this.guild.id];
 
     if (!warnings) return `Error: [${this.member.user.username}(${this.member.id})] does not have any warnings in [${this.guild.name}(${this.guild.id})]`;
 
     const warning = warnings.filter((warning: IMemberWarning) => warning.id === id);
-
     if (warning.length === 0) return `Error: warning id not found: ID '${id}'`;
-
-    warnings = warnings.filter((warning: IMemberWarning) => warning.id !== id);
 
     db.members.model.delete(
       this.member.id,

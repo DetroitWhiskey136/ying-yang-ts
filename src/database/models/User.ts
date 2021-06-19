@@ -1,6 +1,6 @@
 import {
   booleanResolvable, numberResolvable,
-} from '../../index';
+} from '../../util';
 
 export interface IUser {
   botAdmin: booleanResolvable;

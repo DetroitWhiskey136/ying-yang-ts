@@ -1,6 +1,5 @@
 import {
-  ClientOptions, Intents, MessageMentionOptions,
-  TextChannel, VoiceChannel, GuildChannel, CategoryChannel, Channel, NewsChannel, DMChannel,
+  ClientOptions, Intents,
 } from 'discord.js';
 
 export const clientOptions: ClientOptions = {

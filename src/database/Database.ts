@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 
-import { EnmapProvider } from '../database/EnmapProvider';
+import { EnmapProvider } from './EnmapProvider';
 import {
   ISettings, IGuild, IUser, IMember,
 } from './models';

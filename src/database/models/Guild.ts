@@ -1,4 +1,4 @@
-import { stringResolvable } from '../../index';
+import { stringResolvable } from '../../util';
 
 export interface IGuild {
   autoFormatUsernames: boolean;

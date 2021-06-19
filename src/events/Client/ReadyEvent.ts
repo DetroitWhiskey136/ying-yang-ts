@@ -1,5 +1,5 @@
 import {
-  BotClient, DiscordClient, Event, Files,
+  BotClient, DiscordClient, Event,
 } from '../../index';
 
 export class MessageEvent extends Event {
