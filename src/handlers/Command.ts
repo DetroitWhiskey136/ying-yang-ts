@@ -209,7 +209,7 @@ export namespace YinYangCommand {
     /**
      * The Commands Context.
      * @param {CommandContext} ctx CommandContext.
-     * @returns {Promis<void>} the Commands Commands method
+     * @returns {Promise<void>} the Commands Commands method
      */
     async runNormal(ctx: CommandContext) {
       throw Error('This field is not implemented');
@@ -219,7 +219,7 @@ export namespace YinYangCommand {
      * The Commands Context.
      * @note Treat this as a internal
      * @param {CommandContext} ctx CommandContext.
-     * @returns {Promis<void>} the Commands Commands method
+     * @returns {Promise<void>} the Commands Commands method
      */
     async _runNormal(ctx: CommandContext) {
       this.runNormal(ctx)
@@ -229,7 +229,7 @@ export namespace YinYangCommand {
     /**
      * The Slash Commands Context.
      * @param {SlashContext} ctx SlashContext.
-     * @returns {Promis<void>} the Slash Commands method
+     * @returns {Promise<void>} the Slash Commands method
      */
     async runSlash(ctx: SlashContext) {
       throw Error('This field is not implemented');
@@ -239,12 +239,11 @@ export namespace YinYangCommand {
      * The Slash Commands Context.
      * @note Treat this as a internal
      * @param {SlashContext} ctx SlashContext.
-     * @returns {Promis<void>} the Slash Commands method
+     * @returns {Promise<void>} the Slash Commands method
      */
     async _runSlash(ctx: SlashContext) {
       this.runSlash(ctx)
         .catch((e) => ctx.client.emit('error', e));
     }
   }
-
 }
