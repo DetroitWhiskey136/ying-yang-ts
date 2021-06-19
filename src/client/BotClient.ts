@@ -70,7 +70,7 @@ export class BotClient {
         this.logger.info('Sentry was not provided');
         return;
       }
-      sentry?.captureException?.(error);
+      sentry.captureException(error);
     });
     // #endregion
 
