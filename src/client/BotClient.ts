@@ -66,7 +66,11 @@ export class BotClient {
     this.client.on('error', (error) => {
       this.logger.error(error);
 
-      sentry?.captureException?.(error) ?? this.logger.info('Sentry was not provided');
+      if (sentry == null) {
+        this.logger.info('Sentry was not provided');
+        return;
+      }
+      sentry.captureException(error);
     });
     // #endregion
 

@@ -1,7 +1,7 @@
 import {
   Message, MessageMentions, GuildMember, Guild, User,
   TextChannel, DMChannel, NewsChannel, CommandInteraction,
-  Collection, CommandInteractionOption,
+  CommandInteractionOption,
 } from 'discord.js';
 import {
   BotClient, DiscordClient, Database,
@@ -11,9 +11,9 @@ export namespace YinYangCommand {
 
   // #region Command Context,
   /**
-   * The Command Context Interface options
+   * Options used to build CommandContext
    */
-  interface commandContext {
+  type CommandContextOptions = {
     bot: BotClient;
     message: Message;
     prefix: string | null;
@@ -22,7 +22,7 @@ export namespace YinYangCommand {
   }
 
   /**
-   * The Command Context Interface
+   * The CommandContext Interface
    */
   export declare interface CommandContext {
     bot: BotClient;
@@ -45,37 +45,37 @@ export namespace YinYangCommand {
    */
   export class CommandContext {
     /**
-     * The options for the command context.
-     * @param ctx commandContex options
+     * Building the CommandContext with given options.
+     * @param options Options to build CommandContext
      */
-    constructor(ctx: commandContext) {
-      this.bot = ctx.bot;
-      this.message = ctx.message;
-      this.mentions = ctx.message.mentions;
-      this.member = ctx.message?.member;
-      this.guild = ctx.message.guild;
-      this.author = ctx.message.author;
-      this.channel = ctx.message.channel;
-      this.client = ctx.bot.client;
-      this.prefix = ctx.prefix || null;
-      this.query = ctx.query;
-      this.args = ctx.args;
-      this.database = ctx.bot.database;
+    constructor(options: CommandContextOptions) {
+      this.bot = options.bot;
+      this.message = options.message;
+      this.mentions = options.message.mentions;
+      this.member = options.message?.member;
+      this.guild = options.message.guild;
+      this.author = options.message.author;
+      this.channel = options.message.channel;
+      this.client = options.bot.client;
+      this.prefix = options.prefix || null;
+      this.query = options.query;
+      this.args = options.args;
+      this.database = options.bot.database;
     }
   }
   // #endregion
 
   // #region Slash Command Context,
   /**
-   * The Slash Context Interface options
+   * Options used to build SlashContext
    */
-  interface slashContext {
+  type SlashContextOptions = {
     bot: BotClient;
     commandInteraction: CommandInteraction;
   }
 
   /**
-   * The Slash Context Interface
+   * The SlashContext Interface
    */
   export declare interface SlashContext {
     bot: BotClient;
@@ -89,21 +89,21 @@ export namespace YinYangCommand {
    */
   export class SlashContext {
     /**
-     * The options for the slash context.
-     * @param ctx slashContex options
+     * Building the CommandContext with given options.
+     * @param options SlashContextOptions options
      */
-    constructor(ctx: slashContext) {
-      this.bot = ctx.bot;
-      this.client = ctx.bot.client;
-      this.commandInteraction = ctx.commandInteraction;
-      this.database = ctx.bot.database;
+    constructor(options: SlashContextOptions) {
+      this.bot = options.bot;
+      this.client = options.bot.client;
+      this.commandInteraction = options.commandInteraction;
+      this.database = options.bot.database;
     }
   }
   // #endregion
 
   /**
    * These are the available Categories for the bots commands.
-   * ```js
+   * ```ts
    * // usage
    * YinYangCommand.CommandCategories.<CategoryName>
    * ```
@@ -167,13 +167,13 @@ export namespace YinYangCommand {
    * export class <CommandName>Command extends YinYangCommand.Command {
    *   constructor() {
    *     super({
-   *       aliases: [<'aliasname'>],
+   *       aliases: ['<aliasName>'],
    *       category: YinYangCommand.CommandCategories.<CategoryName>,
    *       description: 'A Description of some sort',
    *       enabled: true,
    *       guildOnly: false,
-   *       name: '<commandname>',
-   *       usage: '<commandname> <paramas...>',
+   *       name: '<commandName>',
+   *       usage: '<commandName> <params...>',
    *       options: [<CommandInteractionOption>],
    *       ownerOnly: false,
    *     });
@@ -209,7 +209,7 @@ export namespace YinYangCommand {
     /**
      * The Commands Context.
      * @param {CommandContext} ctx CommandContext.
-     * @returns {Promis<void>} the Commands Commands method
+     * @returns {Promise<void>} the Commands Commands method
      */
     async runNormal(ctx: CommandContext) {
       throw Error('This field is not implemented');
@@ -219,9 +219,9 @@ export namespace YinYangCommand {
      * The Commands Context.
      * @note Treat this as a internal
      * @param {CommandContext} ctx CommandContext.
-     * @returns {Promis<void>} the Commands Commands method
+     * @returns {Promise<void>} the Commands Commands method
      */
-    async _runNormal(ctx: CommandContext) {
+    _runNormal(ctx: CommandContext) {
       this.runNormal(ctx)
         .catch((e) => ctx.client.emit('error', e));
     }
@@ -229,7 +229,7 @@ export namespace YinYangCommand {
     /**
      * The Slash Commands Context.
      * @param {SlashContext} ctx SlashContext.
-     * @returns {Promis<void>} the Slash Commands method
+     * @returns {Promise<void>} the Slash Commands method
      */
     async runSlash(ctx: SlashContext) {
       throw Error('This field is not implemented');
@@ -239,12 +239,11 @@ export namespace YinYangCommand {
      * The Slash Commands Context.
      * @note Treat this as a internal
      * @param {SlashContext} ctx SlashContext.
-     * @returns {Promis<void>} the Slash Commands method
+     * @returns {Promise<void>} the Slash Commands method
      */
-    async _runSlash(ctx: SlashContext) {
+    _runSlash(ctx: SlashContext) {
       this.runSlash(ctx)
         .catch((e) => ctx.client.emit('error', e));
     }
   }
-
 }

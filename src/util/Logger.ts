@@ -52,7 +52,7 @@ export class Logger {
    * @static
    * @param {number} input The number to format
    * @returns {string} String or Number
-   * @memberof Logger
+   * @memberOf Logger
    */
   private static formatTime(input: number): string {
     return input < 10 ? `0${input}` : `${input}`;
@@ -64,7 +64,7 @@ export class Logger {
    * @private
    * @static
    * @returns {string[]} String Array
-   * @memberof Logger
+   * @memberOf Logger
    */
   private static timestamp(): string[] {
     const date = new Date();
@@ -87,7 +87,7 @@ export class Logger {
    * @param {string[]} timestamp A timestamp.
    * @param {...any[]} content The content.
    * @returns {void}
-   * @memberof Logger
+   * @memberOf Logger
    */
   private static appendLogs(timestamp: string[], ...content: any[]): void {
     const filePath = './data/logs/';
@@ -100,9 +100,9 @@ export class Logger {
    * Creates a type for colors and stuff
    * @private
    * @static
-   * @param {keyofLoggerTypes} loggerType The Logger Type.
+   * @param {keyof LoggerTypes} loggerType The Logger Type.
    * @returns {Array<string>} String Array
-   * @memberof Logger
+   * @memberOf Logger
    */
   private static type(loggerType: keyof LoggerTypes): string[] {
     const types: LoggerTypes = {

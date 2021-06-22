@@ -1,7 +1,6 @@
 import {
   GuildMemberResolvable, MessageMentions, Guild, Snowflake,
 } from 'discord.js';
-import { BotClient } from '../index';
 
 export class MemberUtil {
   static parseMemberFromID(id: Snowflake, guild: Guild) {

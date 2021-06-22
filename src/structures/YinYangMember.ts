@@ -19,14 +19,13 @@ export default Structures.extend('GuildMember', (GuildMember) => {
       super(client, data, guild);
       this.warnings = new GuildMemberWarningManager(this);
       this.init();
-
       this.dj = client.bot.database.members.get(this.id).guilds[guild.id].dj;
       this.level = client.bot.database.members.get(this.id).guilds[guild.id].level;
     }
     // #endregion
 
     // #region Methods
-    private async init() {
+    private init() {
       const { id } = this.guild;
       const options = {
         guilds: {
@@ -40,10 +39,10 @@ export default Structures.extend('GuildMember', (GuildMember) => {
 
       const member = this.client.bot.database.members.model.get(this.id);
 
-      if (!member) {
-        await this.client.bot.database.members.ensure(this.id, options);
-      } else if (!member.guilds[id]) {
-        await this.client.bot.database.members.update(this.id, options);
+      if (member == null) {
+        this.client.bot.database.members.ensure(this.id, options);
+      } else if (member.guilds[id] == null) {
+        this.client.bot.database.members.update(this.id, options);
       }
     }
 

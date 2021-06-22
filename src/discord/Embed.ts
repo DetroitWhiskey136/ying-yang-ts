@@ -3,10 +3,10 @@
 
 import crypto from 'crypto';
 import {
-  Guild, GuildMember, MessageAttachment, MessageEmbed,
+  Guild, GuildMember, MessageEmbed,
   User, MessageEmbedOptions, ImageURLOptions, EmbedFieldData,
 } from 'discord.js';
-import { ImageUtil } from '../index';
+import { ImageUtil } from '../util';
 
 const EmbedColors = { error: 'RED', normal: '#00FFFF', warn: '0xfdfd96' } as const;
 
@@ -60,7 +60,7 @@ export class Embed extends MessageEmbed {
     if (embedResolvable) {
       if (embedResolvable instanceof User) {
         this.setTemplate(embedResolvable);
-      } else if (embedResolvable instanceof GuildMember) {
+      } else {
         this.setTemplate(embedResolvable.user);
       }
     }
@@ -95,7 +95,7 @@ export class Embed extends MessageEmbed {
    * @static
    * @param {*} resolvable The resolvable
    * @returns {boolean} A Boolean
-   * @memberof Embed
+   * @memberOf Embed
    */
   static hasSupport(resolvable: any): boolean {
     return resolvable instanceof GuildMember
@@ -115,7 +115,7 @@ export class Embed extends MessageEmbed {
     if (resolvable instanceof Guild) {
       const icon = resolvable.iconURL(o);
       if (icon) return icon;
-      const defaultIcon = ImageUtil.renderGuildIcon(resolvable.nameAcronym);
+      ImageUtil.renderGuildIcon(resolvable.nameAcronym);
       const name = `${crypto.randomBytes(20).toString('hex')}.png`;
       return `attachment://${name}`;
     }

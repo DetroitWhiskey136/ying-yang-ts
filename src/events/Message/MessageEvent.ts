@@ -102,8 +102,7 @@ export class MessageEvent extends Event {
       args, bot, message, prefix, query: args.join(' '),
     };
 
-    command._runNormal(new YinYangCommand.CommandContext(params))
-      .catch((e) => client.emit('error', e));
+    command._runNormal(new YinYangCommand.CommandContext(params));
     bot.logger.debug(`\nCommand: ${command.name} \nQuery: ${params.query ?? ''} \n ran by ${author.username}`);
   }
 }

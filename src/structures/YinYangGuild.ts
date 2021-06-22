@@ -1,5 +1,5 @@
-import { Structures, TextChannel, Invite } from 'discord.js';
-import { DiscordClient, stringResolvable, YinYangMember } from '../index';
+import { Structures, TextChannel } from 'discord.js';
+import { DiscordClient, stringResolvable } from '../index';
 
 // #region Scope Declaration
 declare module 'discord.js' {
@@ -25,7 +25,6 @@ export default Structures.extend('Guild', (Guild) => {
     constructor(client: DiscordClient, data: any) {
       super(client, data);
       this.init();
-
       this.autoFormatUsernames = client.bot.database.guilds.get(this.id).autoFormatUsernames;
       this.prefix = client.bot.database.guilds.get(this.id).prefix;
       this.log = client.bot.database.guilds.get(this.id).log;
@@ -36,7 +35,7 @@ export default Structures.extend('Guild', (Guild) => {
     // #endregion
 
     // #region Methods
-    async init() {
+    private init() {
       const options = {
         joinMessage: null,
         leaveMessage: null,
@@ -45,7 +44,7 @@ export default Structures.extend('Guild', (Guild) => {
         welcomeChannel: null,
       };
 
-      await this.client.bot.database.guilds.ensure(this.id, options);
+      this.client.bot.database.guilds.ensure(this.id, options);
     }
 
     async setPrefix(value: string) {
