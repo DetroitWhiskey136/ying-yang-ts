@@ -3,7 +3,7 @@ export {
   Settings, ISettings, IAdmins, ISupport,
 } from './Settings';
 export {
-  Guild, IGuild,
+  Guild, IGuild, IRoles,
 } from './Guild';
 export {
   User, IUser,

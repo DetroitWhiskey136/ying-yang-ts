@@ -30,7 +30,7 @@
     "@sentry/node": "^5.27.1",
     "@sentry/tracing": "^5.27.1",
     "@types/color-thief-node": "^1.0.1",
-    "canvas": "^2.6.1",
+    "canvas": "^2.8.0",
     "color-thief-node": "^1.0.4",
     "discord.js": "^13.0.0-dev.918921e8211fc16e9b12d2502f3168264246ea22",
     "dotenv": "^8.2.0",

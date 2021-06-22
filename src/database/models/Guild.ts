@@ -1,4 +1,12 @@
+import { RoleResolvable } from 'discord.js';
 import { stringResolvable } from '../../util';
+
+export interface IRoles {
+  admin: RoleResolvable;
+  moderator: RoleResolvable;
+  support: RoleResolvable;
+  dj: RoleResolvable;
+}
 
 export interface IGuild {
   autoFormatUsernames: boolean;
@@ -7,6 +15,7 @@ export interface IGuild {
   joinMessage: stringResolvable;
   leaveMessage: stringResolvable;
   welcomeChannel: stringResolvable;
+  roles: IRoles;
 }
 
 export const Guild: IGuild = {
@@ -15,5 +24,11 @@ export const Guild: IGuild = {
   leaveMessage: null,
   log: null,
   prefix: '/',
+  roles: {
+    admin: '',
+    dj: '',
+    moderator: '',
+    support: '',
+  },
   welcomeChannel: null,
 };

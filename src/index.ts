@@ -4,7 +4,7 @@ export * from './database/models';
 export { Embed } from './discord/Embed';
 export * from './handlers';
 export {
-  GuildMemberWarningManager,
+  WarningManager,
 } from './managers';
 export {
   Warning, YinYangGuild, YinYangMember, YinYangUser,

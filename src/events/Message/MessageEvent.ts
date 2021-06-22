@@ -51,8 +51,7 @@ export class MessageEvent extends Event {
       .setColor(color)
       .setDescription(content);
 
-    channel.send({ embeds: [embed] })
-      .catch();
+    channel.send({ embeds: [embed] });
   }
 
   async run(bot: BotClient, client: DiscordClient, message: Message) {
@@ -62,7 +61,8 @@ export class MessageEvent extends Event {
     const authorNick = Strings.setNickname(author.username);
 
     if (
-      bot.database.guilds.get(guild!.id).autoFormatUsernames
+      guild
+      && bot.database.guilds.get(guild.id).autoFormatUsernames
       && guild?.me?.permissions?.has('MANAGE_NICKNAMES') !== false
       && member?.displayName !== authorNick
     ) {
@@ -97,6 +97,9 @@ export class MessageEvent extends Event {
     }
 
     if (command === undefined || usedPrefix.length === 0) return;
+
+    // if (command.permLevel !== getPermLevel(author)) return;
+    // why not use number for this and > / < / >= / <=
 
     const params = {
       args, bot, message, prefix, query: args.join(' '),

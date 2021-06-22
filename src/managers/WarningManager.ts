@@ -1,13 +1,13 @@
 import { Guild, GuildMember, Collection } from 'discord.js';
 import { Strings, IMemberWarning, Warning } from '../index';
 
-export declare interface GuildMemberWarningManager {
+export declare interface WarningManager {
   member: GuildMember;
   guild: Guild;
   cache: Collection<string, Warning>;
 }
 
-export class GuildMemberWarningManager {
+export class WarningManager {
   // #region Constructor
   constructor(member: GuildMember) {
     this.member = member;
@@ -69,12 +69,15 @@ export class GuildMemberWarningManager {
 
   public remove(id: string) {
     const db = this.member.client.bot.database;
-    const { warnings } = db.members.model.get(this.member.id).guilds[this.guild.id];
+    let { warnings } = db.members.model.get(this.member.id).guilds[this.guild.id];
 
     if (!warnings) return `Error: [${this.member.user.username}(${this.member.id})] does not have any warnings in [${this.guild.name}(${this.guild.id})]`;
 
     const warning = warnings.filter((warning: IMemberWarning) => warning.id === id);
+
     if (warning.length === 0) return `Error: warning id not found: ID '${id}'`;
+
+    warnings = warnings.filter((warning: IMemberWarning) => warning.id !== id);
 
     db.members.model.delete(
       this.member.id,

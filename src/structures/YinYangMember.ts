@@ -1,10 +1,10 @@
 import { Structures, Guild } from 'discord.js';
-import { GuildMemberWarningManager, DiscordClient } from '../index';
+import { WarningManager, DiscordClient } from '../index';
 
 // #region Scope Declaration
 declare module 'discord.js' {
   interface GuildMember {
-    warnings: GuildMemberWarningManager;
+    warnings: WarningManager;
     dj: boolean;
     level: number;
     addLevel(): Promise<void>;
@@ -17,7 +17,7 @@ export default Structures.extend('GuildMember', (GuildMember) => {
     // #region Constructor
     constructor(client: DiscordClient, data: object, guild: Guild) {
       super(client, data, guild);
-      this.warnings = new GuildMemberWarningManager(this);
+      this.warnings = new WarningManager(this);
       this.init();
       this.dj = client.bot.database.members.get(this.id).guilds[guild.id].dj;
       this.level = client.bot.database.members.get(this.id).guilds[guild.id].level;
