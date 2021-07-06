@@ -7,7 +7,7 @@ export {
   WarningManager, RoleManager, YinYangPermissions,
 } from './managers';
 export {
-  Warning, YinYangGuild, YinYangMember, YinYangUser,
+  Warning,
 } from './structures';
 
 export { ChannelUtil } from './util/Channel';

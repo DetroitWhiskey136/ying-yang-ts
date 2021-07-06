@@ -1,3 +1,4 @@
+import path from 'path';
 import {
   Collection, ClientOptions, Message, GuildMember, User,
 } from 'discord.js';
@@ -40,17 +41,8 @@ export class BotClient {
     this.logger = new Logger();
     this.perms = YinYangPermissions.Permissions;
 
-    console.log();
-    if (!(process.env.NODE_ENV
-      ? process.env.NODE_ENV.indexOf('production') > -1
-      : false
-    )) {
-      Files.LoadFiles('src/events', this);
-      Files.LoadFiles('src/commands', this);
-    } else {
-      Files.LoadFiles('dist/src/events', this);
-      Files.LoadFiles('dist/src/commands', this);
-    }
+    Files.LoadFiles(path.join(__dirname, '..', 'commands'), this);
+    Files.LoadFiles(path.join(__dirname, '..', 'events'), this);
   }
 
   /**

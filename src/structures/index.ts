@@ -1,7 +1,7 @@
 // Exports
-export { default as YinYangGuild } from './YinYangGuild';
-export { default as YinYangUser } from './YinYangUser';
-export { default as YinYangMember } from './YinYangMember';
+export * from './YinYangGuild';
+export * from './YinYangUser';
+export * from './YinYangMember';
 
 // custom data
 export { Warning } from './Warning';

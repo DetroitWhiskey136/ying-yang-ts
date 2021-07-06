@@ -1,5 +1,5 @@
-import { Structures, Guild } from 'discord.js';
-import { WarningManager, DiscordClient } from '../index';
+import { Structures, Guild, GuildMember } from 'discord.js';
+import { WarningManager, DiscordClient, Database } from '../index';
 
 // #region Scope Declaration
 declare module 'discord.js' {
@@ -7,50 +7,46 @@ declare module 'discord.js' {
     warnings: WarningManager;
     dj: boolean;
     level: number;
-    addLevel(): Promise<void>;
   }
 }
 // #endregion
 
-export default Structures.extend('GuildMember', (GuildMember) => {
-  class YinYangMember extends GuildMember {
-    // #region Constructor
-    constructor(client: DiscordClient, data: object, guild: Guild) {
-      super(client, data, guild);
-      this.warnings = new WarningManager(this);
-      this.init();
-      this.dj = client.bot.database.members.get(this.id).guilds[guild.id].dj;
-      this.level = client.bot.database.members.get(this.id).guilds[guild.id].level;
-    }
-    // #endregion
+const database = new Database();
 
-    // #region Methods
-    private init() {
-      const { id } = this.guild;
-      const options = {
-        guilds: {
-          [id]: {
-            dj: false,
-            level: 0,
-            warnings: [],
-          },
+Reflect.defineProperty(GuildMember.prototype, 'warnings', {
+  get: function (this: GuildMember) {
+    return database.members.get(this.id).guilds[this.guild.id].warnings ?? [];
+  },
+});
+
+Reflect.defineProperty(GuildMember.prototype, 'dj', {
+  get: function (this: GuildMember) {
+    return database.members.get(this.id).guilds[this.guild.id].dj ?? [];
+  },
+  set: function (this: GuildMember, value: boolean) {
+    const options = {
+      guilds: {
+        [this.guild.id]: {
+          dj: value,
         },
-      };
+      },
+    };
+    return database.members.update(this.id, options);
+  },
+});
 
-      const member = this.client.bot.database.members.model.get(this.id);
-
-      if (member == null) {
-        this.client.bot.database.members.ensure(this.id, options);
-      } else if (member.guilds[id] == null) {
-        this.client.bot.database.members.update(this.id, options);
-      }
-    }
-
-    public async addLevel() {
-      await this.client.bot.database.members.model.inc(this.id, `guilds.${this.guild.id}.level`);
-      return this.init();
-    }
-    // #endregion
-  }
-  return YinYangMember;
+Reflect.defineProperty(GuildMember.prototype, 'level', {
+  get: function (this: GuildMember) {
+    return database.members.get(this.id).guilds[this.guild.id].level ?? [];
+  },
+  set: function (this: GuildMember, value: boolean) {
+    const options = {
+      guilds: {
+        [this.guild.id]: {
+          level: value,
+        },
+      },
+    };
+    return database.members.update(this.id, options);
+  },
 });

@@ -79,7 +79,7 @@ export class MessageEvent extends Event {
 
     if (!MessageEvent.isValidMessage(message)) return;
     if (!author.bot && member !== null) {
-      member?.addLevel();
+      member.level++;
     }
 
     const prefix = guild?.prefix ?? OPTIONS.PREFIX;

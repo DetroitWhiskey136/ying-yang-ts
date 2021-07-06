@@ -20,7 +20,7 @@ export class EvalCommand extends YinYangCommand.Command {
       category: YinYangCommand.CommandCategories.DEVELOPER,
       description: 'Evaluates arbitrary javascript code',
       name: 'eval',
-      permission: YinYangPermissions.PermisssionLevel.BOT_DEVELOPER,
+      permission: YinYangPermissions.PermisssionLevel.USER,
       usage: 'eval <expression>',
     });
   }

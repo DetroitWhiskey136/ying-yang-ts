@@ -58,4 +58,6 @@ rules: {
   lines-between-class-members: 0,
   eol-last: 0,
   max-classes-per-file: 0,
+  object-shorthand: 0,
+  func-names: 0,
 }
