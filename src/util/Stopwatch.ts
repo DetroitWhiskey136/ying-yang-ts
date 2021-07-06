@@ -1,4 +1,5 @@
-/* eslint-disable no-undef */
+import { performance } from 'perf_hooks';
+
 export class Stopwatch {
     decimal: number;
     startedAt: number;

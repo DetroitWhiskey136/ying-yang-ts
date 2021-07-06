@@ -3,6 +3,7 @@ import { inspect } from 'util';
 import {
   YinYangCommand, Embed, Strings, Util,
 } from '../../index';
+import { YinYangPermissions } from '../../managers/Permissions';
 import { Stopwatch } from '../../util/Stopwatch';
 import { Type } from '../../util/Type';
 
@@ -20,6 +21,7 @@ export class EvalCommand extends YinYangCommand.Command {
       category: YinYangCommand.CommandCategories.DEVELOPER,
       description: 'Evaluates arbitrary javascript code',
       name: 'eval',
+      permission: YinYangPermissions.PermisssionLevel.USER,
       usage: 'eval <expression>',
     });
   }

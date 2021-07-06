@@ -79,13 +79,13 @@
 <span style="color: #89DDFF">export</span><span style="color: #EEFFFF"> </span><span style="color: #C792EA">class</span><span style="color: #EEFFFF"> </span><span style="color: #89DDFF">&lt;</span><span style="color: #FFCB6B">CommandName</span><span style="color: #89DDFF">&gt;</span><span style="color: #FFCB6B">Command</span><span style="color: #EEFFFF"> </span><span style="color: #C792EA">extends</span><span style="color: #EEFFFF"> </span><span style="color: #FFCB6B">YinYangCommand</span><span style="color: #89DDFF">.</span><span style="color: #FFCB6B">Command</span><span style="color: #EEFFFF"> </span><span style="color: #89DDFF">{</span>
 <span style="color: #EEFFFF">  </span><span style="color: #C792EA">constructor</span><span style="color: #89DDFF">()</span><span style="color: #EEFFFF"> </span><span style="color: #89DDFF">{</span>
 <span style="color: #F07178">    </span><span style="color: #EEFFFF">super</span><span style="color: #F07178">(</span><span style="color: #89DDFF">{</span>
-<span style="color: #F07178">      aliases</span><span style="color: #89DDFF">:</span><span style="color: #F07178"> [</span><span style="color: #89DDFF">&lt;</span><span style="color: #89DDFF">&#039;</span><span style="color: #C3E88D">aliasname</span><span style="color: #89DDFF">&#039;</span><span style="color: #89DDFF">&gt;</span><span style="color: #F07178">]</span><span style="color: #89DDFF">,</span>
+<span style="color: #F07178">      aliases</span><span style="color: #89DDFF">:</span><span style="color: #F07178"> [</span><span style="color: #89DDFF">&#039;</span><span style="color: #C3E88D">&lt;aliasName&gt;</span><span style="color: #89DDFF">&#039;</span><span style="color: #F07178">]</span><span style="color: #89DDFF">,</span>
 <span style="color: #F07178">      category</span><span style="color: #89DDFF">:</span><span style="color: #F07178"> </span><span style="color: #EEFFFF">YinYangCommand</span><span style="color: #89DDFF">.</span><span style="color: #EEFFFF">CommandCategories</span><span style="color: #89DDFF">.&lt;</span><span style="color: #EEFFFF">CategoryName</span><span style="color: #89DDFF">&gt;,</span>
 <span style="color: #F07178">      description</span><span style="color: #89DDFF">:</span><span style="color: #F07178"> </span><span style="color: #89DDFF">&#039;</span><span style="color: #C3E88D">A Description of some sort</span><span style="color: #89DDFF">&#039;</span><span style="color: #89DDFF">,</span>
 <span style="color: #F07178">      enabled</span><span style="color: #89DDFF">:</span><span style="color: #F07178"> </span><span style="color: #FF9CAC">true</span><span style="color: #89DDFF">,</span>
 <span style="color: #F07178">      guildOnly</span><span style="color: #89DDFF">:</span><span style="color: #F07178"> </span><span style="color: #FF9CAC">false</span><span style="color: #89DDFF">,</span>
-<span style="color: #F07178">      name</span><span style="color: #89DDFF">:</span><span style="color: #F07178"> </span><span style="color: #89DDFF">&#039;</span><span style="color: #C3E88D">&lt;commandname&gt;</span><span style="color: #89DDFF">&#039;</span><span style="color: #89DDFF">,</span>
-<span style="color: #F07178">      usage</span><span style="color: #89DDFF">:</span><span style="color: #F07178"> </span><span style="color: #89DDFF">&#039;</span><span style="color: #C3E88D">&lt;commandname&gt; &lt;paramas...&gt;</span><span style="color: #89DDFF">&#039;</span><span style="color: #89DDFF">,</span>
+<span style="color: #F07178">      name</span><span style="color: #89DDFF">:</span><span style="color: #F07178"> </span><span style="color: #89DDFF">&#039;</span><span style="color: #C3E88D">&lt;commandName&gt;</span><span style="color: #89DDFF">&#039;</span><span style="color: #89DDFF">,</span>
+<span style="color: #F07178">      usage</span><span style="color: #89DDFF">:</span><span style="color: #F07178"> </span><span style="color: #89DDFF">&#039;</span><span style="color: #C3E88D">&lt;commandName&gt; &lt;params...&gt;</span><span style="color: #89DDFF">&#039;</span><span style="color: #89DDFF">,</span>
 <span style="color: #F07178">      options</span><span style="color: #89DDFF">:</span><span style="color: #F07178"> [</span><span style="color: #89DDFF">&lt;</span><span style="color: #EEFFFF">CommandInteractionOption</span><span style="color: #89DDFF">&gt;</span><span style="color: #F07178">]</span><span style="color: #89DDFF">,</span>
 <span style="color: #F07178">      ownerOnly</span><span style="color: #89DDFF">:</span><span style="color: #F07178"> </span><span style="color: #FF9CAC">false</span><span style="color: #89DDFF">,</span>
 <span style="color: #F07178">    </span><span style="color: #89DDFF">}</span><span style="color: #F07178">)</span><span style="color: #89DDFF">;</span>
@@ -293,7 +293,7 @@
 					<a name="_runnormal" class="tsd-anchor"></a>
 					<h3>_run<wbr>Normal</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">_run<wbr>Normal<span class="tsd-signature-symbol">(</span>ctx<span class="tsd-signature-symbol">: </span><a href="yinyangcommand.commandcontext.html" class="tsd-signature-type" data-tsd-kind="Class">CommandContext</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">_run<wbr>Normal<span class="tsd-signature-symbol">(</span>ctx<span class="tsd-signature-symbol">: </span><a href="yinyangcommand.commandcontext.html" class="tsd-signature-type" data-tsd-kind="Class">CommandContext</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -318,7 +318,7 @@
 									</div>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 							<p>the Commands Commands method</p>
 						</li>
 					</ul>
@@ -327,7 +327,7 @@
 					<a name="_runslash" class="tsd-anchor"></a>
 					<h3>_run<wbr>Slash</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">_run<wbr>Slash<span class="tsd-signature-symbol">(</span>ctx<span class="tsd-signature-symbol">: </span><a href="yinyangcommand.slashcontext.html" class="tsd-signature-type" data-tsd-kind="Class">SlashContext</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">_run<wbr>Slash<span class="tsd-signature-symbol">(</span>ctx<span class="tsd-signature-symbol">: </span><a href="yinyangcommand.slashcontext.html" class="tsd-signature-type" data-tsd-kind="Class">SlashContext</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -352,7 +352,7 @@
 									</div>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 							<p>the Slash Commands method</p>
 						</li>
 					</ul>

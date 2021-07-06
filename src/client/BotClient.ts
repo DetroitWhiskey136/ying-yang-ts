@@ -1,6 +1,9 @@
-import { Collection, ClientOptions } from 'discord.js';
+import {
+  Collection, ClientOptions, Message, GuildMember,
+} from 'discord.js';
 import {
   Database, YinYangCommand, Event, Logger, Files, DiscordClient,
+  YinYangPermissions,
 } from '../index';
 
 /**
@@ -13,6 +16,7 @@ export interface BotClient {
   database: Database;
   events: Collection<string, Event>;
   logger: Logger;
+  perms: YinYangPermissions.Levels[];
 }
 
 /**
@@ -34,6 +38,7 @@ export class BotClient {
     this.database = new Database();
     this.events = new Collection();
     this.logger = new Logger();
+    this.perms = YinYangPermissions.Permissions;
 
     console.log();
     if (!(process.env.NODE_ENV
@@ -46,6 +51,49 @@ export class BotClient {
       Files.LoadFiles('dist/src/events', this);
       Files.LoadFiles('dist/src/commands', this);
     }
+  }
+
+  /**
+   * Gets the permission level of a user from a message.
+   * @param {Message} message The message.
+   * @returns {YinYangPermissions.PermisssionLevel} The users highest Level.
+   */
+  permLevel(message: Message) {
+    let permlvl = YinYangPermissions.PermisssionLevel.USER;
+
+    // eslint-disable-next-line array-callback-return
+    const permOrder = this.perms.slice(0).sort((p, c) => (
+      p.level < c.level ? 1 : -1
+    ));
+
+    while (permOrder.length) {
+      const currentLevel = permOrder.shift();
+      if (currentLevel?.check(message, this)) {
+        permlvl = currentLevel.level;
+        break;
+      }
+    }
+
+    return permlvl;
+  }
+
+  getPerm(member: GuildMember) {
+    let permlvl = YinYangPermissions.PermisssionLevel.USER;
+
+    // eslint-disable-next-line array-callback-return
+    const permOrder = this.perms.slice(0).sort((p, c) => (
+      p.level < c.level ? 1 : -1
+    ));
+
+    while (permOrder.length) {
+      const currentLevel = permOrder.shift();
+      if (currentLevel?.checkMember(member, this)) {
+        permlvl = currentLevel.level;
+        break;
+      }
+    }
+
+    return permlvl;
   }
 
   /**
