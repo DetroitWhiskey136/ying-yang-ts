@@ -1,11 +1,11 @@
 import { Structures } from 'discord.js';
-import { booleanResolvable, DiscordClient, numberResolvable } from '../index';
+import {
+  DiscordClient, numberResolvable, IUser,
+} from '../index';
 
 // #region Scope Declaration
 declare module 'discord.js' {
-    interface User {
-        botAdmin: booleanResolvable;
-        botSupport: booleanResolvable;
+    interface User extends IUser{
         level: numberResolvable;
 
         setBotAdmin(value: boolean): Promise<this>;
@@ -23,8 +23,9 @@ export default Structures.extend('User', (User) => {
     constructor(client: DiscordClient, data: object) {
       super(client, data);
       this.init();
-      this.botAdmin = client.bot.database.users.get(this.id).botAdmin;
-      this.botSupport = client.bot.database.users.get(this.id).botSupport;
+      this.botAdmin = client.bot.database.users.get(this.id).botAdmin ?? false;
+      this.botDeveloper = client.bot.database.users.get(this.id).botDeveloper ?? false;
+      this.botSupport = client.bot.database.users.get(this.id).botSupport ?? false;
       this.level = client.bot.database.users.get(this.id).level;
     }
     // #endregion
@@ -46,6 +47,15 @@ export default Structures.extend('User', (User) => {
         { botAdmin: value },
       );
       this.botAdmin = this.client.bot.database.users.get(this.id)?.botAdmin;
+      return this;
+    }
+
+    async setBotDeveloper(value: boolean) {
+      await this.client.bot.database.users.update(
+        this.id,
+        { botDeveloper: value },
+      );
+      this.botDeveloper = this.client.bot.database.users.get(this.id)?.botDeveloper;
       return this;
     }
 
