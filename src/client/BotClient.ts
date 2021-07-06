@@ -54,52 +54,6 @@ export class BotClient {
   }
 
   /**
-   * Gets the permission level of a user.
-   * @param {User} user The user.
-   * @returns {YinYangPermissions.PermisssionLevel} The users highest Level.
-   */
-  permUser(user: User) {
-    let permlvl = YinYangPermissions.PermisssionLevel.USER;
-
-    const permOrder = this.perms.slice(0).sort((p, c) => (
-      p.level < c.level ? 1 : -1
-    ));
-
-    while (permOrder.length) {
-      const currentLevel = permOrder.shift();
-      if (currentLevel?.check(user, this)) {
-        permlvl = currentLevel.level;
-        break;
-      }
-    }
-
-    return permlvl;
-  }
-
-  /**
-   * Gets the permission level of a member.
-   * @param member The member.
-   * @returns {YinYangPermissions.PermisssionLevel} The members highest Level.
-   */
-  permMember(member: GuildMember) {
-    let permlvl = YinYangPermissions.PermisssionLevel.USER;
-
-    const permOrder = this.perms.slice(0).sort((p, c) => (
-      p.level < c.level ? 1 : -1
-    ));
-
-    while (permOrder.length) {
-      const currentLevel = permOrder.shift();
-      if (currentLevel?.checkMember(member, this)) {
-        permlvl = currentLevel.level;
-        break;
-      }
-    }
-
-    return permlvl;
-  }
-
-  /**
    * This method is used to start the bots initialization process
    * ```js
    * without sentry support.

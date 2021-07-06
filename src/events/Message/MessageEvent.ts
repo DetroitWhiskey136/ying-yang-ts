@@ -1,10 +1,10 @@
 import {
-  Message, TextChannel, DMChannel, NewsChannel, ColorResolvable,
+  Message, TextChannel, DMChannel, NewsChannel, ColorResolvable, GuildMember,
 } from 'discord.js';
 import {
   BotClient, DiscordClient, Embed,
   Event, Strings, MESSAGES, OPTIONS,
-  YinYangCommand,
+  YinYangCommand, YinYangPermissions,
 } from '../../index';
 
 type Channel = TextChannel | DMChannel | NewsChannel;
@@ -22,6 +22,14 @@ export class MessageEvent extends Event {
     return !author.bot
       || (channel instanceof TextChannel
       && channel.permissionsFor(String(client.user?.id))?.has('SEND_MESSAGES') !== true);
+  }
+
+  private static getPermLevel(message: Message, bot: BotClient) {
+    const { author, member, guild } = message;
+
+    return guild
+      ? YinYangPermissions.permMember(member as GuildMember, bot)
+      : YinYangPermissions.permUser(author, bot);
   }
 
   private static getPrefix(prefix: string, { client, content }: Message): string {
@@ -97,6 +105,13 @@ export class MessageEvent extends Event {
     }
 
     if (command === undefined || usedPrefix.length === 0) return;
+
+    console.log(
+      command.permission,
+      MessageEvent.getPermLevel(message, bot),
+    );
+
+    if ((command.permission ?? 0) > MessageEvent.getPermLevel(message, bot)) return;
 
     // if (command.permLevel !== getPermLevel(author)) return;
     // why not use number for this and > / < / >= / <=

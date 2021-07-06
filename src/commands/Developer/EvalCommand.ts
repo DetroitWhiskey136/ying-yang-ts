@@ -1,9 +1,8 @@
 /* eslint-disable no-eval, no-unused-vars */
 import { inspect } from 'util';
 import {
-  YinYangCommand, Embed, Strings, Util,
+  YinYangCommand, Embed, Strings, Util, YinYangPermissions,
 } from '../../index';
-import { YinYangPermissions } from '../../managers/Permissions';
 import { Stopwatch } from '../../util/Stopwatch';
 import { Type } from '../../util/Type';
 
@@ -21,7 +20,7 @@ export class EvalCommand extends YinYangCommand.Command {
       category: YinYangCommand.CommandCategories.DEVELOPER,
       description: 'Evaluates arbitrary javascript code',
       name: 'eval',
-      permission: YinYangPermissions.PermisssionLevel.USER,
+      permission: YinYangPermissions.PermisssionLevel.BOT_DEVELOPER,
       usage: 'eval <expression>',
     });
   }
@@ -31,6 +30,9 @@ export class EvalCommand extends YinYangCommand.Command {
       bot, message, mentions, member, guild, author, channel, client,
       prefix, query, args, database,
     } = ctx;
+
+    // eslint-disable-next-line global-require
+    const mods = require('../../index');
 
     if (!author.botAdmin && !['574074150327418893', '190324299083546624'].includes(author.id)) {
       return;
