@@ -30,7 +30,7 @@ export namespace YinYangPermissions {
     },
     {
       check: (message: Message, bot: BotClient) => message.author.botSupport as boolean,
-      checkMember: (member: GuildMember, bot: BotClient) => member.user.botAdmin as boolean,
+      checkMember: (member: GuildMember, bot: BotClient) => member.user.botSupport as boolean,
       level: PermisssionLevel.BOT_SUPPORT,
       name: 'user',
     },
@@ -41,8 +41,8 @@ export namespace YinYangPermissions {
       name: 'user',
     },
     {
-      check: (message: Message, bot: BotClient) => message.author.botAdmin as boolean,
-      checkMember: (member: GuildMember, bot: BotClient) => member.user.botAdmin as boolean,
+      check: (message: Message, bot: BotClient) => message.author.botDeveloper as boolean,
+      checkMember: (member: GuildMember, bot: BotClient) => member.user.botDeveloper as boolean,
       level: PermisssionLevel.BOT_DEVELOPER,
       name: 'user',
     },
