@@ -15,15 +15,12 @@ export interface eventOptions {
  * @class Event
  */
 export class Event {
-  // #region Type Declarations
   name: string;
 
   enabled: boolean;
 
   type: string;
-  // #endregion
 
-  // #region Constructor
   /**
    * Creates an instance of Event.
    * @param {eventOptions} options Options for the event
@@ -38,9 +35,4 @@ export class Event {
     this.enabled = options.enabled;
     this.type = 'event';
   }
-  // #endregion
-
-  // #region Methods
-
-  // #endregion
 }

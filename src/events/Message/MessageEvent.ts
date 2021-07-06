@@ -106,11 +106,6 @@ export class MessageEvent extends Event {
 
     if (command === undefined || usedPrefix.length === 0) return;
 
-    console.log(
-      command.permission,
-      MessageEvent.getPermLevel(message, bot),
-    );
-
     if ((command.permission ?? 0) > MessageEvent.getPermLevel(message, bot)) return;
 
     // if (command.permLevel !== getPermLevel(author)) return;

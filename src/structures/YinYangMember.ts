@@ -1,5 +1,5 @@
-import { Structures, Guild, GuildMember } from 'discord.js';
-import { WarningManager, DiscordClient, Database } from '../index';
+import { GuildMember } from 'discord.js';
+import { WarningManager, Database } from '../index';
 
 // #region Scope Declaration
 declare module 'discord.js' {
@@ -15,7 +15,7 @@ const database = new Database();
 
 Reflect.defineProperty(GuildMember.prototype, 'warnings', {
   get: function (this: GuildMember) {
-    return database.members.get(this.id).guilds[this.guild.id].warnings ?? [];
+    return new WarningManager(this);
   },
 });
 

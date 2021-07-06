@@ -10,7 +10,7 @@
     "build:fast": "esbuild --outdir=dist --platform=node --target=node14 --format=cjs `find src -type f -name '*.ts'`",
     "prebuild": "rimraf dist",
     "start-dev": "yarn build:fast && cross-env NODE_ENV=development node .",
-    "watch": "yarn prebuild && cross-env NODE_ENV=development tsc-watch --onSuccess node .",
+    "watch": "yarn prebuild && cross-env NODE_ENV=development tsc-watch --onSuccess \"node .\"",
     "watch:fast": "esbuild --outdir=dist --platform=node --target=node14 --format=cjs --watch `find src -type f -name '*.ts'`",
     "run:dev": "cross-env NODE_ENV=development tsnd --ignore-watch node_modules --respawn --transpile-only --watch src,.env --no-notify src/bot.ts",
     "run:pro": "yarn build && cross-env NODE_ENV=production node .",

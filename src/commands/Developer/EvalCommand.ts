@@ -20,7 +20,7 @@ export class EvalCommand extends YinYangCommand.Command {
       category: YinYangCommand.CommandCategories.DEVELOPER,
       description: 'Evaluates arbitrary javascript code',
       name: 'eval',
-      permission: YinYangPermissions.PermisssionLevel.USER,
+      permission: YinYangPermissions.PermisssionLevel.BOT_DEVELOPER,
       usage: 'eval <expression>',
     });
   }
@@ -33,10 +33,6 @@ export class EvalCommand extends YinYangCommand.Command {
 
     // eslint-disable-next-line global-require
     const mods = require('../../index');
-
-    if (!author.botAdmin && !['574074150327418893', '190324299083546624'].includes(author.id)) {
-      return;
-    }
 
     const embed = new Embed();
     let res;
