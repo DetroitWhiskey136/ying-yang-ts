@@ -23,7 +23,7 @@ export const Guild: IGuild = {
   joinMessage: null,
   leaveMessage: null,
   log: null,
-  prefix: '/',
+  prefix: ':',
   roles: {
     admin: '',
     dj: '',

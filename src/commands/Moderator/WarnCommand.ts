@@ -1,5 +1,5 @@
 import { Snowflake } from 'discord.js';
-import { Embed, YinYangCommand } from '../../index';
+import { Embed, YinYangCommand, YinYangPermissions } from '../../index';
 
 export class WarnCommand extends YinYangCommand.Command {
   constructor() {
@@ -9,6 +9,7 @@ export class WarnCommand extends YinYangCommand.Command {
       description: 'Gives a user a warning',
       enabled: true,
       name: 'warn',
+      permission: YinYangPermissions.PermisssionLevel.MODERATOR,
       usage: 'warn <user> [points] [reason]',
     });
   }

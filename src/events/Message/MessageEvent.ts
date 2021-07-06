@@ -106,7 +106,10 @@ export class MessageEvent extends Event {
 
     if (command === undefined || usedPrefix.length === 0) return;
 
-    if ((command.permission ?? 0) > MessageEvent.getPermLevel(message, bot)) return;
+    if ((command.permission ?? 0) > MessageEvent.getPermLevel(message, bot)) {
+      this.createEmbed(channel, 'RED', 'You do not have permission to use this command #getgud');
+      return;
+    }
 
     // if (command.permLevel !== getPermLevel(author)) return;
     // why not use number for this and > / < / >= / <=

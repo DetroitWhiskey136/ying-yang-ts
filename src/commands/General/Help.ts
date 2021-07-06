@@ -64,9 +64,7 @@ export class HelpCommand extends YinYangCommand.Command {
     categories.forEach((cmds, categoryName) => {
       const content: string[] = [];
       cmds.forEach((cmd) => {
-        console.log(categoryName);
         content.push(`\`${prefix}${cmd.usage}\` -- ${cmd.description}`);
-        console.log(content.join(' '));
       });
       embed.addField(categoryName, content.join('\n'));
     });
