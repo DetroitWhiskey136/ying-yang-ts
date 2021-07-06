@@ -29,9 +29,21 @@ export namespace YinYangPermissions {
       name: 'user',
     },
     {
-      check: (message: Message, bot: BotClient) => message.author.botAdmin as boolean,
+      check: (message: Message, bot: BotClient) => message.author.botSupport as boolean,
+      checkMember: (member: GuildMember, bot: BotClient) => member.user.botAdmin as boolean,
+      level: PermisssionLevel.BOT_SUPPORT,
+      name: 'user',
+    },
+    {
+      check: (message: Message, bot: BotClient) => message.author.botSupport as boolean,
       checkMember: (member: GuildMember, bot: BotClient) => member.user.botAdmin as boolean,
       level: PermisssionLevel.BOT_ADMIN,
+      name: 'user',
+    },
+    {
+      check: (message: Message, bot: BotClient) => message.author.botAdmin as boolean,
+      checkMember: (member: GuildMember, bot: BotClient) => member.user.botAdmin as boolean,
+      level: PermisssionLevel.BOT_DEVELOPER,
       name: 'user',
     },
   ];
