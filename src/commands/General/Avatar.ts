@@ -1,4 +1,5 @@
 import { getColorFromURL } from 'color-thief-node';
+import { ColorResolvable } from 'discord.js';
 
 import { YinYangCommand, Embed } from '../../index';
 
@@ -28,7 +29,7 @@ export class AvatarCommand extends YinYangCommand.Command {
     const embed = new Embed()
       .setImage(avatarUrl)
       .setTitle(`Profile Picture for ${user.username}`)
-      .setColor(dominantColor);
+      .setColor(dominantColor as ColorResolvable);
     await interaction.reply({ embeds: [embed] });
   }
 }

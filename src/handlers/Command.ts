@@ -1,7 +1,7 @@
 import {
   Message, MessageMentions, GuildMember, Guild, User,
   TextChannel, DMChannel, NewsChannel, CommandInteraction,
-  CommandInteractionOption,
+  CommandInteractionOption, ThreadChannel,
 } from 'discord.js';
 import {
   BotClient, DiscordClient, Database, YinYangPermissions,
@@ -31,7 +31,7 @@ export namespace YinYangCommand {
     member: GuildMember | null;
     guild: Guild | null;
     author: User;
-    channel: TextChannel | DMChannel | NewsChannel;
+    channel: TextChannel | DMChannel | NewsChannel | ThreadChannel;
     client: DiscordClient;
     prefix: string | null;
     query: string;

@@ -4,7 +4,7 @@
 import crypto from 'crypto';
 import {
   Guild, GuildMember, MessageEmbed,
-  User, MessageEmbedOptions, ImageURLOptions, EmbedFieldData,
+  User, MessageEmbedOptions, ImageURLOptions, EmbedFieldData, ColorResolvable,
 } from 'discord.js';
 import { ImageUtil } from '../util';
 
@@ -67,7 +67,7 @@ export class Embed extends MessageEmbed {
 
     const color = EmbedColors[this.options.type] || EmbedColors.normal;
 
-    this.setColor(color);
+    this.setColor(color as ColorResolvable);
   }
   // #endregion
 

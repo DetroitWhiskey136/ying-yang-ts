@@ -1,10 +1,11 @@
 import {
-  Message, TextChannel, DMChannel, NewsChannel, ColorResolvable, GuildMember,
+  Message, TextChannel, DMChannel, NewsChannel, ColorResolvable, GuildMember, Role,
 } from 'discord.js';
 import {
   BotClient, DiscordClient, Embed,
   Event, Strings, MESSAGES, OPTIONS,
   YinYangCommand, YinYangPermissions,
+  Guild as GuildData, Member as MemberData, User as UserData,
 } from '../../index';
 
 type Channel = TextChannel | DMChannel | NewsChannel;
@@ -13,15 +14,17 @@ export class MessageEvent extends Event {
   constructor() {
     super({
       enabled: true,
-      name: 'message',
+      name: 'messageCreate',
     });
   }
 
   private static isValidMessage(message: Message) {
-    const { author, channel, client } = message;
+    const {
+      author, channel, client, guild,
+    } = message;
     return !author.bot
       || (channel instanceof TextChannel
-      && channel.permissionsFor(String(client.user?.id))?.has('SEND_MESSAGES') !== true);
+      && channel.permissionsFor(guild?.members.cache.get(client.user!.id) as GuildMember)?.has('SEND_MESSAGES') !== true);
   }
 
   private static getPermLevel(message: Message, bot: BotClient) {
@@ -63,9 +66,13 @@ export class MessageEvent extends Event {
   }
 
   async run(bot: BotClient, client: DiscordClient, message: Message) {
-    const { author, channel, content } = message;
-    const guild = message?.guild;
-    const member = message?.member;
+    const {
+      author, channel, content, guild, member,
+    } = message;
+    if (guild) bot.database.guilds.ensure(guild.id, GuildData);
+    if (member) bot.database.members.ensure(member.id, MemberData);
+    if (author) bot.database.users.ensure(author.id, UserData);
+
     const authorNick = Strings.setNickname(author.username);
 
     if (
@@ -89,7 +96,7 @@ export class MessageEvent extends Event {
     const isMentioned = MENTION_REGEX.test(message.content);
 
     if (isMentioned && usedPrefix.length === 0) {
-      this.createEmbed(channel, 'BLUE', Strings.hasPlaceholder(MESSAGES.PREFIX, '{prefix}', `\`${prefix}\``));
+      this.createEmbed(channel as Channel, 'BLUE', Strings.hasPlaceholder(MESSAGES.PREFIX, '{prefix}', `\`${prefix}\``));
       return;
     }
 
@@ -100,14 +107,14 @@ export class MessageEvent extends Event {
       ?? bot.commands.get(bot.aliases.get(commandName)!);
 
     if (isMentioned && command === undefined) {
-      this.createEmbed(channel, 'BLUE', Strings.hasPlaceholder(MESSAGES.PREFIX, '{prefix}', `\`${prefix}\``));
+      this.createEmbed(channel as Channel, 'BLUE', Strings.hasPlaceholder(MESSAGES.PREFIX, '{prefix}', `\`${prefix}\``));
       return;
     }
 
     if (command === undefined || usedPrefix.length === 0) return;
 
     if ((command.permission ?? 0) > MessageEvent.getPermLevel(message, bot)) {
-      this.createEmbed(channel, 'RED', 'You do not have permission to use this command #getgud');
+      this.createEmbed(channel as Channel, 'RED', 'You do not have permission to use this command #getgud');
       return;
     }
 

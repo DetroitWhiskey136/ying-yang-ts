@@ -16,6 +16,7 @@ export interface IGuild {
   leaveMessage: stringResolvable;
   welcomeChannel: stringResolvable;
   roles: IRoles;
+  queue: [];
 }
 
 export const Guild: IGuild = {
@@ -24,11 +25,12 @@ export const Guild: IGuild = {
   leaveMessage: null,
   log: null,
   prefix: ':',
+  queue: [],
   roles: {
-    admin: '',
-    dj: '',
-    moderator: '',
-    support: '',
+    admin: '' as RoleResolvable,
+    dj: '' as RoleResolvable,
+    moderator: '' as RoleResolvable,
+    support: '' as RoleResolvable,
   },
   welcomeChannel: null,
 };

@@ -7,7 +7,7 @@ export class InteractionEvent extends Event {
   constructor() {
     super({
       enabled: true,
-      name: 'interaction',
+      name: 'interactionCreate',
     });
   }
 

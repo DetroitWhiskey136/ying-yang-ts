@@ -25,11 +25,11 @@ export class RoleManager {
   }
 
   private getRole(roleID: RoleResolvable): RoleResolvable {
-    return this.guild.roles.cache.get(roleID as Snowflake) ?? '';
+    return this.guild.roles.cache.get(roleID as Snowflake) ?? '' as RoleResolvable;
   }
 
   public add(roleName: string, roleID: string) {
-    if (this.getRole(roleID) === null) return;
+    if (this.getRole(roleID as RoleResolvable) === null) return;
     this.bot.database.guilds.update(`roles.${roleName}`, roleID);
   }
 
