@@ -1,10 +1,10 @@
 import path from 'path';
 import {
-  Collection, ClientOptions, Message, GuildMember, User,
+  Collection, ClientOptions, Message, GuildMember, User, Snowflake,
 } from 'discord.js';
 import {
   Database, YinYangCommand, Event, Logger, Files, DiscordClient,
-  YinYangPermissions,
+  YinYangPermissions, MusicManager,
 } from '../index';
 
 /**
@@ -18,6 +18,7 @@ export interface BotClient {
   events: Collection<string, Event>;
   logger: Logger;
   perms: YinYangPermissions.Levels[];
+  subscriptions: Map<Snowflake, MusicManager>;
 }
 
 /**
@@ -40,6 +41,7 @@ export class BotClient {
     this.events = new Collection();
     this.logger = new Logger();
     this.perms = YinYangPermissions.Permissions;
+    this.subscriptions = new Map<Snowflake, MusicManager>();
 
     Files.LoadFiles(path.join(__dirname, '..', 'commands'), this);
     Files.LoadFiles(path.join(__dirname, '..', 'events'), this);

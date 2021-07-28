@@ -7,6 +7,7 @@ import {
   YinYangCommand, YinYangPermissions,
   Guild as GuildData, Member as MemberData, User as UserData,
 } from '../../index';
+import { WarningManager } from '../../managers/WarningManager';
 
 type Channel = TextChannel | DMChannel | NewsChannel;
 
@@ -85,7 +86,20 @@ export class MessageEvent extends Event {
     }
 
     if (!MessageEvent.isValidMessage(message)) return;
-    if (!author.bot && member !== null) {
+
+    bot.logger.debug(`\n Message: ${message.content}\n`, `Guild: ${guild?.name} ~ ${guild?.id}\n`, `Member: ${member?.user.username} ~ ${member?.user.id}`);
+
+    if (!author.bot && member !== null && guild) {
+      const memberDB = bot.database.members.get(member.id).guilds;
+      if (!memberDB[guild.id] || !memberDB[guild.id].level) {
+        bot.database.members.update(member.id, {
+          guilds: {
+            [guild.id]: {
+              level: 0,
+            },
+          },
+        });
+      }
       member.level++;
     }
 

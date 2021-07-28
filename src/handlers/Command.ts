@@ -1,7 +1,7 @@
 import {
   Message, MessageMentions, GuildMember, Guild, User,
   TextChannel, DMChannel, NewsChannel, CommandInteraction,
-  CommandInteractionOption, ThreadChannel,
+  ThreadChannel, ApplicationCommandOption,
 } from 'discord.js';
 import {
   BotClient, DiscordClient, Database, YinYangPermissions,
@@ -134,7 +134,7 @@ export namespace YinYangCommand {
     ownerOnly?: boolean,
     usage?: string,
     enabled?: boolean
-    options?: Array<CommandInteractionOption>
+    options?: Array<ApplicationCommandOption>
     permission?: YinYangPermissions.PermisssionLevel;
   }
 
@@ -150,7 +150,7 @@ export namespace YinYangCommand {
     ownerOnly: boolean
     usage: string
     enabled: boolean
-    options: Array<CommandInteractionOption>
+    options: Array<ApplicationCommandOption>
     permission?: YinYangPermissions.PermisssionLevel;
     runNormal: (ctx: CommandContext) => Promise<void>
     runSlash: (ctx: SlashContext) => Promise<void>

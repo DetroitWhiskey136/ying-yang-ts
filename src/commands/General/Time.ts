@@ -9,6 +9,14 @@ export class TimeCommand extends YinYangCommand.Command {
       category: YinYangCommand.CommandCategories.GENERAL,
       description: 'shows the time in a specified timezone',
       name: 'time',
+      options: [
+        {
+          description: 'The timezone you would like to search for',
+          name: 'timezone',
+          required: true,
+          type: 'STRING' as const,
+        },
+      ],
       usage: 'time <timezone>',
     });
   }

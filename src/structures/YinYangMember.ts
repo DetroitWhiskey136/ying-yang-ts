@@ -21,7 +21,7 @@ Reflect.defineProperty(GuildMember.prototype, 'warnings', {
 
 Reflect.defineProperty(GuildMember.prototype, 'dj', {
   get: function (this: GuildMember) {
-    return database.members.get(this.id).guilds[this.guild.id].dj ?? [];
+    return database.members.get(this.id).guilds[this.guild.id].dj;
   },
   set: function (this: GuildMember, value: boolean) {
     const options = {
@@ -37,7 +37,7 @@ Reflect.defineProperty(GuildMember.prototype, 'dj', {
 
 Reflect.defineProperty(GuildMember.prototype, 'level', {
   get: function (this: GuildMember) {
-    return database.members.get(this.id).guilds[this.guild.id].level ?? [];
+    return database.members.get(this.id).guilds[this.guild.id].level;
   },
   set: function (this: GuildMember, value: boolean) {
     const options = {

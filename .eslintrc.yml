@@ -60,4 +60,5 @@ rules: {
   max-classes-per-file: 0,
   object-shorthand: 0,
   func-names: 0,
+  no-tabs: 0,
 }

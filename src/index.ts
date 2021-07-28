@@ -5,6 +5,7 @@ export { Embed } from './discord/Embed';
 export * from './handlers';
 export {
   WarningManager, RoleManager, YinYangPermissions,
+  MusicManager, TrackManager,
 } from './managers';
 export {
   Warning,

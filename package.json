@@ -48,7 +48,9 @@
     "tsconfig-paths": "^3.9.0",
     "tspath": "^1.3.7",
     "tweetnacl": "^1.0.3",
-    "youtubei": "^0.0.1-rc.15"
+    "youtube-dl-exec": "^1.2.4",
+    "youtubei": "^0.0.1-rc.15",
+    "ytdl-core": "^4.9.0"
   },
   "devDependencies": {
     "@types/klaw": "^3.0.1",
