@@ -17,8 +17,8 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "removeComments": true,
-
   },
+  "include": ["**/*.ts"],
   "exclude": [
     "node_modules"
   ],
