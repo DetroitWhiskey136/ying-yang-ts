@@ -87,8 +87,6 @@ export class MessageEvent extends Event {
 
     if (!MessageEvent.isValidMessage(message)) return;
 
-    bot.logger.debug(`\n Message: ${message.content}\n`, `Guild: ${guild?.name} ~ ${guild?.id}\n`, `Member: ${member?.user.username} ~ ${member?.user.id}`);
-
     if (!author.bot && member !== null && guild) {
       const memberDB = bot.database.members.get(member.id).guilds;
       if (!memberDB[guild.id] || !memberDB[guild.id].level) {
@@ -140,6 +138,5 @@ export class MessageEvent extends Event {
     };
 
     command._runNormal(new YinYangCommand.CommandContext(params));
-    bot.logger.debug(`\nCommand: ${command.name} \nQuery: ${params.query ?? ''} \n ran by ${author.username}`);
   }
 }
