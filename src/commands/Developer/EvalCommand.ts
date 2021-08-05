@@ -31,8 +31,37 @@ export class EvalCommand extends YinYangCommand.Command {
       prefix, query, args, database,
     } = ctx;
 
-    // eslint-disable-next-line global-require
-    const mods = require('../../index');
+    const box = {
+      BC: '─',
+      BL: '╰',
+      BR: '╯',
+      MC: '─',
+      ML: '├',
+      MN: '│',
+      MR: '┤',
+      TC: '─',
+      TL: '╭',
+      TR: '╮',
+    };
+
+    const strings = [
+      ` Content: ${message.content ?? 'N/A'}`,
+      ` Guild: ${guild?.name}(${guild?.id})`,
+      ` Channel: ${channel?.type === 'text' ? channel?.name : 'N/A'}(${channel.id})`,
+      ` Member: ${member?.displayName}(${member?.id})`,
+    ];
+
+    bot.logger.info(
+      '\n',
+      `${box.TL}${box.TC.repeat(65)}${box.TR}\n`,
+      `${box.MN}${' '.repeat(28)}Eval Used${' '.repeat(28)}${box.MN}\n`,
+      `${box.ML}${box.MC.repeat(65)}${box.MR}\n`,
+      `${box.MN}${strings[0].slice(0, 64)}${' '.repeat(65 - (strings[0].slice(0, 64).length))}${box.MN}\n`,
+      `${box.MN}${strings[1].slice(0, 64)}${' '.repeat(65 - (strings[1].slice(0, 64).length))}${box.MN}\n`,
+      `${box.MN}${strings[2].slice(0, 64)}${' '.repeat(65 - (strings[2].slice(0, 64).length))}${box.MN}\n`,
+      `${box.MN}${strings[3].slice(0, 64)}${' '.repeat(65 - (strings[3].slice(0, 64).length))}${box.MN}\n`,
+      `${box.BL}${box.BC.repeat(65)}${box.BR}`,
+    );
 
     const embed = new Embed();
     let res;
