@@ -15,8 +15,8 @@ export class PlayCommand extends YinYangCommand.Command {
       name: 'play',
       options: [
         {
-          description: 'The URL of the song to play',
-          name: 'Youtube URL',
+          description: 'The URL of the song to play <only youtube urls for now>',
+          name: 'url',
           required: true,
           type: 'STRING' as const,
         },
