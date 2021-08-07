@@ -47,7 +47,7 @@ export class EvalCommand extends YinYangCommand.Command {
     const strings = [
       ` Content: ${message.content ?? 'N/A'}`,
       ` Guild: ${guild?.name}(${guild?.id})`,
-      ` Channel: ${channel?.type === 'text' ? channel?.name : 'N/A'}(${channel.id})`,
+      ` Channel: ${channel?.type === 'GUILD_TEXT' ? channel?.name : 'N/A'}(${channel.id})`,
       ` Member: ${member?.displayName}(${member?.id})`,
     ];
 
@@ -82,12 +82,12 @@ export class EvalCommand extends YinYangCommand.Command {
       const stopwatch = new Stopwatch();
       const evaluated = eval(toEval);
       res = await cleanResult(evaluated, stopwatch);
-    } catch (err) {
+    } catch (err: any) {
       if (err.message.includes('await is only valid in async functions')) {
         try {
           const stopwatch = new Stopwatch();
           res = await cleanResult(eval(`(async () => {\n${toEval}\n})()`), stopwatch);
-        } catch (er) {
+        } catch (er: any) {
           client.emit('error', er);
           res = `**Exception** ${value(this.clean(er.message))}`;
         }

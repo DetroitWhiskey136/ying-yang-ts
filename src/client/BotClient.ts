@@ -1,6 +1,6 @@
 import path from 'path';
 import {
-  Collection, ClientOptions, Message, GuildMember, User, Snowflake,
+  Collection, ClientOptions, Snowflake,
 } from 'discord.js';
 import {
   Database, YinYangCommand, Event, Logger, Files, DiscordClient,

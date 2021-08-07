@@ -32,7 +32,7 @@ export class PlayCommand extends YinYangCommand.Command {
   async runSlash(ctx: YinYangCommand.SlashContext) {
     const { commandInteraction, bot } = ctx;
 
-    await commandInteraction.defer();
+    await commandInteraction.deferReply();
     const url = commandInteraction.options.get('song')!.value! as string;
 
     let subscription = bot.subscriptions.get(commandInteraction.guildId as Snowflake);

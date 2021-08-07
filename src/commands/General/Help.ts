@@ -1,5 +1,5 @@
 import {
-  DMChannel, NewsChannel, TextChannel, Collection, ThreadChannel,
+  Collection, TextBasedChannels,
 } from 'discord.js';
 import {
   YinYangCommand, Util, Embed, Strings,
@@ -52,7 +52,7 @@ export class HelpCommand extends YinYangCommand.Command {
   }
 
   private async sendCategories(
-    channel: TextChannel | DMChannel | NewsChannel | ThreadChannel,
+    channel: TextBasedChannels,
     commands: Collection<string, YinYangCommand.Command>,
     prefix: string | null,
   ) {

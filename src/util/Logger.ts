@@ -98,8 +98,6 @@ export class Logger {
 
   /**
    * Creates a type for colors and stuff
-   * @private
-   * @static
    * @param {keyof LoggerTypes} loggerType The Logger Type.
    * @returns {Array<string>} String Array
    * @memberOf Logger

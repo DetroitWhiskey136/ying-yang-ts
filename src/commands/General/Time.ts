@@ -40,7 +40,7 @@ export class TimeCommand extends YinYangCommand.Command {
   async runSlash(ctx: YinYangCommand.SlashContext) {
     const { commandInteraction: interaction } = ctx;
 
-    const timezone = moment.tz.zone(this.getTimezone(String(interaction.options.first()?.value!)));
+    const timezone = moment.tz.zone(this.getTimezone(String(interaction.options.get('timezone')?.value!)));
     if (timezone === null) {
       await interaction.reply('Invalid timezone is given');
       return;
