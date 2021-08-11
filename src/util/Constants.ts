@@ -1,5 +1,5 @@
 import {
-  ClientOptions, Intents,
+  ClientOptions, Intents, Options,
 } from 'discord.js';
 
 export const clientOptions: ClientOptions = {
@@ -21,8 +21,7 @@ export const clientOptions: ClientOptions = {
     Intents.FLAGS.GUILD_VOICE_STATES,
     Intents.FLAGS.GUILD_WEBHOOKS,
   ],
-  messageCacheLifetime: 240,
-  messageSweepInterval: 300,
+  makeCache: Options.cacheEverything(),
   partials: [
     'MESSAGE',
     'CHANNEL',
