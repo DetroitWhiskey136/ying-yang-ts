@@ -96,13 +96,17 @@ export class Logger {
     fs.appendFileSync(file, `${content}\n`);
   }
 
+  // eslint-disable-next-line valid-jsdoc
   /**
-   * Creates a type for colors and stuff
-   * @param {keyof LoggerTypes} loggerType The Logger Type.
-   * @returns {Array<string>} String Array
-   * @memberOf Logger
+   * Creates a type for colors and stuff.
+   *
+   * @private
+   * @static
+   * @param {keyof LoggerTypes} loggerType The Logger Type
+   * @return {string[]} String Array<String>
+   * @memberof Logger
    */
-  private static type(loggerType: keyof LoggerTypes): string[] {
+  private static type(loggerType: keyof LoggerTypes): Array<string> {
     const types: LoggerTypes = {
       DEBUG: [
         TerminalFormatter.bold(
