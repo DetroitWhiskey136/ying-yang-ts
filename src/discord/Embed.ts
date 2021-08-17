@@ -6,7 +6,7 @@ import {
   Guild, GuildMember, MessageEmbed,
   User, MessageEmbedOptions, ImageURLOptions, EmbedFieldData, ColorResolvable,
 } from 'discord.js';
-import { ImageUtil } from '../util';
+import { ImageUtil } from '../index';
 
 const EmbedColors = { error: 'RED', normal: '#00FFFF', warn: '0xfdfd96' } as const;
 
