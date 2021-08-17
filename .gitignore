@@ -1,12 +1,35 @@
-node_modules
+# Log Files
+logs
+*.log
+yarn-error.log*
+
+# DB Files
+*.sqlite*
+
+# Runtime data
+pids
+*.pid
+*.seed
+
+#ENV
 .env
-.history
-.vscode
-data/logs
-data/enmap_data
-yarn-error.log
-.file
+
+# Dist
 dist
-.yarn
+*.tsbuildinfo
+
+# Yarn v2
+.yarn/*
+!.yarn/patches
+!.yarn/releases
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/versions
+.pnp.*
+
+# Miscellaneous
 .idea
+.history
+.eslintcache
 testing
+node_modules

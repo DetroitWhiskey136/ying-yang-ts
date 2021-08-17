@@ -9,6 +9,9 @@ parserOptions:
   sourceType: module
 plugins:
   - '@typescript-eslint'
+ignorePatterns: [
+  "**/dist/*", "**/node_modules/*", ".yarn/*", ".pnp.*"
+]
 rules: {
   valid-jsdoc: ["warn", {
     requireParamType: false
