@@ -1,6 +1,5 @@
 import * as Sentry from '@sentry/node';
 import 'dotenv/config';
-import 'tsconfig-paths/register';
 import './structures';
 
 import { BotClient, clientOptions } from './index';
