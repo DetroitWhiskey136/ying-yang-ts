@@ -9,7 +9,7 @@ export class WarnCommand extends YinYangCommand.Command {
       description: 'Gives a user a warning',
       enabled: true,
       name: 'warn',
-      permission: YinYangPermissions.PermisssionLevel.MODERATOR,
+      permission: YinYangPermissions.PermissionLevel.MODERATOR,
       usage: 'warn <user> [points] [reason]',
     });
   }

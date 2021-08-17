@@ -134,7 +134,7 @@ export namespace YinYangCommand {
     usage?: string,
     enabled?: boolean
     options?: Array<ApplicationCommandOption>
-    permission?: YinYangPermissions.PermisssionLevel;
+    permission?: YinYangPermissions.PermissionLevel;
   }
 
   /**
@@ -150,7 +150,7 @@ export namespace YinYangCommand {
     usage: string
     enabled: boolean
     options: Array<ApplicationCommandOption>
-    permission?: YinYangPermissions.PermisssionLevel;
+    permission?: YinYangPermissions.PermissionLevel;
     runNormal: (ctx: CommandContext) => Promise<void>
     runSlash: (ctx: SlashContext) => Promise<void>
   }
@@ -204,7 +204,7 @@ export namespace YinYangCommand {
       this.usage = co.usage ?? 'No usage';
       this.enabled = co.enabled ?? true;
       this.options = co.options ?? [];
-      this.permission = co.permission ?? YinYangPermissions.PermisssionLevel.USER;
+      this.permission = co.permission ?? YinYangPermissions.PermissionLevel.USER;
     }
 
     /**

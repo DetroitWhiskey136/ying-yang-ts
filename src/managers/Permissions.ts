@@ -2,7 +2,7 @@ import { GuildMember, User } from 'discord.js';
 import { BotClient } from '../index';
 
 export namespace YinYangPermissions {
-  export enum PermisssionLevel {
+  export enum PermissionLevel {
     USER,
     DJ,
     MODERATOR,
@@ -14,7 +14,7 @@ export namespace YinYangPermissions {
   }
 
   export interface Levels {
-    level: PermisssionLevel;
+    level: PermissionLevel;
     name: string;
     check(user: User, bot: BotClient): boolean;
     checkMember(member: GuildMember, bot: BotClient): boolean;
@@ -24,14 +24,14 @@ export namespace YinYangPermissions {
     {
       check: (user: User, bot: BotClient) => true,
       checkMember: (member: GuildMember) => true,
-      level: PermisssionLevel.USER,
+      level: PermissionLevel.USER,
       name: 'user',
     },
     {
       check: (user: User, bot: BotClient) => false,
       checkMember: (member: GuildMember, bot: BotClient) => member.dj
         ?? false,
-      level: PermisssionLevel.DJ,
+      level: PermissionLevel.DJ,
       name: 'dj',
     },
     {
@@ -39,7 +39,7 @@ export namespace YinYangPermissions {
         ?? false,
       checkMember: (member: GuildMember, bot: BotClient) => member.user.botSupport
         ?? false,
-      level: PermisssionLevel.BOT_SUPPORT,
+      level: PermissionLevel.BOT_SUPPORT,
       name: 'bot_support',
     },
     {
@@ -47,7 +47,7 @@ export namespace YinYangPermissions {
         ?? false,
       checkMember: (member: GuildMember, bot: BotClient) => member.user.botAdmin
         ?? false,
-      level: PermisssionLevel.BOT_ADMIN,
+      level: PermissionLevel.BOT_ADMIN,
       name: 'bot_admin',
     },
     {
@@ -55,7 +55,7 @@ export namespace YinYangPermissions {
         ?? false,
       checkMember: (member: GuildMember, bot: BotClient) => member.user.botDeveloper
         ?? false,
-      level: PermisssionLevel.BOT_DEVELOPER,
+      level: PermissionLevel.BOT_DEVELOPER,
       name: 'bot_developer',
     },
   ];
@@ -64,10 +64,10 @@ export namespace YinYangPermissions {
    * Gets the permission level of a user.
    * @param user the user.
    * @param bot the bot.
-   * @returns {PermisssionLevel} the highest level of the user.
+   * @returns {PermissionLevel} the highest level of the user.
    */
   export function permUser(user: User, bot: BotClient) {
-    let permlvl = PermisssionLevel.USER;
+    let permlvl = PermissionLevel.USER;
 
     const permOrder = bot.perms
       .slice(0)
@@ -88,10 +88,10 @@ export namespace YinYangPermissions {
    * Gets the permission level of a member.
    * @param member The member.
    * @param bot the bot.
-   * @returns {PermisssionLevel} the highest level of the member.
+   * @returns {PermissionLevel} the highest level of the member.
    */
   export function permMember(member: GuildMember, bot: BotClient) {
-    let permlvl = PermisssionLevel.USER;
+    let permlvl = PermissionLevel.USER;
 
     const permOrder = bot.perms
       .slice(0)
