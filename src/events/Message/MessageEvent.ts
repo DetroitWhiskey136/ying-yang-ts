@@ -1,5 +1,5 @@
 import {
-  Message, TextChannel, DMChannel, NewsChannel, ColorResolvable, GuildMember, Role,
+  Message, TextChannel, DMChannel, NewsChannel, ColorResolvable, GuildMember,
 } from 'discord.js';
 import {
   BotClient, DiscordClient, Embed,
@@ -7,7 +7,6 @@ import {
   YinYangCommand, YinYangPermissions,
   Guild as GuildData, Member as MemberData, User as UserData,
 } from '../../index';
-import { WarningManager } from '../../managers/WarningManager';
 
 type Channel = TextChannel | DMChannel | NewsChannel;
 
