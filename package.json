@@ -43,7 +43,6 @@
     "libsodium-wrappers": "^0.7.9",
     "moment": "^2.29.0",
     "moment-timezone": "^0.5.33",
-    "tweetnacl": "^1.0.3",
     "youtube-dl-exec": "^1.2.4",
     "youtubei": "^0.0.1-rc.15",
     "ytdl-core": "^4.9.0"
