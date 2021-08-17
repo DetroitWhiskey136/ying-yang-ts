@@ -1,5 +1,5 @@
 import { RoleResolvable } from 'discord.js';
-import { stringResolvable } from '../../util';
+import { stringResolvable } from '../../index';
 
 export interface IRoles {
   admin: RoleResolvable;

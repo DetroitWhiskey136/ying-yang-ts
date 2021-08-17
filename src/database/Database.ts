@@ -1,10 +1,9 @@
 import fs from 'fs';
 import path from 'path';
 
-import { EnmapProvider } from './EnmapProvider';
 import {
-  ISettings, IGuild, IUser, IMember,
-} from './models';
+  ISettings, IGuild, IUser, IMember, EnmapProvider,
+} from '../index';
 
 const dataDir = `${process.cwd()}${path.sep}${path.join('data', 'enmap_data')}`;
 
