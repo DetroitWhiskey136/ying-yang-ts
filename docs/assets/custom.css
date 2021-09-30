@@ -1,0 +1,10 @@
+/* Remove the side panel scrollbar */
+.tsd-navigation::-webkit-scrollbar {
+  display: none;
+}
+
+.tsd-navigation {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
