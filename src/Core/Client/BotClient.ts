@@ -47,11 +47,13 @@ export class BotClient {
   }
 
   /**
-   * This method is used to start the bots initialization process
+   * This method is used to start the bots initialization process.
+   * * without sentry support.
    * ```js
-   * without sentry support.
    * bot.init(String(process.env.TOKEN));
-   * with sentry support.
+   * ```
+   * * With sentry support.
+   * ```js
    * bot.init(String(process.env.TOKEN), Sentry);
    * ```
    * @param token - The bots token from discord.com

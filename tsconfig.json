@@ -25,21 +25,22 @@
 
   "typedocOptions": {
     "entryPoints": ["src/index.ts"],
+    "entryPointStrategy": ["Resolve"],
     "out": "docs",
     "name": "Yin Yang TS Documentation",
-    "json": "docs/docs.json",
     "excludePrivate": true,
     "excludeInternal": true,
-    "disableOutputCheck": true,
     "includeVersion": true,
     "disableSources": true,
     "readme": "none",
     "defaultCategory": "Misc",
     "hideGenerator": true,
-    "toc": [],
-    "listInvalidSymbolLinks": true,
+    "validation": {
+      "invalidLink": true,
+    },
+    "customCss": "./data/resources/docs.css",
     "emit": true,
-    "theme": "./node_modules/typedoc-darker-theme/bin/default",
-    "highlightTheme": "material-darker",
+    "theme": "default",
+    "darkHighlightTheme": "material-darker",
   }
 }
