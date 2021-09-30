@@ -3,7 +3,7 @@
     "esModuleInterop": true,
     "noUnusedLocals": false,
     "target": "es2019",
-    "module": "commonjs",
+    "module": "CommonJS",
     "noImplicitAny": true,
     "outDir": "dist",
     "baseUrl": ".",
@@ -40,6 +40,6 @@
     "listInvalidSymbolLinks": true,
     "emit": true,
     "theme": "./node_modules/typedoc-darker-theme/bin/default",
-    "highlightTheme": "material-theme-darker",
+    "highlightTheme": "material-darker",
   }
 }

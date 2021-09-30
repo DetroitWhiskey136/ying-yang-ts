@@ -1,17 +1,17 @@
-import { YinYangCommand } from '../../index';
+import { Core } from '../../index';
 
-export class RegisterCommand extends YinYangCommand.Command {
+export class RegisterCommand extends Core.Handler.Command.Command {
   constructor() {
     super({
       aliases: ['reg', 'deploy'],
-      category: YinYangCommand.CommandCategories.DEVELOPER,
+      category: Core.Handler.Command.CommandCategories.DEVELOPER,
       description: 'registers a slash command!',
       name: 'register',
       usage: 'register <command>',
     });
   }
 
-  async runNormal(ctx: YinYangCommand.CommandContext) {
+  async runNormal(ctx: Core.Handler.Command.CommandContext) {
     const {
       args, bot, message, guild,
     } = ctx;
@@ -39,6 +39,6 @@ export class RegisterCommand extends YinYangCommand.Command {
     guild?.commands.create(data);
 
     console.log(guild?.commands.cache);
-    message.reply({ content: 'Command Registerd' });
+    message.reply({ content: 'Command Registered' });
   }
 }

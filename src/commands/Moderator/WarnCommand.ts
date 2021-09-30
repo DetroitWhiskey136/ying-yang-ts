@@ -1,20 +1,20 @@
 import { Snowflake } from 'discord.js';
-import { Embed, YinYangCommand, YinYangPermissions } from '../../index';
+import { Core } from '../../index';
 
-export class WarnCommand extends YinYangCommand.Command {
+export class WarnCommand extends Core.Handler.Command.Command {
   constructor() {
     super({
       aliases: [],
-      category: YinYangCommand.CommandCategories.MODERATOR,
+      category: Core.Handler.Command.CommandCategories.MODERATOR,
       description: 'Gives a user a warning',
       enabled: true,
       name: 'warn',
-      permission: YinYangPermissions.PermissionLevel.MODERATOR,
+      permission: Core.Managers.Permissions.PermissionLevel.MODERATOR,
       usage: 'warn <user> [points] [reason]',
     });
   }
 
-  async runNormal(ctx: YinYangCommand.CommandContext) {
+  async runNormal(ctx: Core.Handler.Command.CommandContext) {
     const {
       author, member, args, guild, channel, mentions,
     } = ctx;
@@ -37,14 +37,14 @@ export class WarnCommand extends YinYangCommand.Command {
       return;
     }
 
-    let points: number = 1;
+    let points: number = 0;
     const isPointProvided = !Number.isNaN(Number(args[1]))
             && Number(args[1]) === parseInt(args[1], 10);
     if (isPointProvided) {
       points = Number(args[1]);
     }
-    if (points < 1) {
-      await channel.send('A warning point should be positive');
+    if (points < 0) {
+      await channel.send('A warning point must be a number greater or equal to 0');
       return;
     }
 
@@ -54,7 +54,7 @@ export class WarnCommand extends YinYangCommand.Command {
     }
 
     await target.warnings.add(reason, points, member);
-    const embed = new Embed().setAuthor(
+    const embed = new Core.Discord.Embed().setAuthor(
       `${target.user.username} has been warned`,
       target.user.displayAvatarURL({ dynamic: true }),
     ).addField('Moderator', `${author}`, false)

@@ -1,12 +1,12 @@
 import { getColorFromURL } from 'color-thief-node';
 import { ColorResolvable } from 'discord.js';
 
-import { YinYangCommand, Embed } from '../../index';
+import { Core } from '../../index';
 
-export class AvatarCommand extends YinYangCommand.Command {
+export class AvatarCommand extends Core.Handler.Command.Command {
   constructor() {
     super({
-      category: YinYangCommand.CommandCategories.GENERAL,
+      category: Core.Handler.Command.CommandCategories.GENERAL,
       description: 'Display a users avatar',
       name: 'avatar',
       options: [
@@ -21,7 +21,7 @@ export class AvatarCommand extends YinYangCommand.Command {
     });
   }
 
-  async runSlash(ctx: YinYangCommand.SlashContext) {
+  async runSlash(ctx: Core.Handler.Command.SlashContext) {
     const { commandInteraction: interaction } = ctx;
 
     const user = interaction.options.get('user')?.user ?? interaction.user;
@@ -34,7 +34,7 @@ export class AvatarCommand extends YinYangCommand.Command {
       dominantColor = 'BLURPLE';
     }
 
-    const embed = new Embed()
+    const embed = new Core.Discord.Embed()
       .setImage(avatarUrl)
       .setTitle(`Profile Picture for ${user.username}`)
       .setColor(dominantColor as ColorResolvable);

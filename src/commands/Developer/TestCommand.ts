@@ -1,9 +1,9 @@
-import { YinYangCommand } from '../../index';
+import { Core } from '../../index';
 
-export class TestCommand extends YinYangCommand.Command {
+export class TestCommand extends Core.Handler.Command.Command {
   constructor() {
     super({
-      category: YinYangCommand.CommandCategories.DEVELOPER,
+      category: Core.Handler.Command.CommandCategories.DEVELOPER,
       description: 'This is a test',
       name: 'test',
       options: [
@@ -13,11 +13,11 @@ export class TestCommand extends YinYangCommand.Command {
     });
   }
 
-  async runNormal(ctx: YinYangCommand.CommandContext) {
+  async runNormal(ctx: Core.Handler.Command.CommandContext) {
     // Test
   }
 
-  async runSlash(ctx: YinYangCommand.SlashContext) {
+  async runSlash(ctx: Core.Handler.Command.SlashContext) {
     // Test
   }
 }

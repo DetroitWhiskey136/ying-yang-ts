@@ -1,21 +1,21 @@
 import { Snowflake } from 'discord.js';
-import { YinYangCommand } from '../../index';
+import { Core } from '../../index';
 
-export class SkipCommand extends YinYangCommand.Command {
+export class SkipCommand extends Core.Handler.Command.Command {
   constructor() {
     super({
-      category: YinYangCommand.CommandCategories.MUSIC,
+      category: Core.Handler.Command.CommandCategories.MUSIC,
       description: 'Skips the current song',
       name: 'skip',
       usage: 'skip',
     });
   }
 
-  async runNormal(ctx: YinYangCommand.CommandContext) {
+  async runNormal(ctx: Core.Handler.Command.CommandContext) {
     // Test
   }
 
-  async runSlash(ctx: YinYangCommand.SlashContext) {
+  async runSlash(ctx: Core.Handler.Command.SlashContext) {
     const { commandInteraction, bot } = ctx;
     const subscription = bot.subscriptions.get(commandInteraction.guildId as Snowflake);
 

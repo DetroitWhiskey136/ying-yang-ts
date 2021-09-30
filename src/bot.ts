@@ -1,10 +1,9 @@
 import * as Sentry from '@sentry/node';
 import 'dotenv/config';
-import './structures';
 
-import { BotClient, clientOptions } from './index';
+import { Core } from './index';
 
-const bot = new BotClient(clientOptions);
+const bot = new Core.Client.BotClient(Core.Util.Constants.clientOptions);
 
 Sentry.init({
   attachStacktrace: true,

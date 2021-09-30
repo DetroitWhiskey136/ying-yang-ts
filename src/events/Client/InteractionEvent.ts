@@ -1,9 +1,7 @@
 import { Interaction, GuildMember, Message } from 'discord.js';
-import {
-  BotClient, DiscordClient, Event, YinYangCommand, YinYangPermissions,
-} from '../../index';
+import { Core } from '../../index';
 
-export class InteractionEvent extends Event {
+export class InteractionEvent extends Core.Handler.Event.Event {
   constructor() {
     super({
       enabled: true,
@@ -11,15 +9,19 @@ export class InteractionEvent extends Event {
     });
   }
 
-  private static getPermLevel(interaction: Interaction, bot: BotClient) {
+  private static getPermLevel(interaction: Interaction, bot: Core.Client.BotClient) {
     const { user, member, guild } = interaction;
 
     return guild
-      ? YinYangPermissions.permMember(member as GuildMember, bot)
-      : YinYangPermissions.permUser(user, bot);
+      ? Core.Managers.Permissions.permMember(member as GuildMember, bot)
+      : Core.Managers.Permissions.permUser(user, bot);
   }
 
-  async run(bot: BotClient, client: DiscordClient, interaction: Interaction) {
+  async run(
+    bot: Core.Client.BotClient,
+    client: Core.Client.DiscordClient,
+    interaction: Interaction,
+  ) {
     if (!interaction.isCommand()) return;
 
     const command = bot.commands.get(interaction.commandName);
@@ -34,6 +36,6 @@ export class InteractionEvent extends Event {
       bot, commandInteraction: interaction,
     };
 
-    command._runSlash(new YinYangCommand.SlashContext(params));
+    command._runSlash(new Core.Handler.Command.SlashContext(params));
   }
 }

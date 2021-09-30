@@ -1,10 +1,10 @@
-import { YinYangCommand } from '../../index';
+import { Core } from '../../index';
 
-export class UpdateWarnCommand extends YinYangCommand.Command {
+export class UpdateWarnCommand extends Core.Handler.Command.Command {
   constructor() {
     super({
       aliases: ['uw', 'uwarn'],
-      category: YinYangCommand.CommandCategories.MODERATOR,
+      category: Core.Handler.Command.CommandCategories.MODERATOR,
       description: 'Update a warning for a user',
       enabled: false,
       name: 'updatewarn',
@@ -12,7 +12,7 @@ export class UpdateWarnCommand extends YinYangCommand.Command {
     });
   }
 
-  async runNormal(ctx: YinYangCommand.CommandContext) {
+  async runNormal(ctx: Core.Handler.Command.CommandContext) {
     // Not implemented
   }
 }

@@ -1,8 +1,6 @@
-import {
-  BotClient, DiscordClient, Event,
-} from '../../index';
+import { Core } from '../../index';
 
-export class MessageEvent extends Event {
+export class MessageEvent extends Core.Handler.Event.Event {
   constructor() {
     super({
       enabled: true,
@@ -10,7 +8,7 @@ export class MessageEvent extends Event {
     });
   }
 
-  async run(bot: BotClient, client: DiscordClient) {
+  async run(bot: Core.Client.BotClient, client: Core.Client.DiscordClient) {
     //
   }
 }

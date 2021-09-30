@@ -3,14 +3,12 @@ import {
   joinVoiceChannel,
 } from '@discordjs/voice';
 import { GuildMember, Snowflake } from 'discord.js';
-import {
-  YinYangCommand, MusicManager, TrackManager,
-} from '../../index';
+import { Core } from '../../index';
 
-export class PlayCommand extends YinYangCommand.Command {
+export class PlayCommand extends Core.Handler.Command.Command {
   constructor() {
     super({
-      category: YinYangCommand.CommandCategories.MUSIC,
+      category: Core.Handler.Command.CommandCategories.MUSIC,
       description: 'Plays a song',
       name: 'play',
       options: [
@@ -25,22 +23,23 @@ export class PlayCommand extends YinYangCommand.Command {
     });
   }
 
-  async runNormal(ctx: YinYangCommand.CommandContext) {
+  async runNormal(ctx: Core.Handler.Command.CommandContext) {
     // Test
   }
 
-  async runSlash(ctx: YinYangCommand.SlashContext) {
+  async runSlash(ctx: Core.Handler.Command.SlashContext) {
     const { commandInteraction, bot } = ctx;
 
     await commandInteraction.deferReply();
-    const url = commandInteraction.options.get('song')!.value! as string;
+    console.log(commandInteraction.options);
+    const url = commandInteraction.options.get('url')!.value! as string;
 
     let subscription = bot.subscriptions.get(commandInteraction.guildId as Snowflake);
     if (!subscription) {
       if (commandInteraction.member instanceof GuildMember
         && commandInteraction.member.voice.channel) {
         const { channel } = commandInteraction.member.voice;
-        subscription = new MusicManager(
+        subscription = new Core.Managers.Music.MusicManager(
           joinVoiceChannel({
             adapterCreator: channel.guild.voiceAdapterCreator as DiscordGatewayAdapterCreator,
             channelId: channel.id,
@@ -60,7 +59,7 @@ export class PlayCommand extends YinYangCommand.Command {
     }
 
     try {
-      const track = await TrackManager.from(url, {
+      const track = await Core.Managers.Music.TrackManager.from(url, {
         onError(error) {
           commandInteraction.followUp({ content: `Error: ${error.message}`, ephemeral: true })
             .catch((error: Error) => bot.logger.warn(error));

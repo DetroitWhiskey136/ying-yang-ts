@@ -1,27 +1,25 @@
 import {
   Collection, TextBasedChannels,
 } from 'discord.js';
-import {
-  YinYangCommand, Util, Embed, Strings,
-} from '../../index';
+import { Core } from '../../index';
 
-export class HelpCommand extends YinYangCommand.Command {
+export class HelpCommand extends Core.Handler.Command.Command {
   constructor() {
     super({
       aliases: ['?', 'h'],
-      category: YinYangCommand.CommandCategories.GENERAL,
+      category: Core.Handler.Command.CommandCategories.GENERAL,
       description: 'shows information about other commands',
       name: 'help',
       usage: 'help <commandName>',
     });
   }
 
-  async runNormal(ctx: YinYangCommand.CommandContext) {
+  async runNormal(ctx: Core.Handler.Command.CommandContext) {
     const {
       bot, args, channel, prefix,
     } = ctx;
     const { commands } = bot;
-    const embed = new Embed();
+    const embed = new Core.Discord.Embed();
 
     if (args[0] === undefined) {
       await this.sendCategories(channel, commands, prefix);
@@ -38,14 +36,14 @@ export class HelpCommand extends YinYangCommand.Command {
     }
 
     embed.setAuthor(
-      Strings.toProperCase(cmd.name),
+      Core.Util.Strings.toProperCase(cmd.name),
       bot.client.user?.displayAvatarURL({ size: 4096 }),
     ).setDescription(cmd.description) // why not just use description?
       .addField('Usage', prefix + cmd.usage)
       .setFooter(`Category: ${cmd.category} | Enabled: ${cmd.enabled ? '✅' : '❌'}`);
 
     if (cmd.aliases.length !== 0) {
-      embed.setTitle(`${embed.title} - ${cmd.aliases.join(', ')}`);
+      embed.setTitle(`${cmd.aliases.join(', ')}`);
     }
 
     await channel.send({ embeds: [embed] });
@@ -53,12 +51,12 @@ export class HelpCommand extends YinYangCommand.Command {
 
   private async sendCategories(
     channel: TextBasedChannels,
-    commands: Collection<string, YinYangCommand.Command>,
+    commands: Collection<string, Core.Handler.Command.Command>,
     prefix: string | null,
   ) {
-    const embed = new Embed();
-    const categories = Util.groupBy(
-      commands, (command: YinYangCommand.Command) => command.category,
+    const embed = new Core.Discord.Embed();
+    const categories = Core.Util.Util.groupBy(
+      commands, (command: Core.Handler.Command.Command) => command.category,
     );
 
     categories.forEach((cmds, categoryName) => {
@@ -68,6 +66,8 @@ export class HelpCommand extends YinYangCommand.Command {
       });
       embed.addField(categoryName, content.join('\n'));
     });
+
+    embed.setFooter('<arg> = required | [arg] = optional');
 
     await channel.send({ embeds: [embed] });
   }

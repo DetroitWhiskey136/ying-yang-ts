@@ -1,31 +1,27 @@
 /* eslint-disable no-eval, no-unused-vars */
 import { inspect } from 'util';
-import {
-  YinYangCommand, Embed, Strings, Util, YinYangPermissions,
-} from '../../index';
-import { Stopwatch } from '../../util/Stopwatch';
-import { Type } from '../../util/Type';
+import { Core } from '../../index';
 
-const { isPromise } = Util;
-const { code } = Strings;
+const { isPromise } = Core.Util.Util;
+const { code } = Core.Util.Strings;
 
 const token = process.env.TOKEN ?? '';
 const value = (str: string) => code(str, 'js')
   .replace(token, () => '*'.repeat(token.length));
 
-export class EvalCommand extends YinYangCommand.Command {
+export class EvalCommand extends Core.Handler.Command.Command {
   constructor() {
     super({
       aliases: ['compile', 'ev', 'js'],
-      category: YinYangCommand.CommandCategories.DEVELOPER,
+      category: Core.Handler.Command.CommandCategories.DEVELOPER,
       description: 'Evaluates arbitrary javascript code',
       name: 'eval',
-      permission: YinYangPermissions.PermissionLevel.BOT_DEVELOPER,
+      permission: Core.Managers.Permissions.PermissionLevel.BOT_DEVELOPER,
       usage: 'eval <expression>',
     });
   }
 
-  async runNormal(ctx: YinYangCommand.CommandContext) {
+  async runNormal(ctx: Core.Handler.Command.CommandContext) {
     const {
       bot, message, mentions, member, guild, author, channel, client,
       prefix, query, args, database,
@@ -63,29 +59,29 @@ export class EvalCommand extends YinYangCommand.Command {
       `${box.BL}${box.BC.repeat(65)}${box.BR}`,
     );
 
-    const embed = new Embed();
+    const embed = new Core.Discord.Embed();
     let res;
 
     const toEval = query.replace(/(^`{3}(\w+)?|`{3}$)/gim, () => '');
 
-    const cleanResult = async (evaluated: unknown, stopwatch: Stopwatch) => {
+    const cleanResult = async (evaluated: unknown, stopwatch: Core.Util.Stopwatch) => {
       const resolved = await evaluated;
       const inspected = inspect(resolved, { depth: 0, showHidden: true });
       const cleanEvaluated = value(this.clean(inspected));
 
-      const type = new Type(resolved);
+      const type = new Core.Util.Types.Type(resolved);
       const summary = `**Type:** ${type}\n**Executed in** ${stopwatch.toString()}`;
       return `${isPromise(evaluated) ? '**Awaited Promise**\n' : ''}${summary} ${cleanEvaluated}`;
     };
 
     try {
-      const stopwatch = new Stopwatch();
+      const stopwatch = new Core.Util.Stopwatch();
       const evaluated = eval(toEval);
       res = await cleanResult(evaluated, stopwatch);
     } catch (err: any) {
       if (err.message.includes('await is only valid in async functions')) {
         try {
-          const stopwatch = new Stopwatch();
+          const stopwatch = new Core.Util.Stopwatch();
           res = await cleanResult(eval(`(async () => {\n${toEval}\n})()`), stopwatch);
         } catch (er: any) {
           client.emit('error', er);

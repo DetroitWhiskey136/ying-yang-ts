@@ -1,10 +1,10 @@
-import { YinYangCommand } from '../../index';
+import { Core } from '../../index';
 
-export class DeleteWarnCommand extends YinYangCommand.Command {
+export class DeleteWarnCommand extends Core.Handler.Command.Command {
   constructor() {
     super({
       aliases: ['delwarn', 'dw', 'dwarn'],
-      category: YinYangCommand.CommandCategories.MODERATOR,
+      category: Core.Handler.Command.CommandCategories.MODERATOR,
       description: 'Deletes a users warning',
       enabled: false,
       name: 'deletewarn',
@@ -12,7 +12,7 @@ export class DeleteWarnCommand extends YinYangCommand.Command {
     });
   }
 
-  async runNormal(ctx: YinYangCommand.CommandContext) {
+  async runNormal(ctx: Core.Handler.Command.CommandContext) {
     // Not implemented
   }
 }

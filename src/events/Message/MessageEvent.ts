@@ -1,16 +1,11 @@
 import {
   Message, TextChannel, DMChannel, NewsChannel, ColorResolvable, GuildMember,
 } from 'discord.js';
-import {
-  BotClient, DiscordClient, Embed,
-  Event, Strings, MESSAGES, OPTIONS,
-  YinYangCommand, YinYangPermissions,
-  Guild as GuildData, Member as MemberData, User as UserData,
-} from '../../index';
+import { Core } from '../../index';
 
 type Channel = TextChannel | DMChannel | NewsChannel;
 
-export class MessageEvent extends Event {
+export class MessageEvent extends Core.Handler.Event.Event {
   constructor() {
     super({
       enabled: true,
@@ -27,17 +22,17 @@ export class MessageEvent extends Event {
       && channel.permissionsFor(guild?.members.cache.get(client.user!.id) as GuildMember)?.has('SEND_MESSAGES') !== true);
   }
 
-  private static getPermLevel(message: Message, bot: BotClient) {
+  private static getPermLevel(message: Message, bot: Core.Client.BotClient) {
     const { author, member, guild } = message;
 
     return guild
-      ? YinYangPermissions.permMember(member as GuildMember, bot)
-      : YinYangPermissions.permUser(author, bot);
+      ? Core.Managers.Permissions.permMember(member as GuildMember, bot)
+      : Core.Managers.Permissions.permUser(author, bot);
   }
 
   private static getPrefix(prefix: string, { client, content }: Message): string {
-    const fixedPrefix = Strings.escapeRegExp(prefix);
-    const fixedUsername = Strings.escapeRegExp(client.user?.username ?? '');
+    const fixedPrefix = Core.Util.Strings.escapeRegExp(prefix);
+    const fixedUsername = Core.Util.Strings.escapeRegExp(client.user?.username ?? '');
 
     const PREFIX_REGEX = new RegExp(`^(<@!?${client.user?.id}>|${fixedPrefix}|${fixedUsername})?`, 'i');
     const matchPrefix = content.match(PREFIX_REGEX);
@@ -58,22 +53,22 @@ export class MessageEvent extends Event {
   createEmbed(channel: Channel, color: ColorResolvable, content: string): void {
     if (content.length === 0) throw new Error('A content cannot be empty!');
 
-    const embed = new Embed()
+    const embed = new Core.Discord.Embed()
       .setColor(color)
       .setDescription(content);
 
     channel.send({ embeds: [embed] });
   }
 
-  async run(bot: BotClient, client: DiscordClient, message: Message) {
+  async run(bot: Core.Client.BotClient, client: Core.Client.DiscordClient, message: Message) {
     const {
       author, channel, content, guild, member,
     } = message;
-    if (guild) bot.database.guilds.ensure(guild.id, GuildData);
-    if (member) bot.database.members.ensure(member.id, MemberData);
-    if (author) bot.database.users.ensure(author.id, UserData);
+    if (guild) bot.database.guilds.ensure(guild.id, Core.Database.Models.Guild.Guild);
+    if (member) bot.database.members.ensure(member.id, Core.Database.Models.Member.Member);
+    if (author) bot.database.users.ensure(author.id, Core.Database.Models.User.User);
 
-    const authorNick = Strings.setNickname(author.username);
+    const authorNick = Core.Util.Strings.setNickname(author.username);
 
     if (
       guild
@@ -100,14 +95,14 @@ export class MessageEvent extends Event {
       member.level++;
     }
 
-    const prefix = guild?.prefix ?? OPTIONS.PREFIX;
+    const prefix = guild?.prefix ?? Core.Util.Constants.OPTIONS.PREFIX;
     const usedPrefix = MessageEvent.getPrefix(prefix, message);
 
     const MENTION_REGEX = new RegExp(`^(<@!?${client.user?.id}>)`);
     const isMentioned = MENTION_REGEX.test(message.content);
 
     if (isMentioned && usedPrefix.length === 0) {
-      this.createEmbed(channel as Channel, 'BLUE', Strings.hasPlaceholder(MESSAGES.PREFIX, '{prefix}', `\`${prefix}\``));
+      this.createEmbed(channel as Channel, 'BLUE', Core.Util.Strings.hasPlaceholder(Core.Util.Constants.MESSAGES.PREFIX, '{prefix}', `\`${prefix}\``));
       return;
     }
 
@@ -118,7 +113,7 @@ export class MessageEvent extends Event {
       ?? bot.commands.get(bot.aliases.get(commandName)!);
 
     if (isMentioned && command === undefined) {
-      this.createEmbed(channel as Channel, 'BLUE', Strings.hasPlaceholder(MESSAGES.PREFIX, '{prefix}', `\`${prefix}\``));
+      this.createEmbed(channel as Channel, 'BLUE', Core.Util.Strings.hasPlaceholder(Core.Util.Constants.MESSAGES.PREFIX, '{prefix}', `\`${prefix}\``));
       return;
     }
 
@@ -136,6 +131,6 @@ export class MessageEvent extends Event {
       args, bot, message, prefix, query: args.join(' '),
     };
 
-    command._runNormal(new YinYangCommand.CommandContext(params));
+    command._runNormal(new Core.Handler.Command.CommandContext(params));
   }
 }
