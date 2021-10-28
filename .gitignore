@@ -33,3 +33,4 @@ dist
 .eslintcache
 testing
 node_modules
+docs/CNAME
