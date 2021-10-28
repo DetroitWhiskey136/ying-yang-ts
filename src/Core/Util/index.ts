@@ -1,10 +1,9 @@
 export * as Channel from './Channel';
 export * as Constants from './Constants';
+export * from './Colors';
 export { Files } from './File';
 export { ImageUtil as Image } from './Image';
-export {
-  Logger, Colors, TerminalFormatter,
-} from './Logger';
+export { Logger } from './Logger';
 export * as Member from './MemberUtil';
 export { Stopwatch } from './Stopwatch';
 export { Strings } from './String';
