@@ -45,7 +45,7 @@ export enum Formatters {
   Italic = '\u001b[3m',
   Underline = '\u001b[4m',
   Blink = '\u001b[5m',
-  inverse = '\u001b[7m',
+  Inverse = '\u001b[7m',
   Hidden = '\u001b[8m',
   Strikethrough = '\u001b[9m',
   DoubleUnderline = '\u001b[21m',
