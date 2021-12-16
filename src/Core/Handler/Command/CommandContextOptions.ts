@@ -10,4 +10,4 @@ export type CommandContextOptions = {
   prefix: string | null;
   query: string;
   args: string[];
-}
+};

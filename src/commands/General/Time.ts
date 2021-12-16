@@ -18,7 +18,8 @@ export class TimeCommand extends Core.Handler.Command.Command {
           type: 'STRING',
         },
         {
-          description: 'can only be used to get a users timezone, assuming they have one set.',
+          description:
+            'can only be used to get a users timezone, assuming they have one set.',
           name: 'person',
           required: false,
           type: 'USER',
@@ -41,7 +42,9 @@ export class TimeCommand extends Core.Handler.Command.Command {
       await channel.send('Invalid timezone is given.');
       return;
     }
-    await channel.send(moment().tz(timezone.name).format('YYYY-MM-DD hh:mm:ss a'));
+    await channel.send(
+      moment().tz(timezone.name).format('YYYY-MM-DD hh:mm:ss a'),
+    );
   }
 
   async runSlash(ctx: Core.Handler.Command.SlashContext) {
@@ -65,10 +68,15 @@ export class TimeCommand extends Core.Handler.Command.Command {
       return;
     }
 
-    await interaction.reply(moment().tz(timezone.name).format('YYYY-MM-DD hh:mm:ss a'));
+    await interaction.reply(
+      moment().tz(timezone.name).format('YYYY-MM-DD hh:mm:ss a'),
+    );
   }
 
   private getTimezone(query: string) {
-    return tzList.find((tz) => tz.abbr === String(query).toUpperCase())?.zoneId ?? query;
+    return (
+      tzList.find((tz) => tz.abbr === String(query).toUpperCase())?.zoneId
+      ?? query
+    );
   }
 }

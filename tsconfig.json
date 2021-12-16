@@ -7,8 +7,7 @@
     "noImplicitAny": true,
     "outDir": "dist",
     "baseUrl": ".",
-    "paths": {
-    },
+    "paths": {},
     "resolveJsonModule": true,
     "rootDirs": ["src", "dist/src"],
     "skipLibCheck": true,
@@ -19,9 +18,7 @@
     "removeComments": true,
   },
   "include": ["**/*.ts"],
-  "exclude": [
-    "node_modules"
-  ],
+  "exclude": ["node_modules"],
 
   "typedocOptions": {
     "entryPoints": ["src/index.ts"],
@@ -36,11 +33,11 @@
     "defaultCategory": "Misc",
     "hideGenerator": true,
     "validation": {
-      "invalidLink": true,
+      "invalidLink": true
     },
     "customCss": "./data/resources/docs.css",
     "emit": true,
     "theme": "default",
-    "darkHighlightTheme": "material-darker",
+    "darkHighlightTheme": "material-darker"
   }
 }

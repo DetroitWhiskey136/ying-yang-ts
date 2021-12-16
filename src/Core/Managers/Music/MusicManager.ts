@@ -93,7 +93,7 @@ export class MusicManager {
   /**
    * Adds a new Track to the queue.
    * @param {TrackManager} track The track to add to the queue
-	 * @returns {void} void
+   * @returns {void} void
    */
   public enqueue(track: TrackManager): void {
     this.queue.push(track);
@@ -103,7 +103,7 @@ export class MusicManager {
 
   /**
    * Stops audio playback and empties the queue
-	 * @returns {void} void
+   * @returns {void} void
    */
   public stop(): void {
     this.queueLock = true;

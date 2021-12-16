@@ -30,10 +30,29 @@ export class Logger {
    */
   private static timestamp(): string[] {
     const date = new Date();
-    const m = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-    const formatedTime = `${this.formatTime(date.getHours())}:${this.formatTime(date.getMinutes())}:${this.formatTime(date.getSeconds())}`;
-    const formatedDate = `${m[date.getMonth()]}-${this.formatTime(date.getDate())}-${date.getFullYear()}`;
-    const fileDate = `${date.getMonth() + 1}-${this.formatTime(date.getDate())}-${date.getFullYear()}`;
+    const m = [
+      'Jan',
+      'Feb',
+      'Mar',
+      'Apr',
+      'May',
+      'Jun',
+      'Jul',
+      'Aug',
+      'Sep',
+      'Oct',
+      'Nov',
+      'Dec',
+    ];
+    const formatedTime = `${this.formatTime(date.getHours())}:${this.formatTime(
+      date.getMinutes(),
+    )}:${this.formatTime(date.getSeconds())}`;
+    const formatedDate = `${m[date.getMonth()]}-${this.formatTime(
+      date.getDate(),
+    )}-${date.getFullYear()}`;
+    const fileDate = `${date.getMonth() + 1}-${this.formatTime(
+      date.getDate(),
+    )}-${date.getFullYear()}`;
 
     return [
       `${Util.Colors.Foreground.Grey}${formatedDate} ${formatedTime}${Util.Colors.Formatters.Reset}`,
@@ -105,7 +124,10 @@ export class Logger {
   public log(...content: any[]): void {
     const tm = Logger.timestamp();
     console.log(Logger.type('LOG')[0], tm[0], ...content);
-    Logger.appendLogs(tm, `${Logger.type('LOG')[1]} ${tm[2]} ${content.join(' ')}`);
+    Logger.appendLogs(
+      tm,
+      `${Logger.type('LOG')[1]} ${tm[2]} ${content.join(' ')}`,
+    );
   }
 
   /**
@@ -118,7 +140,10 @@ export class Logger {
   public info(...content: any[]): void {
     const tm = Logger.timestamp();
     console.log(Logger.type('INFO')[0], tm[0], ...content);
-    Logger.appendLogs(tm, `${Logger.type('INFO')[1]} ${tm[2]} ${content.join(' ')}`);
+    Logger.appendLogs(
+      tm,
+      `${Logger.type('INFO')[1]} ${tm[2]} ${content.join(' ')}`,
+    );
   }
 
   /**
@@ -131,7 +156,10 @@ export class Logger {
   public debug(...content: any[]): void {
     const tm = Logger.timestamp();
     console.log(Logger.type('DEBUG')[0], tm[0], ...content);
-    Logger.appendLogs(tm, `${Logger.type('DEBUG')[1]} ${tm[2]} ${content.join(' ')}`);
+    Logger.appendLogs(
+      tm,
+      `${Logger.type('DEBUG')[1]} ${tm[2]} ${content.join(' ')}`,
+    );
   }
 
   /**
@@ -144,7 +172,10 @@ export class Logger {
   public warn(...content: any[]): void {
     const tm = Logger.timestamp();
     console.log(Logger.type('WARN')[0], tm[0], ...content);
-    Logger.appendLogs(tm, `${Logger.type('WARN')[1]} ${tm[2]} ${content.join(' ')}`);
+    Logger.appendLogs(
+      tm,
+      `${Logger.type('WARN')[1]} ${tm[2]} ${content.join(' ')}`,
+    );
   }
 
   /**
@@ -157,6 +188,9 @@ export class Logger {
   public error(...content: any[]): void {
     const tm = Logger.timestamp();
     console.log(Logger.type('ERROR')[0], tm[0], ...content);
-    Logger.appendLogs(tm, `${Logger.type('ERROR')[1]} ${tm[2]} ${content.join(' ')}`);
+    Logger.appendLogs(
+      tm,
+      `${Logger.type('ERROR')[1]} ${tm[2]} ${content.join(' ')}`,
+    );
   }
 }

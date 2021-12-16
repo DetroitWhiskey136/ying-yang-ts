@@ -1,6 +1,4 @@
-import {
-  Collection, TextBasedChannels,
-} from 'discord.js';
+import { Collection, TextBasedChannels } from 'discord.js';
 import { Core } from '../../index';
 
 export class HelpCommand extends Core.Handler.Command.Command {
@@ -28,19 +26,25 @@ export class HelpCommand extends Core.Handler.Command.Command {
 
     const commandName = args.shift()?.toLowerCase()!;
     const cmd = bot.commands.get(commandName)
-            ?? bot.commands.get(bot.aliases.get(commandName) ?? '');
+      ?? bot.commands.get(bot.aliases.get(commandName) ?? '');
 
     if (cmd === undefined) {
-      await channel.send(`Command not found. Use \`${prefix}help\` to see all commands`);
+      await channel.send(
+        `Command not found. Use \`${prefix}help\` to see all commands`,
+      );
       return;
     }
 
-    embed.setAuthor(
-      Core.Util.Strings.toProperCase(cmd.name),
-      bot.client.user?.displayAvatarURL({ size: 4096 }),
-    ).setDescription(cmd.description) // why not just use description?
+    embed
+      .setAuthor(
+        Core.Util.Strings.toProperCase(cmd.name),
+        bot.client.user?.displayAvatarURL({ size: 4096 }),
+      )
+      .setDescription(cmd.description) // why not just use description?
       .addField('Usage', prefix + cmd.usage)
-      .setFooter(`Category: ${cmd.category} | Enabled: ${cmd.enabled ? '✅' : '❌'}`);
+      .setFooter(
+        `Category: ${cmd.category} | Enabled: ${cmd.enabled ? '✅' : '❌'}`,
+      );
 
     if (cmd.aliases.length !== 0) {
       embed.setTitle(`${cmd.aliases.join(', ')}`);
@@ -56,7 +60,8 @@ export class HelpCommand extends Core.Handler.Command.Command {
   ) {
     const embed = new Core.Discord.Embed();
     const categories = Core.Util.Util.groupBy(
-      commands, (command: Core.Handler.Command.Command) => command.category,
+      commands,
+      (command: Core.Handler.Command.Command) => command.category,
     );
 
     categories.forEach((cmds, categoryName) => {

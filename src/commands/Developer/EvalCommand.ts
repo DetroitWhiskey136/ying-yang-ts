@@ -6,8 +6,7 @@ const { isPromise } = Core.Util.Util;
 const { code } = Core.Util.Strings;
 
 const token = process.env.TOKEN ?? '';
-const value = (str: string) => code(str, 'js')
-  .replace(token, () => '*'.repeat(token.length));
+const value = (str: string) => code(str, 'js').replace(token, () => '*'.repeat(token.length));
 
 export class EvalCommand extends Core.Handler.Command.Command {
   constructor() {
@@ -23,8 +22,18 @@ export class EvalCommand extends Core.Handler.Command.Command {
 
   async runNormal(ctx: Core.Handler.Command.CommandContext) {
     const {
-      bot, message, mentions, member, guild, author, channel, client,
-      prefix, query, args, database,
+      bot,
+      message,
+      mentions,
+      member,
+      guild,
+      author,
+      channel,
+      client,
+      prefix,
+      query,
+      args,
+      database,
     } = ctx;
 
     const box = {
@@ -43,7 +52,9 @@ export class EvalCommand extends Core.Handler.Command.Command {
     const strings = [
       ` Content: ${message.content ?? 'N/A'}`,
       ` Guild: ${guild?.name}(${guild?.id})`,
-      ` Channel: ${channel?.type === 'GUILD_TEXT' ? channel?.name : 'N/A'}(${channel.id})`,
+      ` Channel: ${channel?.type === 'GUILD_TEXT' ? channel?.name : 'N/A'}(${
+        channel.id
+      })`,
       ` Member: ${member?.displayName}(${member?.id})`,
     ];
 
@@ -52,10 +63,18 @@ export class EvalCommand extends Core.Handler.Command.Command {
       `${box.TL}${box.TC.repeat(65)}${box.TR}\n`,
       `${box.MN}${' '.repeat(28)}Eval Used${' '.repeat(28)}${box.MN}\n`,
       `${box.ML}${box.MC.repeat(65)}${box.MR}\n`,
-      `${box.MN}${strings[0].slice(0, 64)}${' '.repeat(65 - (strings[0].slice(0, 64).length))}${box.MN}\n`,
-      `${box.MN}${strings[1].slice(0, 64)}${' '.repeat(65 - (strings[1].slice(0, 64).length))}${box.MN}\n`,
-      `${box.MN}${strings[2].slice(0, 64)}${' '.repeat(65 - (strings[2].slice(0, 64).length))}${box.MN}\n`,
-      `${box.MN}${strings[3].slice(0, 64)}${' '.repeat(65 - (strings[3].slice(0, 64).length))}${box.MN}\n`,
+      `${box.MN}${strings[0].slice(0, 64)}${' '.repeat(
+        65 - strings[0].slice(0, 64).length,
+      )}${box.MN}\n`,
+      `${box.MN}${strings[1].slice(0, 64)}${' '.repeat(
+        65 - strings[1].slice(0, 64).length,
+      )}${box.MN}\n`,
+      `${box.MN}${strings[2].slice(0, 64)}${' '.repeat(
+        65 - strings[2].slice(0, 64).length,
+      )}${box.MN}\n`,
+      `${box.MN}${strings[3].slice(0, 64)}${' '.repeat(
+        65 - strings[3].slice(0, 64).length,
+      )}${box.MN}\n`,
       `${box.BL}${box.BC.repeat(65)}${box.BR}`,
     );
 
@@ -64,14 +83,19 @@ export class EvalCommand extends Core.Handler.Command.Command {
 
     const toEval = query.replace(/(^`{3}(\w+)?|`{3}$)/gim, () => '');
 
-    const cleanResult = async (evaluated: unknown, stopwatch: Core.Util.Stopwatch) => {
+    const cleanResult = async (
+      evaluated: unknown,
+      stopwatch: Core.Util.Stopwatch,
+    ) => {
       const resolved = await evaluated;
       const inspected = inspect(resolved, { depth: 0, showHidden: true });
       const cleanEvaluated = value(this.clean(inspected));
 
       const type = new Core.Util.Types.Type(resolved);
       const summary = `**Type:** ${type}\n**Executed in** ${stopwatch.toString()}`;
-      return `${isPromise(evaluated) ? '**Awaited Promise**\n' : ''}${summary} ${cleanEvaluated}`;
+      return `${
+        isPromise(evaluated) ? '**Awaited Promise**\n' : ''
+      }${summary} ${cleanEvaluated}`;
     };
 
     try {
@@ -82,7 +106,10 @@ export class EvalCommand extends Core.Handler.Command.Command {
       if (err.message.includes('await is only valid in async functions')) {
         try {
           const stopwatch = new Core.Util.Stopwatch();
-          res = await cleanResult(eval(`(async () => {\n${toEval}\n})()`), stopwatch);
+          res = await cleanResult(
+            eval(`(async () => {\n${toEval}\n})()`),
+            stopwatch,
+          );
         } catch (er: any) {
           client.emit('error', er);
           res = `**Exception** ${value(this.clean(er.message))}`;
@@ -99,7 +126,6 @@ export class EvalCommand extends Core.Handler.Command.Command {
 
   clean(str: string) {
     const blankSpace = String.fromCharCode(8203);
-    return str.replace(/`/g, `\`${blankSpace}`)
-      .replace(/@/g, `@${blankSpace}`);
+    return str.replace(/`/g, `\`${blankSpace}`).replace(/@/g, `@${blankSpace}`);
   }
 }

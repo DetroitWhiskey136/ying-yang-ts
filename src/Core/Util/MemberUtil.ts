@@ -1,5 +1,8 @@
 import {
-  GuildMemberResolvable, MessageMentions, Guild, Snowflake,
+  GuildMemberResolvable,
+  MessageMentions,
+  Guild,
+  Snowflake,
 } from 'discord.js';
 
 export class MemberUtil {
@@ -12,6 +15,5 @@ export class MemberUtil {
     return !id ? undefined : guild.members.resolve(id!);
   }
 
-  static parseMember(exp: string, guild: Guild) {
-  }
+  static parseMember(exp: string, guild: Guild) {}
 }

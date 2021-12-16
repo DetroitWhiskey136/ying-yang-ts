@@ -6,9 +6,7 @@ export class TestCommand extends Core.Handler.Command.Command {
       category: Core.Handler.Command.CommandCategories.DEVELOPER,
       description: 'This is a test',
       name: 'test',
-      options: [
-
-      ],
+      options: [],
       usage: 'test',
     });
   }

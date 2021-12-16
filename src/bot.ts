@@ -9,9 +9,7 @@ Sentry.init({
   attachStacktrace: true,
   dsn: process.env.SentryDSN,
   environment: 'development',
-  integrations: [
-    new Sentry.Integrations.Http({ tracing: true }),
-  ],
+  integrations: [new Sentry.Integrations.Http({ tracing: true })],
   release: `${process.env.npm_package_name}@${process.env.npm_package_version}`,
   tracesSampleRate: 1.0,
 });

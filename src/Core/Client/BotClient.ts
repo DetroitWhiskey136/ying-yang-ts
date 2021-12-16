@@ -1,7 +1,5 @@
 import path from 'path';
-import {
-  Collection, ClientOptions, Snowflake,
-} from 'discord.js';
+import { Collection, ClientOptions, Snowflake } from 'discord.js';
 import {
   Client, Database, Handler, Managers, Structure, Util,
 } from '..';
@@ -75,14 +73,16 @@ export class BotClient {
     // #endregion
 
     // #region  Client Login
-    this.client.login(token)
+    this.client
+      .login(token)
       .then(() => {
         this.logger.debug('Using token to login');
       })
       .catch((error) => {
         this.logger.error(
           `${error.name}:\n  ${error.message}\n${error.stack.replace(
-            `${error.name}: ${error.message}`, '',
+            `${error.name}: ${error.message}`,
+            '',
           )}`,
         );
       })

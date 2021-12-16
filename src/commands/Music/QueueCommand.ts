@@ -1,7 +1,4 @@
-import {
-  AudioPlayerStatus,
-  AudioResource,
-} from '@discordjs/voice';
+import { AudioPlayerStatus, AudioResource } from '@discordjs/voice';
 import { GuildMember, Snowflake } from 'discord.js';
 import { Core } from '../../index';
 
@@ -21,12 +18,19 @@ export class QueueCommand extends Core.Handler.Command.Command {
 
   async runSlash(ctx: Core.Handler.Command.SlashContext) {
     const { commandInteraction, bot } = ctx;
-    const subscription = bot.subscriptions.get(commandInteraction.guildId as Snowflake);
+    const subscription = bot.subscriptions.get(
+      commandInteraction.guildId as Snowflake,
+    );
 
     if (subscription) {
       const current = subscription.audioPlayer.state.status === AudioPlayerStatus.Idle
         ? 'Nothing is currently playing!'
-        : `Playing **${(subscription.audioPlayer.state.resource as AudioResource<Core.Managers.Music.TrackManager>).metadata.title}**`;
+        : `Playing **${
+          (
+                subscription.audioPlayer.state
+                  .resource as AudioResource<Core.Managers.Music.TrackManager>
+          ).metadata.title
+        }**`;
 
       const queue = subscription.queue
         .slice(0, 5)

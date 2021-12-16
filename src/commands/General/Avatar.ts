@@ -25,7 +25,11 @@ export class AvatarCommand extends Core.Handler.Command.Command {
     const { commandInteraction: interaction } = ctx;
 
     const user = interaction.options.get('user')?.user ?? interaction.user;
-    const avatarUrl = user.displayAvatarURL({ dynamic: true, format: 'png', size: 4096 });
+    const avatarUrl = user.displayAvatarURL({
+      dynamic: true,
+      format: 'png',
+      size: 4096,
+    });
 
     let dominantColor;
     try {

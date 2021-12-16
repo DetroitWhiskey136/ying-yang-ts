@@ -11,7 +11,6 @@ export interface ISettings {
   support: ISupport[];
   guilds: number;
   restart: boolean;
-
 }
 
 export const Settings: ISettings = {

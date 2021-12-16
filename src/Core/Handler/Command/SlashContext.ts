@@ -1,6 +1,4 @@
-import {
-  CommandInteraction,
-} from 'discord.js';
+import { CommandInteraction } from 'discord.js';
 import { Client, Database, Handler } from '../..';
 
 /**

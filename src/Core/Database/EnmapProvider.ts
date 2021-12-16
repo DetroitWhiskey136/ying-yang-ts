@@ -84,8 +84,6 @@ export class EnmapProvider<D> {
    */
   public delete(key: string): D {
     const data = this.model.get(key);
-    return data
-      ? this.model.delete(key)
-      : new Error(`Data not found: ${key}`);
+    return data ? this.model.delete(key) : new Error(`Data not found: ${key}`);
   }
 }

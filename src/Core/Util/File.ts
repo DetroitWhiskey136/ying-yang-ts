@@ -5,7 +5,11 @@ import { Client } from '..';
 export interface Files {
   message: string | null;
   LoadFiles(url: string, bot: Client.BotClient): void;
-  LoadFile(filePath: string, fileName: string, bot: Client.BotClient): Promise<void>;
+  LoadFile(
+    filePath: string,
+    fileName: string,
+    bot: Client.BotClient
+  ): Promise<void>;
 }
 
 /**
@@ -45,7 +49,11 @@ export class Files {
    * @returns {Promise<void>} A void Promise
    * @memberOf Files
    */
-  public static async LoadFile(filePath: string, fileName: string, bot: Client.BotClient) {
+  public static async LoadFile(
+    filePath: string,
+    fileName: string,
+    bot: Client.BotClient,
+  ) {
     try {
       const importedFile = await import(path.resolve(filePath, fileName));
       const propName = Object.keys(importedFile)[0];
@@ -61,10 +69,7 @@ export class Files {
 
       if (props.type === 'event') {
         bot.events.set(props.name, props);
-        bot.client.on(
-          props.name,
-          (...args) => props.run(bot, bot.client, ...args),
-        );
+        bot.client.on(props.name, (...args) => props.run(bot, bot.client, ...args));
       } else {
         bot.commands.set(props.name, props);
         props.aliases.forEach((alias: string) => {

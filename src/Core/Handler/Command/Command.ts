@@ -1,6 +1,4 @@
-import {
-  Handler, Managers,
-} from '../..';
+import { Handler, Managers } from '../..';
 
 export interface ICommand extends Handler.Command.BaseCommand {}
 
@@ -70,8 +68,7 @@ export class Command implements Handler.Command.BaseCommand {
    * @returns {Promise<void>} the Commands Commands method
    */
   _runNormal(ctx: Handler.Command.CommandContext) {
-    this.runNormal(ctx)
-      .catch((e) => ctx.client.emit('error', e));
+    this.runNormal(ctx).catch((e) => ctx.client.emit('error', e));
   }
 
   /**
@@ -90,7 +87,6 @@ export class Command implements Handler.Command.BaseCommand {
    * @returns {Promise<void>} the Slash Commands method
    */
   _runSlash(ctx: Handler.Command.SlashContext) {
-    this.runSlash(ctx)
-      .catch((e) => ctx.client.emit('error', e));
+    this.runSlash(ctx).catch((e) => ctx.client.emit('error', e));
   }
 }

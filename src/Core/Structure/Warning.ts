@@ -1,11 +1,9 @@
-import {
-  GuildMemberResolvable, GuildMember, Guild,
-} from 'discord.js';
+import { GuildMemberResolvable, GuildMember, Guild } from 'discord.js';
 import { Client, Database } from '..';
 
 export declare interface Warning {
   client: Client.DiscordClient;
-  guild: Guild
+  guild: Guild;
   member: GuildMember;
   id: string;
   reason: string;
@@ -29,11 +27,14 @@ export class Warning {
   }
 
   private getMod(moderator: GuildMemberResolvable): GuildMemberResolvable {
-    this.guild.members.fetch(moderator).then((mod) => {
-      this.moderator = mod;
-    }).catch(() => {
-      this.moderator = moderator;
-    });
+    this.guild.members
+      .fetch(moderator)
+      .then((mod) => {
+        this.moderator = mod;
+      })
+      .catch(() => {
+        this.moderator = moderator;
+      });
     return this.moderator;
   }
 }

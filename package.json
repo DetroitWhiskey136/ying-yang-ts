@@ -6,7 +6,7 @@
   "scripts": {
     "build": "yarn prebuild && tsc",
     "lint": "eslint --ext .ts --cache src",
-    "lint:fix": "eslint -ext .ts --fix --cache src",
+    "lint:fix": "eslint --ext .ts --fix --cache src",
     "prebuild": "rimraf dist",
     "prettier:check": "prettier **/**.{js,ts,yml,json} --check --ignore-unknown",
     "prettier:fix": "prettier **/**.{js,ts,yml,json} --write --ignore-unknown",

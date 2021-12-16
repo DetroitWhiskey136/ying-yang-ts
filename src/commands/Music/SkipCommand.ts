@@ -17,14 +17,17 @@ export class SkipCommand extends Core.Handler.Command.Command {
 
   async runSlash(ctx: Core.Handler.Command.SlashContext) {
     const { commandInteraction, bot } = ctx;
-    const subscription = bot.subscriptions.get(commandInteraction.guildId as Snowflake);
+    const subscription = bot.subscriptions.get(
+      commandInteraction.guildId as Snowflake,
+    );
 
     const { dj } = bot.database.members.get(
       commandInteraction.member?.user.id as string,
-    ).guilds[
-        commandInteraction.guildId as string];
+    ).guilds[commandInteraction.guildId as string];
     if (!dj) {
-      commandInteraction.reply('You must be a dj in this guild to be able to use this command!');
+      commandInteraction.reply(
+        'You must be a dj in this guild to be able to use this command!',
+      );
       return;
     }
 

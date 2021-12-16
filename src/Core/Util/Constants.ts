@@ -1,6 +1,4 @@
-import {
-  ClientOptions, Intents, Options,
-} from 'discord.js';
+import { ClientOptions, Intents, Options } from 'discord.js';
 
 export const clientOptions: ClientOptions = {
   allowedMentions: { repliedUser: true },
@@ -22,10 +20,7 @@ export const clientOptions: ClientOptions = {
     Intents.FLAGS.GUILD_WEBHOOKS,
   ],
   makeCache: Options.cacheEverything(),
-  partials: [
-    'MESSAGE',
-    'CHANNEL',
-  ],
+  partials: ['MESSAGE', 'CHANNEL'],
   retryLimit: 3,
   ws: {
     large_threshold: 100,
@@ -33,7 +28,8 @@ export const clientOptions: ClientOptions = {
 };
 
 export const REGEX = {
-  DOMAINS: /^https?:\/\/(www\.)?(pastebin|(gist\.)?github|gitlab)\.com\/\b([-a-zA-Z0-9()@:%_+.~#?&/=]*)?$/i,
+  DOMAINS:
+    /^https?:\/\/(www\.)?(pastebin|(gist\.)?github|gitlab)\.com\/\b([-a-zA-Z0-9()@:%_+.~#?&/=]*)?$/i,
   MEMBER_MENTION: /^(?:<@!?)?([0-9]{16,19})(?:>)?$/,
   REGEX: /[|\\{}()[\]^$+*?.]/g,
   ROLE_ID: /^[0-9]{16, 19}$/,

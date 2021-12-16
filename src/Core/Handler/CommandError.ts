@@ -1,20 +1,20 @@
 export declare interface CommandErrorField {
-  inline: boolean,
-  name: string,
-  value: string
+  inline: boolean;
+  name: string;
+  value: string;
 }
 
 export declare interface CommandErrorOptions {
-  onUsage?: boolean,
-  fields?: Array<CommandErrorField>,
-  delete?: boolean,
+  onUsage?: boolean;
+  fields?: Array<CommandErrorField>;
+  delete?: boolean;
 }
 
 export declare interface CommandError {
-  options: CommandErrorOptions,
-  onUsage: boolean,
-  fields: Array<CommandErrorField>,
-  delete: boolean
+  options: CommandErrorOptions;
+  onUsage: boolean;
+  fields: Array<CommandErrorField>;
+  delete: boolean;
 }
 
 export class CommandError extends Error {

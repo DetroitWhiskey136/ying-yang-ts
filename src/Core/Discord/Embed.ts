@@ -3,15 +3,25 @@
 
 import crypto from 'crypto';
 import {
-  Guild, GuildMember, MessageEmbed,
-  User, MessageEmbedOptions, ImageURLOptions, EmbedFieldData, ColorResolvable,
+  Guild,
+  GuildMember,
+  MessageEmbed,
+  User,
+  MessageEmbedOptions,
+  ImageURLOptions,
+  EmbedFieldData,
+  ColorResolvable,
 } from 'discord.js';
 import { Util } from '..';
 
-const EmbedColors = { error: 'RED', normal: '#00FFFF', warn: '0xfdfd96' } as const;
+const EmbedColors = {
+  error: 'RED',
+  normal: '#00FFFF',
+  warn: '0xfdfd96',
+} as const;
 
 // #region Scope Declaration
-type EmbedResolvable = User | GuildMember
+type EmbedResolvable = User | GuildMember;
 type EmbedInput = Guild | GuildMember | User | string;
 
 interface EmbedOptions {
@@ -98,9 +108,11 @@ export class Embed extends MessageEmbed {
    * @memberOf Embed
    */
   static hasSupport(resolvable: any): boolean {
-    return resolvable instanceof GuildMember
+    return (
+      resolvable instanceof GuildMember
       || resolvable instanceof GuildMember
-      || resolvable instanceof Guild;
+      || resolvable instanceof Guild
+    );
   }
 
   /**
@@ -109,7 +121,11 @@ export class Embed extends MessageEmbed {
    * @returns {string} The resolved image url
    */
   resolveImage(resolvable: EmbedInput): string {
-    const o: ImageURLOptions & { dynamic?: boolean } = { dynamic: true, format: 'png', size: 4096 };
+    const o: ImageURLOptions & { dynamic?: boolean } = {
+      dynamic: true,
+      format: 'png',
+      size: 4096,
+    };
     if (resolvable instanceof User) return resolvable.displayAvatarURL(o);
     if (resolvable instanceof GuildMember) return resolvable.user.displayAvatarURL(o);
     if (resolvable instanceof Guild) {
@@ -144,13 +160,12 @@ export class Embed extends MessageEmbed {
   ): this {
     const parseName = Embed.resolveName(name);
     const parseIcon = iconURL
-      ? this.resolveImage(iconURL) : typeof name !== 'string' ? this.resolveImage(name) : undefined;
+      ? this.resolveImage(iconURL)
+      : typeof name !== 'string'
+        ? this.resolveImage(name)
+        : undefined;
     const parseUrl = url ? this.resolveImage(url) : undefined;
-    return super.setAuthor(
-      parseName,
-      parseIcon,
-      parseUrl,
-    );
+    return super.setAuthor(parseName, parseIcon, parseUrl);
   }
 
   /**
@@ -163,12 +178,11 @@ export class Embed extends MessageEmbed {
     const parseText = Embed.resolveName(text);
     const parseIconURL = iconURL
       ? this.resolveImage(iconURL)
-      : Embed.hasSupport(text) ? this.resolveImage(text) : undefined;
+      : Embed.hasSupport(text)
+        ? this.resolveImage(text)
+        : undefined;
 
-    return super.setFooter(
-      parseText,
-      parseIconURL,
-    );
+    return super.setFooter(parseText, parseIconURL);
   }
 
   /**
@@ -196,17 +210,12 @@ export class Embed extends MessageEmbed {
    * @param {boolean} inline If this field will be displayed inline
    * @returns {this} This?
    */
-  addField(
-    name: string,
-    value: string,
-    inline = false,
-  ): this {
-    return this
-      .addFields({
-        inline,
-        name,
-        value,
-      });
+  addField(name: string, value: string, inline = false): this {
+    return this.addFields({
+      inline,
+      name,
+      value,
+    });
   }
 
   /**
@@ -217,16 +226,8 @@ export class Embed extends MessageEmbed {
   addFields(...fields: EmbedFieldData[]): this {
     // eslint-disable-next-line no-restricted-syntax
     for (const data of fields) {
-      const {
-        name, value, inline,
-      } = data;
-      this.fields.push(
-        Embed.normalizeField(
-          name,
-          value,
-          inline,
-        ),
-      );
+      const { name, value, inline } = data;
+      this.fields.push(Embed.normalizeField(name, value, inline));
     }
     return this;
   }

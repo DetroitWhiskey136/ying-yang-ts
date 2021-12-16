@@ -20,8 +20,7 @@ export class RegisterCommand extends Core.Handler.Command.Command {
       message.reply({ content: 'you must include the command' });
       return;
     }
-    const command = bot.commands.get(args[0])
-      ?? bot.commands.get(bot.aliases.get(args[0])!);
+    const command = bot.commands.get(args[0]) ?? bot.commands.get(bot.aliases.get(args[0])!);
 
     if (!command) {
       message.reply({ content: 'That command/alias does not exist!' });

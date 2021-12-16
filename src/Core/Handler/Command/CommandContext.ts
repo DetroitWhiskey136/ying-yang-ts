@@ -1,6 +1,10 @@
 import {
-  Message, MessageMentions, GuildMember, Guild,
-  User, TextBasedChannels,
+  Message,
+  MessageMentions,
+  GuildMember,
+  Guild,
+  User,
+  TextBasedChannels,
 } from 'discord.js';
 import { Client, Database, Handler } from '../..';
 
@@ -8,18 +12,18 @@ import { Client, Database, Handler } from '../..';
  * The CommandContext Interface
  */
 export interface CommandContext {
-bot: Client.BotClient;
-message: Message;
-mentions: MessageMentions;
-member: GuildMember | null;
-guild: Guild | null;
-author: User;
-channel: TextBasedChannels;
-client: Client.DiscordClient;
-prefix: string | null;
-query: string;
-args: string[];
-database: Database.ConnectionBridge;
+  bot: Client.BotClient;
+  message: Message;
+  mentions: MessageMentions;
+  member: GuildMember | null;
+  guild: Guild | null;
+  author: User;
+  channel: TextBasedChannels;
+  client: Client.DiscordClient;
+  prefix: string | null;
+  query: string;
+  args: string[];
+  database: Database.ConnectionBridge;
 }
 
 /**
@@ -27,10 +31,10 @@ database: Database.ConnectionBridge;
  * @class CommandContext
  */
 export class CommandContext {
-/**
- * Building the CommandContext with given options.
- * @param options Options to build CommandContext
- */
+  /**
+   * Building the CommandContext with given options.
+   * @param options Options to build CommandContext
+   */
   constructor(options: Handler.Command.CommandContextOptions) {
     this.bot = options.bot;
     this.message = options.message;

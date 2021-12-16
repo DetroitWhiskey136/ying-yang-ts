@@ -1,6 +1,4 @@
-import {
-  Util,
-} from '../..';
+import { Util } from '../..';
 
 export interface IUser {
   botAdmin: Util.Constants.booleanResolvable;

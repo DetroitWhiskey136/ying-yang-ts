@@ -1,4 +1,8 @@
-import { AudioResource, createAudioResource, demuxProbe } from '@discordjs/voice';
+import {
+  AudioResource,
+  createAudioResource,
+  demuxProbe,
+} from '@discordjs/voice';
 import { raw as ytdl } from 'youtube-dl-exec';
 import { getInfo } from 'ytdl-core';
 
@@ -57,10 +61,12 @@ export class TrackManager implements TrackData {
       };
       process
         .once('spawn', () => {
-          demuxProbe(stream)
-            .then((probe) => resolve(
-              createAudioResource(probe.stream, { inputType: probe.type, metadata: this }),
-            ));
+          demuxProbe(stream).then((probe) => resolve(
+            createAudioResource(probe.stream, {
+              inputType: probe.type,
+              metadata: this,
+            }),
+          ));
         })
         .catch(onError);
     });
@@ -72,7 +78,10 @@ export class TrackManager implements TrackData {
    * @param methods Lifecycle callbacks.
    * @returns {Promise<TrackManager>} The created TrackManager
    */
-  public static async from(url: string, methods: Pick<TrackManager, 'onStart' | 'onFinish' | 'onError'>): Promise<TrackManager> {
+  public static async from(
+    url: string,
+    methods: Pick<TrackManager, 'onStart' | 'onFinish' | 'onError'>,
+  ): Promise<TrackManager> {
     const info = await getInfo(url);
 
     const wrappedMethods = {

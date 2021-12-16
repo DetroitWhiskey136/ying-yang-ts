@@ -30,7 +30,7 @@ export class WarnCommand extends Core.Handler.Command.Command {
 
     const userOption = args[0];
     const target = guild.members.resolve(userOption as Snowflake)
-            ?? mentions.members?.first?.();
+      ?? mentions.members?.first?.();
 
     if (target == null) {
       await channel.send('Cannot resolve a member with a given option.');
@@ -39,12 +39,14 @@ export class WarnCommand extends Core.Handler.Command.Command {
 
     let points: number = 0;
     const isPointProvided = !Number.isNaN(Number(args[1]))
-            && Number(args[1]) === parseInt(args[1], 10);
+      && Number(args[1]) === parseInt(args[1], 10);
     if (isPointProvided) {
       points = Number(args[1]);
     }
     if (points < 0) {
-      await channel.send('A warning point must be a number greater or equal to 0');
+      await channel.send(
+        'A warning point must be a number greater or equal to 0',
+      );
       return;
     }
 
@@ -54,10 +56,12 @@ export class WarnCommand extends Core.Handler.Command.Command {
     }
 
     await target.warnings.add(reason, points, member);
-    const embed = new Core.Discord.Embed().setAuthor(
-      `${target.user.username} has been warned`,
-      target.user.displayAvatarURL({ dynamic: true }),
-    ).addField('Moderator', `${author}`, false)
+    const embed = new Core.Discord.Embed()
+      .setAuthor(
+        `${target.user.username} has been warned`,
+        target.user.displayAvatarURL({ dynamic: true }),
+      )
+      .addField('Moderator', `${author}`, false)
       .addField('Reason', reason, false)
       .setFooter(`${points} warning point${points !== 1 ? 's' : ''}`);
     await channel.send({ embeds: [embed] });

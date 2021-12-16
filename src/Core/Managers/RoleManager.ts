@@ -1,11 +1,9 @@
-import {
-  Guild, RoleResolvable, Snowflake,
-} from 'discord.js';
+import { Guild, RoleResolvable, Snowflake } from 'discord.js';
 import { Client, Database } from '..';
 
 export interface RoleManager extends Database.Models.Guild.IRoles {
   // base
-  bot: Client.BotClient
+  bot: Client.BotClient;
   guild: Guild;
 }
 
@@ -25,7 +23,9 @@ export class RoleManager {
   }
 
   private getRole(roleID: RoleResolvable): RoleResolvable {
-    return this.guild.roles.cache.get(roleID as Snowflake) ?? '' as RoleResolvable;
+    return (
+      this.guild.roles.cache.get(roleID as Snowflake) ?? ('' as RoleResolvable)
+    );
   }
 
   public add(roleName: string, roleID: string) {

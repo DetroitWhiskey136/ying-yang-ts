@@ -8,8 +8,8 @@ import { ClientEvents } from 'discord.js';
  * @interface eventOptions
  */
 export interface eventOptions {
-  name: keyof ClientEvents,
-  enabled: boolean,
+  name: keyof ClientEvents;
+  enabled: boolean;
 }
 
 /**

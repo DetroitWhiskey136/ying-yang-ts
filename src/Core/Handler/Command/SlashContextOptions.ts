@@ -1,6 +1,4 @@
-import {
-  CommandInteraction,
-} from 'discord.js';
+import { CommandInteraction } from 'discord.js';
 import { Client } from '../..';
 
 /**
@@ -9,4 +7,4 @@ import { Client } from '../..';
 export type SlashContextOptions = {
   bot: Client.BotClient;
   commandInteraction: CommandInteraction;
-}
+};

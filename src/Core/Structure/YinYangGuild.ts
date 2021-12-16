@@ -15,10 +15,14 @@ declare module 'discord.js' {
 
 Reflect.defineProperty(Guild.prototype, 'autoFormatUsernames', {
   get: function (this: Guild) {
-    return this.client.bot.database.guilds.get(this.id).autoFormatUsernames ?? false;
+    return (
+      this.client.bot.database.guilds.get(this.id).autoFormatUsernames ?? false
+    );
   },
   set: function (this: Guild, value: Boolean) {
-    return this.client.bot.database.guilds.update(this.id, { autoFormatUsernames: value });
+    return this.client.bot.database.guilds.update(this.id, {
+      autoFormatUsernames: value,
+    });
   },
 });
 
@@ -45,7 +49,10 @@ Reflect.defineProperty(Guild.prototype, 'joinMessage', {
     return this.client.bot.database.guilds.get(this.id).joinMessage ?? '';
   },
   set: function (this: Guild, value: Boolean) {
-    return this.client.bot.database.guilds.update(this.id, { joinMessage: value }) ?? false;
+    return (
+      this.client.bot.database.guilds.update(this.id, { joinMessage: value })
+      ?? false
+    );
   },
 });
 
@@ -54,7 +61,11 @@ Reflect.defineProperty(Guild.prototype, 'leaveMessage', {
     return this.client.bot.database.guilds.get(this.id).leaveMessage ?? '';
   },
   set: function (this: Guild, value: Boolean) {
-    return this.client.bot.database.guilds.update(this.id, { leaveMessage: value }) ?? false;
+    return (
+      this.client.bot.database.guilds.update(this.id, {
+        leaveMessage: value,
+      }) ?? false
+    );
   },
 });
 
@@ -63,6 +74,10 @@ Reflect.defineProperty(Guild.prototype, 'welcomeChannel', {
     return this.client.bot.database.guilds.get(this.id).welcomeChannel ?? '';
   },
   set: function (this: Guild, value: Boolean) {
-    return this.client.bot.database.guilds.update(this.id, { welcomeChannel: value }) ?? false;
+    return (
+      this.client.bot.database.guilds.update(this.id, {
+        welcomeChannel: value,
+      }) ?? false
+    );
   },
 });

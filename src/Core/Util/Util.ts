@@ -34,7 +34,9 @@ export class Util {
       typeof val === 'string'
       || typeof val === 'function'
       || Array.isArray(val)
-    ) { return val.length === 0; }
+    ) {
+      return val.length === 0;
+    }
 
     if (val instanceof Error) return val.message === '';
 
@@ -45,7 +47,9 @@ export class Util {
         type === '[object File]'
         || type === '[object Map]'
         || type === '[object Set]'
-      ) { return val.size === 0; }
+      ) {
+        return val.size === 0;
+      }
 
       if (type === '[object Object]') {
         // eslint-disable-next-line no-restricted-syntax

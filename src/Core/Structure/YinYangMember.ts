@@ -15,7 +15,8 @@ Reflect.defineProperty(GuildMember.prototype, 'warnings', {
 
 Reflect.defineProperty(GuildMember.prototype, 'dj', {
   get: function (this: GuildMember) {
-    return this.client.bot.database.members.get(this.id).guilds[this.guild.id].dj;
+    return this.client.bot.database.members.get(this.id).guilds[this.guild.id]
+      .dj;
   },
   set: function (this: GuildMember, value: boolean) {
     const options = {
@@ -26,13 +27,15 @@ Reflect.defineProperty(GuildMember.prototype, 'dj', {
       },
     };
     this.client.bot.database.members.update(this.id, options);
-    return this.client.bot.database.members.get(this.id).guilds[this.guild.id].dj;
+    return this.client.bot.database.members.get(this.id).guilds[this.guild.id]
+      .dj;
   },
 });
 
 Reflect.defineProperty(GuildMember.prototype, 'level', {
   get: function (this: GuildMember) {
-    return this.client.bot.database.members.get(this.id).guilds[this.guild.id].level;
+    return this.client.bot.database.members.get(this.id).guilds[this.guild.id]
+      .level;
   },
   set: function (this: GuildMember, value: boolean) {
     const options = {
@@ -43,6 +46,7 @@ Reflect.defineProperty(GuildMember.prototype, 'level', {
       },
     };
     this.client.bot.database.members.update(this.id, options);
-    return this.client.bot.database.members.get(this.id).guilds[this.guild.id].level;
+    return this.client.bot.database.members.get(this.id).guilds[this.guild.id]
+      .level;
   },
 });

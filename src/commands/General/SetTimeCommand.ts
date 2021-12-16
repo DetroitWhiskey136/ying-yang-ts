@@ -12,7 +12,8 @@ export class TimeCommand extends Core.Handler.Command.Command {
       name: 'set-time',
       options: [
         {
-          description: 'The timezone you would like to set yourself in. Note: for best results use the name or abbreviation',
+          description:
+            'The timezone you would like to set yourself in. Note: for best results use the name or abbreviation',
           name: 'timezone',
           required: false,
           type: 'STRING',
@@ -40,11 +41,18 @@ export class TimeCommand extends Core.Handler.Command.Command {
       return;
     }
 
-    bot.database.users.update(interaction.user.id as Snowflake, { timezone: timezone!.name });
-    await interaction.reply(moment().tz(timezone!.name).format('YYYY-MM-DD hh:mm:ss a'));
+    bot.database.users.update(interaction.user.id as Snowflake, {
+      timezone: timezone!.name,
+    });
+    await interaction.reply(
+      moment().tz(timezone!.name).format('YYYY-MM-DD hh:mm:ss a'),
+    );
   }
 
   private getTimezone(query: string) {
-    return tzList.find((tz) => tz.abbr === String(query).toUpperCase())?.zoneId ?? query;
+    return (
+      tzList.find((tz) => tz.abbr === String(query).toUpperCase())?.zoneId
+      ?? query
+    );
   }
 }

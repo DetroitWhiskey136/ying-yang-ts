@@ -9,7 +9,10 @@ export class InteractionEvent extends Core.Handler.Event.Event {
     });
   }
 
-  private static getPermLevel(interaction: Interaction, bot: Core.Client.BotClient) {
+  private static getPermLevel(
+    interaction: Interaction,
+    bot: Core.Client.BotClient,
+  ) {
     const { user, member, guild } = interaction;
 
     return guild
@@ -27,13 +30,17 @@ export class InteractionEvent extends Core.Handler.Event.Event {
     const command = bot.commands.get(interaction.commandName);
     if (command === undefined) return;
 
-    if ((command.permission ?? 0) > InteractionEvent.getPermLevel(interaction, bot)) {
+    if (
+      (command.permission ?? 0)
+      > InteractionEvent.getPermLevel(interaction, bot)
+    ) {
       interaction.reply('you do not have permission to use this command!');
       return;
     }
 
     const params = {
-      bot, commandInteraction: interaction,
+      bot,
+      commandInteraction: interaction,
     };
 
     command._runSlash(new Core.Handler.Command.SlashContext(params));
