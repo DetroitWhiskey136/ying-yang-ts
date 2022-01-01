@@ -7,7 +7,7 @@ import { Handler, Managers } from '../..';
 export interface BaseCommand {
   name: string;
   aliases: string[];
-  category: Handler.Command.CommandCategories;
+  category: Handler.Commands.CommandCategories;
   description: string;
   guildOnly: boolean;
   ownerOnly: boolean;
@@ -15,6 +15,6 @@ export interface BaseCommand {
   enabled: boolean;
   options: Array<ApplicationCommandOption>;
   permission?: Managers.Permissions.PermissionLevel;
-  runNormal: (ctx: Handler.Command.CommandContext) => Promise<void>;
-  runSlash: (ctx: Handler.Command.SlashContext) => Promise<void>;
+  runNormal: (ctx: Handler.Commands.CommandContext) => Promise<void>;
+  runSlash: (ctx: Handler.Commands.SlashContext) => Promise<void>;
 }

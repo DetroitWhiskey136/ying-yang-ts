@@ -19,7 +19,7 @@ export class SlashContext {
    * Building the CommandContext with given options.
    * @param options SlashContextOptions options
    */
-  constructor(options: Handler.Command.SlashContextOptions) {
+  constructor(options: Handler.Commands.SlashContextOptions) {
     this.bot = options.bot;
     this.client = options.bot.client;
     this.commandInteraction = options.commandInteraction;

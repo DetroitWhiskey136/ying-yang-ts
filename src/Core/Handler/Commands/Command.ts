@@ -1,6 +1,6 @@
 import { Handler, Managers } from '../..';
 
-export interface ICommand extends Handler.Command.BaseCommand {}
+export interface ICommand extends Handler.Commands.BaseCommand {}
 
 export interface Command extends ICommand {}
 
@@ -34,15 +34,15 @@ export interface Command extends ICommand {}
  * }
  * ```
  */
-export class Command implements Handler.Command.BaseCommand {
+export class Command implements Handler.Commands.BaseCommand {
   /**
    * Command Options
    * @param {Handler.Command.CommandOptions} co This is the commands options
    */
-  constructor(co: Handler.Command.CommandOptions) {
+  constructor(co: Handler.Commands.CommandOptions) {
     this.name = co.name;
     this.aliases = co.aliases ?? [];
-    this.category = co.category ?? Handler.Command.CommandCategories.UNKNOWN;
+    this.category = co.category ?? Handler.Commands.CommandCategories.UNKNOWN;
     this.description = co.description ?? 'No description';
     this.guildOnly = co.guildOnly ?? false;
     this.ownerOnly = co.ownerOnly ?? false;
@@ -57,7 +57,7 @@ export class Command implements Handler.Command.BaseCommand {
    * @param {Handler.Command.CommandContext} ctx CommandContext.
    * @returns {Promise<void>} the Commands Commands method
    */
-  async runNormal(ctx: Handler.Command.CommandContext) {
+  async runNormal(ctx: Handler.Commands.CommandContext) {
     throw Error('This field is not implemented');
   }
 
@@ -67,7 +67,7 @@ export class Command implements Handler.Command.BaseCommand {
    * @param {Handler.Command.CommandContext} ctx CommandContext.
    * @returns {Promise<void>} the Commands Commands method
    */
-  _runNormal(ctx: Handler.Command.CommandContext) {
+  _runNormal(ctx: Handler.Commands.CommandContext) {
     this.runNormal(ctx).catch((e) => ctx.client.emit('error', e));
   }
 
@@ -76,7 +76,7 @@ export class Command implements Handler.Command.BaseCommand {
    * @param {Handler.Command.SlashContext} ctx SlashContext.
    * @returns {Promise<void>} the Slash Commands method
    */
-  async runSlash(ctx: Handler.Command.SlashContext) {
+  async runSlash(ctx: Handler.Commands.SlashContext) {
     throw Error('This field is not implemented');
   }
 
@@ -86,7 +86,7 @@ export class Command implements Handler.Command.BaseCommand {
    * @param {Handler.Command.SlashContext} ctx SlashContext.
    * @returns {Promise<void>} the Slash Commands method
    */
-  _runSlash(ctx: Handler.Command.SlashContext) {
+  _runSlash(ctx: Handler.Commands.SlashContext) {
     this.runSlash(ctx).catch((e) => ctx.client.emit('error', e));
   }
 }

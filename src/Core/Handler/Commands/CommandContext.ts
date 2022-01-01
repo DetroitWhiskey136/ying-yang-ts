@@ -35,7 +35,7 @@ export class CommandContext {
    * Building the CommandContext with given options.
    * @param options Options to build CommandContext
    */
-  constructor(options: Handler.Command.CommandContextOptions) {
+  constructor(options: Handler.Commands.CommandContextOptions) {
     this.bot = options.bot;
     this.message = options.message;
     this.mentions = options.message.mentions;

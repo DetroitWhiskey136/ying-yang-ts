@@ -1,18 +1,18 @@
 import { Collection, TextBasedChannels } from 'discord.js';
 import { Core } from '../../index';
 
-export class HelpCommand extends Core.Handler.Command.Command {
+export class HelpCommand extends Core.Handler.Commands.Command {
   constructor() {
     super({
       aliases: ['?', 'h'],
-      category: Core.Handler.Command.CommandCategories.GENERAL,
+      category: Core.Handler.Commands.CommandCategories.GENERAL,
       description: 'shows information about other commands',
       name: 'help',
       usage: 'help <commandName>',
     });
   }
 
-  async runNormal(ctx: Core.Handler.Command.CommandContext) {
+  async runNormal(ctx: Core.Handler.Commands.CommandContext) {
     const {
       bot, args, channel, prefix,
     } = ctx;
@@ -55,13 +55,13 @@ export class HelpCommand extends Core.Handler.Command.Command {
 
   private async sendCategories(
     channel: TextBasedChannels,
-    commands: Collection<string, Core.Handler.Command.Command>,
+    commands: Collection<string, Core.Handler.Commands.Command>,
     prefix: string | null,
   ) {
     const embed = new Core.Discord.Embed();
     const categories = Core.Util.Util.groupBy(
       commands,
-      (command: Core.Handler.Command.Command) => command.category,
+      (command: Core.Handler.Commands.Command) => command.category,
     );
 
     categories.forEach((cmds, categoryName) => {

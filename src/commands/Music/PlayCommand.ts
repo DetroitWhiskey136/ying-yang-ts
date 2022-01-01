@@ -5,10 +5,10 @@ import {
 import { GuildMember, Snowflake } from 'discord.js';
 import { Core } from '../../index';
 
-export class PlayCommand extends Core.Handler.Command.Command {
+export class PlayCommand extends Core.Handler.Commands.Command {
   constructor() {
     super({
-      category: Core.Handler.Command.CommandCategories.MUSIC,
+      category: Core.Handler.Commands.CommandCategories.MUSIC,
       description: 'Plays a song',
       name: 'play',
       options: [
@@ -24,11 +24,11 @@ export class PlayCommand extends Core.Handler.Command.Command {
     });
   }
 
-  async runNormal(ctx: Core.Handler.Command.CommandContext) {
+  async runNormal(ctx: Core.Handler.Commands.CommandContext) {
     // Test
   }
 
-  async runSlash(ctx: Core.Handler.Command.SlashContext) {
+  async runSlash(ctx: Core.Handler.Commands.SlashContext) {
     const { commandInteraction, bot } = ctx;
 
     await commandInteraction.deferReply();

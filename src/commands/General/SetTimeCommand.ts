@@ -4,10 +4,10 @@ import 'moment-timezone';
 import tzList from '../../../data/resources/timezone-list.json';
 import { Core } from '../../index';
 
-export class TimeCommand extends Core.Handler.Command.Command {
+export class TimeCommand extends Core.Handler.Commands.Command {
   constructor() {
     super({
-      category: Core.Handler.Command.CommandCategories.GENERAL,
+      category: Core.Handler.Commands.CommandCategories.GENERAL,
       description: 'Sets the authors timezone that can be gotten through time.',
       name: 'set-time',
       options: [
@@ -23,11 +23,11 @@ export class TimeCommand extends Core.Handler.Command.Command {
     });
   }
 
-  async runNormal(ctx: Core.Handler.Command.CommandContext) {
+  async runNormal(ctx: Core.Handler.Commands.CommandContext) {
     //
   }
 
-  async runSlash(ctx: Core.Handler.Command.SlashContext) {
+  async runSlash(ctx: Core.Handler.Commands.SlashContext) {
     const { commandInteraction: interaction, bot } = ctx;
     const { options } = interaction;
     const args = {

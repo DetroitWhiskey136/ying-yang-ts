@@ -1,10 +1,10 @@
 import { Core } from '../../index';
 
-export class UpdateWarnCommand extends Core.Handler.Command.Command {
+export class UpdateWarnCommand extends Core.Handler.Commands.Command {
   constructor() {
     super({
       aliases: ['uw', 'uwarn'],
-      category: Core.Handler.Command.CommandCategories.MODERATOR,
+      category: Core.Handler.Commands.CommandCategories.MODERATOR,
       description: 'Update a warning for a user',
       enabled: false,
       name: 'updatewarn',
@@ -12,7 +12,7 @@ export class UpdateWarnCommand extends Core.Handler.Command.Command {
     });
   }
 
-  async runNormal(ctx: Core.Handler.Command.CommandContext) {
+  async runNormal(ctx: Core.Handler.Commands.CommandContext) {
     // Not implemented
   }
 }

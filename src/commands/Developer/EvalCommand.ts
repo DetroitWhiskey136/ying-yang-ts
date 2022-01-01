@@ -8,11 +8,11 @@ const { code } = Core.Util.Strings;
 const token = process.env.TOKEN ?? '';
 const value = (str: string) => code(str, 'js').replace(token, () => '*'.repeat(token.length));
 
-export class EvalCommand extends Core.Handler.Command.Command {
+export class EvalCommand extends Core.Handler.Commands.Command {
   constructor() {
     super({
       aliases: ['compile', 'ev', 'js'],
-      category: Core.Handler.Command.CommandCategories.DEVELOPER,
+      category: Core.Handler.Commands.CommandCategories.DEVELOPER,
       description: 'Evaluates arbitrary javascript code',
       name: 'eval',
       permission: Core.Managers.Permissions.PermissionLevel.BOT_DEVELOPER,
@@ -20,7 +20,7 @@ export class EvalCommand extends Core.Handler.Command.Command {
     });
   }
 
-  async runNormal(ctx: Core.Handler.Command.CommandContext) {
+  async runNormal(ctx: Core.Handler.Commands.CommandContext) {
     const {
       bot,
       message,

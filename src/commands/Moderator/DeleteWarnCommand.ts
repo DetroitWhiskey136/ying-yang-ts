@@ -1,10 +1,10 @@
 import { Core } from '../../index';
 
-export class DeleteWarnCommand extends Core.Handler.Command.Command {
+export class DeleteWarnCommand extends Core.Handler.Commands.Command {
   constructor() {
     super({
       aliases: ['delwarn', 'dw', 'dwarn'],
-      category: Core.Handler.Command.CommandCategories.MODERATOR,
+      category: Core.Handler.Commands.CommandCategories.MODERATOR,
       description: 'Deletes a users warning',
       enabled: false,
       name: 'deletewarn',
@@ -12,7 +12,7 @@ export class DeleteWarnCommand extends Core.Handler.Command.Command {
     });
   }
 
-  async runNormal(ctx: Core.Handler.Command.CommandContext) {
+  async runNormal(ctx: Core.Handler.Commands.CommandContext) {
     // Not implemented
   }
 }

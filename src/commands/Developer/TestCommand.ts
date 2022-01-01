@@ -1,9 +1,9 @@
 import { Core } from '../../index';
 
-export class TestCommand extends Core.Handler.Command.Command {
+export class TestCommand extends Core.Handler.Commands.Command {
   constructor() {
     super({
-      category: Core.Handler.Command.CommandCategories.DEVELOPER,
+      category: Core.Handler.Commands.CommandCategories.DEVELOPER,
       description: 'This is a test',
       name: 'test',
       options: [],
@@ -11,11 +11,11 @@ export class TestCommand extends Core.Handler.Command.Command {
     });
   }
 
-  async runNormal(ctx: Core.Handler.Command.CommandContext) {
+  async runNormal(ctx: Core.Handler.Commands.CommandContext) {
     // Test
   }
 
-  async runSlash(ctx: Core.Handler.Command.SlashContext) {
+  async runSlash(ctx: Core.Handler.Commands.SlashContext) {
     // Test
   }
 }

@@ -4,10 +4,10 @@ import 'moment-timezone';
 import tzList from '../../../data/resources/timezone-list.json';
 import { Core } from '../../index';
 
-export class TimeCommand extends Core.Handler.Command.Command {
+export class TimeCommand extends Core.Handler.Commands.Command {
   constructor() {
     super({
-      category: Core.Handler.Command.CommandCategories.GENERAL,
+      category: Core.Handler.Commands.CommandCategories.GENERAL,
       description: 'shows the time in a specified timezone',
       name: 'time',
       options: [
@@ -29,7 +29,7 @@ export class TimeCommand extends Core.Handler.Command.Command {
     });
   }
 
-  async runNormal(ctx: Core.Handler.Command.CommandContext) {
+  async runNormal(ctx: Core.Handler.Commands.CommandContext) {
     const { channel, args, bot } = ctx;
 
     if (args.length === 0) {
@@ -47,7 +47,7 @@ export class TimeCommand extends Core.Handler.Command.Command {
     );
   }
 
-  async runSlash(ctx: Core.Handler.Command.SlashContext) {
+  async runSlash(ctx: Core.Handler.Commands.SlashContext) {
     const { commandInteraction: interaction, bot } = ctx;
     const { options } = interaction;
     const args = {

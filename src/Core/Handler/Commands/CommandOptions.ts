@@ -7,7 +7,7 @@ import { Handler, Managers } from '../..';
 export type CommandOptions = {
   name: string;
   aliases?: string[];
-  category: Handler.Command.CommandCategories;
+  category: Handler.Commands.CommandCategories;
   description?: string;
   guildOnly?: boolean;
   ownerOnly?: boolean;

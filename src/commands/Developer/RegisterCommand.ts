@@ -1,17 +1,17 @@
 import { Core } from '../../index';
 
-export class RegisterCommand extends Core.Handler.Command.Command {
+export class RegisterCommand extends Core.Handler.Commands.Command {
   constructor() {
     super({
       aliases: ['reg', 'deploy'],
-      category: Core.Handler.Command.CommandCategories.DEVELOPER,
+      category: Core.Handler.Commands.CommandCategories.DEVELOPER,
       description: 'registers a slash command!',
       name: 'register',
       usage: 'register <command>',
     });
   }
 
-  async runNormal(ctx: Core.Handler.Command.CommandContext) {
+  async runNormal(ctx: Core.Handler.Commands.CommandContext) {
     const {
       args, bot, message, guild,
     } = ctx;

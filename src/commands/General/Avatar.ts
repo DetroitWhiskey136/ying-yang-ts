@@ -3,10 +3,10 @@ import { ColorResolvable } from 'discord.js';
 
 import { Core } from '../../index';
 
-export class AvatarCommand extends Core.Handler.Command.Command {
+export class AvatarCommand extends Core.Handler.Commands.Command {
   constructor() {
     super({
-      category: Core.Handler.Command.CommandCategories.GENERAL,
+      category: Core.Handler.Commands.CommandCategories.GENERAL,
       description: 'Display a users avatar',
       name: 'avatar',
       options: [
@@ -21,7 +21,7 @@ export class AvatarCommand extends Core.Handler.Command.Command {
     });
   }
 
-  async runSlash(ctx: Core.Handler.Command.SlashContext) {
+  async runSlash(ctx: Core.Handler.Commands.SlashContext) {
     const { commandInteraction: interaction } = ctx;
 
     const user = interaction.options.get('user')?.user ?? interaction.user;

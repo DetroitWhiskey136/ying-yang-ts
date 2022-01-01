@@ -1,11 +1,11 @@
 import { Snowflake } from 'discord.js';
 import { Core } from '../../index';
 
-export class WarnCommand extends Core.Handler.Command.Command {
+export class WarnCommand extends Core.Handler.Commands.Command {
   constructor() {
     super({
       aliases: [],
-      category: Core.Handler.Command.CommandCategories.MODERATOR,
+      category: Core.Handler.Commands.CommandCategories.MODERATOR,
       description: 'Gives a user a warning',
       enabled: true,
       name: 'warn',
@@ -14,7 +14,7 @@ export class WarnCommand extends Core.Handler.Command.Command {
     });
   }
 
-  async runNormal(ctx: Core.Handler.Command.CommandContext) {
+  async runNormal(ctx: Core.Handler.Commands.CommandContext) {
     const {
       author, member, args, guild, channel, mentions,
     } = ctx;
