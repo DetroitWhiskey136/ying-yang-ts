@@ -10,7 +10,7 @@ import {
 export interface BotClient {
   aliases: Collection<string, string>;
   client: Client.DiscordClient;
-  commands: Collection<string, Handler.Command.Command>;
+  commands: Collection<string, Handler.Commands.Command>;
   database: Database.ConnectionBridge;
   events: Collection<string, Handler.Event.Event>;
   logger: Util.Logger;

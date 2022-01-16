@@ -43,6 +43,6 @@ export class InteractionEvent extends Core.Handler.Event.Event {
       commandInteraction: interaction,
     };
 
-    command._runSlash(new Core.Handler.Command.SlashContext(params));
+    command._runSlash(new Core.Handler.Commands.SlashContext(params));
   }
 }

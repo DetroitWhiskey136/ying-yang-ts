@@ -183,6 +183,6 @@ export class MessageEvent extends Core.Handler.Event.Event {
       query: args.join(' '),
     };
 
-    command._runNormal(new Core.Handler.Command.CommandContext(params));
+    command._runNormal(new Core.Handler.Commands.CommandContext(params));
   }
 }
