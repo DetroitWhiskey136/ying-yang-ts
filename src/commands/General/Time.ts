@@ -1,5 +1,5 @@
 import { Snowflake } from 'discord.js';
-import moment, { MomentZone } from 'moment';
+import moment, { MomentTimezone, MomentZone } from 'moment';
 import 'moment-timezone';
 import tzList from '../../../data/resources/timezone-list.json';
 import { Core } from '../../index';
@@ -75,8 +75,19 @@ export class TimeCommand extends Core.Handler.Commands.Command {
 
   private getTimezone(query: string) {
     return (
-      tzList.find((tz) => tz.abbr === String(query).toUpperCase())?.zoneId
-      ?? query
+      this.hasEntry(query, 'name')
+        ? this.hasEntry(query, 'name')
+        : this.hasEntry(query, 'abbr')
+          ? this.hasEntry(query, 'abbr')
+          : this.hasEntry(query, 'zoneId')
+            ? this.hasEntry(query, 'zoneId')
+            : query
+    )!;
+  }
+
+  private hasEntry(query: string, prop: any) {
+    return (
+      tzList.find((tz: any) => tz[prop]?.toLowerCase() === String(query).toLowerCase())?.zoneId
     );
   }
 }
