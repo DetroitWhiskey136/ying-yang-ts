@@ -75,6 +75,12 @@ export class TimeCommand extends Core.Handler.Commands.Command {
 
   private getTimezone(query: string) {
     return (
+
+/*       tzList.find((tz: any) => tz.name.toLowerCase()
+        ?? tz.abbr.toLowerCase()
+        ?? tz.zoneId.toLowerCase()
+        === String(query).toLowerCase())?.zoneId */
+
       this.hasEntry(query, 'name')
         ? this.hasEntry(query, 'name')
         : this.hasEntry(query, 'abbr')
@@ -82,6 +88,7 @@ export class TimeCommand extends Core.Handler.Commands.Command {
           : this.hasEntry(query, 'zoneId')
             ? this.hasEntry(query, 'zoneId')
             : query
+
     )!;
   }
 
