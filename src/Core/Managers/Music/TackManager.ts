@@ -3,7 +3,7 @@ import {
   createAudioResource,
   demuxProbe,
 } from '@discordjs/voice';
-import { raw as ytdl } from 'youtube-dl-exec';
+import { raw } from 'youtube-dl-exec';
 import { getInfo } from 'ytdl-core';
 
 const noop = () => {};
@@ -39,13 +39,16 @@ export class TrackManager implements TrackData {
    */
   public createAudioResource(): Promise<AudioResource<TrackManager>> {
     return new Promise((resolve, reject) => {
-      const process = ytdl(
+      const process = raw(
         this.url,
         {
-          f: 'bestaudio[ext=webm+acodec=opus+asr=48000]/bestaudio',
-          o: '-',
-          q: '',
-          r: '100K',
+          callHome: false,
+          dumpSingleJson: true,
+          noCheckCertificate: true,
+          noWarnings: true,
+          preferFreeFormats: true,
+          referer: this.url,
+          youtubeSkipDashManifest: true,
         },
         { stdio: ['ignore', 'pipe', 'ignore'] },
       );
@@ -73,7 +76,7 @@ export class TrackManager implements TrackData {
   }
 
   /**
-   *  Creates a TrackManager from a video URL and cifecycle callback method.
+   *  Creates a TrackManager from a video URL and lifecycle callback method.
    * @param url The URL of the video.
    * @param methods Lifecycle callbacks.
    * @returns {Promise<TrackManager>} The created TrackManager

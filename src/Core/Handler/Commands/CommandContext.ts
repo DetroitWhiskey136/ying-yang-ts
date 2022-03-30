@@ -4,7 +4,7 @@ import {
   GuildMember,
   Guild,
   User,
-  TextBasedChannels,
+  TextBasedChannel,
 } from 'discord.js';
 import { Client, Database, Handler } from '../..';
 
@@ -18,7 +18,7 @@ export interface CommandContext {
   member: GuildMember | null;
   guild: Guild | null;
   author: User;
-  channel: TextBasedChannels;
+  channel: TextBasedChannel;
   client: Client.DiscordClient;
   prefix: string | null;
   query: string;

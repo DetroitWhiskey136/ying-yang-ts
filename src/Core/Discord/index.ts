@@ -1,1 +1,4 @@
-export { Embed } from './Embed';
+export {
+  Embed, EmbedColors, EmbedInput, EmbedOptions,
+  EmbedResolvable, FieldOptions, AuthorData, FooterData,
+} from './Embed';

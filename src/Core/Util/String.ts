@@ -1,3 +1,5 @@
+import moment from 'moment';
+
 import { REGEX } from './Constants';
 
 export class Strings {
@@ -61,5 +63,33 @@ export class Strings {
   static setNickname(username: string): string {
     const parsedUsername = username.replace(/([!@#$%^&*()])/g, '');
     return parsedUsername.length > 0 ? parsedUsername : 'Nickname Not Found';
+  }
+
+  static formatTime(timestamp: number) {
+    const format = 'MMM-DD-YYY HH:mm:ss';
+    return moment(timestamp).format(format);
+  }
+
+  static formatUptime(uptime: number) {
+    const result = [];
+
+    const years = 31536000;
+    const days = 86400;
+    const hours = 3600;
+    const minutes = 60;
+    const seconds = 60;
+
+    uptime >= years
+      ? result.push(`${Math.floor(uptime / years)}y`) : null;
+    uptime >= days
+      ? result.push(`${Math.floor(uptime / days)}d`) : null;
+    uptime >= hours
+      ? result.push(`${Math.floor(uptime / hours)}h`) : null;
+    uptime >= minutes
+      ? result.push(`${Math.floor(uptime / minutes)}m`) : null;
+    uptime <= seconds
+      ? result.push(`${Math.floor(uptime % seconds)}s`) : null;
+
+    return result.join(', ');
   }
 }

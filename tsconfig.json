@@ -38,6 +38,7 @@
     "customCss": "./data/resources/docs.css",
     "emit": true,
     "theme": "default",
-    "darkHighlightTheme": "material-darker"
+    "darkHighlightTheme": "material-darker",
+    "logLevel": "Verbose"
   }
 }

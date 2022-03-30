@@ -1,3 +1,3 @@
 export * as Commands from './Commands';
-export * as CommandError from './CommandError';
+export * as Errors from './Errors';
 export * as Event from './Event';

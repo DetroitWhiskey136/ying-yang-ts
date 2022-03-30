@@ -11,27 +11,32 @@ import {
   ImageURLOptions,
   EmbedFieldData,
   ColorResolvable,
+  EmbedAuthorData,
+  EmbedFooterData,
 } from 'discord.js';
 import { Util } from '..';
 
-const EmbedColors = {
+export const EmbedColors = {
   error: 'RED',
   normal: '#00FFFF',
   warn: '0xfdfd96',
 } as const;
 
 // #region Scope Declaration
-type EmbedResolvable = User | GuildMember;
-type EmbedInput = Guild | GuildMember | User | string;
+export type EmbedResolvable = User | GuildMember;
+export type EmbedInput = Guild | GuildMember | User | string;
 
-interface EmbedOptions {
+export type AuthorData = EmbedAuthorData | string | null;
+export type FooterData = EmbedFooterData | string | null;
+
+export interface EmbedOptions {
   autoAuthor: boolean;
   autoFooter: boolean;
   autoTimestamp: boolean;
   type: keyof typeof EmbedColors;
 }
 
-interface FieldOptions {
+export interface FieldOptions {
   inline?: boolean;
   name: string | number;
   options?: object;
@@ -83,7 +88,7 @@ export class Embed extends MessageEmbed {
 
   // #region Methods
   setTemplate(user: User): void {
-    if (this.options.autoAuthor) this.setAuthor(user);
+    if (this.options.autoAuthor) this.setAuthor({ iconURL: user.displayAvatarURL({ dynamic: true, format: 'png', size: 1024 }), name: user.username });
     if (this.options.autoFooter) this.setFooter(user.tag);
     if (this.options.autoTimestamp) this.setTimestamp();
   }
@@ -148,16 +153,11 @@ export class Embed extends MessageEmbed {
 
   /**
    * Sets the author of this embed.
-   * @param {EmbedInput} name The name of the author
-   * @param {EmbedInput | null} iconURL The icon URL of the author
-   * @param {EmbedInput | null} url The URL of the author
-   * @returns {this} This?
+   * @param {(AuthorData)} options The options.
+   * @return {*}  {this}
    */
-  setAuthor(
-    name: EmbedInput,
-    iconURL?: EmbedInput | null,
-    url?: EmbedInput | null,
-  ): this {
+  setAuthor(options: AuthorData): this {
+    const { name, iconURL, url } = options as EmbedAuthorData;
     const parseName = Embed.resolveName(name);
     const parseIcon = iconURL
       ? this.resolveImage(iconURL)
@@ -165,16 +165,17 @@ export class Embed extends MessageEmbed {
         ? this.resolveImage(name)
         : undefined;
     const parseUrl = url ? this.resolveImage(url) : undefined;
-    return super.setAuthor(parseName, parseIcon, parseUrl);
+    return super.setAuthor({ iconURL: parseIcon, name: parseName, url: parseUrl });
   }
 
   /**
    * Sets the footer of this embed.
-   * @param {EmbedInput} text The text of the footer
-   * @param {EmbedInput} iconURL The icon URL of the footer
-   * @returns {this} This?
+   * @param {FooterData} options the options.
+   * @return {*}  {this}
+   * @memberof Embed
    */
-  setFooter(text: EmbedInput, iconURL: EmbedInput | null = null): this {
+  setFooter(options: FooterData): this {
+    const { iconURL, text } = options as EmbedFooterData;
     const parseText = Embed.resolveName(text);
     const parseIconURL = iconURL
       ? this.resolveImage(iconURL)
@@ -182,7 +183,7 @@ export class Embed extends MessageEmbed {
         ? this.resolveImage(text)
         : undefined;
 
-    return super.setFooter(parseText, parseIconURL);
+    return super.setFooter({ iconURL: parseIconURL, text: parseText });
   }
 
   /**

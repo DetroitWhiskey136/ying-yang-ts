@@ -1,6 +1,6 @@
 import Enmap from 'enmap';
 
-interface EnmapOptions {
+export interface EnmapOptions {
   name: string;
   dataDir: string;
 }

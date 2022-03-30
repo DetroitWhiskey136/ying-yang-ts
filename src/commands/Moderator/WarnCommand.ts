@@ -57,13 +57,14 @@ export class WarnCommand extends Core.Handler.Commands.Command {
 
     await target.warnings.add(reason, points, member);
     const embed = new Core.Discord.Embed()
-      .setAuthor(
-        `${target.user.username} has been warned`,
-        target.user.displayAvatarURL({ dynamic: true }),
-      )
+      .setAuthor({
+        iconURL: `${target.user.username} has been warned`,
+        name: target.user.displayAvatarURL({ dynamic: true }),
+
+      })
       .addField('Moderator', `${author}`, false)
       .addField('Reason', reason, false)
-      .setFooter(`${points} warning point${points !== 1 ? 's' : ''}`);
+      .setFooter({ text: `${points} warning point${points !== 1 ? 's' : ''}` });
     await channel.send({ embeds: [embed] });
   }
 }

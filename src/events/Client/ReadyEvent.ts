@@ -9,6 +9,6 @@ export class MessageEvent extends Core.Handler.Event.Event {
   }
 
   async run(bot: Core.Client.BotClient, client: Core.Client.DiscordClient) {
-    //
+    // code here
   }
 }

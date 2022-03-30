@@ -1,4 +1,4 @@
-import { ApplicationCommandOption } from 'discord.js';
+import { ApplicationCommandOptionData } from 'discord.js';
 import { Handler, Managers } from '../..';
 
 /**
@@ -13,6 +13,6 @@ export type CommandOptions = {
   ownerOnly?: boolean;
   usage?: string;
   enabled?: boolean;
-  options?: Array<ApplicationCommandOption>;
+  options?: Array<ApplicationCommandOptionData>;
   permission?: Managers.Permissions.PermissionLevel;
 };

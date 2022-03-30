@@ -1,4 +1,4 @@
-import { ApplicationCommandOption } from 'discord.js';
+import { ApplicationCommandOptionData } from 'discord.js';
 import { Handler, Managers } from '../..';
 
 /**
@@ -13,7 +13,7 @@ export interface BaseCommand {
   ownerOnly: boolean;
   usage: string;
   enabled: boolean;
-  options: Array<ApplicationCommandOption>;
+  options: Array<ApplicationCommandOptionData>;
   permission?: Managers.Permissions.PermissionLevel;
   runNormal: (ctx: Handler.Commands.CommandContext) => Promise<void>;
   runSlash: (ctx: Handler.Commands.SlashContext) => Promise<void>;

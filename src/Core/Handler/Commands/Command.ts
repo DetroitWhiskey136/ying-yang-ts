@@ -1,3 +1,4 @@
+import { Handlers } from '@sentry/node';
 import { Handler, Managers } from '../..';
 
 export interface ICommand extends Handler.Commands.BaseCommand {}
@@ -58,7 +59,7 @@ export class Command implements Handler.Commands.BaseCommand {
    * @returns {Promise<void>} the Commands Commands method
    */
   async runNormal(ctx: Handler.Commands.CommandContext) {
-    throw Error('This field is not implemented');
+    throw new Handler.Errors.CommandError(this.name, 'This field \'runNormal\' is not implemented!');
   }
 
   /**
@@ -77,7 +78,7 @@ export class Command implements Handler.Commands.BaseCommand {
    * @returns {Promise<void>} the Slash Commands method
    */
   async runSlash(ctx: Handler.Commands.SlashContext) {
-    throw Error('This field is not implemented');
+    throw new Handler.Errors.CommandError(this.name, 'This field \'runSlash\' is not implemented!');
   }
 
   /**

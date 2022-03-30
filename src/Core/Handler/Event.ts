@@ -9,7 +9,13 @@ import { ClientEvents } from 'discord.js';
  */
 export interface eventOptions {
   name: keyof ClientEvents;
-  enabled: boolean;
+  enabled?: boolean;
+}
+
+export interface Event {
+  name: keyof ClientEvents;
+  enabled?: boolean;
+  type: string;
 }
 
 /**
@@ -17,24 +23,16 @@ export interface eventOptions {
  * @class Event
  */
 export class Event {
-  name: keyof ClientEvents;
-
-  enabled: boolean;
-
-  type: string;
-
   /**
    * Creates an instance of Event.
    * @param {eventOptions} options Options for the event
    * @param {string} [options.name] The name of the event.
    * @param {boolean} [options.enabled] Should be in BotClient?
    * @param {string} [options.type] Use 'event'.
-   *
-   * @memberOf Event
    */
   constructor(options: eventOptions) {
     this.name = options.name;
-    this.enabled = options.enabled;
+    this.enabled = options.enabled ?? false;
     this.type = 'event';
   }
 }

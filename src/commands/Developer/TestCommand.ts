@@ -11,10 +11,6 @@ export class TestCommand extends Core.Handler.Commands.Command {
     });
   }
 
-  async runNormal(ctx: Core.Handler.Commands.CommandContext) {
-    // Test
-  }
-
   async runSlash(ctx: Core.Handler.Commands.SlashContext) {
     // Test
   }

@@ -1,4 +1,4 @@
-import { Collection, TextBasedChannels } from 'discord.js';
+import { Collection, TextBasedChannel } from 'discord.js';
 import { Core } from '../../index';
 
 export class HelpCommand extends Core.Handler.Commands.Command {
@@ -36,15 +36,13 @@ export class HelpCommand extends Core.Handler.Commands.Command {
     }
 
     embed
-      .setAuthor(
-        Core.Util.Strings.toProperCase(cmd.name),
-        bot.client.user?.displayAvatarURL({ size: 4096 }),
-      )
+      .setAuthor({
+        iconURL: bot.client.user?.displayAvatarURL({ size: 4096 }),
+        name: Core.Util.Strings.toProperCase(cmd.name),
+      })
       .setDescription(cmd.description) // why not just use description?
       .addField('Usage', prefix + cmd.usage)
-      .setFooter(
-        `Category: ${cmd.category} | Enabled: ${cmd.enabled ? '✅' : '❌'}`,
-      );
+      .setFooter({ text: `Category: ${cmd.category} | Enabled: ${cmd.enabled ? '✅' : '❌'}` });
 
     if (cmd.aliases.length !== 0) {
       embed.setTitle(`${cmd.aliases.join(', ')}`);
@@ -54,7 +52,7 @@ export class HelpCommand extends Core.Handler.Commands.Command {
   }
 
   private async sendCategories(
-    channel: TextBasedChannels,
+    channel: TextBasedChannel,
     commands: Collection<string, Core.Handler.Commands.Command>,
     prefix: string | null,
   ) {
@@ -72,7 +70,7 @@ export class HelpCommand extends Core.Handler.Commands.Command {
       embed.addField(categoryName, content.join('\n'));
     });
 
-    embed.setFooter('<arg> = required | [arg] = optional');
+    embed.setFooter({ text: '<arg> = required | [arg] = optional' });
 
     await channel.send({ embeds: [embed] });
   }
