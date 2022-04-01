@@ -1,21 +1,19 @@
-export interface IAdmins {
-  id: string;
-}
-
-export interface ISupport {
-  id: string;
+export interface IRestart {
+  isRestart: boolean;
+  message: string;
+  channel: string;
 }
 
 export interface ISettings {
-  admins: IAdmins[];
-  support: ISupport[];
   guilds: number;
-  restart: boolean;
+  restart: IRestart;
 }
 
 export const Settings: ISettings = {
-  admins: [],
   guilds: 0,
-  restart: false,
-  support: [],
+  restart: {
+    channel: '',
+    isRestart: false,
+    message: '',
+  },
 };
