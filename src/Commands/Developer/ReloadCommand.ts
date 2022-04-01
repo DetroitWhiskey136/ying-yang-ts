@@ -14,7 +14,7 @@ export class ReloadCommand extends Core.Handler.Commands.Command {
   }
 
   async runNormal(ctx: Core.Handler.Commands.CommandContext): Promise<void> {
-    // Code Here...
+    // Code Here
   }
 
   async runSlash(ctx: Core.Handler.Commands.SlashContext): Promise<void> {

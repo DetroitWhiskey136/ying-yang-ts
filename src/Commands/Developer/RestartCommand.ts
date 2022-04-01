@@ -33,8 +33,6 @@ export class RestartCommand extends Core.Handler.Commands.Command {
       },
     );
     process.exit(0);
-
-    // blah.
   }
 
   async runSlash(ctx: Core.Handler.Commands.SlashContext): Promise<void> {
