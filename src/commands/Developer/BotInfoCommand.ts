@@ -64,6 +64,6 @@ export class BotInfoCommand extends Core.Handler.Commands.Command {
   }
 
   async runSlash(ctx: Core.Handler.Commands.SlashContext): Promise<void> {
-    // Code Here
+    // Code Here ...
   }
 }

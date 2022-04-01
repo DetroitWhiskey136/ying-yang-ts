@@ -3,17 +3,18 @@ import { Core } from '../../index';
 export class ReloadCommand extends Core.Handler.Commands.Command {
   constructor() {
     super({
+      aliases: ['rl', 'load'],
       category: Core.Handler.Commands.CommandCategories.DEVELOPER,
-      description: '',
+      description: 'Reloads a command that has been modified',
       enabled: false,
-      name: '',
+      name: 'reload',
       options: [],
-      usage: '',
+      usage: 'reload <command>',
     });
   }
 
   async runNormal(ctx: Core.Handler.Commands.CommandContext): Promise<void> {
-    // Code Here
+    // Code Here...
   }
 
   async runSlash(ctx: Core.Handler.Commands.SlashContext): Promise<void> {
