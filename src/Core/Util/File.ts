@@ -10,6 +10,11 @@ export interface Files {
     fileName: string,
     bot: Client.BotClient
   ): Promise<void>;
+  UnloadFile(
+    filePath: string,
+    fileName: string,
+    bot: Client.BotClient,
+  ): boolean;
 }
 
 /**
@@ -81,5 +86,22 @@ export class Files {
     } catch (err) {
       bot.logger.error(`Error in FileLoading: ${err}`);
     }
+  }
+
+  static UnloadFile(filePath: string, UName: string, bot: Client.BotClient): boolean {
+    const file = bot.commands.has(UName)
+      ? bot.commands.get(UName)
+      : bot.aliases.has(UName)
+        ? bot.commands.get(bot.aliases.get(UName)!)
+        : bot.events.has(UName)
+          ? bot.events.get(UName)
+          : false;
+
+    if (file) {
+      delete require.cache[require.resolve(path.resolve(filePath, file.filename))];
+      return true;
+    }
+
+    return false;
   }
 }

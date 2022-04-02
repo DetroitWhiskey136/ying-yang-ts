@@ -51,6 +51,8 @@ export class Command implements Handler.Commands.BaseCommand {
     this.enabled = co.enabled ?? true;
     this.options = co.options ?? [];
     this.permission = co.permission ?? Managers.Permissions.PermissionLevel.USER;
+    this.location = '';
+    this.filename = '';
   }
 
   /**

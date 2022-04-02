@@ -15,6 +15,8 @@ export interface BaseCommand {
   enabled: boolean;
   options: Array<ApplicationCommandOptionData>;
   permission?: Managers.Permissions.PermissionLevel;
+  location: string;
+  filename: string;
   runNormal: (ctx: Handler.Commands.CommandContext) => Promise<void>;
   runSlash: (ctx: Handler.Commands.SlashContext) => Promise<void>;
 }

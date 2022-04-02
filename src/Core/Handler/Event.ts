@@ -13,6 +13,8 @@ export interface eventOptions {
 }
 
 export interface Event {
+  location: string;
+  filename: string;
   name: keyof ClientEvents;
   enabled?: boolean;
   type: string;
@@ -34,5 +36,7 @@ export class Event {
     this.name = options.name;
     this.enabled = options.enabled ?? false;
     this.type = 'event';
+    this.location = '';
+    this.filename = '';
   }
 }
