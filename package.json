@@ -44,7 +44,7 @@
     "ffmpeg-static": "^4.4.0",
     "klaw": "^3.0.0",
     "libsodium-wrappers": "^0.7.9",
-    "moment": "^2.29.0",
+    "moment": "^2.29.2",
     "moment-timezone": "^0.5.33",
     "winston": "^3.5.1",
     "youtube-dl-exec": "^1.2.4",
