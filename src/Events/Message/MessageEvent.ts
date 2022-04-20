@@ -5,8 +5,9 @@ import {
   NewsChannel,
   ColorResolvable,
   GuildMember,
-} from 'discord.js';
-import { Core } from '../../index';
+} from "discord.js";
+import { PermissionLevel } from "src/Core/Managers/Permissions";
+import { Core } from "../../index";
 
 type Channel = TextChannel | DMChannel | NewsChannel;
 
@@ -14,22 +15,20 @@ export class MessageEvent extends Core.Handler.Event.Event {
   constructor() {
     super({
       enabled: true,
-      name: 'messageCreate',
+      name: "messageCreate",
     });
   }
 
   private static isValidMessage(message: Message) {
-    const {
-      author, channel, client, guild,
-    } = message;
+    const { author, channel, client, guild } = message;
     return (
-      !author.bot
-      || (channel instanceof TextChannel
-        && channel
+      !author.bot ||
+      (channel instanceof TextChannel &&
+        channel
           .permissionsFor(
-            guild?.members.cache.get(client.user!.id) as GuildMember,
+            guild?.members.cache.get(client.user!.id) as GuildMember
           )
-          ?.has('SEND_MESSAGES') !== true)
+          ?.has("SEND_MESSAGES") !== true)
     );
   }
 
@@ -43,23 +42,23 @@ export class MessageEvent extends Core.Handler.Event.Event {
 
   private static getPrefix(
     prefix: string,
-    { client, content }: Message,
+    { client, content }: Message
   ): string {
     const fixedPrefix = Core.Util.Strings.escapeRegExp(prefix);
     const fixedUsername = Core.Util.Strings.escapeRegExp(
-      client.user?.username ?? '',
+      client.user?.username ?? ""
     );
 
     const PREFIX_REGEX = new RegExp(
       `^(<@!?${client.user?.id}>|${fixedPrefix}|${fixedUsername})?`,
-      'i',
+      "i"
     );
     const matchPrefix = content.match(PREFIX_REGEX);
 
     if (matchPrefix !== null && matchPrefix.length > 1) {
       return matchPrefix[0];
     }
-    return '';
+    return "";
   }
 
   /**
@@ -70,7 +69,7 @@ export class MessageEvent extends Core.Handler.Event.Event {
    * @returns {void}
    */
   createEmbed(channel: Channel, color: ColorResolvable, content: string): void {
-    if (content.length === 0) throw new Error('A content cannot be empty!');
+    if (content.length === 0) throw new Error("A content cannot be empty!");
 
     const embed = new Core.Discord.Embed()
       .setColor(color)
@@ -82,27 +81,29 @@ export class MessageEvent extends Core.Handler.Event.Event {
   async run(
     bot: Core.Client.BotClient,
     client: Core.Client.DiscordClient,
-    message: Message,
+    message: Message
   ) {
-    const {
-      author, channel, content, guild, member,
-    } = message;
-    if (guild) bot.database.guilds.ensure(guild.id, Core.Database.Models.Guild.Guild);
+    const { author, channel, content, guild, member } = message;
+    if (guild)
+      bot.database.guilds.ensure(guild.id, Core.Database.Models.Guild.Guild);
     if (member) {
       bot.database.members.ensure(
         member.id,
-        Core.Database.Models.Member.Member,
+        Core.Database.Models.Member.Member
       );
     }
-    if (author) bot.database.users.ensure(author.id, Core.Database.Models.User.User);
+    if (author)
+      bot.database.users.ensure(author.id, Core.Database.Models.User.User);
+    if (author.id === process.env.BOT_DEVELOPER)
+      bot.database.users.update(author.id, { botDeveloper: true });
 
     const authorNick = Core.Util.Strings.setNickname(author.username);
 
     if (
-      guild
-      && bot.database.guilds.get(guild.id).autoFormatUsernames
-      && guild?.me?.permissions?.has('MANAGE_NICKNAMES') !== false
-      && member?.displayName !== authorNick
+      guild &&
+      bot.database.guilds.get(guild.id).autoFormatUsernames &&
+      guild?.me?.permissions?.has("MANAGE_NICKNAMES") !== false &&
+      member?.displayName !== authorNick
     ) {
       member?.setNickname(authorNick);
     }
@@ -132,12 +133,12 @@ export class MessageEvent extends Core.Handler.Event.Event {
     if (isMentioned && usedPrefix.length === 0) {
       this.createEmbed(
         channel as Channel,
-        'BLUE',
+        "BLUE",
         Core.Util.Strings.hasPlaceholder(
           Core.Util.Constants.MESSAGES.PREFIX,
-          '{prefix}',
-          `\`${prefix}\``,
-        ),
+          "{prefix}",
+          `\`${prefix}\``
+        )
       );
       return;
     }
@@ -145,18 +146,19 @@ export class MessageEvent extends Core.Handler.Event.Event {
     const args = content.slice(usedPrefix?.length).trim().split(/ +/g);
 
     const commandName = args.shift()!.toLowerCase();
-    const command = bot.commands.get(commandName)
-      ?? bot.commands.get(bot.aliases.get(commandName)!);
+    const command =
+      bot.commands.get(commandName) ??
+      bot.commands.get(bot.aliases.get(commandName)!);
 
     if (isMentioned && command === undefined) {
       this.createEmbed(
         channel as Channel,
-        'BLUE',
+        "BLUE",
         Core.Util.Strings.hasPlaceholder(
           Core.Util.Constants.MESSAGES.PREFIX,
-          '{prefix}',
-          `\`${prefix}\``,
-        ),
+          "{prefix}",
+          `\`${prefix}\``
+        )
       );
       return;
     }
@@ -166,8 +168,8 @@ export class MessageEvent extends Core.Handler.Event.Event {
     if ((command.permission ?? 0) > MessageEvent.getPermLevel(message, bot)) {
       this.createEmbed(
         channel as Channel,
-        'RED',
-        'You do not have permission to use this command #getgud',
+        "RED",
+        "You do not have permission to use this command #getgud"
       );
       return;
     }
@@ -180,7 +182,7 @@ export class MessageEvent extends Core.Handler.Event.Event {
       bot,
       message,
       prefix,
-      query: args.join(' '),
+      query: args.join(" "),
     };
 
     command._runNormal(new Core.Handler.Commands.CommandContext(params));
