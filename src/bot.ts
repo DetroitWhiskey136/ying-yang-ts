@@ -1,22 +1,22 @@
-import 'dotenv/config';
+import "dotenv/config";
 
-import * as Sentry from '@sentry/node';
+import * as Sentry from "@sentry/node";
 
-import { API, Core } from './index';
+import { API, Core } from "./index";
 
 // Sentry Related Stuff
 Sentry.init({
   attachStacktrace: true,
-  dsn: process.env.SentryDSN,
-  environment: 'development',
+  dsn: process.env.SENTRY_DSN,
+  environment: "development",
   integrations: [new Sentry.Integrations.Http({ tracing: true })],
   release: `${process.env.npm_package_name}@${process.env.npm_package_version}`,
   tracesSampleRate: 1.0,
 });
 
 const transaction = Sentry.startTransaction({
-  name: 'My Transaction',
-  op: 'transaction',
+  name: "My Transaction",
+  op: "transaction",
 });
 
 Sentry.configureScope((scope) => {
@@ -49,5 +49,5 @@ const bot = new Core.Client.BotClient(Core.Util.Constants.clientOptions);
 
 // API.init(bot);
 
-if (process.env.NODE_ENV !== 'production') bot.dev();
+if (process.env.NODE_ENV !== "production") bot.dev();
 bot.init(String(process.env.TOKEN), Sentry);
