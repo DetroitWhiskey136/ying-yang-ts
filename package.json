@@ -28,7 +28,7 @@
   },
   "homepage": "https://github.com/DetroitWhiskey136/ying-yang-ts#readme",
   "dependencies": {
-    "@discordjs/opus": "^0.5.3",
+    "@discordjs/opus": "^0.8.0",
     "@discordjs/voice": "^0.5.5",
     "@sentry/node": "^5.27.1",
     "@sentry/tracing": "^5.27.1",
